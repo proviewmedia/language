@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PRIMARY META -->
+<title>Habla — Learn Spanish for Beginners | Free Spanish Learning App</title>
+<meta name="description" content="Learn Spanish from scratch with Habla. Structured lessons, pronunciation audio, phrasebooks, and daily vocabulary review. Free to start — no credit card needed.">
+<meta name="keywords" content="learn spanish, spanish for beginners, spanish learning app, how to learn spanish, free spanish lessons, spanish vocabulary, spanish phrases, beginner spanish, speak spanish, spanish pronunciation, learn spanish online, spanish app, spanish words, basic spanish, conversational spanish, spanish grammar, spanish lessons for beginners, best way to learn spanish, spanish course free, spanish flashcards, spanish exercises, daily spanish practice, learn spanish fast, spanish for travel, spanish language learning">
+<meta name="author" content="Habla">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4A5CE8">
+<link rel="canonical" href="https://proviewmedia.github.io/habla/">
+
+<!-- OPEN GRAPH (Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://proviewmedia.github.io/habla/">
+<meta property="og:title" content="Habla — Learn Spanish for Beginners">
+<meta property="og:description" content="Structured Spanish lessons, pronunciation audio, phrasebooks, and spaced repetition review. Start free — no credit card required.">
+<meta property="og:image" content="https://proviewmedia.github.io/habla/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Habla">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://proviewmedia.github.io/habla/">
+<meta name="twitter:title" content="Habla — Learn Spanish for Beginners">
+<meta name="twitter:description" content="Free Spanish lessons with pronunciation audio, phrasebooks, and daily vocabulary review. Start from zero — no experience needed.">
+<meta name="twitter:image" content="https://proviewmedia.github.io/habla/icon-512.png">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<!-- STRUCTURED DATA — SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Habla",
+  "alternateName": "Habla Spanish Learning App",
+  "description": "Learn Spanish from scratch with structured lessons, pronunciation audio, phrasebooks, and spaced repetition vocabulary review. Free to start.",
+  "url": "https://proviewmedia.github.io/habla/",
+  "applicationCategory": "EducationApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "name": "Free plan — Levels 1 & 2"
+    },
+    {
+      "@type": "Offer",
+      "price": "9.99",
+      "priceCurrency": "USD",
+      "name": "Pro — All 5 levels, one-time payment"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "124"
+  },
+  "featureList": [
+    "Spanish lessons for beginners",
+    "Pronunciation audio on every word",
+    "Spaced repetition vocabulary review",
+    "Phrasebooks: greetings, food, directions, numbers",
+    "Sentence builder exercises",
+    "Offline support",
+    "Daily streak and XP tracking"
+  ],
+  "inLanguage": "en",
+  "teaches": "Spanish language",
+  "educationalLevel": "Beginner to Intermediate",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  }
+}
+</script>
+
+<!-- STRUCTURED DATA — FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need any Spanish experience to start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at all. Habla starts from absolute zero — first words, first phrases, pronunciation from day one. It is designed for complete beginners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Habla different from Duolingo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Habla focuses on production — building sentences, hearing pronunciation, and using spaced repetition to retain vocabulary long-term. Sentence builder exercises force you to think in Spanish, not just pick the right answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to learn conversational Spanish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With 15–20 focused minutes daily, most learners reach basic conversational ability in 3–4 months and comfortable conversation in 6–12 months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Pro is a one-time payment of $9.99. You pay once and own access forever — no monthly charges, no renewals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Spanish learning app work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Habla can be installed to your home screen as a PWA and used offline. Lessons, vocabulary review, and phrasebooks all work without an internet connection."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- STRUCTURED DATA — WebSite with Sitelinks Searchbox -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Habla",
+  "url": "https://proviewmedia.github.io/habla/",
+  "description": "Free Spanish learning app for beginners. Lessons, pronunciation audio, phrasebooks, and vocabulary review.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://proviewmedia.github.io/habla/app.html",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F5F7;--bg2:#FFFFFF;--bg3:#F0F0F4;--bg4:#E8E8EE;
+  --border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.12);
+  --text:#0F0F14;--text2:#5A5A72;--text3:#9898B0;
+  --accent:#4A5CE8;--accent-d:#2E3FBF;--accent-g:rgba(74,92,232,0.08);
+  --green:#16A87A;--green-g:rgba(22,168,122,0.08);
+  --gold:#C8920A;--gold-g:rgba(200,146,10,0.08);
+  --radius:12px;--radius-l:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--bg);overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(245,245,247,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Instrument Serif',serif;font-size:1.35rem;color:var(--text);letter-spacing:-.02em;text-decoration:none;}
+.nav-logo span{color:var(--accent);font-style:italic;}
+.nav-links{display:flex;align-items:center;gap:2rem;}
+.nav-link{font-size:.85rem;color:var(--text2);text-decoration:none;font-weight:500;transition:color .2s;}
+.nav-link:hover{color:var(--text);}
+.nav-cta{background:var(--accent);color:white;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;padding:.5rem 1.1rem;border-radius:var(--radius);border:none;cursor:pointer;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--accent-d);}
+@media(max-width:600px){.nav-links .nav-link{display:none;}.nav-links{gap:.75rem;}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:7rem 2rem 4rem;text-align:center;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 70% 50% at 30% 20%,rgba(74,92,232,.07) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 80% 70%,rgba(22,168,122,.05) 0%,transparent 55%);}
+.hero-content{position:relative;z-index:1;max-width:720px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent-g);border:1px solid rgba(74,92,232,.15);border-radius:100px;padding:.35rem .9rem;font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem;}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.8);}}
+h1{font-family:'Instrument Serif',serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:400;line-height:1.1;letter-spacing:-.03em;color:var(--text);margin-bottom:1.5rem;}
+h1 em{font-style:italic;color:var(--accent);}
+.hero-sub{font-size:clamp(1rem,2.5vw,1.15rem);color:var(--text2);line-height:1.7;max-width:520px;margin:0 auto 2.5rem;font-weight:400;}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;}
+.btn-hero{display:inline-flex;align-items:center;gap:.4rem;background:var(--accent);color:white;font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;padding:.8rem 1.75rem;border-radius:var(--radius);border:none;cursor:pointer;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(74,92,232,.25);}
+.btn-hero:hover{background:var(--accent-d);transform:translateY(-1px);box-shadow:0 6px 28px rgba(74,92,232,.32);}
+.btn-ghost{display:inline-flex;align-items:center;background:var(--bg2);color:var(--text);font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:500;padding:.8rem 1.75rem;border-radius:var(--radius);border:1.5px solid var(--border2);cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.hero-note{font-size:.75rem;color:var(--text3);margin-top:1.25rem;}
+
+/* PROOF BAR */
+.proof-bar{
+  background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:2rem 2.5rem;display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+.proof-item{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:1rem 1.5rem;gap:.3rem;
+  border-right:1px solid var(--border);
+}
+.proof-item:last-child{border-right:none;}
+.proof-icon{font-size:1.4rem;margin-bottom:.2rem;}
+.proof-label{font-family:'Instrument Serif',serif;font-size:1.35rem;color:var(--text);letter-spacing:-.02em;line-height:1;}
+.proof-desc{font-size:.72rem;color:var(--text3);font-weight:400;margin-top:.15rem;}
+.proof-div{display:none;}
+@media(max-width:700px){
+  .proof-bar{grid-template-columns:repeat(2,1fr);}
+  .proof-item:nth-child(2){border-right:none;}
+  .proof-item:nth-child(1),.proof-item:nth-child(2){border-bottom:1px solid var(--border);}
+}
+@media(max-width:400px){
+  .proof-bar{grid-template-columns:1fr;}
+  .proof-item{border-right:none;border-bottom:1px solid var(--border);}
+  .proof-item:last-child{border-bottom:none;}
+}
+
+/* SECTIONS */
+section{padding:6rem 2rem;}
+.inner{max-width:1100px;margin:0 auto;}
+.eyebrow{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;}
+.s-title{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4vw,2.75rem);font-weight:400;letter-spacing:-.02em;color:var(--text);margin-bottom:1rem;line-height:1.2;}
+.s-sub{font-size:1rem;color:var(--text2);line-height:1.7;max-width:520px;}
+
+/* HOW IT WORKS */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem;}
+@media(max-width:720px){.how-grid{grid-template-columns:1fr;}}
+.how-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.75rem;position:relative;overflow:hidden;}
+.how-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),rgba(74,92,232,.15));border-radius:3px 3px 0 0;}
+.how-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:500;color:var(--accent);letter-spacing:.08em;margin-bottom:1rem;opacity:.7;}
+.how-icon{font-size:1.75rem;margin-bottom:.75rem;display:block;}
+.how-title{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.4rem;}
+.how-desc{font-size:.82rem;color:var(--text2);line-height:1.65;}
+
+/* FEATURE SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.split.flip{direction:rtl;}
+.split.flip>*{direction:ltr;}
+@media(max-width:760px){.split{grid-template-columns:1fr;gap:2.5rem;}.split.flip{direction:ltr;}}
+.feat-list{display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem;}
+.feat-item{display:flex;gap:.9rem;align-items:flex-start;}
+.feat-ico{width:36px;height:36px;border-radius:10px;background:var(--accent-g);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.feat-item h4{font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:.2rem;}
+.feat-item p{font-size:.8rem;color:var(--text2);line-height:1.6;}
+
+/* CHAT MOCK */
+.chat-mock{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.25rem;box-shadow:0 8px 40px rgba(0,0,0,.07);}
+.chat-hd{display:flex;align-items:center;gap:.6rem;padding-bottom:1rem;border-bottom:1px solid var(--border);margin-bottom:1rem;}
+.chat-av{width:32px;height:32px;border-radius:50%;background:var(--accent-g);display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.chat-name{font-size:.82rem;font-weight:600;color:var(--text);}
+.chat-status{font-size:.68rem;color:var(--green);display:flex;align-items:center;gap:.25rem;}
+.chat-status::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green);display:inline-block;}
+.bubble{border-radius:12px;padding:.6rem .9rem;font-size:.8rem;line-height:1.55;margin-bottom:.5rem;max-width:85%;}
+.bubble.t{background:var(--bg3);color:var(--text);}
+.bubble.u{background:var(--accent);color:white;margin-left:auto;}
+.correction{background:var(--green-g);border:1px solid rgba(22,168,122,.2);border-radius:var(--radius);padding:.5rem .75rem;font-size:.72rem;color:var(--green);margin-bottom:.5rem;}
+.chat-msgs{display:flex;flex-direction:column;}
+
+/* CURRICULUM MOCK */
+.curr-mock{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.25rem;box-shadow:0 8px 40px rgba(0,0,0,.07);}
+.cl{border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;margin-bottom:.6rem;}
+.cl:last-child{margin-bottom:0;}
+.cl-hd{display:flex;align-items:center;gap:.75rem;}
+.cl-badge{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;}
+.cl-badge.done{background:var(--green-g);}
+.cl-badge.active{background:var(--accent-g);}
+.cl-badge.locked{background:var(--bg3);opacity:.5;}
+.cl-name{font-size:.82rem;font-weight:600;color:var(--text);flex:1;}
+.cl-desc{font-size:.7rem;color:var(--text3);margin-top:.1rem;}
+.cl-pill{font-size:.65rem;font-weight:600;border-radius:100px;padding:.2rem .55rem;flex-shrink:0;}
+.cl-pill.done{background:var(--green-g);color:var(--green);}
+.cl-pill.active{background:var(--accent-g);color:var(--accent);}
+.cl-pill.locked{background:var(--bg4);color:var(--text3);}
+.cl-bar{height:3px;background:var(--bg4);border-radius:100px;margin-top:.6rem;overflow:hidden;}
+.cl-fill{height:100%;border-radius:100px;background:var(--accent);}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem;}
+@media(max-width:600px){.pricing-grid{grid-template-columns:1fr;}}
+.p-card{border:2px solid var(--border2);border-radius:var(--radius-l);padding:2rem;position:relative;transition:border-color .2s;}
+.p-card.featured{border-color:var(--accent);box-shadow:0 0 0 4px rgba(74,92,232,.08),0 8px 32px rgba(74,92,232,.12);}
+.p-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:white;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px;white-space:nowrap;}
+.p-plan{font-size:.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;}
+.p-price{font-family:'Instrument Serif',serif;font-size:2.5rem;color:var(--text);line-height:1;}
+.p-price span{font-family:'Outfit',sans-serif;font-size:.85rem;color:var(--text3);font-weight:400;}
+.p-desc{font-size:.8rem;color:var(--text2);margin:.65rem 0 1.25rem;line-height:1.55;}
+.p-feats{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem;}
+.p-feats li{font-size:.8rem;color:var(--text2);display:flex;gap:.5rem;align-items:flex-start;}
+.p-feats li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
+.p-feats li.off{color:var(--text3);}
+.p-feats li.off::before{content:'—';color:var(--text3);}
+.p-btn{width:100%;padding:.75rem;border-radius:var(--radius);border:none;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:600;transition:all .2s;text-decoration:none;display:block;text-align:center;}
+.p-btn.primary{background:var(--accent);color:white;}
+.p-btn.primary:hover{background:var(--accent-d);}
+.p-btn.ghost{background:var(--bg3);color:var(--text);}
+.p-btn.ghost:hover{background:var(--bg4);}
+.p-note{font-size:.72rem;color:var(--text3);text-align:center;margin-top:.65rem;}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem;}
+@media(max-width:760px){.testi-grid{grid-template-columns:1fr;}}
+.t-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.5rem;}
+.t-stars{color:var(--gold);font-size:.9rem;margin-bottom:.75rem;}
+.t-text{font-size:.83rem;color:var(--text2);line-height:1.65;margin-bottom:1rem;font-style:italic;}
+.t-text::before{content:'\201C';}
+.t-text::after{content:'\201D';}
+.t-author{display:flex;align-items:center;gap:.6rem;}
+.t-av{width:28px;height:28px;border-radius:50%;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:var(--text2);}
+.t-name{font-size:.75rem;font-weight:600;color:var(--text);}
+.t-handle{font-size:.68rem;color:var(--text3);}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:.5rem;max-width:700px;margin-top:2.5rem;}
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);}
+.faq-q{width:100%;padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:500;color:var(--text);}
+.faq-icon{font-size:.7rem;color:var(--text3);transition:transform .25s;flex-shrink:0;}
+.faq-q.open .faq-icon{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 1.25rem 1rem;font-size:.82rem;color:var(--text2);line-height:1.7;}
+.faq-a.open{display:block;}
+
+/* CTA FOOTER */
+.cta-section{background:var(--text);padding:5rem 2rem;text-align:center;}
+.cta-section h2{font-family:'Instrument Serif',serif;font-size:clamp(1.8rem,4vw,2.75rem);font-weight:400;color:white;margin-bottom:1rem;letter-spacing:-.02em;}
+.cta-section h2 em{font-style:italic;color:rgba(255,255,255,.45);}
+.cta-section p{font-size:1rem;color:rgba(255,255,255,.5);margin-bottom:2.5rem;line-height:1.7;}
+.btn-white{display:inline-flex;align-items:center;background:white;color:var(--text);font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;padding:.85rem 2rem;border-radius:var(--radius);border:none;cursor:pointer;text-decoration:none;transition:background .2s;}
+.btn-white:hover{background:var(--bg3);}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.f-logo{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--text);text-decoration:none;}
+.f-logo span{color:var(--accent);font-style:italic;}
+.f-links{display:flex;gap:1.5rem;}
+.f-link{font-size:.78rem;color:var(--text3);text-decoration:none;transition:color .2s;}
+.f-link:hover{color:var(--text);}
+.f-copy{font-size:.72rem;color:var(--text3);}
+
+/* FADE UP */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.fu{opacity:0;animation:fadeUp .6s cubic-bezier(.16,1,.3,1) forwards;animation-play-state:paused;}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+  <a class="nav-logo" href="/" aria-label="Habla home">ha<span>bla</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="#how">How it works</a>
+    <a class="nav-link" href="#pricing">Pricing</a>
+    <a class="nav-link" href="app.html">Sign in</a>
+    <a class="nav-cta" href="app.html">Start free →</a>
+  </div>
+</nav>
+
+<!-- Hidden SEO content — visible to crawlers, not to users -->
+<div style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;" aria-hidden="true">
+  <h1>Learn Spanish for Beginners — Free Spanish Learning App</h1>
+  <p>Habla is a free Spanish learning app for beginners. Learn Spanish online with structured lessons, pronunciation audio, phrasebooks, and daily vocabulary review using spaced repetition. Start speaking Spanish from day one with no prior experience needed. Practice basic Spanish phrases, Spanish vocabulary, Spanish grammar, and conversational Spanish. Perfect for people who want to learn Spanish fast, learn Spanish for travel, or simply start learning Spanish from scratch. Habla covers greetings, food, directions, numbers, and essential everyday phrases. Each word includes IPA phonetic pronunciation and a native audio speaker button. Beginner Spanish has never been this accessible — free Spanish lessons with no credit card required.</p>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="hero-dot"></span>Learn Spanish — actually use it</div>
+    <h1>Spanish that <em>sticks</em><br>from lesson one.</h1>
+    <p class="hero-sub">Habla teaches real Spanish through structured lessons, pronunciation audio, phrasebooks, and daily vocabulary review — everything you need to go from zero to conversational.</p>
+    <div class="hero-actions">
+      <a class="btn-hero" href="app.html">Start learning free →</a>
+      <a class="btn-ghost" href="#how">See how it works</a>
+    </div>
+    <p class="hero-note">Levels 1–2 free forever · No credit card required</p>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-item">
+    <div class="proof-icon">📚</div>
+    <div class="proof-label">5 Levels</div>
+    <div class="proof-desc">Beginner to conversational</div>
+  </div>
+  <div class="proof-div"></div>
+  <div class="proof-item">
+    <div class="proof-icon">🔊</div>
+    <div class="proof-label">Audio</div>
+    <div class="proof-desc">Pronunciation on every word</div>
+  </div>
+  <div class="proof-div"></div>
+  <div class="proof-item">
+    <div class="proof-icon">📱</div>
+    <div class="proof-label">Offline</div>
+    <div class="proof-desc">Install it, study anywhere</div>
+  </div>
+  <div class="proof-div"></div>
+  <div class="proof-item">
+    <div class="proof-icon">💸</div>
+    <div class="proof-label">$9.99</div>
+    <div class="proof-desc">One payment, yours forever</div>
+  </div>
+</div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="inner">
+    <div class="eyebrow">How it works</div>
+    <h2 class="s-title">Three things that actually<br>make language learning work</h2>
+    <p class="s-sub">Research shows beginners need high-frequency vocabulary, spaced repetition, and real pronunciation. Habla is built around all three.</p>
+    <div class="how-grid">
+      <div class="how-card fu">
+        <div class="how-num">01</div>
+        <span class="how-icon">📖</span>
+        <div class="how-title">Structured lessons</div>
+        <p class="how-desc">Five levels take you from zero to conversational. Short, focused lessons with vocab cards, multiple choice, fill-in-the-blank, and sentence builders. Finish a lesson in 5 minutes.</p>
+      </div>
+      <div class="how-card fu">
+        <div class="how-num">02</div>
+        <span class="how-icon">🧠</span>
+        <div class="how-title">Daily vocabulary review</div>
+        <p class="how-desc">Your weakest words surface first. Rate each one — still learning, got it, or know it cold. The app remembers and keeps drilling what you need most. Science calls it spaced repetition.</p>
+      </div>
+      <div class="how-card fu">
+        <div class="how-num">03</div>
+        <span class="how-icon">🔊</span>
+        <div class="how-title">Hear every phrase</div>
+        <p class="how-desc">Every word, flashcard, and phrasebook entry has a pronunciation button. Tap to hear it spoken clearly in Spanish. No guessing how anything sounds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE: LESSONS -->
+<section style="background:var(--bg2);">
+  <div class="inner">
+    <div class="split">
+      <div>
+        <div class="eyebrow">Lesson engine</div>
+        <h2 class="s-title">Six exercise types.<br>Never boring.</h2>
+        <p class="s-sub">Every lesson mixes different formats so your brain can't go on autopilot — you're always actively producing Spanish, not just recognizing it.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-ico">🧩</div>
+            <div><h4>Sentence builder</h4><p>Tap words in the right order to build a sentence. Instant feedback, shows you the correct order if you miss it.</p></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-ico">🔗</div>
+            <div><h4>Matching pairs</h4><p>Match Spanish to English across two columns. Race against yourself to get them all right.</p></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-ico">✏️</div>
+            <div><h4>Fill in the blank</h4><p>Type the missing word. Use the hint if you need it. No multiple choice to hide behind.</p></div>
+          </div>
+        </div>
+      </div>
+      <!-- LESSON MOCK -->
+      <div class="curr-mock">
+        <div style="font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">🧩 Build the sentence</div>
+        <div style="font-size:.9rem;font-weight:500;color:var(--text);margin-bottom:1rem;">Translate: "Good morning, how are you?"</div>
+        <div style="min-height:48px;border:2px dashed var(--accent);border-radius:10px;padding:.5rem;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;background:var(--accent-g);margin-bottom:.85rem;">
+          <span style="padding:.35rem .75rem;border-radius:7px;background:var(--accent);color:white;font-size:.82rem;font-family:'Outfit',sans-serif;">Buenos</span>
+          <span style="padding:.35rem .75rem;border-radius:7px;background:var(--accent);color:white;font-size:.82rem;font-family:'Outfit',sans-serif;">días</span>
+          <span style="padding:.35rem .75rem;border-radius:7px;background:var(--accent);color:white;font-size:.82rem;font-family:'Outfit',sans-serif;">¿cómo</span>
+          <span style="padding:.35rem .75rem;border-radius:7px;border:1.5px dashed rgba(74,92,232,.4);color:var(--text3);font-size:.82rem;font-family:'Outfit',sans-serif;">___</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;">
+          <span style="padding:.35rem .75rem;border-radius:7px;border:1.5px solid var(--border2);background:var(--bg);font-size:.82rem;font-family:'Outfit',sans-serif;opacity:.35;text-decoration:line-through;">Buenos</span>
+          <span style="padding:.35rem .75rem;border-radius:7px;border:1.5px solid var(--border2);background:var(--bg);font-size:.82rem;font-family:'Outfit',sans-serif;opacity:.35;text-decoration:line-through;">días</span>
+          <span style="padding:.35rem .75rem;border-radius:7px;border:1.5px solid var(--border2);background:var(--bg);font-size:.82rem;font-family:'Outfit',sans-serif;opacity:.35;text-decoration:line-through;">¿cómo</span>
+          <span style="padding:.35rem .75rem;border-radius:7px;border:1.5px solid var(--accent);background:var(--accent-g);color:var(--accent-d);font-size:.82rem;font-family:'Outfit',sans-serif;font-weight:600;">estás?</span>
+        </div>
+        <div style="display:flex;gap:.5rem;">
+          <button style="flex:1;padding:.55rem;border-radius:9px;border:1px solid var(--border2);background:var(--bg3);font-family:'Outfit',sans-serif;font-size:.78rem;cursor:pointer;">Clear</button>
+          <button style="flex:1;padding:.55rem;border-radius:9px;border:1px solid var(--border2);background:var(--bg3);font-family:'Outfit',sans-serif;font-size:.78rem;cursor:pointer;">Check</button>
+          <button style="flex:2;padding:.55rem;border-radius:9px;border:none;background:var(--accent);color:white;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:600;cursor:pointer;">Continue →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE: PRACTICE -->
+<section>
+  <div class="inner">
+    <div class="split flip">
+      <div>
+        <div class="eyebrow">Practice & phrasebooks</div>
+        <h2 class="s-title">Real phrases.<br>Hear them spoken.</h2>
+        <p class="s-sub">Six beginner phrasebooks covering greetings, food, directions, numbers and more. Every phrase shows the Spanish, phonetic pronunciation, English meaning, and a usage tip — plus a button to hear it out loud.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-ico">👋</div>
+            <div><h4>Greetings, Food, Directions</h4><p>The phrases you actually need — not textbook filler. Immediately useful from day one.</p></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-ico">🧠</div>
+            <div><h4>Smart daily review</h4><p>Weak words bubble up first. Strong words rest. 8 cards, 5 minutes, maximum retention.</p></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-ico">🔊</div>
+            <div><h4>Native pronunciation audio</h4><p>Tap the speaker on any word or phrase and hear it spoken in clear Spanish. Build your ear from the start.</p></div>
+          </div>
+        </div>
+      </div>
+      <!-- PRACTICE MOCK -->
+      <div class="curr-mock">
+        <div style="font-size:.62rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;text-align:center;">👋 Greetings · 3 of 8</div>
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center;margin-bottom:.85rem;">
+          <div style="font-family:'Instrument Serif',serif;font-size:2rem;color:var(--text);margin-bottom:.2rem;">Mucho gusto</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--text3);margin-bottom:.75rem;">/ˈmu.tʃo ˈɡus.to/</div>
+          <div style="font-size:.95rem;color:var(--text2);margin-bottom:.5rem;">Nice to meet you</div>
+          <div style="font-size:.75rem;color:var(--text3);font-style:italic;border-top:1px solid var(--border);padding-top:.6rem;margin-top:.5rem;">💡 Said right after learning someone's name.</div>
+        </div>
+        <div style="display:flex;gap:.5rem;justify-content:center;">
+          <button style="display:inline-flex;align-items:center;gap:.35rem;padding:.45rem 1rem;border-radius:100px;border:1.5px solid var(--border2);background:var(--bg3);font-family:'Outfit',sans-serif;font-size:.78rem;cursor:pointer;">🔊 Say it</button>
+          <button style="display:inline-flex;align-items:center;gap:.35rem;padding:.45rem 1.25rem;border-radius:100px;border:none;background:var(--accent);color:white;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:600;cursor:pointer;">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE: CURRICULUM -->
+<section style="background:var(--bg2);">
+  <div class="inner">
+    <div class="split">
+      <div>
+        <div class="eyebrow">Curriculum</div>
+        <h2 class="s-title">A clear path from<br>zero to fluent</h2>
+        <p class="s-sub">Five levels of structured content. Each lesson unlocks the next. A level exam gates you into the next tier — so you only move forward when you're ready.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-ico">🗺️</div>
+            <div><h4>No guessing what to study</h4><p>One clear path. Finish a lesson, unlock the next. Pass the exam, unlock the level. Always know exactly where you are.</p></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-ico">⭐</div>
+            <div><h4>XP, streaks, and weekly charts</h4><p>Every lesson earns XP. Your streak rewards daily consistency. A weekly bar chart shows your momentum at a glance.</p></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-ico">📱</div>
+            <div><h4>Install it — works offline</h4><p>Add Habla to your home screen like a native app. Study on the subway, on a flight, anywhere.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="curr-mock">
+        <div class="cl">
+          <div class="cl-hd">
+            <div class="cl-badge done">✓</div>
+            <div style="flex:1"><div class="cl-name">Level 1 — Survival Spanish</div><div class="cl-desc">Greetings, numbers, colors, days of the week</div></div>
+            <span class="cl-pill done">Complete</span>
+          </div>
+          <div class="cl-bar"><div class="cl-fill" style="width:100%;background:var(--green);"></div></div>
+        </div>
+        <div class="cl" style="border-color:var(--accent);background:var(--accent-g);">
+          <div class="cl-hd">
+            <div class="cl-badge active">🌿</div>
+            <div style="flex:1"><div class="cl-name">Level 2 — Everyday Life</div><div class="cl-desc">Family, food, shopping, directions</div></div>
+            <span class="cl-pill active">3 / 6</span>
+          </div>
+          <div class="cl-bar"><div class="cl-fill" style="width:50%;"></div></div>
+        </div>
+        <div class="cl" style="opacity:.5;">
+          <div class="cl-hd">
+            <div class="cl-badge locked">🔒</div>
+            <div style="flex:1"><div class="cl-name">Level 3 — Going Deeper</div><div class="cl-desc">Present tense verbs, opinions, hobbies</div></div>
+            <span class="cl-pill locked">Pro</span>
+          </div>
+        </div>
+        <div class="cl" style="opacity:.3;">
+          <div class="cl-hd">
+            <div class="cl-badge locked">🔒</div>
+            <div style="flex:1"><div class="cl-name">Level 4 — Past &amp; Future</div><div class="cl-desc">Preterite, stories, future plans</div></div>
+            <span class="cl-pill locked">Pro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section>
+  <div class="inner">
+    <div class="eyebrow">Everything included</div>
+    <h2 class="s-title">Built for how people<br>actually learn languages</h2>
+    <p class="s-sub">Habla pulls together the methods that research shows work best — and wraps them in an experience that's actually enjoyable to use every day.</p>
+    <div class="how-grid" style="margin-top:2.5rem;">
+      <div class="how-card fu">
+        <span class="how-icon">🧩</span>
+        <div class="how-title">Sentence builders</div>
+        <p class="how-desc">Tap words into the right order. Forces you to think in Spanish, not just translate in your head.</p>
+      </div>
+      <div class="how-card fu">
+        <span class="how-icon">🔊</span>
+        <div class="how-title">Pronunciation audio</div>
+        <p class="how-desc">Hear every word and phrase spoken clearly. Build your ear alongside your vocabulary from day one.</p>
+      </div>
+      <div class="how-card fu">
+        <span class="how-icon">📚</span>
+        <div class="how-title">6 phrasebook categories</div>
+        <p class="how-desc">Greetings, introductions, essentials, food, directions, and numbers — the phrases that actually come up.</p>
+      </div>
+      <div class="how-card fu">
+        <span class="how-icon">🧠</span>
+        <div class="how-title">Spaced repetition review</div>
+        <p class="how-desc">The only proven method for long-term vocabulary retention. Habla surfaces your weakest words first.</p>
+      </div>
+      <div class="how-card fu">
+        <span class="how-icon">🔥</span>
+        <div class="how-title">Streaks & XP</div>
+        <p class="how-desc">Daily streaks and experience points make 15 minutes a day feel like a win — because it is.</p>
+      </div>
+      <div class="how-card fu">
+        <span class="how-icon">📱</span>
+        <div class="how-title">Works offline</div>
+        <p class="how-desc">Install to your home screen. Full app experience, no internet required. Progress syncs when back online.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--bg2);">
+  <div class="inner">
+    <div class="eyebrow">Early learners</div>
+    <h2 class="s-title">What people are saying</h2>
+    <div class="testi-grid">
+      <div class="t-card fu">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">I've tried three other apps and quit all of them. Habla is the first one where I feel like I'm actually learning to speak — not just tapping the right answer.</p>
+        <div class="t-author"><div class="t-av">MR</div><div><div class="t-name">Marcus R.</div><div class="t-handle">Los Angeles, CA</div></div></div>
+      </div>
+      <div class="t-card fu">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">The pronunciation audio is a game changer. I finally know what things actually sound like instead of guessing from the spelling. Totally addicted to the daily review.</p>
+        <div class="t-author"><div class="t-av">JK</div><div><div class="t-name">Jasmine K.</div><div class="t-handle">Miami, FL</div></div></div>
+      </div>
+      <div class="t-card fu">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">Clean, simple, no nonsense. The sentence builder exercises are genuinely hard in a good way. 21-day streak and I can already hold a basic conversation.</p>
+        <div class="t-author"><div class="t-av">DT</div><div><div class="t-name">David T.</div><div class="t-handle">Austin, TX</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="inner">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="s-title">Simple, honest pricing</h2>
+    <p class="s-sub">Start free, upgrade once. No subscriptions, no recurring charges, ever.</p>
+    <div class="pricing-grid">
+      <div class="p-card">
+        <div class="p-plan">Free</div>
+        <div class="p-price">$0<span> / forever</span></div>
+        <p class="p-desc">Everything you need to build a real foundation in Spanish.</p>
+        <ul class="p-feats">
+          <li>Levels 1 &amp; 2 — full access</li>
+          <li>Sentence builder exercises</li>
+          <li>Pronunciation audio on all words</li>
+          <li>6 phrasebook categories</li>
+          <li>Daily vocabulary review</li>
+          <li>Streak &amp; XP tracking</li>
+          <li>Works offline (PWA)</li>
+          <li class="off">Levels 3–5</li>
+          <li class="off">Priority support</li>
+        </ul>
+        <a class="p-btn ghost" href="app.html">Start learning free</a>
+      </div>
+      <div class="p-card featured">
+        <div class="p-badge">One-time only</div>
+        <div class="p-plan">Pro</div>
+        <div class="p-price">$9.99<span> / once</span></div>
+        <p class="p-desc">Pay once, own it forever. All five levels, no recurring fees.</p>
+        <ul class="p-feats">
+          <li>Everything in Free</li>
+          <li>Levels 3–5 unlocked forever</li>
+          <li>All advanced lessons &amp; exams</li>
+          <li>Spanish-only immersion mode</li>
+          <li>Priority support</li>
+        </ul>
+        <a class="p-btn primary" href="app.html">Unlock Pro — $9.99 →</a>
+        <div class="p-note">One payment · Yours forever · No subscription</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--bg2);">
+  <div class="inner">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="s-title">Common questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">Do I need any Spanish experience to start?<span class="faq-icon">▾</span></button>
+        <div class="faq-a">Not at all. Level 1 starts from absolute zero — first words, first phrases, pronunciation from day one. The curriculum is designed to take a complete beginner to conversational Spanish through consistent daily practice.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">How is this different from Duolingo?<span class="faq-icon">▾</span></button>
+        <div class="faq-a">Duolingo is great for gamified vocab recognition. Habla focuses more on production — building sentences, hearing pronunciation, and using spaced repetition to make vocabulary actually stick long-term. The sentence builder exercises force you to think in Spanish, not just pick the right answer.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">How long does it take to get conversational?<span class="faq-icon">▾</span></button>
+        <div class="faq-a">With 15–20 focused minutes daily, most learners reach basic conversational ability in 3–4 months and comfortable conversation in 6–12 months. Consistency matters far more than session length — that's why streaks are built into the core experience.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">Does my progress sync across devices?<span class="faq-icon">▾</span></button>
+        <div class="faq-a">Yes — create a free account and your XP, streaks, completed lessons, and vocabulary status all sync to the cloud. Sign in on any device and pick up exactly where you left off. Guest mode saves locally only.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="faq(this)">Is there a subscription or recurring charge?<span class="faq-icon">▾</span></button>
+        <div class="faq-a">No. Pro is a single one-time payment of $9.99. You pay once and own it forever — no monthly charges, no renewals, no cancellations to worry about. Your progress is never deleted.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="inner">
+    <h2>Ready to start <em>speaking</em>?</h2>
+    <p>Levels 1 and 2 are completely free.<br>No credit card. No commitment. Just Spanish.</p>
+    <a class="btn-white" href="app.html">Start learning free →</a>
+  </div>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <a class="f-logo" href="/" aria-label="Habla">ha<span>bla</span></a>
+  <div class="f-links">
+    <a class="f-link" href="#">Terms</a>
+    <a class="f-link" href="#">Privacy</a>
+    <a class="f-link" href="app.html">Sign in</a>
+    <a class="f-link" href="#pricing">Pricing</a>
+  </div>
+  <div class="f-copy">© 2026 Habla. Free Spanish learning app for beginners.</div>
+</footer>
+
+<script>
+function faq(btn){
+  const open=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q=>{q.classList.remove('open');q.nextElementSibling.classList.remove('open');});
+  if(!open){btn.classList.add('open');btn.nextElementSibling.classList.add('open');}
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.animationPlayState='running';}});
+},{threshold:.15});
+document.querySelectorAll('.fu').forEach((el,i)=>{el.style.animationDelay=(i%3*.1+.05)+'s';obs.observe(el);});
+</script>
+</body>
+</html>
