@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Habla — Learn Spanish</title>
+<title>EspTalk — Learn Spanish</title>
 <meta name="description" content="Speak Spanish from day one. No flashcards, no busywork.">
 <meta name="theme-color" content="#4A5CE8">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Habla">
+<meta name="apple-mobile-web-app-title" content="EspTalk">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Text:ital@1&family=Hanken+Grotesk:wght@700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <!-- Supabase JS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <!-- PayPal SDK -->
@@ -51,10 +51,14 @@
   --sidebar:  240px;
   --radius:   12px;
   --radius-l: 18px;
+  --font-heading: 'Hanken Grotesk', sans-serif;
+  --font-body: 'DM Sans', 'Outfit', sans-serif;
+  --font-serif: 'DM Serif Text', 'Instrument Serif', serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{height:100%;overflow:hidden;background:var(--bg);}
-body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
+body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:4px;height:4px;}
@@ -67,7 +71,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
 ═══════════════════════════════════ */
 .auth-overlay{
   position:fixed;inset:0;z-index:999;
-  background:rgba(245,245,247,0.88);backdrop-filter:blur(20px);
+  background:#fff;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   animation:fadeIn .3s ease;
   padding:1.5rem;
@@ -75,61 +79,61 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 
 .auth-card{
-  background:var(--bg2);border:1px solid var(--border2);
-  border-radius:24px;padding:2.5rem;width:420px;
-  box-shadow:0 24px 60px rgba(0,0,0,0.12);
+  background:var(--bg2);border:1px solid #e8e8e8;
+  border-radius:20px;padding:2rem 2.25rem;width:400px;max-width:400px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
   animation:slideUp .4s cubic-bezier(.16,1,.3,1);
   position:relative;
 }
 @keyframes slideUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
 .auth-logo{
-  font-family:'Instrument Serif',serif;font-size:1.6rem;font-weight:400;
-  color:var(--text);margin-bottom:.25rem;letter-spacing:-.02em;
+  font-family:'Hanken Grotesk',sans-serif;font-size:1.7rem;font-weight:900;
+  color:var(--text);margin-bottom:.2rem;letter-spacing:-.5px;
   text-align:center;
 }
-.auth-logo span{color:var(--accent);font-style:italic;}
-.auth-tagline{font-size:.82rem;color:var(--text2);margin-bottom:2rem;text-align:center;}
-.auth-tabs{display:flex;gap:0;margin-bottom:2rem;background:var(--bg3);border-radius:var(--radius);padding:3px;}
+.auth-logo span{font-family:'Instrument Serif',serif;color:var(--accent);font-style:italic;font-weight:700;}
+.auth-tagline{font-family:var(--font-body);font-size:0.85rem;color:#444;line-height:1.5;margin-bottom:1.25rem;text-align:center;}
+.auth-tabs{display:flex;gap:0;margin-bottom:1.25rem;background:#f5f5f7;border-radius:10px;padding:3px;}
 .auth-tab{
-  flex:1;padding:.55rem;border-radius:9px;border:none;
-  font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:500;
+  flex:1;padding:.45rem;border-radius:8px;border:none;
+  font-family:var(--font-body);font-size:.78rem;font-weight:500;
   cursor:pointer;transition:all .2s;color:var(--text2);background:transparent;
 }
-.auth-tab.active{background:var(--bg2);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.1);}
+.auth-tab.active{background:#fff;color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,0.1);border-radius:10px;}
 
-.auth-field{margin-bottom:1rem;}
-.auth-field label{display:block;font-size:.75rem;font-weight:500;color:var(--text2);margin-bottom:.4rem;letter-spacing:.03em;}
+.auth-field{margin-bottom:.75rem;}
+.auth-field label{display:block;font-family:var(--font-heading);font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#8a8a8a;margin-bottom:.3rem;}
 .auth-field input{
-  width:100%;padding:.7rem 1rem;
-  background:var(--bg3);border:1.5px solid var(--border2);border-radius:var(--radius);
-  font-family:'Outfit',sans-serif;font-size:.875rem;color:var(--text);outline:none;
+  width:100%;padding:0.65rem 0.9rem;
+  background:#f9f9f9;border:1.5px solid #e8e8e8;border-radius:10px;
+  font-family:var(--font-body);font-size:.82rem;color:var(--text);outline:none;
   transition:border .2s;
 }
-.auth-field input:focus{border-color:var(--accent);}
+.auth-field input:focus{border-color:#4A5CE8;}
 .auth-field input::placeholder{color:var(--text3);}
 
 .auth-btn{
-  width:100%;padding:.8rem;border-radius:var(--radius);border:none;
-  background:var(--accent);color:white;
-  font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;
-  cursor:pointer;transition:all .2s;margin-top:.5rem;
+  width:100%;padding:0.7rem;border-radius:500px;border:none;
+  background:#4A5CE8;color:white;
+  font-family:var(--font-heading);font-size:0.82rem;font-weight:700;
+  cursor:pointer;transition:all .2s;margin-top:.35rem;
   box-shadow:0 4px 20px rgba(91,110,245,.35);
 }
 .auth-btn:hover{background:var(--accent-d);transform:translateY(-1px);box-shadow:0 6px 28px rgba(91,110,245,.45);}
 
-.auth-divider{display:flex;align-items:center;gap:.75rem;margin:1.25rem 0;color:var(--text3);font-size:.75rem;}
+.auth-divider{display:flex;align-items:center;gap:.75rem;margin:.75rem 0;color:var(--text3);font-size:.72rem;}
 .auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--border);}
 
 .auth-guest{
-  width:100%;padding:.7rem;border-radius:var(--radius);
-  border:1.5px solid var(--border2);background:transparent;color:var(--text2);
-  font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:500;
+  width:100%;padding:0.6rem;border-radius:500px;
+  border:1px solid #e8e8e8;background:transparent;color:var(--text2);
+  font-family:var(--font-body);font-size:.78rem;font-weight:500;
   cursor:pointer;transition:all .2s;
 }
 .auth-guest:hover{border-color:var(--text3);color:var(--text);background:var(--bg3);}
 
-.auth-fine{font-size:.72rem;color:var(--text3);text-align:center;margin-top:1.25rem;line-height:1.6;}
+.auth-fine{font-family:var(--font-body);font-size:0.72rem;color:#8a8a8a;text-align:center;margin-top:1.25rem;line-height:1.6;}
 
 /* ═══════════════════════════════════
    SIDEBAR
@@ -138,15 +142,15 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
   width:var(--sidebar);flex-shrink:0;
   background:var(--bg2);
   display:flex;flex-direction:column;
-  height:100vh;border-right:1px solid var(--border);
+  height:100vh;border-right:1px solid #e8e8e8;
 }
 .sb-logo{
   padding:1.25rem 1.25rem .75rem;
-  font-family:'Instrument Serif',serif;font-size:1.5rem;font-weight:400;
-  color:var(--text);letter-spacing:-.02em;
+  font-family:'Hanken Grotesk',sans-serif;font-size:1.4rem;font-weight:900;
+  color:var(--text);letter-spacing:-.5px;
   border-bottom:1px solid var(--border);
 }
-.sb-logo span{color:var(--accent);font-style:italic;}
+.sb-logo span{font-family:'Instrument Serif',serif;color:var(--accent);font-style:italic;font-weight:700;}
 
 .sb-user{
   padding:.9rem 1.25rem;display:flex;align-items:center;gap:.75rem;
@@ -164,11 +168,11 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
 .sb-xp-fill{height:100%;background:var(--accent);border-radius:100px;transition:width .6s;}
 
 .sb-nav{flex:1;overflow-y:auto;padding:.5rem 0;}
-.sb-section{font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);padding:.75rem 1.25rem .3rem;}
+.sb-section{font-family:var(--font-heading);font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--text3);padding:.75rem 1.25rem .3rem;}
 .sb-link{
   display:flex;align-items:center;gap:.65rem;padding:.6rem 1.25rem;
-  cursor:pointer;transition:background .15s;border-radius:0;position:relative;
-  border:none;background:transparent;width:100%;text-align:left;font-family:'Outfit',sans-serif;
+  cursor:pointer;transition:background .15s;border-radius:10px;position:relative;
+  border:none;background:transparent;width:100%;text-align:left;font-family:var(--font-body);font-size:0.82rem;font-weight:500;
 }
 .sb-link:hover{background:var(--bg3);}
 .sb-link.active{background:var(--accent-g);}
@@ -208,24 +212,24 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
 ═══════════════════════════════════ */
 .main{flex:1;height:100vh;overflow:hidden;display:flex;flex-direction:column;background:var(--bg);}
 .topbar{
-  background:var(--bg2);border-bottom:1px solid var(--border);
+  background:var(--bg2);border-bottom:1px solid #e8e8e8;
   padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;
   flex-shrink:0;
 }
-.tb-left h1{font-size:1rem;font-weight:600;color:var(--text);}
-.tb-left p{font-size:.72rem;color:var(--text3);margin-top:.1rem;}
+.tb-left h1{font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--text);}
+.tb-left p{font-family:var(--font-body);font-size:.72rem;color:#444;margin-top:.1rem;}
 .tb-actions{display:flex;gap:.5rem;align-items:center;}
 
 /* BUTTONS */
 .btn{
-  padding:.5rem 1.1rem;border-radius:100px;
-  font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:500;
+  padding:.5rem 1.1rem;border-radius:500px;
+  font-family:var(--font-body);font-size:.78rem;font-weight:500;
   cursor:pointer;border:none;transition:all .2s;
   display:inline-flex;align-items:center;gap:.4rem;
 }
-.btn-primary{background:var(--accent);color:white;box-shadow:0 2px 12px rgba(91,110,245,.3);}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 2px 12px rgba(91,110,245,.3);border-radius:500px;font-family:var(--font-heading);font-weight:700;}
 .btn-primary:hover{background:var(--accent-d);transform:translateY(-1px);box-shadow:0 4px 18px rgba(91,110,245,.4);}
-.btn-ghost{background:transparent;color:var(--text2);border:1px solid var(--border2);}
+.btn-ghost{background:transparent;color:var(--text2);border:1px solid #e8e8e8;border-radius:500px;}
 .btn-ghost:hover{color:var(--text);border-color:var(--text3);background:var(--bg3);}
 .btn-green{background:var(--green-g);color:var(--green);border:1px solid rgba(45,212,160,.25);}
 .btn-green:hover{background:rgba(45,212,160,.15);}
@@ -260,7 +264,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
   padding:1rem 1.25rem;box-shadow:0 1px 3px rgba(0,0,0,.04);
 }
 .stat-val{font-family:'Instrument Serif',serif;font-size:1.8rem;color:var(--text);display:block;line-height:1;}
-.stat-lbl{font-size:.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-top:.25rem;}
+.stat-lbl{font-family:var(--font-heading);font-size:.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.12em;margin-top:.25rem;}
 .stat-icon{font-size:1rem;margin-bottom:.4rem;display:block;}
 
 .dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
@@ -345,9 +349,9 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
 .lesson-bar-fill{height:100%;background:var(--accent);border-radius:100px;transition:width .4s;}
 .lesson-counter{font-size:.72rem;font-family:'JetBrains Mono',monospace;color:var(--text3);white-space:nowrap;}
 
-.ex-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.75rem;margin-bottom:1rem;animation:exIn .3s ease;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.ex-card{background:var(--bg2);border:1px solid #e8e8e8;border-radius:20px;padding:1.75rem;margin-bottom:1rem;animation:exIn .3s ease;box-shadow:0 4px 20px rgba(0,0,0,0.04);}
 @keyframes exIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-.ex-type{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-l);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem;}
+.ex-type{font-family:var(--font-heading);font-size:.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent-l);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem;}
 .ex-prompt{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--text);margin-bottom:.4rem;line-height:1.3;}
 .ex-hint{font-size:.8rem;color:var(--text3);margin-bottom:1.25rem;}
 
@@ -897,7 +901,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
 <div class="auth-overlay" id="authOverlay">
   <a href="index.html" style="display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--text3);text-decoration:none;margin-bottom:1.25rem;transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text3)'">← Back to site</a>
   <div class="auth-card">
-    <div class="auth-logo" style="margin-top:.25rem;">ha<span>bla</span></div>
+    <div class="auth-logo" style="margin-top:.25rem;">Esp<span>Talk</span></div>
     <div class="auth-tagline">Speak Spanish from day one. No flashcards, no busywork.</div>
     <div class="auth-tabs">
       <button class="auth-tab active" onclick="switchAuthTab('signup')">Create account</button>
@@ -927,7 +931,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
 
 <!-- SIDEBAR -->
 <aside class="sidebar">
-  <div class="sb-logo">ha<span>bla</span></div>
+  <div class="sb-logo">Esp<span>Talk</span></div>
   <div class="sb-user">
     <div class="sb-avatar" id="sbAvatar">?</div>
     <div style="flex:1;min-width:0;">
@@ -1000,7 +1004,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
     <div class="screen active" id="screen-dashboard">
       <div class="dash-hero">
         <h1 id="dashGreeting">¡Hola!</h1>
-        <p id="dashSubtitle">Welcome to Habla. Start your first lesson below.</p>
+        <p id="dashSubtitle">Welcome to EspTalk. Start your first lesson below.</p>
         <div class="dash-hero-actions">
           <button class="btn btn-primary btn-lg" onclick="continueLesson()">Continue learning →</button>
           <button class="btn btn-ghost btn-lg" onclick="nav('practice')">More practice</button>
@@ -1217,7 +1221,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
         <div class="pw-feat">✓ &nbsp;Spanish-only immersion mode</div>
         <div class="pw-feat">✓ &nbsp;No subscription — pay once, keep forever</div>
       </div>
-      <div class="pw-price" id="pwPrice">$9.99<span style="font-size:1.2rem;color:var(--text2);"> one-time</span></div>
+      <div class="pw-price" id="pwPrice">$4.99<span style="font-size:1.2rem;color:var(--text2);"> one-time</span></div>
       <div class="pw-per" id="pwPer">one payment · yours forever · no renewals</div>
       <button class="auth-btn" onclick="startCheckout()" id="pwCheckoutBtn">Continue to payment →</button>
       <button class="auth-guest" style="margin-top:.75rem;" onclick="hidePaywall()">Maybe later</button>
@@ -1230,8 +1234,8 @@ body{font-family:'Outfit',sans-serif;color:var(--text);display:flex;}
       <div style="font-size:1.5rem;margin-bottom:.75rem;">💳</div>
       <div class="pw-title" style="font-size:1.1rem;margin-bottom:.5rem;">Complete payment</div>
       <div id="pwOrderSummary" style="background:var(--bg3);border-radius:var(--radius);padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.82rem;color:var(--text2);text-align:left;">
-        <div style="display:flex;justify-content:space-between;margin-bottom:.3rem;"><span>Habla Pro (one-time)</span><span style="color:var(--text);font-weight:600;">$9.99</span></div>
-        <div style="border-top:1px solid var(--border2);padding-top:.3rem;margin-top:.3rem;display:flex;justify-content:space-between;font-weight:600;color:var(--text);"><span>Total today</span><span>$9.99</span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:.3rem;"><span>EspTalk Pro (one-time)</span><span style="color:var(--text);font-weight:600;">$4.99</span></div>
+        <div style="border-top:1px solid var(--border2);padding-top:.3rem;margin-top:.3rem;display:flex;justify-content:space-between;font-weight:600;color:var(--text);"><span>Total today</span><span>$4.99</span></div>
       </div>
       <!-- PayPal button container — renders when SDK loads -->
       <div id="paypal-button-container" style="min-height:48px;"></div>
@@ -1285,7 +1289,7 @@ function initSupabase(){
 const PAYPAL_CONFIGURED = true;
 
 let BILLING_CYCLE = 'onetime';
-const PRICES = { onetime: { amount: '9.99', label: '$9.99', desc: 'one payment · yours forever · no renewals' } };
+const PRICES = { onetime: { amount: '4.99', label: '$4.99', desc: 'one payment · yours forever · no renewals' } };
 
 function setBilling(cycle){ /* no-op — single price */ }
 
@@ -1301,7 +1305,7 @@ function startCheckout(){
       style:{layout:'vertical',color:'blue',shape:'rect',label:'pay'},
       createOrder:(data,actions)=>actions.order.create({
         purchase_units:[{
-          description:'Habla Pro — '+BILLING_CYCLE,
+          description:'EspTalk Pro — '+BILLING_CYCLE,
           amount:{value:PRICES[BILLING_CYCLE].amount,currency_code:'USD'}
         }]
       }),
@@ -1626,7 +1630,7 @@ async function doAuth(){
       }
       document.getElementById('authOverlay').style.display='none';
       updateUserUI();refreshDashboard();saveState();
-      showToast('Welcome'+(authMode==='signup'?' to Habla, ':' back, ')+displayName+'! 🎉');
+      showToast('Welcome'+(authMode==='signup'?' to EspTalk, ':' back, ')+displayName+'! 🎉');
     }catch(err){
       errEl.textContent=err.message||'Something went wrong. Please try again.';
     }
@@ -1635,7 +1639,7 @@ async function doAuth(){
     S.user.name=name||email.split('@')[0]||'Learner';
     document.getElementById('authOverlay').style.display='none';
     updateUserUI();refreshDashboard();saveState();
-    showToast('Welcome to Habla, '+S.user.name+'! 🎉');
+    showToast('Welcome to EspTalk, '+S.user.name+'! 🎉');
   }
 
   btn.textContent=authMode==='signup'?'Start learning free →':'Sign in →';
@@ -1654,7 +1658,7 @@ function continueGuest(){
 async function signOut(){
   if(!sb) initSupabase();
   if(sb) await sb.auth.signOut();
-  try{localStorage.removeItem('habla_v1');}catch(e){}
+  try{localStorage.removeItem('esptalk_v1');}catch(e){}
   location.reload();
 }
 const PREFS={reminders:false,sound:true,auto:false,dailyGoal:25,difficulty:'adaptive'};
@@ -1667,11 +1671,11 @@ function toggleSetting(key){
 }
 function savePref(key,val){
   PREFS[key]=val;
-  try{localStorage.setItem('habla_prefs',JSON.stringify(PREFS));}catch(e){}
+  try{localStorage.setItem('esptalk_prefs',JSON.stringify(PREFS));}catch(e){}
 }
 function loadPrefs(){
   try{
-    const raw=localStorage.getItem('habla_prefs');
+    const raw=localStorage.getItem('esptalk_prefs');
     if(raw) Object.assign(PREFS,JSON.parse(raw));
   }catch(e){}
   // Apply to DOM (called every time settings screen is opened)
@@ -1824,7 +1828,7 @@ function refreshDashboard(){
   } else if(S.completedLessons.size>0){
     el('dashSubtitle').textContent='Welcome back! Your next lesson is ready.';
   } else {
-    el('dashSubtitle').textContent='Welcome to Habla. Start your first lesson below.';
+    el('dashSubtitle').textContent='Welcome to EspTalk. Start your first lesson below.';
   }
 
   // Stats
@@ -1901,8 +1905,8 @@ function refreshDashboard(){
 // CURRICULUM
 // ═══════════════════════════
 function isLevelUnlocked(lv){
-  if(lv<2) return true;
-  if(CURRICULUM[lv].pro&&!S.user.isPro) return false;
+  if(lv<1) return true;
+  if(lv>=1&&!S.user.isPro) return false;
   return S.completedExams.has(String(lv-1));
 }
 function isLessonUnlocked(lv,ls){
@@ -2597,8 +2601,15 @@ function renderPhrasebookCard(){
 
 function speakPhrase(text){
   if('speechSynthesis' in window){
+    window.speechSynthesis.cancel();
     const u=new SpeechSynthesisUtterance(text);
-    u.lang='es-ES';u.rate=0.85;
+    u.lang='es-MX';u.rate=0.82;u.pitch=1.05;
+    const voices=window.speechSynthesis.getVoices();
+    const esVoice=voices.find(v=>v.lang.startsWith('es')&&v.name.toLowerCase().includes('paulina'))
+      ||voices.find(v=>v.lang.startsWith('es')&&v.name.toLowerCase().includes('monica'))
+      ||voices.find(v=>v.lang.startsWith('es')&&!v.name.toLowerCase().includes('google'))
+      ||voices.find(v=>v.lang.startsWith('es'));
+    if(esVoice)u.voice=esVoice;
     window.speechSynthesis.speak(u);
   } else {
     showToast('Speech not supported on this browser.');
@@ -2805,7 +2816,7 @@ function showToast(msg,duration=3000){
 function saveState(){
   if(S.user.isGuest) return;
   try{
-    localStorage.setItem('habla_v1',JSON.stringify({
+    localStorage.setItem('esptalk_v1',JSON.stringify({
       xp:S.xp,
       name:S.user.name,
       isPro:S.user.isPro,
@@ -2824,7 +2835,7 @@ function saveState(){
 
 function loadState(){
   try{
-    const raw=localStorage.getItem('habla_v1');
+    const raw=localStorage.getItem('esptalk_v1');
     if(!raw) return;
     const d=JSON.parse(raw);
     if(d.name){S.user.name=d.name;}

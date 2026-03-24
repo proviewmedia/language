@@ -1,6 +1,6 @@
-const CACHE = 'habla-v1';
+const CACHE = 'esptalk-v1';
 const ASSETS = [
-  './habla-v4.html',
+  './app.html',
   './manifest.json',
   'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap'
 ];
@@ -22,10 +22,7 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  // Network-first for API calls, cache-first for assets
-  if (e.request.url.includes('anthropic.com')) {
-    return; // Never cache AI API calls
-  }
+  if (e.request.url.includes('supabase.co')) return;
   e.respondWith(
     caches.match(e.request).then(cached => {
       const network = fetch(e.request).then(res => {

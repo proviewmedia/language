@@ -1,8 +1,8 @@
 {
-  "name": "Habla — Learn Spanish",
-  "short_name": "Habla",
-  "description": "Speak Spanish from day one.",
-  "start_url": "./habla-v4.html",
+  "name": "EspTalk — Survival Spanish, Fast",
+  "short_name": "EspTalk",
+  "description": "Learn enough Spanish to actually use it — in a week.",
+  "start_url": "./app.html",
   "display": "standalone",
   "background_color": "#F5F5F7",
   "theme_color": "#4A5CE8",
