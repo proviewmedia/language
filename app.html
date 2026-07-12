@@ -339,6 +339,64 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   font-size:.55rem;color:var(--bg);font-weight:700;
 }
 .lock-overlay{position:absolute;top:.5rem;right:.5rem;font-size:.7rem;opacity:.5;}
+/* ── readiness meter (level header) ── */
+.readiness{margin-top:.55rem;}
+.rd-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem;}
+.rd-label{font-size:.66rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text3);}
+.rd-pct{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:600;color:var(--text2);}
+.rd-pct.rd-ok{color:var(--green);}
+.rd-bar{height:5px;background:var(--bg4);border-radius:100px;overflow:hidden;}
+.rd-fill{height:100%;border-radius:100px;background:var(--gold);transition:width .6s;}
+.rd-fill.rd-fill-ok{background:var(--green);}
+.rd-hint{font-size:.66rem;color:var(--text3);margin-top:.3rem;}
+.rd-complete{margin-top:.5rem;font-size:.72rem;font-weight:600;color:var(--green);}
+/* ── course bands ── */
+.level-body{padding:.25rem 1.25rem 1.25rem;}
+.band-label{font-family:var(--font-heading);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin:1rem 0 .5rem;}
+.band-label:first-child{margin-top:.35rem;}
+.course-list{display:flex;flex-direction:column;gap:.4rem;}
+.lesson-row{display:flex;align-items:center;gap:.75rem;padding:.6rem .75rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg);cursor:pointer;transition:all .15s;}
+.lesson-row:hover:not(.lr-lock){border-color:var(--accent);box-shadow:0 2px 8px rgba(74,92,232,.1);}
+.lesson-row.lr-done{background:var(--green-g);border-color:rgba(22,168,122,.22);}
+.lesson-row.lr-inprog{border-color:rgba(200,146,10,.4);background:var(--gold-g);}
+.lesson-row.lr-lock{cursor:default;opacity:.5;}
+.lr-num{width:20px;height:20px;flex-shrink:0;border-radius:50%;background:var(--bg3);color:var(--text3);font-family:'JetBrains Mono',monospace;font-size:.66rem;font-weight:600;display:flex;align-items:center;justify-content:center;}
+.lesson-row.lr-done .lr-num{background:var(--green);color:#fff;}
+.lr-icon{font-size:1rem;flex-shrink:0;}
+.lr-main{flex:1;min-width:0;}
+.lr-title{font-size:.82rem;font-weight:500;color:var(--text);}
+.lr-type{font-size:.64rem;color:var(--text3);margin-top:.05rem;text-transform:uppercase;letter-spacing:.05em;}
+.lr-badge{flex-shrink:0;font-size:.66rem;font-weight:600;padding:.2rem .5rem;border-radius:100px;white-space:nowrap;}
+.lr-badge.lr-passed{background:var(--green-g);color:var(--green);}
+.lr-badge.lr-progress{background:var(--gold-g);color:var(--gold);}
+.lr-badge.lr-start{background:var(--accent-g);color:var(--accent-l);}
+.lr-badge.lr-locked{background:var(--bg3);color:var(--text3);}
+/* ── checkpoint card (the exam gate) ── */
+.checkpoint-card{display:flex;align-items:center;gap:.85rem;padding:.9rem 1rem;border-radius:var(--radius-l);border:1.5px solid rgba(200,146,10,.35);background:var(--gold-g);transition:all .18s;}
+.checkpoint-card.cp-ready{cursor:pointer;box-shadow:0 2px 10px rgba(200,146,10,.12);}
+.checkpoint-card.cp-ready:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(200,146,10,.2);}
+.checkpoint-card.cp-done{cursor:pointer;border-color:rgba(22,168,122,.3);background:var(--green-g);}
+.checkpoint-card.cp-lock{opacity:.6;border-style:dashed;}
+.cp-star{font-size:1.35rem;flex-shrink:0;}
+.cp-main{flex:1;min-width:0;}
+.cp-title{font-size:.9rem;font-weight:700;color:var(--text);}
+.cp-meta{font-size:.68rem;color:var(--text3);margin-top:.15rem;}
+.cp-action{flex-shrink:0;font-size:.75rem;font-weight:600;color:var(--gold);white-space:nowrap;}
+.checkpoint-card.cp-done .cp-action{color:var(--green);}
+/* ── practice band ── */
+.practice-row{display:flex;gap:.5rem;flex-wrap:wrap;}
+.practice-chip{background:var(--bg);border:1px solid var(--border);border-radius:100px;padding:.4rem .8rem;font-family:'Outfit',sans-serif;font-size:.74rem;font-weight:500;color:var(--text2);cursor:pointer;transition:all .15s;}
+.practice-chip:hover{border-color:var(--accent);color:var(--accent-d);background:var(--accent-g);}
+/* ── Home: ready-to-advance module ── */
+.ready-module{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.1rem 1.25rem;margin-bottom:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+.rm-eyebrow{font-family:var(--font-heading);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+.rm-title{font-size:.95rem;font-weight:600;color:var(--text);margin-top:.2rem;}
+.rm-foot{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-top:.7rem;flex-wrap:wrap;}
+.rm-note{font-size:.72rem;color:var(--text3);flex:1;min-width:160px;}
+/* ── Practice intro banner ── */
+.practice-intro{display:flex;gap:.7rem;align-items:flex-start;background:var(--accent-g);border:1px solid rgba(74,92,232,.15);border-radius:var(--radius);padding:.8rem 1rem;margin-bottom:1.25rem;font-size:.78rem;color:var(--text2);line-height:1.45;}
+.practice-intro .pi-icon{font-size:1rem;flex-shrink:0;}
+.practice-intro strong{color:var(--text);font-weight:600;}
 
 /* ═══════════════════════════════════
    LESSON ENGINE
@@ -592,6 +650,12 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   cursor:pointer;transition:all .15s;
 }
 .filter-btn.active{background:var(--accent);color:white;box-shadow:0 1px 4px rgba(74,92,232,.3);}
+.prog-tabs{display:flex;gap:.25rem;margin-bottom:1.5rem;border-bottom:1px solid var(--border2);}
+.prog-tab{background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;
+  font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:500;color:var(--text3);
+  padding:.55rem .5rem;cursor:pointer;transition:color .15s,border-color .15s;}
+.prog-tab:hover{color:var(--text2);}
+.prog-tab.active{color:var(--text);font-weight:600;border-bottom-color:var(--accent);}
 
 .vocab-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.5rem;}
 .vs-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.1rem;display:flex;align-items:center;gap:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
@@ -664,7 +728,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 /* ═══════════════════════════════════
    SETTINGS / PROFILE
 ═══════════════════════════════════ */
-.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:860px;}
+.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .settings-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
 .settings-card h3{font-size:.78rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:1.25rem;}
 .setting-row{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--border);}
@@ -679,7 +743,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 /* ═══════════════════════════════════
    PROGRESS SCREEN
 ═══════════════════════════════════ */
-.progress-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:860px;}
+.progress-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .progress-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
 .progress-card h3{font-size:.78rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:1.25rem;}
 .skill-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;}
@@ -943,14 +1007,13 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   </div>
   <nav class="sb-nav">
     <div class="sb-section">Learn</div>
-    <button class="sb-link active" onclick="nav('dashboard')"><span class="sb-link-icon">⊞</span><span class="sb-link-txt">Dashboard</span></button>
-    <button class="sb-link" onclick="nav('curriculum')"><span class="sb-link-icon">◈</span><span class="sb-link-txt">Curriculum</span></button>
+    <button class="sb-link active" onclick="nav('dashboard')"><span class="sb-link-icon">⊞</span><span class="sb-link-txt">Home</span></button>
+    <button class="sb-link" onclick="nav('curriculum')"><span class="sb-link-icon">◈</span><span class="sb-link-txt">Course</span></button>
     <button class="sb-link" onclick="nav('practice')"><span class="sb-link-icon">◎</span><span class="sb-link-txt">Practice</span></button>
-    <div class="sb-section">Review</div>
-    <button class="sb-link" onclick="nav('vocabulary')"><span class="sb-link-icon">▦</span><span class="sb-link-txt">Vocabulary</span></button>
+    <div class="sb-section">You</div>
     <button class="sb-link" onclick="nav('progress')"><span class="sb-link-icon">◷</span><span class="sb-link-txt">Progress</span></button>
     <div class="sb-section">Account</div>
-    <button class="sb-link" onclick="nav('settings')"><span class="sb-link-icon">◌</span><span class="sb-link-txt">Settings</span></button>
+    <button class="sb-link" onclick="nav('settings')"><span class="sb-link-icon">◌</span><span class="sb-link-txt">Account</span></button>
   </nav>
   <div class="sb-upgrade" id="sbUpgrade">
     <div class="sb-upgrade-title">Unlock all 5 levels</div>
@@ -972,13 +1035,13 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     <span class="bn-icon">⊞</span><span class="bn-label">Home</span>
   </button>
   <button class="bn-item" onclick="nav('curriculum')" id="bn-curriculum">
-    <span class="bn-icon">◈</span><span class="bn-label">Learn</span>
+    <span class="bn-icon">◈</span><span class="bn-label">Course</span>
   </button>
   <button class="bn-item" onclick="nav('practice')" id="bn-practice">
     <span class="bn-icon">◎</span><span class="bn-label">Practice</span>
   </button>
-  <button class="bn-item" onclick="nav('vocabulary')" id="bn-vocabulary">
-    <span class="bn-icon">▦</span><span class="bn-label">Words</span>
+  <button class="bn-item" onclick="nav('progress')" id="bn-progress">
+    <span class="bn-icon">◷</span><span class="bn-label">Progress</span>
   </button>
   <button class="bn-item" onclick="nav('settings')" id="bn-settings">
     <span class="bn-icon">◌</span><span class="bn-label">Account</span>
@@ -989,11 +1052,11 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 <div class="main">
   <div class="topbar">
     <div class="tb-left">
-      <h1 id="tbTitle">Dashboard</h1>
+      <h1 id="tbTitle">Home</h1>
       <p id="tbSub">Welcome back</p>
     </div>
     <div class="tb-actions" id="tbActions">
-      <button class="btn btn-ghost" onclick="nav('curriculum')">Curriculum</button>
+      <button class="btn btn-ghost" onclick="nav('curriculum')">Course</button>
       <button class="btn btn-primary" onclick="continueLesson()">Continue →</button>
     </div>
   </div>
@@ -1025,6 +1088,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
         </div>
         <button class="btn btn-primary">Start →</button>
       </div>
+      <div class="ready-module" id="dashReadiness" style="display:none;"></div>
       <div class="dash-grid">
         <div class="dash-card">
           <h3>Your level path</h3>
@@ -1069,6 +1133,10 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     <!-- ── PRACTICE ── -->
     <div class="screen" id="screen-practice">
       <div id="practiceHome">
+        <div class="practice-intro">
+          <span class="pi-icon">🎯</span>
+          <div><strong>Practice is optional and never graded.</strong> It's how you get better and prep for Checkpoints — your Course score isn't affected.</div>
+        </div>
         <div class="practice-hero" id="practiceHero"></div>
         <div class="practice-modes" id="practiceModes"></div>
       </div>
@@ -1077,8 +1145,12 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 
     <!-- ── VOCABULARY ── -->
     <div class="screen" id="screen-vocabulary">
+      <div class="prog-tabs">
+        <button class="prog-tab" onclick="nav('progress')">Stats</button>
+        <button class="prog-tab active" onclick="nav('vocabulary')">Words</button>
+      </div>
       <div class="vocab-header">
-        <h2>Vocabulary</h2>
+        <h2>Words</h2>
         <div class="filter-group">
           <button class="filter-btn active" id="vf-all" onclick="filterVocab('all')">All</button>
           <button class="filter-btn" id="vf-learning" onclick="filterVocab('learning')">Learning</button>
@@ -1115,8 +1187,9 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 
     <!-- ── PROGRESS ── -->
     <div class="screen" id="screen-progress">
-      <div style="margin-bottom:1.5rem;">
-        <h2 style="font-family:'Instrument Serif',serif;font-size:1.5rem;font-weight:400;color:var(--text);">Your Progress</h2>
+      <div class="prog-tabs">
+        <button class="prog-tab active" onclick="nav('progress')">Stats</button>
+        <button class="prog-tab" onclick="nav('vocabulary')">Words</button>
       </div>
       <div class="progress-grid">
         <div class="progress-card">
@@ -1572,6 +1645,7 @@ const S={
   accuracy:[],
   vocabFilter:'all',
   vocabStatus:{},
+  lessonScores:{},   // "lv-ls" -> {correct,total} — feeds the readiness meter
   weeklyXP:[0,0,0,0,0,0,0],
   todayDayIdx:new Date().getDay()===0?6:new Date().getDay()-1,
   streak:0,
@@ -1773,33 +1847,35 @@ function updateStreakUI(){
 // NAVIGATION
 // ═══════════════════════════
 const SCREEN_META={
-  dashboard:{title:'Dashboard',sub:()=>'Welcome back, '+S.user.name},
-  curriculum:{title:'Curriculum',sub:'Your learning path'},
+  dashboard:{title:'Home',sub:()=>'Welcome back, '+S.user.name},
+  curriculum:{title:'Course',sub:'Your graded learning path'},
   lesson:{title:'Lesson',sub:''},
-  exam:{title:'Exam',sub:''},
-  practice:{title:'Practice',sub:'Dialogues & sentence drills'},
-  vocabulary:{title:'Vocabulary',sub:'Words you\'ve learned'},
+  exam:{title:'Checkpoint',sub:''},
+  practice:{title:'Practice',sub:'Optional — sharpen your skills'},
+  vocabulary:{title:'Progress',sub:'Words you\'ve learned'},
   flashcards:{title:'Flashcard Study',sub:'Review your vocabulary'},
   progress:{title:'Progress',sub:'Your learning journey'},
-  settings:{title:'Settings',sub:'Customize your experience'},
+  settings:{title:'Account',sub:'Customize your experience'},
 };
 function nav(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById(`screen-${id}`)?.classList.add('active');
   // Sidebar active
   document.querySelectorAll('.sb-link').forEach(l=>l.classList.remove('active'));
-  const sbMap={dashboard:0,curriculum:1,practice:2,vocabulary:3,progress:4,settings:5};
+  // Words & flashcards live under Progress now
+  const sbMap={dashboard:0,curriculum:1,practice:2,progress:3,vocabulary:3,flashcards:3,settings:4};
   if(sbMap[id]!==undefined) document.querySelectorAll('.sb-link')[sbMap[id]]?.classList.add('active');
   // Bottom nav active
   document.querySelectorAll('.bn-item').forEach(b=>b.classList.remove('active'));
-  const bnEl=document.getElementById('bn-'+id);
+  const bnId={vocabulary:'progress',flashcards:'progress'}[id]||id;
+  const bnEl=document.getElementById('bn-'+bnId);
   if(bnEl) bnEl.classList.add('active');
   // Topbar
   const m=SCREEN_META[id]||{title:id,sub:''};
   document.getElementById('tbTitle').textContent=m.title;
   document.getElementById('tbSub').textContent=typeof m.sub==='function'?m.sub():m.sub;
   document.getElementById('tbActions').innerHTML=`
-    <button class="btn btn-ghost" onclick="nav('curriculum')">Curriculum</button>
+    <button class="btn btn-ghost" onclick="nav('curriculum')">Course</button>
     <button class="btn btn-primary" onclick="continueLesson()">Continue →</button>`;
   // Screen-specific
   if(id==='dashboard') refreshDashboard();
@@ -1846,12 +1922,42 @@ function refreshDashboard(){
       const key=`${lv}-${ls}`;
       const isDone=lesson.type==='exam'?S.completedExams.has(String(lv)):S.completedLessons.has(key);
       if(!isDone&&isLessonUnlocked(lv,ls)){
-        el('nlTag').textContent='Level '+(lv+1)+' · '+(lesson.type==='exam'?'Exam':'Lesson '+(ls+1));
+        el('nlTag').textContent='Level '+(lv+1)+' · '+(lesson.type==='exam'?'Checkpoint':'Lesson '+(ls+1));
         el('nlTitle').textContent=lesson.title;
-        el('nlSub').textContent=lesson.type==='exam'?'Complete to unlock the next level':CURRICULUM[lv].desc;
+        el('nlSub').textContent=lesson.type==='exam'?'Pass to unlock the next level':CURRICULUM[lv].desc;
         el('nlIcon').textContent=lesson.icon;
         foundNext=true;
       }
+    }
+  }
+
+  // ── Ready to advance? — readiness for the current active level ──
+  const rm=el('dashReadiness');
+  if(rm){
+    let activeLv=-1;
+    for(let lv=0;lv<CURRICULUM.length;lv++){
+      if(isLevelUnlocked(lv)&&getLvProg(lv).pct<100){activeLv=lv;break;}
+    }
+    if(activeLv<0){rm.style.display='none';}
+    else{
+      const rd=getLevelReadiness(activeLv);
+      const examIdx=CURRICULUM[activeLv].lessons.findIndex(l=>l.type==='exam');
+      const canExam=examIdx>=0&&isLessonUnlocked(activeLv,examIdx)&&!S.completedExams.has(String(activeLv));
+      rm.style.display='block';
+      rm.innerHTML=`
+        <div class="rm-eyebrow">Ready to advance?</div>
+        <div class="rm-title">Level ${activeLv+1} · ${CURRICULUM[activeLv].name}</div>
+        <div class="readiness" style="margin-top:.6rem;">
+          <div class="rd-top"><span class="rd-label">Readiness for Checkpoint</span>
+            <span class="rd-pct ${rd.ready?'rd-ok':''}">${rd.ready?'Ready ✓':rd.pct+'%'}</span></div>
+          <div class="rd-bar"><div class="rd-fill ${rd.ready?'rd-fill-ok':''}" style="width:${rd.pct}%"></div></div>
+        </div>
+        <div class="rm-foot">
+          <span class="rm-note">${rd.ready?(canExam?'You\'re prepared — take the Checkpoint.':'Finish the last lesson to open the Checkpoint.'):'Keep practicing'+(rd.weakest?' — weakest area: '+rd.weakest:'')+'.'}</span>
+          ${rd.ready&&canExam
+            ?`<button class="btn btn-primary" style="padding:.4rem .85rem;font-size:.78rem;" onclick="startExam(${activeLv})">Take Checkpoint →</button>`
+            :`<button class="btn btn-ghost" style="padding:.4rem .85rem;font-size:.78rem;" onclick="continueLesson()">Continue coursework →</button>`}
+        </div>`;
     }
   }
   if(!foundNext){
@@ -1926,6 +2032,32 @@ function getLvProg(lv){
   }
   return{done,total,pct:Math.round(done/total*100)};
 }
+const LESSON_KIND={vocab:'Learn',grammar:'Grammar',speaking:'Speaking',exam:'Checkpoint'};
+
+// Readiness for a level's Checkpoint: 50% coursework done, 30% accuracy, 20% vocab mastery.
+function getLevelReadiness(lv){
+  const lessons=CURRICULUM[lv].lessons;
+  const course=lessons.filter(l=>l.type!=='exam');
+  const total=course.length;
+  let done=0,accSum=0,accN=0;
+  lessons.forEach((l,i)=>{
+    if(l.type==='exam') return;
+    if(S.completedLessons.has(`${lv}-${i}`)) done++;
+    const sc=S.lessonScores&&S.lessonScores[`${lv}-${i}`];
+    if(sc&&sc.total>0){accSum+=sc.correct/sc.total;accN++;}
+  });
+  const lessonPct=total?done/total:0;
+  const accPct=accN?accSum/accN:lessonPct;               // proxy when no scores stored yet
+  const words=VOCAB_BANK.filter(w=>w.level===lv+1);
+  let mastered=0; words.forEach(w=>{if((S.vocabStatus[w.spanish]||'new')==='mastered')mastered++;});
+  const vocabPct=words.length?mastered/words.length:lessonPct;   // proxy when no words mapped
+  const pct=Math.round((lessonPct*0.5+accPct*0.3+vocabPct*0.2)*100);
+  const allDone=done>=total;
+  const ready=allDone&&pct>=80;
+  const areas=[['coursework',lessonPct],['accuracy',accPct],['vocab mastery',vocabPct]].sort((a,b)=>a[1]-b[1]);
+  return {pct,ready,allDone,done,total,weakest:areas[0][1]<1?areas[0][0]:null};
+}
+
 function renderCurr(){
   const map=document.getElementById('currMap');
   map.innerHTML='';
@@ -1933,41 +2065,82 @@ function renderCurr(){
     const unlocked=isLevelUnlocked(li);
     const p=getLvProg(li);
     const done=p.pct===100;
+    const rd=unlocked?getLevelReadiness(li):null;
     const stateCls=done?'done':unlocked?'active':'locked';
     const row=document.createElement('div');
     row.className='level-card '+(unlocked?'':'locked');
     const hasLessonsOpen=unlocked&&!done;
+
+    // ── header: readiness meter for active levels, complete note when done ──
+    const headMeter = done
+      ? `<div class="rd-complete">✓ Level complete</div>`
+      : (unlocked ? `<div class="readiness">
+            <div class="rd-top"><span class="rd-label">Readiness for Checkpoint</span>
+              <span class="rd-pct ${rd.ready?'rd-ok':''}">${rd.ready?'Ready ✓':rd.pct+'%'}</span></div>
+            <div class="rd-bar"><div class="rd-fill ${rd.ready?'rd-fill-ok':''}" style="width:${rd.pct}%"></div></div>
+            ${!rd.ready&&rd.weakest?`<div class="rd-hint">Keep practicing — weakest area: ${rd.weakest}</div>`:''}
+          </div>` : '');
+
+    // ── coursework rows (graded, non-exam) ──
+    const courseRows = lv.lessons.map((ls,lsi)=>{
+      if(ls.type==='exam') return '';
+      const ldone=S.completedLessons.has(`${li}-${lsi}`);
+      const llocked=!isLessonUnlocked(li,lsi);
+      const inprog=!ldone&&S.inProgressLesson&&S.inProgressLesson.lv===li&&S.inProgressLesson.ls===lsi;
+      const sc=S.lessonScores&&S.lessonScores[`${li}-${lsi}`];
+      const scoreTxt=sc&&sc.total?` · ${Math.round(sc.correct/sc.total*100)}%`:'';
+      const badge=llocked?`<span class="lr-badge lr-locked">🔒 Locked</span>`
+        :ldone?`<span class="lr-badge lr-passed">✓ Passed${scoreTxt}</span>`
+        :inprog?`<span class="lr-badge lr-progress">▶ Continue</span>`
+        :`<span class="lr-badge lr-start">Start →</span>`;
+      return `<div class="lesson-row ${ldone?'lr-done':''} ${llocked?'lr-lock':''} ${inprog?'lr-inprog':''}"
+          onclick="${llocked?'':`startLesson(${li},${lsi})`}">
+          <div class="lr-num">${lsi+1}</div>
+          <div class="lr-icon">${ls.icon}</div>
+          <div class="lr-main"><div class="lr-title">${ls.title}</div>
+            <div class="lr-type">${LESSON_KIND[ls.type]||ls.type}</div></div>
+          ${badge}
+        </div>`;
+    }).join('');
+
+    // ── checkpoint (the exam) ──
+    const examIdx=lv.lessons.findIndex(l=>l.type==='exam');
+    const examDone=S.completedExams.has(String(li));
+    const examUnlocked=examIdx>=0&&isLessonUnlocked(li,examIdx);
+    const nextTxt=li<CURRICULUM.length-1?`unlocks Level ${li+2}`:'completes the course';
+    const cpMeta=examDone?`Passed · ${nextTxt}`
+      :examUnlocked?`70% to pass · timed 10:00 · ${nextTxt}`
+      :`Finish all ${p.total-1} lessons to unlock · ${nextTxt}`;
+    const checkpoint=`<div class="checkpoint-card ${examDone?'cp-done':examUnlocked?'cp-ready':'cp-lock'}"
+        ${(examDone||examUnlocked)?`onclick="startExam(${li})"`:''}>
+        <div class="cp-star">${examDone?'🏅':examUnlocked?'★':'🔒'}</div>
+        <div class="cp-main"><div class="cp-title">Level ${li+1} Checkpoint</div>
+          <div class="cp-meta">${cpMeta}</div></div>
+        <div class="cp-action">${examDone?'✓ Passed':examUnlocked?'Take it →':''}</div>
+      </div>`;
+
     row.innerHTML=`
       <div class="level-head" onclick="${unlocked?`toggleLv(${li})`:``}">
         <div class="level-num-badge ${stateCls}">${done?'✓':(unlocked?lv.icon:'🔒')}</div>
         <div class="level-info">
           <div class="level-name">Level ${li+1}: ${lv.name}</div>
           <div class="level-desc">${lv.desc}</div>
-          ${unlocked?`<div class="level-prog">
-            <div class="level-bar"><div class="level-bar-fill ${done?'fill-done':'fill-active'}" style="width:${p.pct}%"></div></div>
-            <span class="level-pct">${p.pct}%</span>
-          </div>`:''}
+          ${headMeter}
         </div>
         <span class="level-pill ${done?'pill-done':unlocked?'pill-active':'pill-locked'} ${lv.pro&&!done?'pill-pro':''}">
           ${done?'✓ Complete':unlocked?`${p.done}/${p.total}`:lv.pro?'🔐 Pro':'🔒 Locked'}
         </span>
       </div>
-      ${unlocked?`<div class="level-lessons" id="lvl-${li}" style="${hasLessonsOpen?'':'display:none'}">
-        ${lv.lessons.map((ls,lsi)=>{
-          const ldone=ls.type==='exam'?S.completedExams.has(String(li)):S.completedLessons.has(`${li}-${lsi}`);
-          const llocked=!isLessonUnlocked(li,lsi);
-          const isExam=ls.type==='exam';
-          const isInProgress=!ldone&&S.inProgressLesson&&S.inProgressLesson.lv===li&&S.inProgressLesson.ls===lsi;
-          return `<div class="lesson-tile ${ldone?'tile-done':''} ${llocked?'tile-locked':''} ${isExam?'tile-exam':''} ${isInProgress?'tile-inprogress':''}" style="position:relative;"
-            onclick="${llocked?'':(isExam?`startExam(${li})`:`startLesson(${li},${lsi})`)}">
-            ${ldone?'<span class="tile-check">✓</span>':''}
-            ${llocked?'<span class="lock-overlay">🔒</span>':''}
-            ${isInProgress?'<span class="tile-inprogress-dot"></span>':''}
-            <div class="tile-icon">${ls.icon}</div>
-            <div class="tile-title">${ls.title}</div>
-            <div class="tile-type">${isInProgress?'▶ In progress':ls.type}</div>
-          </div>`;
-        }).join('')}
+      ${unlocked?`<div class="level-body" id="lvl-${li}" style="${hasLessonsOpen?'':'display:none'}">
+        <div class="band-label">Coursework · graded</div>
+        <div class="course-list">${courseRows}</div>
+        <div class="band-label">Checkpoint · determines if you advance</div>
+        ${checkpoint}
+        <div class="band-label">Practice · optional, not graded</div>
+        <div class="practice-row">
+          <button class="practice-chip" onclick="event.stopPropagation();nav('practice')">↻ Daily Review</button>
+          <button class="practice-chip" onclick="event.stopPropagation();nav('practice')">📖 Phrasebooks</button>
+        </div>
       </div>`:''}
     `;
     map.appendChild(row);
@@ -1975,7 +2148,7 @@ function renderCurr(){
 }
 function toggleLv(i){
   const el=document.getElementById(`lvl-${i}`);
-  if(el) el.style.display=el.style.display==='none'?'grid':'none';
+  if(el) el.style.display=el.style.display==='none'?'block':'none';
 }
 
 // ═══════════════════════════
@@ -2004,7 +2177,10 @@ function genLesson(lv,ls){
   ];
 }
 
+const MAX_TRIES=2;      // attempts allowed before the answer is revealed
+let stepTries=0;        // wrong attempts on the current step
 function renderStep(){
+  stepTries=0;
   const{steps,si,correct}=LS;
   const total=steps.length;
   const nonVocab=steps.filter(s=>s.type!=='vocab').length;
@@ -2073,20 +2249,22 @@ function renderStep(){
   } else if(s.type==='speak'){
     body.innerHTML=`
       <div class="ex-card">
-        <div class="ex-type">🗣️ Speaking practice</div>
-        <p style="font-size:.78rem;color:var(--text3);margin-bottom:1rem;">Read this phrase aloud in Spanish:</p>
+        <div class="ex-type">🗣️ Listen & repeat</div>
+        <p style="font-size:.78rem;color:var(--text3);margin-bottom:1rem;">Listen to the phrase, then say it aloud in Spanish:</p>
         <div class="speak-card">
           <div class="speak-phrase">${s.prompt}</div>
           <div class="speak-trans">${s.translation}</div>
-          <button class="mic-btn" id="micB" onclick="toggleMic()">🎙️</button>
-          <div class="speak-status" id="spkSt">Tap mic to record · or click "I said it"</div>
+          <button class="mic-btn" id="micB" onclick="speakPhrase('${s.prompt.replace(/'/g,"\\'")}')" title="Hear it">🔊</button>
+          <div class="speak-status" id="spkSt">Tap to hear it · repeat aloud · then rate yourself</div>
         </div>
       </div>
       <div id="fb"></div>
       <div class="ex-actions">
-        <button class="btn btn-ghost ex-check" onclick="markSpeak()">I said it ✓</button>
+        <button class="btn btn-ghost ex-check" onclick="rateSpeak(false)">Need more practice</button>
+        <button class="btn btn-ghost ex-check" onclick="rateSpeak(true)">I said it well ✓</button>
         <button class="btn btn-primary" id="nxt" onclick="next()" disabled>Continue →</button>
       </div>`;
+    setTimeout(()=>speakPhrase(s.prompt),350);   // auto-play the model once
   } else if(s.type==='build'){
     // Sentence builder — tap words in correct order
     const words=[...s.words].sort(()=>Math.random()-.5);
@@ -2146,38 +2324,78 @@ function checkBuild(){
   const s=LS.steps[LS.si];
   const attempt=sbChosen.map(c=>c.word).join(' ');
   const ok=normalizeSB(attempt)===normalizeSB(s.answer);
-  LS.answered=true;if(ok)LS.correct++;
   const zone=document.getElementById('sbZone');
-  zone.classList.add(ok?'correct':'wrong');
-  showFB(ok,ok?'¡Perfecto! Sentence correct!':'Correct order: "'+s.answer+'"',ok?'':'You built: "'+attempt+'"');
-  document.getElementById('nxt').disabled=false;
-  if(!ok){
+  if(ok){
+    if(stepTries===0)LS.correct++;
+    LS.answered=true;
+    zone.classList.remove('wrong');zone.classList.add('correct');
+    showFB(true,stepTries===0?'¡Perfecto! Sentence correct!':'¡Perfecto! Nice recovery.','');
+    document.getElementById('nxt').disabled=false;
+    return;
+  }
+  // wrong attempt — flash, then let them rearrange and try again
+  stepTries++;
+  zone.classList.add('wrong');
+  if(stepTries>=MAX_TRIES){
+    LS.answered=true;
+    showFB(false,'Correct order: "'+s.answer+'"','You built: "'+attempt+'"');
+    document.getElementById('nxt').disabled=false;
     setTimeout(()=>{
       zone.innerHTML=s.answer.split(' ').map(w=>`<button class="word-chip in-zone" style="pointer-events:none;">${w}</button>`).join('');
     },600);
+  } else {
+    showFB(false,'Not the right order — try again.','You have 1 more try. Tap words to rearrange.');
+    setTimeout(()=>zone.classList.remove('wrong'),700);
   }
 }
 function pickMC(i){
-  if(LS.answered)return;LS.answered=true;
+  if(LS.answered)return;
   const s=LS.steps[LS.si];const ok=i===s.answer;
-  if(ok)LS.correct++;
-  document.querySelectorAll('.mc-btn').forEach((b,j)=>{
-    b.disabled=true;
-    if(j===s.answer)b.classList.add('correct');
-    else if(j===i&&!ok)b.classList.add('wrong');
-  });
-  showFB(ok,ok?'¡Correcto! Well done.':'The correct answer is: "'+s.options[s.answer]+'"','');
-  document.getElementById('nxt').disabled=false;
+  if(ok){
+    if(stepTries===0)LS.correct++;
+    document.querySelectorAll('.mc-btn').forEach((b,j)=>{b.disabled=true;if(j===s.answer)b.classList.add('correct');});
+    LS.answered=true;
+    showFB(true,stepTries===0?'¡Correcto! Well done.':'¡Correcto! Nice recovery.','');
+    document.getElementById('nxt').disabled=false;
+    return;
+  }
+  // wrong attempt — lock out this option and let them try again
+  stepTries++;
+  const chosen=document.getElementById('mc'+i);
+  if(chosen){chosen.classList.add('wrong');chosen.disabled=true;}
+  if(stepTries>=MAX_TRIES){
+    document.querySelectorAll('.mc-btn').forEach((b,j)=>{b.disabled=true;if(j===s.answer)b.classList.add('correct');});
+    LS.answered=true;
+    showFB(false,'The correct answer is: "'+s.options[s.answer]+'"','');
+    document.getElementById('nxt').disabled=false;
+  } else {
+    showFB(false,'Not quite — try again.','You have 1 more try.');
+  }
 }
 function checkFill(){
   if(LS.answered)return;
   const inp=document.getElementById('fillIn');if(!inp)return;
   const v=inp.value.trim().toLowerCase();
   const s=LS.steps[LS.si];const ok=s.accept.includes(v);
-  LS.answered=true;if(ok)LS.correct++;
-  inp.classList.add(ok?'correct':'wrong');inp.disabled=true;
-  showFB(ok,ok?'¡Perfecto!':'Correct answer: "'+s.answer+'"',ok?'':'You wrote: "'+inp.value+'"');
-  document.getElementById('nxt').disabled=false;
+  if(ok){
+    if(stepTries===0)LS.correct++;
+    inp.classList.remove('wrong');inp.classList.add('correct');inp.disabled=true;
+    LS.answered=true;
+    showFB(true,stepTries===0?'¡Perfecto!':'¡Perfecto! Nice recovery.','');
+    document.getElementById('nxt').disabled=false;
+    return;
+  }
+  // wrong attempt — surface the hint and let them try again
+  stepTries++;
+  inp.classList.add('wrong');
+  if(stepTries>=MAX_TRIES){
+    inp.disabled=true;LS.answered=true;
+    showFB(false,'Correct answer: "'+s.answer+'"','You wrote: "'+inp.value+'"');
+    document.getElementById('nxt').disabled=false;
+  } else {
+    showFB(false,'Not quite — try again.','You have 1 more try.'+(s.hint?' 💡 Hint: '+s.hint:''));
+    setTimeout(()=>{inp.classList.remove('wrong');inp.focus();inp.select();},700);
+  }
 }
 
 let matchSel2={side:null,idx:null,val:null};
@@ -2216,22 +2434,15 @@ function pickMatch(side,idx,val){
   }
 }
 
-let micTimer=null;
-function toggleMic(){
-  const btn=document.getElementById('micB'),st=document.getElementById('spkSt');
-  if(btn.classList.contains('rec')){
-    btn.classList.remove('rec');btn.textContent='🎙️';
-    st.textContent='Done! Click "I said it" to continue.';
-    clearTimeout(micTimer);
-  } else {
-    btn.classList.add('rec');btn.textContent='⏹️';
-    st.textContent='Recording... speak clearly!';
-    micTimer=setTimeout(()=>{btn.classList.remove('rec');btn.textContent='🎙️';st.textContent='Recording saved!';},4000);
-  }
-}
-function markSpeak(){
-  if(LS.answered)return;LS.answered=true;LS.correct++;
-  showFB(true,'Great speaking practice! Saying it out loud builds real fluency.','Repeat until it feels completely natural.');
+// Listen & repeat is self-assessed — we can't actually hear the learner, so we
+// play the model pronunciation and let them rate how they did.
+function rateSpeak(good){
+  if(LS.answered)return;LS.answered=true;
+  if(good)LS.correct++;
+  showFB(true,
+    good?'¡Bien hecho! Saying it out loud builds real fluency.'
+        :'Good effort — repeat it a few more times until it feels natural.',
+    good?'':'Tap 🔊 to hear it again anytime.');
   document.getElementById('nxt').disabled=false;
 }
 function showExamHint(hint){
@@ -2261,6 +2472,7 @@ function next(auto=false){
 function lessonComplete(){
   const nonVocabSteps=LS.steps.filter(s=>s.type!=='vocab');
   const xp=15+Math.round(LS.correct/Math.max(nonVocabSteps.length,1)*10);
+  S.lessonScores[`${LS.lv}-${LS.ls}`]={correct:LS.correct,total:nonVocabSteps.length};
   S.completedLessons.add(`${LS.lv}-${LS.ls}`);
   S.inProgressLesson=null;
   // Track accuracy
@@ -2599,7 +2811,27 @@ function renderPhrasebookCard(){
     </div>`;
 }
 
+// Bundled human-voice clips (generated by tools/gen_audio.py). Keyed by the
+// exact Spanish string; plays the same natural voice for every user/device.
+const AUDIO_MANIFEST={"A la derecha":"audio/a-la-derecha.m4a","A la izquierda":"audio/a-la-izquierda.m4a","Adiós":"audio/adios.m4a","Agua, por favor":"audio/agua-por-favor.m4a","Bien, gracias":"audio/bien-gracias.m4a","Buenas noches":"audio/buenas-noches.m4a","Buenas tardes":"audio/buenas-tardes.m4a","Buenos días":"audio/buenos-dias.m4a","Cerca / Lejos":"audio/cerca-lejos.m4a","De nada":"audio/de-nada.m4a","Está delicioso":"audio/esta-delicioso.m4a","Gracias":"audio/gracias.m4a","Hasta luego":"audio/hasta-luego.m4a","Hola":"audio/hola.m4a","Igualmente":"audio/igualmente.m4a","La cuenta, por favor":"audio/la-cuenta-por-favor.m4a","Lo siento":"audio/lo-siento.m4a","Me llamo...":"audio/me-llamo.m4a","Mucho gusto":"audio/mucho-gusto.m4a","Más despacio":"audio/mas-despacio.m4a","Necesito ayuda":"audio/necesito-ayuda.m4a","No entiendo":"audio/no-entiendo.m4a","Perdón":"audio/perdon.m4a","Por favor":"audio/por-favor.m4a","Quisiera...":"audio/quisiera.m4a","Sin... por favor":"audio/sin-por-favor.m4a","Soy de...":"audio/soy-de.m4a","Todo recto":"audio/todo-recto.m4a","adiós":"audio/adios.m4a","aprender":"audio/aprender.m4a","azul":"audio/azul.m4a","cuatro, cinco, seis":"audio/cuatro-cinco-seis.m4a","dieciséis...veinte":"audio/dieciseis-veinte.m4a","diez, once, doce":"audio/diez-once-doce.m4a","dos":"audio/dos.m4a","gracias":"audio/gracias.m4a","hermano":"audio/hermano.m4a","hola":"audio/hola.m4a","la madre / el padre":"audio/la-madre-el-padre.m4a","lunes":"audio/lunes.m4a","lunes · martes · miércoles":"audio/lunes-martes-miercoles.m4a","madre":"audio/madre.m4a","padre":"audio/padre.m4a","rojo":"audio/rojo.m4a","rojo / azul / verde":"audio/rojo-azul-verde.m4a","siete, ocho, nueve":"audio/siete-ocho-nueve.m4a","trece, catorce, quince":"audio/trece-catorce-quince.m4a","uno":"audio/uno.m4a","uno, dos, tres":"audio/uno-dos-tres.m4a","verde":"audio/verde.m4a","¿Cuánto cuesta?":"audio/cuanto-cuesta.m4a","¿Cómo estás?":"audio/como-estas.m4a","¿Cómo te llamas?":"audio/como-te-llamas.m4a","¿De dónde eres?":"audio/de-donde-eres.m4a","¿Dónde está...?":"audio/donde-esta.m4a","¿Puede repetir?":"audio/puede-repetir.m4a"};
+const AUDIO_LOOKUP=(function(){const m={};for(const k in AUDIO_MANIFEST){m[k.toLowerCase().trim()]=AUDIO_MANIFEST[k];}return m;})();
+let _esptalkAudio=null;
 function speakPhrase(text){
+  const src=AUDIO_MANIFEST[text]||AUDIO_LOOKUP[(text||'').toLowerCase().trim()];
+  if(src){
+    try{
+      if('speechSynthesis' in window)window.speechSynthesis.cancel();
+      if(_esptalkAudio){_esptalkAudio.pause();}
+      _esptalkAudio=new Audio(src);
+      _esptalkAudio.currentTime=0;
+      _esptalkAudio.play().catch(function(){speakPhraseTTS(text);});
+      return;
+    }catch(e){/* fall through to browser TTS */}
+  }
+  speakPhraseTTS(text);
+}
+// Fallback: browser speech synthesis for any phrase without a bundled clip.
+function speakPhraseTTS(text){
   if('speechSynthesis' in window){
     window.speechSynthesis.cancel();
     const u=new SpeechSynthesisUtterance(text);
@@ -2828,6 +3060,7 @@ function saveState(){
       accuracy:S.accuracy.slice(-100),
       activityLog:S.activityLog.slice(-20),
       vocabStatus:S.vocabStatus,
+      lessonScores:S.lessonScores,
       inProgressLesson:S.inProgressLesson,
     }));
   }catch(e){}
@@ -2843,6 +3076,7 @@ function loadState(){
     if(d.isPro){S.user.isPro=true;}
     if(d.lessons){S.completedLessons=new Set(d.lessons);}
     if(d.exams){S.completedExams=new Set(d.exams);}
+    if(d.lessonScores){S.lessonScores=d.lessonScores;}
     if(d.weekly){S.weeklyXP=d.weekly;}
     if(typeof d.streak==='number'){S.streak=d.streak;}
     if(d.lastActive){S.lastActiveDate=d.lastActive;}

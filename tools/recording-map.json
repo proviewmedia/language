@@ -1,0 +1,730 @@
+[
+  {
+    "num": "001",
+    "phrase": "Hola",
+    "ph": "/ˈo.la/",
+    "en": "Hello",
+    "slug": "hola",
+    "file": "audio/hola.m4a"
+  },
+  {
+    "num": "002",
+    "phrase": "Buenos días",
+    "ph": "/ˈbwe.nos ˈdi.as/",
+    "en": "Good morning",
+    "slug": "buenos-dias",
+    "file": "audio/buenos-dias.m4a"
+  },
+  {
+    "num": "003",
+    "phrase": "Buenas tardes",
+    "ph": "/ˈbwe.nas ˈtar.ðes/",
+    "en": "Good afternoon",
+    "slug": "buenas-tardes",
+    "file": "audio/buenas-tardes.m4a"
+  },
+  {
+    "num": "004",
+    "phrase": "Buenas noches",
+    "ph": "/ˈbwe.nas ˈno.tʃes/",
+    "en": "Good evening / Goodnight",
+    "slug": "buenas-noches",
+    "file": "audio/buenas-noches.m4a"
+  },
+  {
+    "num": "005",
+    "phrase": "¿Cómo estás?",
+    "ph": "/ˈko.mo esˈtas/",
+    "en": "How are you? (casual)",
+    "slug": "como-estas",
+    "file": "audio/como-estas.m4a"
+  },
+  {
+    "num": "006",
+    "phrase": "Bien, gracias",
+    "ph": "/bjen ˈɡra.sjas/",
+    "en": "Good, thank you",
+    "slug": "bien-gracias",
+    "file": "audio/bien-gracias.m4a"
+  },
+  {
+    "num": "007",
+    "phrase": "Adiós",
+    "ph": "/a.ˈðjos/",
+    "en": "Goodbye",
+    "slug": "adios",
+    "file": "audio/adios.m4a"
+  },
+  {
+    "num": "008",
+    "phrase": "Hasta luego",
+    "ph": "/ˈas.ta ˈlwe.ɣo/",
+    "en": "See you later",
+    "slug": "hasta-luego",
+    "file": "audio/hasta-luego.m4a"
+  },
+  {
+    "num": "009",
+    "phrase": "Me llamo...",
+    "ph": "/me ˈʝa.mo/",
+    "en": "My name is...",
+    "slug": "me-llamo",
+    "file": "audio/me-llamo.m4a"
+  },
+  {
+    "num": "010",
+    "phrase": "¿Cómo te llamas?",
+    "ph": "/ˈko.mo te ˈʝa.mas/",
+    "en": "What is your name?",
+    "slug": "como-te-llamas",
+    "file": "audio/como-te-llamas.m4a"
+  },
+  {
+    "num": "011",
+    "phrase": "Mucho gusto",
+    "ph": "/ˈmu.tʃo ˈɡus.to/",
+    "en": "Nice to meet you",
+    "slug": "mucho-gusto",
+    "file": "audio/mucho-gusto.m4a"
+  },
+  {
+    "num": "012",
+    "phrase": "Soy de...",
+    "ph": "/soj ðe/",
+    "en": "I am from...",
+    "slug": "soy-de",
+    "file": "audio/soy-de.m4a"
+  },
+  {
+    "num": "013",
+    "phrase": "¿De dónde eres?",
+    "ph": "/de ˈðon.de ˈe.res/",
+    "en": "Where are you from?",
+    "slug": "de-donde-eres",
+    "file": "audio/de-donde-eres.m4a"
+  },
+  {
+    "num": "014",
+    "phrase": "Igualmente",
+    "ph": "/iˈɣwal.men.te/",
+    "en": "Likewise / Same to you",
+    "slug": "igualmente",
+    "file": "audio/igualmente.m4a"
+  },
+  {
+    "num": "015",
+    "phrase": "Por favor",
+    "ph": "/por fa.ˈβor/",
+    "en": "Please",
+    "slug": "por-favor",
+    "file": "audio/por-favor.m4a"
+  },
+  {
+    "num": "016",
+    "phrase": "Gracias",
+    "ph": "/ˈɡra.sjas/",
+    "en": "Thank you",
+    "slug": "gracias",
+    "file": "audio/gracias.m4a"
+  },
+  {
+    "num": "017",
+    "phrase": "De nada",
+    "ph": "/de ˈna.ða/",
+    "en": "You're welcome",
+    "slug": "de-nada",
+    "file": "audio/de-nada.m4a"
+  },
+  {
+    "num": "018",
+    "phrase": "Lo siento",
+    "ph": "/lo ˈsjen.to/",
+    "en": "I'm sorry",
+    "slug": "lo-siento",
+    "file": "audio/lo-siento.m4a"
+  },
+  {
+    "num": "019",
+    "phrase": "Perdón",
+    "ph": "/perˈðon/",
+    "en": "Excuse me / Pardon",
+    "slug": "perdon",
+    "file": "audio/perdon.m4a"
+  },
+  {
+    "num": "020",
+    "phrase": "No entiendo",
+    "ph": "/no enˈtjen.do/",
+    "en": "I don't understand",
+    "slug": "no-entiendo",
+    "file": "audio/no-entiendo.m4a"
+  },
+  {
+    "num": "021",
+    "phrase": "¿Puede repetir?",
+    "ph": "/ˈpwe.ðe re.peˈtir/",
+    "en": "Can you repeat that?",
+    "slug": "puede-repetir",
+    "file": "audio/puede-repetir.m4a"
+  },
+  {
+    "num": "022",
+    "phrase": "Más despacio",
+    "ph": "/mas desˈpa.sjo/",
+    "en": "More slowly",
+    "slug": "mas-despacio",
+    "file": "audio/mas-despacio.m4a"
+  },
+  {
+    "num": "023",
+    "phrase": "Quisiera...",
+    "ph": "/kiˈsje.ra/",
+    "en": "I would like...",
+    "slug": "quisiera",
+    "file": "audio/quisiera.m4a"
+  },
+  {
+    "num": "024",
+    "phrase": "La cuenta, por favor",
+    "ph": "/la ˈkwen.ta por fa.ˈβor/",
+    "en": "The bill, please",
+    "slug": "la-cuenta-por-favor",
+    "file": "audio/la-cuenta-por-favor.m4a"
+  },
+  {
+    "num": "025",
+    "phrase": "¿Cuánto cuesta?",
+    "ph": "/ˈkwan.to ˈkwes.ta/",
+    "en": "How much does it cost?",
+    "slug": "cuanto-cuesta",
+    "file": "audio/cuanto-cuesta.m4a"
+  },
+  {
+    "num": "026",
+    "phrase": "Agua, por favor",
+    "ph": "/ˈa.ɣwa por fa.ˈβor/",
+    "en": "Water, please",
+    "slug": "agua-por-favor",
+    "file": "audio/agua-por-favor.m4a"
+  },
+  {
+    "num": "027",
+    "phrase": "Sin... por favor",
+    "ph": "/sin por fa.ˈβor/",
+    "en": "Without... please",
+    "slug": "sin-por-favor",
+    "file": "audio/sin-por-favor.m4a"
+  },
+  {
+    "num": "028",
+    "phrase": "Está delicioso",
+    "ph": "/esˈta de.liˈsjo.so/",
+    "en": "It's delicious",
+    "slug": "esta-delicioso",
+    "file": "audio/esta-delicioso.m4a"
+  },
+  {
+    "num": "029",
+    "phrase": "¿Dónde está...?",
+    "ph": "/ˈðon.de esˈta/",
+    "en": "Where is...?",
+    "slug": "donde-esta",
+    "file": "audio/donde-esta.m4a"
+  },
+  {
+    "num": "030",
+    "phrase": "A la derecha",
+    "ph": "/a la ðeˈre.tʃa/",
+    "en": "To the right",
+    "slug": "a-la-derecha",
+    "file": "audio/a-la-derecha.m4a"
+  },
+  {
+    "num": "031",
+    "phrase": "A la izquierda",
+    "ph": "/a la isˈkjer.ða/",
+    "en": "To the left",
+    "slug": "a-la-izquierda",
+    "file": "audio/a-la-izquierda.m4a"
+  },
+  {
+    "num": "032",
+    "phrase": "Todo recto",
+    "ph": "/ˈto.ðo ˈrek.to/",
+    "en": "Straight ahead",
+    "slug": "todo-recto",
+    "file": "audio/todo-recto.m4a"
+  },
+  {
+    "num": "033",
+    "phrase": "Cerca / Lejos",
+    "ph": "/ˈser.ka / ˈle.xos/",
+    "en": "Near / Far",
+    "slug": "cerca-lejos",
+    "file": "audio/cerca-lejos.m4a"
+  },
+  {
+    "num": "034",
+    "phrase": "Necesito ayuda",
+    "ph": "/ne.seˈsi.to aˈʝu.ða/",
+    "en": "I need help",
+    "slug": "necesito-ayuda",
+    "file": "audio/necesito-ayuda.m4a"
+  },
+  {
+    "num": "035",
+    "phrase": "uno, dos, tres",
+    "ph": "/ˈu.no, dos, tres/",
+    "en": "one, two, three",
+    "slug": "uno-dos-tres",
+    "file": "audio/uno-dos-tres.m4a"
+  },
+  {
+    "num": "036",
+    "phrase": "cuatro, cinco, seis",
+    "ph": "/ˈkwa.tro, ˈsin.ko, sejs/",
+    "en": "four, five, six",
+    "slug": "cuatro-cinco-seis",
+    "file": "audio/cuatro-cinco-seis.m4a"
+  },
+  {
+    "num": "037",
+    "phrase": "siete, ocho, nueve",
+    "ph": "/ˈsje.te, ˈo.tʃo, ˈnwe.βe/",
+    "en": "seven, eight, nine",
+    "slug": "siete-ocho-nueve",
+    "file": "audio/siete-ocho-nueve.m4a"
+  },
+  {
+    "num": "038",
+    "phrase": "diez, once, doce",
+    "ph": "/djes, ˈon.se, ˈdo.se/",
+    "en": "ten, eleven, twelve",
+    "slug": "diez-once-doce",
+    "file": "audio/diez-once-doce.m4a"
+  },
+  {
+    "num": "039",
+    "phrase": "trece, catorce, quince",
+    "ph": "/ˈtre.se, kaˈtor.se, ˈkin.se/",
+    "en": "thirteen, fourteen, fifteen",
+    "slug": "trece-catorce-quince",
+    "file": "audio/trece-catorce-quince.m4a"
+  },
+  {
+    "num": "040",
+    "phrase": "dieciséis...veinte",
+    "ph": "/ˌdje.siˈsejs...ˈbejn.te/",
+    "en": "sixteen...twenty",
+    "slug": "dieciseis-veinte",
+    "file": "audio/dieciseis-veinte.m4a"
+  },
+  {
+    "num": "041",
+    "phrase": "¡Hola! ¿Cómo estás?",
+    "ph": "",
+    "en": "Hello! How are you?",
+    "slug": "hola-como-estas",
+    "file": "audio/hola-como-estas.m4a"
+  },
+  {
+    "num": "042",
+    "phrase": "¡Buenos días a todos!",
+    "ph": "",
+    "en": "Good morning, everyone!",
+    "slug": "buenos-dias-a-todos",
+    "file": "audio/buenos-dias-a-todos.m4a"
+  },
+  {
+    "num": "043",
+    "phrase": "Buenos días ¿cómo estás?",
+    "ph": "",
+    "en": "Good morning, how are you?",
+    "slug": "buenos-dias-como-estas",
+    "file": "audio/buenos-dias-como-estas.m4a"
+  },
+  {
+    "num": "044",
+    "phrase": "¡Hola! ¿Cómo te llamas?",
+    "ph": "",
+    "en": "Hello! What's your name?",
+    "slug": "hola-como-te-llamas",
+    "file": "audio/hola-como-te-llamas.m4a"
+  },
+  {
+    "num": "045",
+    "phrase": "Tengo tres hermanos.",
+    "ph": "",
+    "en": "I have three brothers.",
+    "slug": "tengo-tres-hermanos",
+    "file": "audio/tengo-tres-hermanos.m4a"
+  },
+  {
+    "num": "046",
+    "phrase": "Tengo dos hermanos",
+    "ph": "",
+    "en": "I have two brothers",
+    "slug": "tengo-dos-hermanos",
+    "file": "audio/tengo-dos-hermanos.m4a"
+  },
+  {
+    "num": "047",
+    "phrase": "uno",
+    "ph": "",
+    "en": "one",
+    "slug": "uno",
+    "file": "audio/uno.m4a"
+  },
+  {
+    "num": "048",
+    "phrase": "cuatro",
+    "ph": "",
+    "en": "four",
+    "slug": "cuatro",
+    "file": "audio/cuatro.m4a"
+  },
+  {
+    "num": "049",
+    "phrase": "siete",
+    "ph": "",
+    "en": "seven",
+    "slug": "siete",
+    "file": "audio/siete.m4a"
+  },
+  {
+    "num": "050",
+    "phrase": "diez",
+    "ph": "",
+    "en": "ten",
+    "slug": "diez",
+    "file": "audio/diez.m4a"
+  },
+  {
+    "num": "051",
+    "phrase": "rojo / azul / verde",
+    "ph": "/ˈro.xo/ /a.ˈsul/ /ˈber.ðe/",
+    "en": "red / blue / green",
+    "slug": "rojo-azul-verde",
+    "file": "audio/rojo-azul-verde.m4a"
+  },
+  {
+    "num": "052",
+    "phrase": "El tomate es rojo.",
+    "ph": "",
+    "en": "The tomato is red.",
+    "slug": "el-tomate-es-rojo",
+    "file": "audio/el-tomate-es-rojo.m4a"
+  },
+  {
+    "num": "053",
+    "phrase": "El cielo es azul",
+    "ph": "",
+    "en": "The sky is blue",
+    "slug": "el-cielo-es-azul",
+    "file": "audio/el-cielo-es-azul.m4a"
+  },
+  {
+    "num": "054",
+    "phrase": "amarillo",
+    "ph": "",
+    "en": "yellow",
+    "slug": "amarillo",
+    "file": "audio/amarillo.m4a"
+  },
+  {
+    "num": "055",
+    "phrase": "rojo",
+    "ph": "",
+    "en": "red",
+    "slug": "rojo",
+    "file": "audio/rojo.m4a"
+  },
+  {
+    "num": "056",
+    "phrase": "azul",
+    "ph": "",
+    "en": "blue",
+    "slug": "azul",
+    "file": "audio/azul.m4a"
+  },
+  {
+    "num": "057",
+    "phrase": "verde",
+    "ph": "",
+    "en": "green",
+    "slug": "verde",
+    "file": "audio/verde.m4a"
+  },
+  {
+    "num": "058",
+    "phrase": "blanco",
+    "ph": "",
+    "en": "white",
+    "slug": "blanco",
+    "file": "audio/blanco.m4a"
+  },
+  {
+    "num": "059",
+    "phrase": "¿Cuál es tu color favorito?",
+    "ph": "",
+    "en": "What is your favorite color?",
+    "slug": "cual-es-tu-color-favorito",
+    "file": "audio/cual-es-tu-color-favorito.m4a"
+  },
+  {
+    "num": "060",
+    "phrase": "Me llamo Alex",
+    "ph": "",
+    "en": "My name is Alex",
+    "slug": "me-llamo-alex",
+    "file": "audio/me-llamo-alex.m4a"
+  },
+  {
+    "num": "061",
+    "phrase": "llamo",
+    "ph": "",
+    "en": "I call (myself)",
+    "slug": "llamo",
+    "file": "audio/llamo.m4a"
+  },
+  {
+    "num": "062",
+    "phrase": "Me llamo Alex. ¿Y tú?",
+    "ph": "",
+    "en": "My name is Alex. And you?",
+    "slug": "me-llamo-alex-y-tu",
+    "file": "audio/me-llamo-alex-y-tu.m4a"
+  },
+  {
+    "num": "063",
+    "phrase": "¿Cómo está usted?",
+    "ph": "",
+    "en": "How are you? (formal)",
+    "slug": "como-esta-usted",
+    "file": "audio/como-esta-usted.m4a"
+  },
+  {
+    "num": "064",
+    "phrase": "lunes · martes · miércoles",
+    "ph": "/ˈlu.nes/ /ˈmar.tes/ /ˈmjér.ko.les/",
+    "en": "Monday · Tuesday · Wednesday",
+    "slug": "lunes-martes-miercoles",
+    "file": "audio/lunes-martes-miercoles.m4a"
+  },
+  {
+    "num": "065",
+    "phrase": "El lunes tengo clase de español.",
+    "ph": "",
+    "en": "On Monday I have Spanish class.",
+    "slug": "el-lunes-tengo-clase-de-espanol",
+    "file": "audio/el-lunes-tengo-clase-de-espanol.m4a"
+  },
+  {
+    "num": "066",
+    "phrase": "martes",
+    "ph": "",
+    "en": "Tuesday",
+    "slug": "martes",
+    "file": "audio/martes.m4a"
+  },
+  {
+    "num": "067",
+    "phrase": "jueves",
+    "ph": "",
+    "en": "Thursday",
+    "slug": "jueves",
+    "file": "audio/jueves.m4a"
+  },
+  {
+    "num": "068",
+    "phrase": "viernes",
+    "ph": "",
+    "en": "Friday",
+    "slug": "viernes",
+    "file": "audio/viernes.m4a"
+  },
+  {
+    "num": "069",
+    "phrase": "Hoy es lunes",
+    "ph": "",
+    "en": "Today is Monday",
+    "slug": "hoy-es-lunes",
+    "file": "audio/hoy-es-lunes.m4a"
+  },
+  {
+    "num": "070",
+    "phrase": "domingo",
+    "ph": "",
+    "en": "Sunday",
+    "slug": "domingo",
+    "file": "audio/domingo.m4a"
+  },
+  {
+    "num": "071",
+    "phrase": "lunes",
+    "ph": "",
+    "en": "Monday",
+    "slug": "lunes",
+    "file": "audio/lunes.m4a"
+  },
+  {
+    "num": "072",
+    "phrase": "miércoles",
+    "ph": "",
+    "en": "Wednesday",
+    "slug": "miercoles",
+    "file": "audio/miercoles.m4a"
+  },
+  {
+    "num": "073",
+    "phrase": "sábado",
+    "ph": "",
+    "en": "Saturday",
+    "slug": "sabado",
+    "file": "audio/sabado.m4a"
+  },
+  {
+    "num": "074",
+    "phrase": "la madre / el padre",
+    "ph": "/la ˈma.ðre/ /el ˈpa.ðre/",
+    "en": "mother / father",
+    "slug": "la-madre-el-padre",
+    "file": "audio/la-madre-el-padre.m4a"
+  },
+  {
+    "num": "075",
+    "phrase": "Mi madre es muy amable.",
+    "ph": "",
+    "en": "My mother is very kind.",
+    "slug": "mi-madre-es-muy-amable",
+    "file": "audio/mi-madre-es-muy-amable.m4a"
+  },
+  {
+    "num": "076",
+    "phrase": "hermana",
+    "ph": "",
+    "en": "sister",
+    "slug": "hermana",
+    "file": "audio/hermana.m4a"
+  },
+  {
+    "num": "077",
+    "phrase": "primo",
+    "ph": "",
+    "en": "cousin (m)",
+    "slug": "primo",
+    "file": "audio/primo.m4a"
+  },
+  {
+    "num": "078",
+    "phrase": "tío",
+    "ph": "",
+    "en": "uncle",
+    "slug": "tio",
+    "file": "audio/tio.m4a"
+  },
+  {
+    "num": "079",
+    "phrase": "Tengo una hermana",
+    "ph": "",
+    "en": "I have a sister",
+    "slug": "tengo-una-hermana",
+    "file": "audio/tengo-una-hermana.m4a"
+  },
+  {
+    "num": "080",
+    "phrase": "abuela",
+    "ph": "",
+    "en": "grandmother",
+    "slug": "abuela",
+    "file": "audio/abuela.m4a"
+  },
+  {
+    "num": "081",
+    "phrase": "madre",
+    "ph": "",
+    "en": "mother",
+    "slug": "madre",
+    "file": "audio/madre.m4a"
+  },
+  {
+    "num": "082",
+    "phrase": "hijo",
+    "ph": "",
+    "en": "son",
+    "slug": "hijo",
+    "file": "audio/hijo.m4a"
+  },
+  {
+    "num": "083",
+    "phrase": "abuelo",
+    "ph": "",
+    "en": "grandfather",
+    "slug": "abuelo",
+    "file": "audio/abuelo.m4a"
+  },
+  {
+    "num": "084",
+    "phrase": "¿Tienes hermanos?",
+    "ph": "",
+    "en": "Do you have siblings?",
+    "slug": "tienes-hermanos",
+    "file": "audio/tienes-hermanos.m4a"
+  },
+  {
+    "num": "085",
+    "phrase": "nueve",
+    "ph": "",
+    "en": "nine",
+    "slug": "nueve",
+    "file": "audio/nueve.m4a"
+  },
+  {
+    "num": "086",
+    "phrase": "Hasta mañana",
+    "ph": "",
+    "en": "See you tomorrow",
+    "slug": "hasta-manana",
+    "file": "audio/hasta-manana.m4a"
+  },
+  {
+    "num": "087",
+    "phrase": "prima",
+    "ph": "",
+    "en": "cousin (f)",
+    "slug": "prima",
+    "file": "audio/prima.m4a"
+  },
+  {
+    "num": "088",
+    "phrase": "tía",
+    "ph": "",
+    "en": "aunt",
+    "slug": "tia",
+    "file": "audio/tia.m4a"
+  },
+  {
+    "num": "089",
+    "phrase": "manzana",
+    "ph": "",
+    "en": "apple",
+    "slug": "manzana",
+    "file": "audio/manzana.m4a"
+  },
+  {
+    "num": "090",
+    "phrase": "agua",
+    "ph": "",
+    "en": "water",
+    "slug": "agua",
+    "file": "audio/agua.m4a"
+  },
+  {
+    "num": "091",
+    "phrase": "pan",
+    "ph": "",
+    "en": "bread",
+    "slug": "pan",
+    "file": "audio/pan.m4a"
+  }
+]

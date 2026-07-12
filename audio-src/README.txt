@@ -1,0 +1,3 @@
+Drop your recordings here, named by number: 01.m4a, 02.wav, 03.mp3 ...
+See ../RECORDING-SCRIPT.md for the phrase list.
+Then run: python3 tools/import_recordings.py
