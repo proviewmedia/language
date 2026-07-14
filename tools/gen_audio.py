@@ -18,6 +18,12 @@ VOICE = os.environ.get("VOICE", "Paulina")
 RATE = os.environ.get("RATE", "165")  # words per minute; slightly deliberate
 
 def extract_phrases(html: str):
+    """Prefer the master recording map (full curriculum); fall back to grepping
+    app.html for phrasebook/vocab strings if the map isn't built yet."""
+    mapf = ROOT / "tools" / "recording-map.json"
+    if mapf.exists():
+        rows = json.load(open(mapf, encoding="utf-8"))
+        return sorted({r["phrase"] for r in rows})
     keys = set()
     for m in re.finditer(r"\{es:'([^']*)'", html):
         keys.add(m.group(1))

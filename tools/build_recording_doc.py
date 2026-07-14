@@ -125,6 +125,16 @@ for key, items in DATA['EXERCISES'].items():
                 add(b, pair[0], "", pair[1])
     sections.append((f"Course {cid+1}: {curr_name[cid]} · {lesson_title(cid,lid)}", b))
 
+# 2b) Flashcard vocabulary (VOCAB_BANK — played in flashcards & daily review)
+for w in DATA.get('VOCAB_BANK', []):
+    pass  # handled below as its own section
+vb=DATA.get('VOCAB_BANK', [])
+if vb:
+    b=[]
+    for w in vb:
+        add(b, w.get('spanish',''), w.get('phonetic',''), w.get('english',''))
+    sections.append(("Flashcard Vocabulary", b))
+
 # 3) Exams (Spanish options + fill answers)
 for ek, exam in DATA['EXAMS'].items():
     b = []

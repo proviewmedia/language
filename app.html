@@ -397,6 +397,51 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .practice-intro{display:flex;gap:.7rem;align-items:flex-start;background:var(--accent-g);border:1px solid rgba(74,92,232,.15);border-radius:var(--radius);padding:.8rem 1rem;margin-bottom:1.25rem;font-size:.78rem;color:var(--text2);line-height:1.45;}
 .practice-intro .pi-icon{font-size:1rem;flex-shrink:0;}
 .practice-intro strong{color:var(--text);font-weight:600;}
+/* ── audio-first lesson step types ── */
+.al-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.5rem 1.25rem;text-align:center;}
+.al-es{font-family:'Instrument Serif',serif;font-size:1.9rem;line-height:1.25;color:var(--text);}
+.al-ph{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--accent-d);margin-top:.35rem;}
+.al-en{font-size:.95rem;color:var(--text2);margin-top:.6rem;}
+.al-note{font-size:.78rem;color:var(--text3);margin-top:.8rem;line-height:1.5;background:var(--accent-g);border-radius:var(--radius);padding:.6rem .75rem;}
+.al-btns{display:flex;gap:.5rem;margin-top:.9rem;}
+.al-say{font-size:.8rem;font-weight:600;color:var(--accent-d);margin-top:.9rem;}
+.al-hint{text-align:center;font-size:.75rem;color:var(--text3);margin-top:1rem;}
+.pr-prompt{font-size:1.25rem;font-weight:500;color:var(--text);text-align:center;margin:1rem 0 .4rem;}
+.pr-instr{text-align:center;font-size:.8rem;color:var(--text3);}
+.pr-rate{display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap;font-size:.82rem;color:var(--text2);margin-top:.5rem;}
+.fs-frame{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--text3);text-align:center;margin:.5rem 0 1rem;}
+.fs-slot{color:var(--accent);border-bottom:2px solid var(--accent);padding:0 .15rem;}
+.fs-count{font-size:.72rem;color:var(--text3);text-align:center;margin-top:1rem;font-family:'JetBrains Mono',monospace;}
+.sc-title{font-size:.8rem;color:var(--text3);margin-bottom:.9rem;}
+.sc-lines{display:flex;flex-direction:column;gap:.6rem;}
+.sc-line{display:flex;gap:.7rem;align-items:flex-start;text-align:left;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:.6rem .75rem;}
+.sc-play{flex-shrink:0;background:var(--accent-g);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:.85rem;}
+.sc-sp{font-size:.95rem;font-weight:500;color:var(--text);}
+.sc-en{font-size:.78rem;color:var(--text3);margin-top:.15rem;}
+.rp-turn{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-align:center;margin-bottom:.6rem;}
+.rp-turn.rp-you{color:var(--accent-d);}
+.rp-turn.rp-them{color:var(--text3);}
+.rp-cue{font-size:1.15rem;font-weight:500;color:var(--text);text-align:center;margin-bottom:.5rem;}
+/* ── Basics cheat-sheet ── */
+.basics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.5rem;margin-bottom:.5rem;}
+.basics-chip{display:flex;flex-direction:column;align-items:flex-start;gap:.1rem;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:.55rem .7rem;cursor:pointer;transition:all .15s;text-align:left;}
+.basics-chip:hover{border-color:var(--accent);background:var(--accent-g);}
+.bc-es{font-size:.92rem;font-weight:600;color:var(--text);}
+.bc-en{font-size:.72rem;color:var(--text3);}
+/* ── lesson goal card ── */
+.goal-card{text-align:center;padding:2rem 1.5rem;}
+.goal-icon{font-size:2.4rem;margin-bottom:.6rem;}
+.goal-code{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:600;letter-spacing:.05em;color:var(--accent-d);text-transform:uppercase;}
+.goal-by{font-size:.72rem;color:var(--text3);margin-top:1rem;text-transform:uppercase;letter-spacing:.08em;}
+.goal-text{font-family:'Instrument Serif',serif;font-size:1.5rem;line-height:1.3;color:var(--text);margin-top:.35rem;}
+/* ── Course welcome hero ── */
+.welcome-hero{text-align:center;background:linear-gradient(180deg,var(--accent-g),transparent);border:1px solid rgba(74,92,232,.18);border-radius:var(--radius-l);padding:1.75rem 1.5rem;margin-bottom:1.25rem;}
+.wh-emoji{font-size:1.8rem;}
+.wh-title{font-family:'Instrument Serif',serif;font-size:1.7rem;color:var(--text);margin-top:.2rem;}
+.wh-sub{font-size:.9rem;color:var(--text2);max-width:420px;margin:.5rem auto 1.1rem;line-height:1.5;}
+/* ── practice section labels ── */
+.pm-section{grid-column:1/-1;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin:.9rem 0 -.1rem;}
+.pm-section:first-of-type{margin-top:.25rem;}
 
 /* ═══════════════════════════════════
    LESSON ENGINE
@@ -1527,6 +1572,158 @@ const EXERCISES={
     {type:'match',prompt:'Match family',pairs:[['madre','mother'],['hijo','son'],['abuelo','grandfather'],['hermana','sister']]},
     {type:'speak',prompt:'¿Tienes hermanos?',translation:'Do you have siblings?'},
   ],
+  '1-1':[
+    {type:'vocab',spanish:'la manzana',phonetic:'/la manˈsa.na/',english:'the apple',example:'Me gusta la manzana.'},
+    {type:'mc',prompt:'"Bread" in Spanish?',options:['pan','leche','queso','agua'],answer:0},
+    {type:'build',prompt:'Translate: "I want water"',words:['Quiero','agua'],answer:'Quiero agua'},
+    {type:'fill',prompt:'"Milk" in Spanish: _______',hint:'leche',answer:'leche',accept:['leche']},
+    {type:'match',prompt:'Match the foods',pairs:[['pan','bread'],['queso','cheese'],['leche','milk'],['huevo','egg']]},
+    {type:'speak',prompt:'¿Tienes hambre?',translation:'Are you hungry?'},
+  ],
+  '1-2':[
+    {type:'vocab',spanish:'el mercado',phonetic:'/el merˈka.ðo/',english:'the market',example:'Voy al mercado.'},
+    {type:'mc',prompt:'"Pharmacy" in Spanish?',options:['la farmacia','el banco','el cine','la escuela'],answer:0},
+    {type:'build',prompt:'Translate: "The bank is here"',words:['El','banco','está','aquí'],answer:'El banco está aquí'},
+    {type:'fill',prompt:'"Where is the bathroom?" → "¿Dónde está el _______?"',hint:'baño',answer:'baño',accept:['baño']},
+    {type:'match',prompt:'Match the places',pairs:[['el banco','bank'],['la escuela','school'],['el hospital','hospital'],['la tienda','store']]},
+    {type:'speak',prompt:'¿Dónde está el mercado?',translation:'Where is the market?'},
+  ],
+  '1-3':[
+    {type:'vocab',spanish:'¿Qué? / ¿Quién? / ¿Dónde?',phonetic:'/ke/ /kjen/ /ˈdon.de/',english:'What? / Who? / Where?',example:'¿Qué quieres?'},
+    {type:'mc',prompt:'"Why?" in Spanish?',options:['¿Cuándo?','¿Por qué?','¿Cómo?','¿Cuánto?'],answer:1},
+    {type:'build',prompt:'Translate: "Where do you live?"',words:['¿Dónde','vives?'],answer:'¿Dónde vives?'},
+    {type:'fill',prompt:'"When?" in Spanish: _______',hint:'cuándo',answer:'cuándo',accept:['cuándo','cuando']},
+    {type:'match',prompt:'Match the questions',pairs:[['¿Qué?','What?'],['¿Quién?','Who?'],['¿Cuándo?','When?'],['¿Cuánto?','How much?']]},
+    {type:'speak',prompt:'¿Cuántos años tienes?',translation:'How old are you?'},
+  ],
+  '1-4':[
+    {type:'vocab',spanish:'Quisiera un café',phonetic:'/kiˈsje.ra un kaˈfe/',english:'I would like a coffee',example:'Quisiera un café, por favor.'},
+    {type:'mc',prompt:'"The check, please" →',options:['La cuenta, por favor','De nada','Buen provecho','Salud'],answer:0},
+    {type:'build',prompt:'Translate: "I want a coffee"',words:['Quiero','un','café'],answer:'Quiero un café'},
+    {type:'fill',prompt:'"Water, please" → "Agua, por _______"',hint:'favor',answer:'favor',accept:['favor']},
+    {type:'speak',prompt:'Quisiera la cuenta, por favor.',translation:'I would like the check, please.'},
+    {type:'speak',prompt:'¿Qué me recomienda?',translation:'What do you recommend?'},
+  ],
+  '2-0':[
+    {type:'vocab',spanish:'despertarse',phonetic:'/des.perˈtar.se/',english:'to wake up',example:'Me despierto a las siete.'},
+    {type:'vocab',spanish:'desayunar',phonetic:'/de.sa.ʝuˈnar/',english:'to have breakfast',example:'Desayuno pan y café.'},
+    {type:'mc',prompt:'"To sleep" in Spanish?',options:['comer','dormir','correr','vivir'],answer:1},
+    {type:'build',prompt:'Translate: "I wake up early"',words:['Me','despierto','temprano'],answer:'Me despierto temprano'},
+    {type:'fill',prompt:'"I eat breakfast" → "Yo _______"',hint:'desayuno',answer:'desayuno',accept:['desayuno']},
+    {type:'speak',prompt:'¿A qué hora te levantas?',translation:'What time do you get up?'},
+  ],
+  '2-1':[
+    {type:'vocab',spanish:'hablar → hablo',phonetic:'/aˈβlar/',english:'to speak → I speak',example:'Yo hablo español.'},
+    {type:'mc',prompt:'"You (tú) speak" → hablar becomes...',options:['hablo','hablas','habla','hablan'],answer:1},
+    {type:'build',prompt:'Translate: "We work a lot"',words:['Nosotros','trabajamos','mucho'],answer:'Nosotros trabajamos mucho'},
+    {type:'fill',prompt:'"They study" → "Ellos _______" (estudiar)',hint:'estudian',answer:'estudian',accept:['estudian']},
+    {type:'match',prompt:'Match the forms of "hablar"',pairs:[['hablo','I speak'],['hablas','you speak'],['habla','he/she speaks'],['hablan','they speak']]},
+    {type:'speak',prompt:'Yo estudio español todos los días.',translation:'I study Spanish every day.'},
+  ],
+  '2-2':[
+    {type:'vocab',spanish:'comer → como',phonetic:'/koˈmer/',english:'to eat → I eat',example:'Yo como a mediodía.'},
+    {type:'mc',prompt:'"We live" → vivir becomes...',options:['vivo','vives','vivimos','viven'],answer:2},
+    {type:'build',prompt:'Translate: "He eats fruit"',words:['Él','come','fruta'],answer:'Él come fruta'},
+    {type:'fill',prompt:'"I drink water" → "Yo _______ agua" (beber)',hint:'bebo',answer:'bebo',accept:['bebo']},
+    {type:'match',prompt:'Match the forms of "comer"',pairs:[['como','I eat'],['comes','you eat'],['comemos','we eat'],['comen','they eat']]},
+    {type:'speak',prompt:'¿Dónde vives?',translation:'Where do you live?'},
+  ],
+  '2-3':[
+    {type:'vocab',spanish:'feliz / triste',phonetic:'/feˈlis/ /ˈtris.te/',english:'happy / sad',example:'Estoy feliz hoy.'},
+    {type:'mc',prompt:'"Tired" in Spanish?',options:['cansado','enojado','contento','enfermo'],answer:0},
+    {type:'build',prompt:'Translate: "I am happy"',words:['Estoy','feliz'],answer:'Estoy feliz'},
+    {type:'fill',prompt:'"I am tired" → "Estoy _______"',hint:'cansado',answer:'cansado',accept:['cansado','cansada']},
+    {type:'match',prompt:'Match the feelings',pairs:[['feliz','happy'],['triste','sad'],['enojado','angry'],['cansado','tired']]},
+    {type:'speak',prompt:'¿Cómo te sientes hoy?',translation:'How do you feel today?'},
+  ],
+  '2-4':[
+    {type:'vocab',spanish:'Hoy fue un buen día',phonetic:'/oj fwe un bwen ˈdi.a/',english:'Today was a good day',example:'Hoy fue un buen día.'},
+    {type:'mc',prompt:'"I am fine" →',options:['Estoy bien','Tengo hambre','Es tarde','Hace frío'],answer:0},
+    {type:'build',prompt:'Translate: "I work in the morning"',words:['Trabajo','por','la','mañana'],answer:'Trabajo por la mañana'},
+    {type:'fill',prompt:'"In the afternoon" → "Por la _______"',hint:'tarde',answer:'tarde',accept:['tarde']},
+    {type:'speak',prompt:'Hoy trabajé mucho y estoy cansado.',translation:'Today I worked a lot and I am tired.'},
+    {type:'speak',prompt:'¿Qué haces normalmente por la tarde?',translation:'What do you usually do in the afternoon?'},
+  ],
+  '3-0':[
+    {type:'vocab',spanish:'hablé / comí',phonetic:'/aˈβle/ /koˈmi/',english:'I spoke / I ate',example:'Ayer hablé con mi madre.'},
+    {type:'mc',prompt:'"I ate" → comer becomes...',options:['como','comí','comía','comeré'],answer:1},
+    {type:'build',prompt:'Translate: "Yesterday I worked"',words:['Ayer','trabajé'],answer:'Ayer trabajé'},
+    {type:'fill',prompt:'"I spoke" → "Yo _______" (hablar)',hint:'hablé',answer:'hablé',accept:['hablé']},
+    {type:'match',prompt:'Match the past tense',pairs:[['hablé','I spoke'],['comí','I ate'],['viví','I lived'],['estudié','I studied']]},
+    {type:'speak',prompt:'Ayer comí en un restaurante.',translation:'Yesterday I ate at a restaurant.'},
+  ],
+  '3-1':[
+    {type:'vocab',spanish:'fui / tuve / hice',phonetic:'/fwi/ /ˈtu.βe/ /ˈi.se/',english:'I went / I had / I did',example:'Fui al mercado ayer.'},
+    {type:'mc',prompt:'"I went" (ir) →',options:['voy','fui','iba','iré'],answer:1},
+    {type:'build',prompt:'Translate: "I had a dog"',words:['Tuve','un','perro'],answer:'Tuve un perro'},
+    {type:'fill',prompt:'"I did / made" → "Yo _______" (hacer)',hint:'hice',answer:'hice',accept:['hice']},
+    {type:'match',prompt:'Match the irregular past',pairs:[['fui','I went'],['tuve','I had'],['hice','I did'],['estuve','I was']]},
+    {type:'speak',prompt:'Fui a la playa el fin de semana.',translation:'I went to the beach on the weekend.'},
+  ],
+  '3-2':[
+    {type:'vocab',spanish:'hablaré / comeré',phonetic:'/a.βlaˈre/ /ko.meˈre/',english:'I will speak / I will eat',example:'Mañana hablaré con ella.'},
+    {type:'mc',prompt:'"I will eat" → comer becomes...',options:['como','comí','comeré','comía'],answer:2},
+    {type:'build',prompt:'Translate: "Tomorrow I will travel"',words:['Mañana','viajaré'],answer:'Mañana viajaré'},
+    {type:'fill',prompt:'"I will live" → "Yo _______" (vivir)',hint:'viviré',answer:'viviré',accept:['viviré']},
+    {type:'match',prompt:'Match the future tense',pairs:[['hablaré','I will speak'],['comeré','I will eat'],['viviré','I will live'],['iré','I will go']]},
+    {type:'speak',prompt:'Mañana estudiaré para el examen.',translation:'Tomorrow I will study for the exam.'},
+  ],
+  '3-3':[
+    {type:'vocab',spanish:'Había una vez',phonetic:'/aˈβi.a ˈu.na βes/',english:'Once upon a time',example:'Había una vez un rey.'},
+    {type:'mc',prompt:'"Then / next" →',options:['luego','pero','porque','aunque'],answer:0},
+    {type:'build',prompt:'Translate: "First I ate, then I slept"',words:['Primero','comí,','luego','dormí'],answer:'Primero comí, luego dormí'},
+    {type:'fill',prompt:'"Suddenly" in Spanish: _______',hint:'de repente',answer:'de repente',accept:['de repente']},
+    {type:'speak',prompt:'Ayer fui al parque y vi a un amigo.',translation:'Yesterday I went to the park and saw a friend.'},
+    {type:'speak',prompt:'Cuando era niño, vivía en México.',translation:'When I was a child, I lived in Mexico.'},
+  ],
+  '3-4':[
+    {type:'vocab',spanish:'ayer / hoy / mañana',phonetic:'/aˈʝer/ /oj/ /maˈɲa.na/',english:'yesterday / today / tomorrow',example:'Hoy es lunes, mañana es martes.'},
+    {type:'mc',prompt:'"Last night" →',options:['anoche','ahora','luego','temprano'],answer:0},
+    {type:'build',prompt:'Translate: "Next week"',words:['La','próxima','semana'],answer:'La próxima semana'},
+    {type:'fill',prompt:'"Always" in Spanish: _______',hint:'siempre',answer:'siempre',accept:['siempre']},
+    {type:'match',prompt:'Match the time words',pairs:[['ayer','yesterday'],['hoy','today'],['mañana','tomorrow'],['ahora','now']]},
+    {type:'speak',prompt:'¿Qué hiciste ayer?',translation:'What did you do yesterday?'},
+  ],
+  '4-0':[
+    {type:'vocab',spanish:'Creo que / Pienso que',phonetic:'/ˈkre.o ke/ /ˈpjen.so ke/',english:'I believe that / I think that',example:'Creo que es una buena idea.'},
+    {type:'mc',prompt:'"In my opinion" →',options:['En mi opinión','Por supuesto','Tal vez','Sin duda'],answer:0},
+    {type:'build',prompt:'Translate: "I think it is important"',words:['Pienso','que','es','importante'],answer:'Pienso que es importante'},
+    {type:'fill',prompt:'"I agree" → "Estoy de _______"',hint:'acuerdo',answer:'acuerdo',accept:['acuerdo']},
+    {type:'match',prompt:'Match the opinions',pairs:[['Creo que','I believe that'],['En mi opinión','In my opinion'],['Estoy de acuerdo','I agree'],['No estoy de acuerdo','I disagree']]},
+    {type:'speak',prompt:'Creo que el español es muy útil.',translation:'I think Spanish is very useful.'},
+  ],
+  '4-1':[
+    {type:'vocab',spanish:'Espero que tengas...',phonetic:'/esˈpe.ro ke ˈten.ɡas/',english:'I hope you have...',example:'Espero que tengas un buen día.'},
+    {type:'mc',prompt:'"I want you to come" → "Quiero que _______"',options:['vienes','vengas','vienen','viniste'],answer:1},
+    {type:'build',prompt:'Translate: "I hope it rains"',words:['Ojalá','que','llueva'],answer:'Ojalá que llueva'},
+    {type:'fill',prompt:'"It is important that you study" → "Es importante que _______" (tú)',hint:'estudies',answer:'estudies',accept:['estudies']},
+    {type:'speak',prompt:'Espero que tengas un buen día.',translation:'I hope you have a good day.'},
+    {type:'speak',prompt:'Quiero que seas feliz.',translation:'I want you to be happy.'},
+  ],
+  '4-2':[
+    {type:'vocab',spanish:'¿Qué vas a hacer?',phonetic:'/ke βas a aˈser/',english:'What are you going to do?',example:'¿Qué vas a hacer mañana?'},
+    {type:'mc',prompt:'"Let\'s go" →',options:['Vamos','Voy','Fui','Iré'],answer:0},
+    {type:'build',prompt:'Translate: "I am going to travel"',words:['Voy','a','viajar'],answer:'Voy a viajar'},
+    {type:'fill',prompt:'"Do you want to go?" → "¿Quieres _______?"',hint:'ir',answer:'ir',accept:['ir']},
+    {type:'speak',prompt:'¿Quieres ir al cine esta noche?',translation:'Do you want to go to the movies tonight?'},
+    {type:'speak',prompt:'Vamos a cenar juntos mañana.',translation:'We are going to have dinner together tomorrow.'},
+  ],
+  '4-3':[
+    {type:'vocab',spanish:'Entiendo tu punto, pero...',phonetic:'/enˈtjen.do tu ˈpun.to/',english:'I understand your point, but...',example:'Entiendo tu punto, pero no estoy de acuerdo.'},
+    {type:'mc',prompt:'"On the other hand" →',options:['Por otro lado','Por eso','Además','Entonces'],answer:0},
+    {type:'build',prompt:'Translate: "I understand, but I disagree"',words:['Entiendo,','pero','no','estoy','de','acuerdo'],answer:'Entiendo, pero no estoy de acuerdo'},
+    {type:'fill',prompt:'"I disagree" → "No estoy de _______"',hint:'acuerdo',answer:'acuerdo',accept:['acuerdo']},
+    {type:'speak',prompt:'Entiendo tu punto, pero pienso diferente.',translation:'I understand your point, but I think differently.'},
+    {type:'speak',prompt:'Respeto tu opinión, aunque no la comparto.',translation:'I respect your opinion, although I do not share it.'},
+  ],
+  '4-4':[
+    {type:'vocab',spanish:'Me gustaría...',phonetic:'/me ɡus.taˈri.a/',english:'I would like...',example:'Me gustaría viajar más.'},
+    {type:'mc',prompt:'"I would eat" → comer becomes...',options:['como','comí','comería','comeré'],answer:2},
+    {type:'build',prompt:'Translate: "I would like to travel"',words:['Me','gustaría','viajar'],answer:'Me gustaría viajar'},
+    {type:'fill',prompt:'"If I had money" → "Si _______ dinero" (tener)',hint:'tuviera',answer:'tuviera',accept:['tuviera']},
+    {type:'match',prompt:'Match the conditional',pairs:[['comería','I would eat'],['hablaría','I would speak'],['viviría','I would live'],['iría','I would go']]},
+    {type:'speak',prompt:'Si tuviera tiempo, aprendería a cocinar.',translation:'If I had time, I would learn to cook.'},
+  ],
 };
 
 const EXAMS={
@@ -1553,6 +1750,42 @@ const EXAMS={
     {type:'mc',prompt:'A "mercado" is a...',options:['hospital','market','school','library'],answer:1},
     {type:'mc',prompt:'"¿Cuánto cuesta?" means...',options:['Where is it?','What is it?','How much does it cost?','Who has it?'],answer:2},
     {type:'fill',prompt:'"Grandfather" → "mi _______"',hint:'abuelo',answer:'abuelo',accept:['abuelo']},
+  ]},
+  '2':{title:'Level 3 Exam',subtitle:'Talking About Life · 10 questions',questions:[
+    {type:'mc',prompt:'"To wake up" →',options:['dormir','despertarse','comer','vivir'],answer:1},
+    {type:'fill',prompt:'"I speak" → "Yo _______" (hablar)',hint:'hablo',answer:'hablo',accept:['hablo']},
+    {type:'mc',prompt:'"We eat" → comer becomes...',options:['como','comemos','comen','comes'],answer:1},
+    {type:'mc',prompt:'"Happy" in Spanish?',options:['triste','cansado','feliz','enojado'],answer:2},
+    {type:'fill',prompt:'"They live" → "Ellos _______" (vivir)',hint:'viven',answer:'viven',accept:['viven']},
+    {type:'mc',prompt:'"How do you feel?" →',options:['¿Cómo te llamas?','¿Cómo te sientes?','¿Dónde vives?','¿Qué hora es?'],answer:1},
+    {type:'fill',prompt:'"I have breakfast" → "Yo _______"',hint:'desayuno',answer:'desayuno',accept:['desayuno']},
+    {type:'mc',prompt:'"Tired" in Spanish?',options:['feliz','cansado','triste','contento'],answer:1},
+    {type:'mc',prompt:'"You (tú) study" → estudiar becomes...',options:['estudio','estudias','estudia','estudian'],answer:1},
+    {type:'fill',prompt:'"I drink" → "Yo _______" (beber)',hint:'bebo',answer:'bebo',accept:['bebo']},
+  ]},
+  '3':{title:'Level 4 Exam',subtitle:'Past & Future · 10 questions',questions:[
+    {type:'mc',prompt:'"I ate" (comer, past) →',options:['como','comí','comeré','comía'],answer:1},
+    {type:'fill',prompt:'"I spoke" → "Yo _______" (hablar)',hint:'hablé',answer:'hablé',accept:['hablé']},
+    {type:'mc',prompt:'"I went" (ir) →',options:['voy','iré','fui','iba'],answer:2},
+    {type:'mc',prompt:'"I will eat" →',options:['comí','como','comeré','comía'],answer:2},
+    {type:'fill',prompt:'"Tomorrow" in Spanish: _______',hint:'mañana',answer:'mañana',accept:['mañana']},
+    {type:'mc',prompt:'"Once upon a time" →',options:['Había una vez','De repente','Por fin','Al final'],answer:0},
+    {type:'fill',prompt:'"Yesterday" in Spanish: _______',hint:'ayer',answer:'ayer',accept:['ayer']},
+    {type:'mc',prompt:'"I did / made" (hacer) →',options:['hago','hice','haré','hacía'],answer:1},
+    {type:'mc',prompt:'"I will travel" →',options:['viajé','viajo','viajaré','viajaba'],answer:2},
+    {type:'fill',prompt:'"I had" → "Yo _______" (tener, past)',hint:'tuve',answer:'tuve',accept:['tuve']},
+  ]},
+  '4':{title:'Level 5 Exam',subtitle:'Real Conversations · 10 questions',questions:[
+    {type:'mc',prompt:'"I think that" →',options:['Creo que','Por eso','Sin duda','Tal vez'],answer:0},
+    {type:'fill',prompt:'"I agree" → "Estoy de _______"',hint:'acuerdo',answer:'acuerdo',accept:['acuerdo']},
+    {type:'mc',prompt:'"I want you to come" → "Quiero que _______"',options:['vienes','vengas','viniste','vienen'],answer:1},
+    {type:'mc',prompt:'"I would like" →',options:['Me gusta','Me gustaría','Me gustó','Me gustaba'],answer:1},
+    {type:'fill',prompt:'"I hope you have..." → "Espero que _______..." (tener, tú)',hint:'tengas',answer:'tengas',accept:['tengas']},
+    {type:'mc',prompt:'"Let\'s go" →',options:['Voy','Fui','Vamos','Iré'],answer:2},
+    {type:'mc',prompt:'"On the other hand" →',options:['Por otro lado','Por eso','Entonces','Además'],answer:0},
+    {type:'fill',prompt:'"I would eat" → "Yo _______" (comer, conditional)',hint:'comería',answer:'comería',accept:['comería']},
+    {type:'mc',prompt:'"What are you going to do?" →',options:['¿Qué haces?','¿Qué vas a hacer?','¿Qué hiciste?','¿Qué harías?'],answer:1},
+    {type:'fill',prompt:'"If I had time" → "Si _______ tiempo" (tener)',hint:'tuviera',answer:'tuviera',accept:['tuviera']},
   ]},
 };
 
@@ -1631,6 +1864,22 @@ const VOCAB_BANK=[
   {spanish:'madre',phonetic:'/ˈma.ðre/',english:'mother',example:'Mi madre es amable.',status:'new',level:2},
   {spanish:'padre',phonetic:'/ˈpa.ðre/',english:'father',example:'Mi padre trabaja mucho.',status:'new',level:2},
   {spanish:'hermano',phonetic:'/er.ˈma.no/',english:'brother',example:'Mi hermano tiene diez años.',status:'new',level:2},
+  {spanish:'pan',phonetic:'/pan/',english:'bread',example:'Quiero pan, por favor.',status:'new',level:2},
+  {spanish:'agua',phonetic:'/ˈa.ɣwa/',english:'water',example:'Un vaso de agua.',status:'new',level:2},
+  {spanish:'mercado',phonetic:'/merˈka.ðo/',english:'market',example:'Voy al mercado.',status:'new',level:2},
+  {spanish:'farmacia',phonetic:'/farˈma.sja/',english:'pharmacy',example:'La farmacia está cerca.',status:'new',level:2},
+  {spanish:'hablar',phonetic:'/aˈβlar/',english:'to speak',example:'Yo hablo español.',status:'new',level:3},
+  {spanish:'comer',phonetic:'/koˈmer/',english:'to eat',example:'Me gusta comer.',status:'new',level:3},
+  {spanish:'vivir',phonetic:'/biˈβir/',english:'to live',example:'Vivo en la ciudad.',status:'new',level:3},
+  {spanish:'feliz',phonetic:'/feˈlis/',english:'happy',example:'Estoy feliz hoy.',status:'new',level:3},
+  {spanish:'cansado',phonetic:'/kanˈsa.ðo/',english:'tired',example:'Estoy muy cansado.',status:'new',level:3},
+  {spanish:'ayer',phonetic:'/aˈʝer/',english:'yesterday',example:'Ayer fui al parque.',status:'new',level:4},
+  {spanish:'mañana',phonetic:'/maˈɲa.na/',english:'tomorrow',example:'Mañana viajaré.',status:'new',level:4},
+  {spanish:'fui',phonetic:'/fwi/',english:'I went',example:'Fui a la playa.',status:'new',level:4},
+  {spanish:'comí',phonetic:'/koˈmi/',english:'I ate',example:'Ayer comí tacos.',status:'new',level:4},
+  {spanish:'creer',phonetic:'/kreˈer/',english:'to believe',example:'Creo que sí.',status:'new',level:5},
+  {spanish:'acuerdo',phonetic:'/aˈkwer.ðo/',english:'agreement',example:'Estoy de acuerdo.',status:'new',level:5},
+  {spanish:'gustaría',phonetic:'/ɡus.taˈri.a/',english:'would like',example:'Me gustaría viajar.',status:'new',level:5},
 ];
 
 // ═══════════════════════════
@@ -1646,6 +1895,7 @@ const S={
   vocabFilter:'all',
   vocabStatus:{},
   lessonScores:{},   // "lv-ls" -> {correct,total} — feeds the readiness meter
+  completedModules:new Set(),   // "track:id" — new Engine/Scenario modules
   weeklyXP:[0,0,0,0,0,0,0],
   todayDayIdx:new Date().getDay()===0?6:new Date().getDay()-1,
   streak:0,
@@ -1914,77 +2164,44 @@ function refreshDashboard(){
   const acc=S.accuracy.length?Math.round(S.accuracy.filter(Boolean).length/S.accuracy.length*100)+'%':'—';
   el('dashAccuracy').textContent=acc;
 
-  // Next lesson card
-  let foundNext=false;
-  for(let lv=0;lv<CURRICULUM.length&&!foundNext;lv++){
-    for(let ls=0;ls<CURRICULUM[lv].lessons.length&&!foundNext;ls++){
-      const lesson=CURRICULUM[lv].lessons[ls];
-      const key=`${lv}-${ls}`;
-      const isDone=lesson.type==='exam'?S.completedExams.has(String(lv)):S.completedLessons.has(key);
-      if(!isDone&&isLessonUnlocked(lv,ls)){
-        el('nlTag').textContent='Level '+(lv+1)+' · '+(lesson.type==='exam'?'Checkpoint':'Lesson '+(ls+1));
-        el('nlTitle').textContent=lesson.title;
-        el('nlSub').textContent=lesson.type==='exam'?'Pass to unlock the next level':CURRICULUM[lv].desc;
-        el('nlIcon').textContent=lesson.icon;
-        foundNext=true;
-      }
-    }
-  }
-
-  // ── Ready to advance? — readiness for the current active level ──
-  const rm=el('dashReadiness');
-  if(rm){
-    let activeLv=-1;
-    for(let lv=0;lv<CURRICULUM.length;lv++){
-      if(isLevelUnlocked(lv)&&getLvProg(lv).pct<100){activeLv=lv;break;}
-    }
-    if(activeLv<0){rm.style.display='none';}
-    else{
-      const rd=getLevelReadiness(activeLv);
-      const examIdx=CURRICULUM[activeLv].lessons.findIndex(l=>l.type==='exam');
-      const canExam=examIdx>=0&&isLessonUnlocked(activeLv,examIdx)&&!S.completedExams.has(String(activeLv));
-      rm.style.display='block';
-      rm.innerHTML=`
-        <div class="rm-eyebrow">Ready to advance?</div>
-        <div class="rm-title">Level ${activeLv+1} · ${CURRICULUM[activeLv].name}</div>
-        <div class="readiness" style="margin-top:.6rem;">
-          <div class="rd-top"><span class="rd-label">Readiness for Checkpoint</span>
-            <span class="rd-pct ${rd.ready?'rd-ok':''}">${rd.ready?'Ready ✓':rd.pct+'%'}</span></div>
-          <div class="rd-bar"><div class="rd-fill ${rd.ready?'rd-fill-ok':''}" style="width:${rd.pct}%"></div></div>
-        </div>
-        <div class="rm-foot">
-          <span class="rm-note">${rd.ready?(canExam?'You\'re prepared — take the Checkpoint.':'Finish the last lesson to open the Checkpoint.'):'Keep practicing'+(rd.weakest?' — weakest area: '+rd.weakest:'')+'.'}</span>
-          ${rd.ready&&canExam
-            ?`<button class="btn btn-primary" style="padding:.4rem .85rem;font-size:.78rem;" onclick="startExam(${activeLv})">Take Checkpoint →</button>`
-            :`<button class="btn btn-ghost" style="padding:.4rem .85rem;font-size:.78rem;" onclick="continueLesson()">Continue coursework →</button>`}
-        </div>`;
-    }
-  }
-  if(!foundNext){
+  // Next module card
+  const doneM=m=>S.completedModules&&S.completedModules.has(m.track+':'+m.id);
+  const allMods=[...ENGINE,...SCENARIOS.filter(m=>!m.soon)];
+  const nextMod=allMods.find(m=>!doneM(m));
+  if(nextMod){
+    el('nlTag').textContent=(nextMod.track==='engine'?'Foundations':'The Trip')+' · '+nextMod.code;
+    el('nlTitle').textContent=nextMod.title;
+    el('nlSub').textContent=nextMod.desc;
+    el('nlIcon').textContent=nextMod.icon;
+  } else {
     el('nlTag').textContent='All done!';
-    el('nlTitle').textContent='You\'ve completed all available lessons';
-    el('nlSub').textContent='Upgrade to Pro to unlock more levels';
+    el('nlTitle').textContent='You’ve finished everything available';
+    el('nlSub').textContent='More scenarios coming soon';
     el('nlIcon').textContent='🏆';
   }
+  const rm=el('dashReadiness'); if(rm) rm.style.display='none';
 
-  // Level path
+  // Journey path — Foundations + The Trip
   const path=el('dashLevelPath');
   if(path){
-    const groups=[{label:'Beginner',levels:[0,1,2],icon:'🌱'},{label:'Intermediate',levels:[3,4],icon:'🌿'}];
+    const dM=m=>S.completedModules&&S.completedModules.has(m.track+':'+m.id);
+    const groups=[
+      {label:'Foundations (the Engine)',icon:'🧭',mods:ENGINE},
+      {label:'The Trip (Scenarios)',icon:'🧳',mods:SCENARIOS.filter(m=>!m.soon)},
+    ];
     path.innerHTML=groups.map(g=>{
-      const total=g.levels.reduce((a,lv)=>a+CURRICULUM[lv].lessons.length,0);
-      const done=g.levels.reduce((a,lv)=>a+getLvProg(lv).done,0);
+      const total=g.mods.length||1;
+      const done=g.mods.filter(dM).length;
       const pct=Math.round(done/total*100);
-      const unlocked=g.levels.some(lv=>isLevelUnlocked(lv));
-      return `<div style="display:flex;align-items:center;gap:.75rem;${unlocked?'':'opacity:.35'}">
-        <span style="font-size:1.1rem;">${unlocked?g.icon:'🔒'}</span>
+      return `<div style="display:flex;align-items:center;gap:.75rem;">
+        <span style="font-size:1.1rem;">${g.icon}</span>
         <div style="flex:1;">
           <div style="font-size:.78rem;font-weight:500;color:var(--text);margin-bottom:.3rem;">${g.label}</div>
           <div style="height:4px;background:var(--bg4);border-radius:100px;overflow:hidden;">
             <div style="height:100%;width:${pct}%;background:${pct===100?'var(--green)':'var(--accent)'};border-radius:100px;"></div>
           </div>
         </div>
-        <span style="font-size:.65rem;color:${pct>0?'var(--accent)':'var(--text3)'};font-family:'JetBrains Mono',monospace;">${pct}%</span>
+        <span style="font-size:.65rem;color:${pct>0?'var(--accent)':'var(--text3)'};font-family:'JetBrains Mono',monospace;">${done}/${total}</span>
       </div>`;
     }).join('');
   }
@@ -2060,91 +2277,76 @@ function getLevelReadiness(lv){
 
 function renderCurr(){
   const map=document.getElementById('currMap');
-  map.innerHTML='';
-  CURRICULUM.forEach((lv,li)=>{
-    const unlocked=isLevelUnlocked(li);
-    const p=getLvProg(li);
-    const done=p.pct===100;
-    const rd=unlocked?getLevelReadiness(li):null;
-    const stateCls=done?'done':unlocked?'active':'locked';
-    const row=document.createElement('div');
-    row.className='level-card '+(unlocked?'':'locked');
-    const hasLessonsOpen=unlocked&&!done;
-
-    // ── header: readiness meter for active levels, complete note when done ──
-    const headMeter = done
-      ? `<div class="rd-complete">✓ Level complete</div>`
-      : (unlocked ? `<div class="readiness">
-            <div class="rd-top"><span class="rd-label">Readiness for Checkpoint</span>
-              <span class="rd-pct ${rd.ready?'rd-ok':''}">${rd.ready?'Ready ✓':rd.pct+'%'}</span></div>
-            <div class="rd-bar"><div class="rd-fill ${rd.ready?'rd-fill-ok':''}" style="width:${rd.pct}%"></div></div>
-            ${!rd.ready&&rd.weakest?`<div class="rd-hint">Keep practicing — weakest area: ${rd.weakest}</div>`:''}
-          </div>` : '');
-
-    // ── coursework rows (graded, non-exam) ──
-    const courseRows = lv.lessons.map((ls,lsi)=>{
-      if(ls.type==='exam') return '';
-      const ldone=S.completedLessons.has(`${li}-${lsi}`);
-      const llocked=!isLessonUnlocked(li,lsi);
-      const inprog=!ldone&&S.inProgressLesson&&S.inProgressLesson.lv===li&&S.inProgressLesson.ls===lsi;
-      const sc=S.lessonScores&&S.lessonScores[`${li}-${lsi}`];
-      const scoreTxt=sc&&sc.total?` · ${Math.round(sc.correct/sc.total*100)}%`:'';
-      const badge=llocked?`<span class="lr-badge lr-locked">🔒 Locked</span>`
-        :ldone?`<span class="lr-badge lr-passed">✓ Passed${scoreTxt}</span>`
-        :inprog?`<span class="lr-badge lr-progress">▶ Continue</span>`
-        :`<span class="lr-badge lr-start">Start →</span>`;
-      return `<div class="lesson-row ${ldone?'lr-done':''} ${llocked?'lr-lock':''} ${inprog?'lr-inprog':''}"
-          onclick="${llocked?'':`startLesson(${li},${lsi})`}">
-          <div class="lr-num">${lsi+1}</div>
-          <div class="lr-icon">${ls.icon}</div>
-          <div class="lr-main"><div class="lr-title">${ls.title}</div>
-            <div class="lr-type">${LESSON_KIND[ls.type]||ls.type}</div></div>
-          ${badge}
-        </div>`;
-    }).join('');
-
-    // ── checkpoint (the exam) ──
-    const examIdx=lv.lessons.findIndex(l=>l.type==='exam');
-    const examDone=S.completedExams.has(String(li));
-    const examUnlocked=examIdx>=0&&isLessonUnlocked(li,examIdx);
-    const nextTxt=li<CURRICULUM.length-1?`unlocks Level ${li+2}`:'completes the course';
-    const cpMeta=examDone?`Passed · ${nextTxt}`
-      :examUnlocked?`70% to pass · timed 10:00 · ${nextTxt}`
-      :`Finish all ${p.total-1} lessons to unlock · ${nextTxt}`;
-    const checkpoint=`<div class="checkpoint-card ${examDone?'cp-done':examUnlocked?'cp-ready':'cp-lock'}"
-        ${(examDone||examUnlocked)?`onclick="startExam(${li})"`:''}>
-        <div class="cp-star">${examDone?'🏅':examUnlocked?'★':'🔒'}</div>
-        <div class="cp-main"><div class="cp-title">Level ${li+1} Checkpoint</div>
-          <div class="cp-meta">${cpMeta}</div></div>
-        <div class="cp-action">${examDone?'✓ Passed':examUnlocked?'Take it →':''}</div>
-      </div>`;
-
-    row.innerHTML=`
-      <div class="level-head" onclick="${unlocked?`toggleLv(${li})`:``}">
-        <div class="level-num-badge ${stateCls}">${done?'✓':(unlocked?lv.icon:'🔒')}</div>
+  const doneM=m=>S.completedModules&&S.completedModules.has(m.track+':'+m.id);
+  const row=m=>{
+    const soon=m.soon;
+    return `<div class="lesson-row ${doneM(m)?'lr-done':''} ${soon?'lr-lock':''}" ${soon?'':`onclick="startModule('${m.track}','${m.id}')"`}>
+      <div class="lr-icon">${m.icon}</div>
+      <div class="lr-main"><div class="lr-title">${m.code} · ${m.title}</div><div class="lr-type" style="text-transform:none;letter-spacing:0;">${m.desc}</div></div>
+      <span class="lr-badge ${doneM(m)?'lr-passed':soon?'lr-locked':'lr-start'}">${doneM(m)?'✓ Done':soon?'Soon':'Start →'}</span>
+    </div>`;
+  };
+  const eDone=ENGINE.filter(doneM).length;
+  const tDone=SCENARIOS.filter(m=>!m.soon&&doneM(m)).length;
+  const started=eDone>0||tDone>0;
+  map.innerHTML=`
+    <div class="welcome-hero">
+      <div class="wh-emoji">👋</div>
+      <div class="wh-title">${started?'Welcome back':'Welcome to EspTalk'}</div>
+      <div class="wh-sub">${started
+        ? 'Pick up where you left off — one focused phrase at a time.'
+        : 'You\'re prepping for a trip. In about 20 minutes you\'ll be ordering a coffee in Spanish. Ready?'}</div>
+      <button class="btn btn-primary btn-lg" onclick="continueLesson()">${started?'Continue →':'Start here →'}</button>
+    </div>
+    <div class="level-card" style="border-color:rgba(74,92,232,.35);">
+      <div class="level-head" style="cursor:default;">
+        <div class="level-num-badge active">🧭</div>
         <div class="level-info">
-          <div class="level-name">Level ${li+1}: ${lv.name}</div>
-          <div class="level-desc">${lv.desc}</div>
-          ${headMeter}
+          <div class="level-name">Phase 1 · Foundations</div>
+          <div class="level-desc">Learn the engine — the reusable machinery. Master this and you can say almost anything.</div>
         </div>
-        <span class="level-pill ${done?'pill-done':unlocked?'pill-active':'pill-locked'} ${lv.pro&&!done?'pill-pro':''}">
-          ${done?'✓ Complete':unlocked?`${p.done}/${p.total}`:lv.pro?'🔐 Pro':'🔒 Locked'}
-        </span>
+        <span class="level-pill pill-active">${eDone}/${ENGINE.length}</span>
       </div>
-      ${unlocked?`<div class="level-body" id="lvl-${li}" style="${hasLessonsOpen?'':'display:none'}">
-        <div class="band-label">Coursework · graded</div>
-        <div class="course-list">${courseRows}</div>
-        <div class="band-label">Checkpoint · determines if you advance</div>
-        ${checkpoint}
-        <div class="band-label">Practice · optional, not graded</div>
-        <div class="practice-row">
-          <button class="practice-chip" onclick="event.stopPropagation();nav('practice')">↻ Daily Review</button>
-          <button class="practice-chip" onclick="event.stopPropagation();nav('practice')">📖 Phrasebooks</button>
+      <div class="level-body" style="display:block;">
+        <div class="course-list">${ENGINE.map(row).join('')}</div>
+      </div>
+    </div>
+    <div class="level-card" style="border-color:rgba(200,146,10,.3);">
+      <div class="level-head" style="cursor:default;">
+        <div class="level-num-badge" style="background:var(--gold-g);border:1px solid rgba(200,146,10,.25);">🧳</div>
+        <div class="level-info">
+          <div class="level-name">Phase 2 · The Trip</div>
+          <div class="level-desc">Use it, event by event. Every scenario reuses your frames and adds just the new words.</div>
         </div>
-      </div>`:''}
-    `;
-    map.appendChild(row);
-  });
+        <span class="level-pill pill-active">${tDone}/${SCENARIOS.length}</span>
+      </div>
+      <div class="level-body" style="display:block;">
+        <div class="course-list">${SCENARIOS.map(row).join('')}</div>
+      </div>
+    </div>
+    <div class="level-card" style="border-color:rgba(22,168,122,.3);">
+      <div class="level-head" style="cursor:default;">
+        <div class="level-num-badge" style="background:var(--green-g);border:1px solid rgba(22,168,122,.25);">🏁</div>
+        <div class="level-info">
+          <div class="level-name">Capstone</div>
+          <div class="level-desc">Prove it — a full travel day, your side spoken start to finish.</div>
+        </div>
+      </div>
+      <div class="level-body" style="display:block;">
+        <div class="course-list">
+          <div class="lesson-row ${doneM(TRIP_SIM)?'lr-done':''}" onclick="startModule('capstone','trip')">
+            <div class="lr-icon">🏁</div>
+            <div class="lr-main"><div class="lr-title">${TRIP_SIM.title}</div><div class="lr-type" style="text-transform:none;letter-spacing:0;">${TRIP_SIM.desc}</div></div>
+            <span class="lr-badge ${doneM(TRIP_SIM)?'lr-passed':'lr-start'}">${doneM(TRIP_SIM)?'✓ Done':'Start →'}</span>
+          </div>
+          <div class="lesson-row" onclick="nav('practice')">
+            <div class="lr-icon">⚡</div>
+            <div class="lr-main"><div class="lr-title">Pre-Trip Cram</div><div class="lr-type" style="text-transform:none;letter-spacing:0;">Blitz the essential phrases — in Practice.</div></div>
+            <span class="lr-badge lr-start">Open →</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
 }
 function toggleLv(i){
   const el=document.getElementById(`lvl-${i}`);
@@ -2175,6 +2377,632 @@ function genLesson(lv,ls){
     {type:'speak',prompt:'¿Qué quieres aprender?',translation:'What do you want to learn?'},
     {type:'mc',prompt:'Spanish is the 2nd most spoken native language. How many countries speak it?',options:['10','15','21','30'],answer:2},
   ];
+}
+
+// ═══════════════════════════
+// NEW AUDIO-FIRST COURSE (Engine + Scenarios) — listen · repeat · produce
+// ═══════════════════════════
+const ENGINE=[
+  {id:'e1',code:'E1',track:'engine',title:'First Words',icon:'👋',
+   desc:'Greet and be polite — the words you\'ll use in your first 30 seconds.',
+   goal:'Greet anyone and be polite — your very first words.',
+   steps:[
+     {type:'listen_repeat',es:'Hola',ph:'/ˈo.la/',en:'Hello'},
+     {type:'listen_repeat',es:'Buenos días',ph:'/ˈbwe.nos ˈdi.as/',en:'Good morning'},
+     {type:'listen_repeat',es:'Gracias',ph:'/ˈɡra.sjas/',en:'Thank you'},
+     {type:'listen_repeat',es:'Por favor',ph:'/por faˈβor/',en:'Please'},
+     {type:'listen_repeat',es:'De nada',ph:'/de ˈna.ða/',en:'You\'re welcome'},
+     {type:'listen_repeat',es:'Sí',ph:'/si/',en:'Yes'},
+     {type:'listen_repeat',es:'No',ph:'/no/',en:'No'},
+     {type:'listen_repeat',es:'Perdón',ph:'/perˈðon/',en:'Excuse me / sorry'},
+     {type:'listen_repeat',es:'Adiós',ph:'/aˈðjos/',en:'Goodbye'},
+     {type:'produce',en:'Say “Hello”',es:'Hola',ph:'/ˈo.la/'},
+     {type:'produce',en:'Say “Thank you”',es:'Gracias',ph:'/ˈɡra.sjas/'},
+     {type:'produce',en:'Say “Please”',es:'Por favor',ph:'/por faˈβor/'},
+   ]},
+  {id:'e2',code:'E2',track:'engine',title:'You Already Know 300 Words',icon:'✨',
+   desc:'Thousands of Spanish words are almost identical to English.',
+   goal:'Realize you already recognize hundreds of Spanish words.',
+   steps:[
+     {type:'present',es:'You already know this',ph:'',en:'Thousands of Spanish words are nearly identical to English. Watch how many you already know.'},
+     {type:'listen_repeat',es:'hotel',ph:'/oˈtel/',en:'hotel'},
+     {type:'listen_repeat',es:'taxi',ph:'/ˈtak.si/',en:'taxi'},
+     {type:'listen_repeat',es:'restaurante',ph:'/res.tauˈran.te/',en:'restaurant'},
+     {type:'listen_repeat',es:'aeropuerto',ph:'/a.e.roˈpwer.to/',en:'airport'},
+     {type:'present',es:'-ción  =  -tion',ph:'',en:'English words ending in “-tion” become “-ción”.',note:'One rule unlocks hundreds of words.'},
+     {type:'listen_repeat',es:'información',ph:'/in.for.maˈsjon/',en:'information'},
+     {type:'listen_repeat',es:'estación',ph:'/es.taˈsjon/',en:'station'},
+     {type:'present',es:'-dad  =  -ty',ph:'',en:'English “-ty” becomes “-dad”.'},
+     {type:'listen_repeat',es:'ciudad',ph:'/sjuˈðad/',en:'city'},
+     {type:'produce',en:'Say “restaurant” in Spanish',es:'restaurante',ph:''},
+     {type:'produce',en:'Say “information” in Spanish',es:'información',ph:''},
+   ]},
+  {id:'e3',code:'E3',track:'engine',title:'The 5 Magic Frames',icon:'🪄',
+   desc:'Five fill-in-the-blank frames that let you ask for almost anything.',
+   goal:'Ask for anything with five simple frames.',
+   steps:[
+     {type:'listen_repeat',es:'Quiero un café',ph:'/ˈkje.ro un kaˈfe/',en:'I want a coffee'},
+     {type:'frame_swap',frame:'Quiero ___',en:'I want ___',slots:[
+       {es:'un café',en:'a coffee'},{es:'agua',en:'water'},{es:'la cuenta',en:'the check'},{es:'un taxi',en:'a taxi'}]},
+     {type:'listen_repeat',es:'Necesito ayuda',ph:'/ne.seˈsi.to aˈʝu.ða/',en:'I need help'},
+     {type:'frame_swap',frame:'Necesito ___',en:'I need ___',slots:[
+       {es:'ayuda',en:'help'},{es:'un baño',en:'a bathroom'},{es:'un médico',en:'a doctor'},{es:'un taxi',en:'a taxi'}]},
+     {type:'listen_repeat',es:'¿Dónde está el baño?',ph:'/ˈdon.de esˈta el ˈba.ɲo/',en:'Where is the bathroom?'},
+     {type:'frame_swap',frame:'¿Dónde está ___?',en:'Where is ___?',slots:[
+       {es:'el baño',en:'the bathroom'},{es:'la salida',en:'the exit'},{es:'el hotel',en:'the hotel'},{es:'la estación',en:'the station'}]},
+     {type:'listen_repeat',es:'¿Cuánto cuesta esto?',ph:'/ˈkwan.to ˈkwes.ta ˈes.to/',en:'How much is this?'},
+     {type:'frame_swap',frame:'¿Cuánto cuesta ___?',en:'How much is ___?',slots:[
+       {es:'esto',en:'this'},{es:'el boleto',en:'the ticket'},{es:'la habitación',en:'the room'}]},
+     {type:'listen_repeat',es:'¿Tiene wifi?',ph:'/ˈtje.ne ˈwi.fi/',en:'Do you have wifi?'},
+     {type:'frame_swap',frame:'¿Tiene ___?',en:'Do you have ___?',slots:[
+       {es:'wifi',en:'wifi'},{es:'una mesa',en:'a table'},{es:'un cuarto',en:'a room'}]},
+     {type:'produce',en:'Say “I want a coffee”',es:'Quiero un café',ph:''},
+     {type:'produce',en:'Ask “Where is the bathroom?”',es:'¿Dónde está el baño?',ph:''},
+     {type:'produce',en:'Ask “How much is this?”',es:'¿Cuánto cuesta esto?',ph:''},
+   ]},
+  {id:'e4',code:'E4',track:'engine',title:'When You\'re Lost',icon:'🆘',
+   desc:'The rescue phrases for when someone talks back too fast.',
+   goal:'Survive any answer you don\'t catch.',
+   steps:[
+     {type:'listen_repeat',es:'No entiendo',ph:'/no enˈtjen.do/',en:'I don\'t understand'},
+     {type:'listen_repeat',es:'Más despacio, por favor',ph:'/mas desˈpa.sjo/',en:'Slower, please'},
+     {type:'listen_repeat',es:'¿Puede repetir?',ph:'/ˈpwe.ðe re.peˈtir/',en:'Can you repeat?'},
+     {type:'listen_repeat',es:'¿Habla inglés?',ph:'/ˈa.βla inˈɡles/',en:'Do you speak English?'},
+     {type:'listen_repeat',es:'No sé',ph:'/no se/',en:'I don\'t know'},
+     {type:'produce',en:'Say “I don\'t understand”',es:'No entiendo',ph:''},
+     {type:'produce',en:'Say “Slower, please”',es:'Más despacio, por favor',ph:''},
+     {type:'produce',en:'Ask “Do you speak English?”',es:'¿Habla inglés?',ph:''},
+   ]},
+  {id:'e5',code:'E5',track:'engine',title:'Numbers, Time & Money',icon:'💰',
+   desc:'Understand prices, tell time, and handle any transaction.',
+   goal:'Understand prices, tell time, and handle money.',
+   steps:[
+     {type:'listen_repeat',es:'uno, dos, tres, cuatro, cinco',ph:'',en:'Count from one to five'},
+     {type:'listen_repeat',es:'seis, siete, ocho, nueve, diez',ph:'',en:'Count from six to ten'},
+     {type:'listen_repeat',es:'¿Cuánto es?',ph:'/ˈkwan.to es/',en:'How much is it?'},
+     {type:'listen_repeat',es:'Es muy caro',ph:'/es muj ˈka.ro/',en:'It\'s very expensive'},
+     {type:'listen_repeat',es:'¿Qué hora es?',ph:'/ke ˈo.ra es/',en:'What time is it?'},
+     {type:'listen_repeat',es:'Son las tres',ph:'/son las tres/',en:'It\'s three o\'clock'},
+     {type:'listen_repeat',es:'A las ocho',ph:'/a las ˈo.tʃo/',en:'At eight'},
+     {type:'listen_repeat',es:'hoy',ph:'/oj/',en:'today'},
+     {type:'listen_repeat',es:'mañana',ph:'/maˈɲa.na/',en:'tomorrow'},
+     {type:'listen_repeat',es:'ayer',ph:'/aˈʝer/',en:'yesterday'},
+     {type:'produce',en:'Ask “How much is it?”',es:'¿Cuánto es?',ph:''},
+     {type:'produce',en:'Say “It\'s very expensive”',es:'Es muy caro',ph:''},
+     {type:'produce',en:'Ask “What time is it?”',es:'¿Qué hora es?',ph:''},
+   ]},
+  {id:'e6',code:'E6',track:'engine',title:'Talking About Yourself',icon:'🙋',
+   desc:'Say who you are, where you are, and what you need.',
+   goal:'Say who you are, where you are, and what you need.',
+   steps:[
+     {type:'listen_repeat',es:'Soy de Estados Unidos',ph:'/soj de esˈta.ðos uˈni.ðos/',en:'I\'m from the United States'},
+     {type:'frame_swap',frame:'Soy de ___',en:'I\'m from ___',slots:[
+       {es:'Estados Unidos',en:'the US'},{es:'California',en:'California'},{es:'Canadá',en:'Canada'},{es:'Nueva York',en:'New York'}]},
+     {type:'listen_repeat',es:'Estoy aquí de vacaciones',ph:'/esˈtoj aˈki de ba.kaˈsjo.nes/',en:'I\'m here on vacation'},
+     {type:'listen_repeat',es:'Tengo hambre',ph:'/ˈten.ɡo ˈam.bre/',en:'I\'m hungry'},
+     {type:'frame_swap',frame:'Tengo ___',en:'I have / I\'m ___',slots:[
+       {es:'hambre',en:'hungry'},{es:'sed',en:'thirsty'},{es:'frío',en:'cold'},{es:'prisa',en:'in a hurry'}]},
+     {type:'listen_repeat',es:'¿Hay un baño?',ph:'/aj un ˈba.ɲo/',en:'Is there a bathroom?'},
+     {type:'frame_swap',frame:'¿Hay ___?',en:'Is there ___?',slots:[
+       {es:'un baño',en:'a bathroom'},{es:'wifi',en:'wifi'},{es:'un cajero',en:'an ATM'},{es:'un restaurante cerca',en:'a restaurant nearby'}]},
+     {type:'produce',en:'Say “I\'m from the United States”',es:'Soy de Estados Unidos',ph:''},
+     {type:'produce',en:'Say “I\'m hungry”',es:'Tengo hambre',ph:''},
+     {type:'produce',en:'Ask “Is there wifi?”',es:'¿Hay wifi?',ph:''},
+   ]},
+  {id:'e7',code:'E7',track:'engine',title:'Questions & Verbs',icon:'🛠️',
+   desc:'Vary your questions and start combining words into new sentences.',
+   goal:'Vary your questions and start combining words.',
+   steps:[
+     {type:'listen_repeat',es:'¿Qué es esto?',ph:'/ke es ˈes.to/',en:'What is this?'},
+     {type:'listen_repeat',es:'¿Cuándo?',ph:'/ˈkwan.do/',en:'When?'},
+     {type:'listen_repeat',es:'¿Por qué?',ph:'/por ke/',en:'Why?'},
+     {type:'listen_repeat',es:'Voy a comer',ph:'/boj a koˈmer/',en:'I\'m going to eat'},
+     {type:'frame_swap',frame:'Voy a ___',en:'I\'m going to ___',slots:[
+       {es:'comer',en:'eat'},{es:'pagar',en:'pay'},{es:'comprar',en:'buy'},{es:'dormir',en:'sleep'}]},
+     {type:'listen_repeat',es:'¿Puede ayudarme?',ph:'/ˈpwe.ðe a.ʝuˈðar.me/',en:'Can you help me?'},
+     {type:'listen_repeat',es:'Me gusta la comida',ph:'/me ˈɡus.ta la koˈmi.ða/',en:'I like the food'},
+     {type:'frame_swap',frame:'Me gusta ___',en:'I like ___',slots:[
+       {es:'México',en:'Mexico'},{es:'la comida',en:'the food'},{es:'esta ciudad',en:'this city'}]},
+     {type:'produce',en:'Say “I\'m going to eat”',es:'Voy a comer',ph:''},
+     {type:'produce',en:'Ask “Can you help me?”',es:'¿Puede ayudarme?',ph:''},
+     {type:'produce',en:'Say “I like the food”',es:'Me gusta la comida',ph:''},
+   ]},
+];
+
+const SCENARIOS=[
+  {id:'s1',code:'S1',track:'scenario',title:'Arrival & the Airport',icon:'🛬',desc:'Passport, baggage, the exit, a SIM or taxi.',goal:'Get through the airport and out the door on your own.',
+   steps:[
+     {type:'scene',title:'A scene — passport control',lines:[
+       {sp:'¿Motivo de su viaje?',en:'Purpose of your trip?'},
+       {sp:'Turismo.',en:'Tourism.'},
+       {sp:'¿Cuántos días?',en:'How many days?'},
+       {sp:'Una semana.',en:'One week.'},
+     ]},
+     {type:'present',es:'Turismo',ph:'/tuˈris.mo/',en:'Tourism',note:'The one-word answer at passport control.'},
+     {type:'listen_repeat',es:'Estoy aquí de vacaciones',ph:'/esˈtoj aˈki de ba.kaˈsjo.nes/',en:'I\'m here on vacation'},
+     {type:'present',es:'¿Dónde está la salida?',ph:'/ˈdon.de esˈta la saˈli.ða/',en:'Where is the exit?  (your E2 frame again)'},
+     {type:'frame_swap',frame:'¿Dónde está ___?',en:'Where is ___?',slots:[
+       {es:'la salida',en:'the exit'},{es:'mi maleta',en:'my suitcase'},{es:'la puerta',en:'the gate'},{es:'un taxi',en:'a taxi'}]},
+     {type:'listen_repeat',es:'Perdí mi maleta',ph:'/perˈði mi maˈle.ta/',en:'I lost my suitcase'},
+     {type:'listen_repeat',es:'Necesito un taxi',ph:'/ne.seˈsi.to un ˈtak.si/',en:'I need a taxi'},
+     {type:'produce',en:'Ask “Where is the exit?”',es:'¿Dónde está la salida?',ph:''},
+     {type:'produce',en:'Say “I need a taxi”',es:'Necesito un taxi',ph:''},
+     {type:'produce',en:'Say “I\'m here on vacation”',es:'Estoy aquí de vacaciones',ph:''},
+     {type:'roleplay',title:'Role-play — you just landed',lines:[
+       {who:'them',es:'¿Motivo de su viaje?',en:'Purpose of your trip?'},
+       {who:'you',es:'Turismo',en:'Tourism'},
+       {who:'them',es:'¿Cuántos días?',en:'How many days?'},
+       {who:'you',es:'Una semana',en:'One week'},
+       {who:'them',es:'Bienvenido.',en:'Welcome.'},
+       {who:'you',es:'¿Dónde está la salida?',en:'Where is the exit?'},
+     ]},
+   ]},
+  {id:'s2',code:'S2',track:'scenario',title:'Getting Around',icon:'🚕',desc:'Tell the driver, ask the fare, “stop here”.',goal:'Get where you\'re going and pay a fair price.',
+   steps:[
+     {type:'scene',title:'A scene — in the taxi',lines:[
+       {sp:'¿A dónde va?',en:'Where are you going?'},
+       {sp:'Al centro, por favor.',en:'Downtown, please.'},
+       {sp:'¿Cuánto cuesta?',en:'How much is it?'},
+       {sp:'Doscientos pesos.',en:'Two hundred pesos.'},
+     ]},
+     {type:'present',es:'Al ___, por favor',ph:'/al/',en:'To ___, please  (telling the driver)'},
+     {type:'frame_swap',frame:'Al ___, por favor',en:'To ___, please',slots:[
+       {es:'centro',en:'downtown'},{es:'hotel',en:'the hotel'},{es:'aeropuerto',en:'the airport'},{es:'museo',en:'the museum'}]},
+     {type:'listen_repeat',es:'¿Cuánto cuesta al centro?',ph:'/ˈkwan.to ˈkwes.ta al ˈsen.tro/',en:'How much to downtown?  (your E2 frame)'},
+     {type:'present',es:'Pare aquí, por favor',ph:'/ˈpa.re aˈki/',en:'Stop here, please',note:'The key survival line in any taxi.'},
+     {type:'frame_swap',frame:'¿Puede llevarme a ___?',en:'Can you take me to ___?',slots:[
+       {es:'este hotel',en:'this hotel'},{es:'esta dirección',en:'this address'},{es:'el aeropuerto',en:'the airport'}]},
+     {type:'produce',en:'Say “Downtown, please”',es:'Al centro, por favor',ph:''},
+     {type:'produce',en:'Ask “How much to downtown?”',es:'¿Cuánto cuesta al centro?',ph:''},
+     {type:'produce',en:'Say “Stop here, please”',es:'Pare aquí, por favor',ph:''},
+     {type:'roleplay',title:'Role-play — catching a taxi',lines:[
+       {who:'them',es:'¿A dónde va?',en:'Where are you going?'},
+       {who:'you',es:'Al centro, por favor',en:'Downtown, please'},
+       {who:'them',es:'Son doscientos pesos.',en:'It\'s two hundred pesos.'},
+       {who:'you',es:'Está bien',en:'Okay'},
+       {who:'them',es:'¿Aquí?',en:'Here?'},
+       {who:'you',es:'Pare aquí, por favor',en:'Stop here, please'},
+     ]},
+   ]},
+  {id:'s3',code:'S3',track:'scenario',title:'Checking In',icon:'🏨',desc:'Reservation, breakfast, report a problem.',goal:'Check in, ask about breakfast, and fix a room problem.',
+   steps:[
+     {type:'scene',title:'A scene — the front desk',lines:[
+       {sp:'Buenas tardes, ¿tiene una reserva?',en:'Good afternoon, do you have a reservation?'},
+       {sp:'Sí, a nombre de García.',en:'Yes, under the name García.'},
+       {sp:'Perfecto. Aquí está su llave.',en:'Perfect. Here\'s your key.'},
+     ]},
+     {type:'present',es:'Tengo una reserva',ph:'/ˈten.ɡo ˈu.na reˈser.βa/',en:'I have a reservation  (your E4 “tengo”)'},
+     {type:'listen_repeat',es:'A nombre de García',ph:'/a ˈnom.bre de ɡarˈsi.a/',en:'Under the name García'},
+     {type:'present',es:'¿A qué hora es el desayuno?',ph:'/a ke ˈo.ra es el de.saˈʝu.no/',en:'What time is breakfast?'},
+     {type:'listen_repeat',es:'¿A qué hora es el checkout?',ph:'',en:'What time is checkout?'},
+     {type:'present',es:'Hay un problema con ___',ph:'/aj un proˈβle.ma kon/',en:'There\'s a problem with ___  (your E4 “hay”)'},
+     {type:'frame_swap',frame:'Hay un problema con ___',en:'There\'s a problem with ___',slots:[
+       {es:'la llave',en:'the key'},{es:'el aire acondicionado',en:'the AC'},{es:'la ducha',en:'the shower'},{es:'el wifi',en:'the wifi'}]},
+     {type:'listen_repeat',es:'Necesito más toallas',ph:'/ne.seˈsi.to mas toˈa.ʝas/',en:'I need more towels'},
+     {type:'produce',en:'Say “I have a reservation”',es:'Tengo una reserva',ph:''},
+     {type:'produce',en:'Ask “What time is breakfast?”',es:'¿A qué hora es el desayuno?',ph:''},
+     {type:'produce',en:'Say “There\'s a problem with the key”',es:'Hay un problema con la llave',ph:''},
+     {type:'roleplay',title:'Role-play — checking in',lines:[
+       {who:'them',es:'¿Tiene una reserva?',en:'Do you have a reservation?'},
+       {who:'you',es:'Sí, a nombre de García',en:'Yes, under García'},
+       {who:'them',es:'Aquí está su llave.',en:'Here\'s your key.'},
+       {who:'you',es:'¿A qué hora es el desayuno?',en:'What time is breakfast?'},
+       {who:'them',es:'A las ocho.',en:'At eight.'},
+       {who:'you',es:'Gracias',en:'Thank you'},
+     ]},
+   ]},
+  {id:'s4',code:'S4',track:'scenario',title:'Eating & Drinking',icon:'🍽️',
+   desc:'Get a table, order, handle allergies, ask what’s good, and pay.',goal:'Get a table, order, flag an allergy, and pay.',
+   steps:[
+     {type:'scene',title:'A quick scene — a table for two',lines:[
+       {sp:'Buenas noches, ¿mesa para dos?',en:'Good evening, table for two?'},
+       {sp:'Sí, por aquí, por favor.',en:'Yes, this way, please.'},
+       {sp:'¿Qué me recomienda?',en:'What do you recommend?'},
+       {sp:'El pescado está muy bueno.',en:'The fish is very good.'},
+     ]},
+     {type:'present',es:'Para mí, ___',ph:'/ˈpa.ra mi/',en:'For me, ___  (the natural way to order)'},
+     {type:'frame_swap',frame:'Para mí, ___',en:'For me, ___',slots:[
+       {es:'un café',en:'a coffee'},{es:'una cerveza',en:'a beer'},{es:'el pollo',en:'the chicken'},{es:'la ensalada',en:'the salad'}]},
+     {type:'listen_repeat',es:'¿Qué recomienda?',ph:'/ke re.koˈmjen.da/',en:'What do you recommend?'},
+     {type:'present',es:'Soy alérgico a ___',ph:'/soj aˈler.xi.ko a/',en:'I am allergic to ___',note:'A critical safety line — learn it cold.'},
+     {type:'frame_swap',frame:'Soy alérgico a ___',en:'I am allergic to ___',slots:[
+       {es:'los mariscos',en:'shellfish'},{es:'los cacahuates',en:'peanuts'},{es:'el gluten',en:'gluten'}]},
+     {type:'listen_repeat',es:'Sin cebolla, por favor',ph:'/sin seˈβo.ʝa/',en:'Without onion, please'},
+     {type:'listen_repeat',es:'La cuenta, por favor',ph:'/la ˈkwen.ta/',en:'The check, please'},
+     {type:'produce',en:'Order: “For me, the chicken”',es:'Para mí, el pollo',ph:'/ˈpa.ra mi el ˈpo.ʝo/'},
+     {type:'produce',en:'Say: “I am allergic to shellfish”',es:'Soy alérgico a los mariscos',ph:'/soj aˈler.xi.ko a los maˈris.kos/'},
+     {type:'produce',en:'Ask for the check',es:'La cuenta, por favor',ph:'/la ˈkwen.ta por faˈβor/'},
+     {type:'roleplay',title:'Role-play — you’re ordering dinner',lines:[
+       {who:'them',es:'Buenas noches, ¿mesa para cuántos?',en:'Good evening, table for how many?'},
+       {who:'you',es:'Para dos, por favor',en:'For two, please'},
+       {who:'them',es:'¿Qué desean tomar?',en:'What would you like to drink?'},
+       {who:'you',es:'Para mí, una cerveza',en:'For me, a beer'},
+       {who:'them',es:'¿Y para comer?',en:'And to eat?'},
+       {who:'you',es:'El pollo, por favor',en:'The chicken, please'},
+     ]},
+   ]},
+  {id:'s5',code:'S5',track:'scenario',title:'Shopping & Money',icon:'🛍️',desc:'Ask the price, sizes, the polite haggle, card or cash.',goal:'Ask prices, try things on, and pay your way.',
+   steps:[
+     {type:'scene',title:'A scene — at the market',lines:[
+       {sp:'¿Cuánto cuesta esto?',en:'How much is this?'},
+       {sp:'Cien pesos.',en:'A hundred pesos.'},
+       {sp:'¿Tiene algo más barato?',en:'Do you have anything cheaper?'},
+       {sp:'Ochenta, para usted.',en:'Eighty, for you.'},
+     ]},
+     {type:'present',es:'¿Cuánto cuesta esto?',ph:'/ˈkwan.to ˈkwes.ta ˈes.to/',en:'How much is this?  (your E2 frame)'},
+     {type:'present',es:'¿Tiene esto en ___?',ph:'/ˈtje.ne ˈes.to en/',en:'Do you have this in ___?'},
+     {type:'frame_swap',frame:'¿Tiene esto en ___?',en:'Do you have this in ___?',slots:[
+       {es:'otra talla',en:'another size'},{es:'azul',en:'blue'},{es:'más grande',en:'bigger'},{es:'más pequeño',en:'smaller'}]},
+     {type:'listen_repeat',es:'¿Dónde está el probador?',ph:'/ˈdon.de esˈta el pro.βaˈðor/',en:'Where is the fitting room?'},
+     {type:'listen_repeat',es:'Es muy caro. ¿Algo más barato?',ph:'',en:'It\'s expensive. Anything cheaper?'},
+     {type:'present',es:'¿Puedo pagar con tarjeta?',ph:'/ˈpwe.ðo paˈɣar kon tarˈxe.ta/',en:'Can I pay by card?  (your E2 “¿Puedo?”)'},
+     {type:'listen_repeat',es:'¿Efectivo o tarjeta?',ph:'/e.fekˈti.βo o tarˈxe.ta/',en:'Cash or card?'},
+     {type:'produce',en:'Ask “How much is this?”',es:'¿Cuánto cuesta esto?',ph:''},
+     {type:'produce',en:'Ask “Do you have anything cheaper?”',es:'¿Tiene algo más barato?',ph:''},
+     {type:'produce',en:'Ask “Can I pay by card?”',es:'¿Puedo pagar con tarjeta?',ph:''},
+     {type:'roleplay',title:'Role-play — buying at a stall',lines:[
+       {who:'them',es:'¿Le puedo ayudar?',en:'Can I help you?'},
+       {who:'you',es:'¿Cuánto cuesta esto?',en:'How much is this?'},
+       {who:'them',es:'Cien pesos.',en:'A hundred pesos.'},
+       {who:'you',es:'¿Tiene algo más barato?',en:'Anything cheaper?'},
+       {who:'them',es:'Ochenta.',en:'Eighty.'},
+       {who:'you',es:'¿Puedo pagar con tarjeta?',en:'Can I pay by card?'},
+     ]},
+   ]},
+  {id:'s6',code:'S6',track:'scenario',title:'Directions',icon:'🧭',desc:'Ask where, left/right/straight, near/far/blocks.',goal:'Ask for directions and actually follow the answer.',
+   steps:[
+     {type:'scene',title:'A scene — asking the way',lines:[
+       {sp:'Disculpe, ¿dónde está el museo?',en:'Excuse me, where is the museum?'},
+       {sp:'Todo recto y a la derecha.',en:'Straight ahead and to the right.'},
+       {sp:'¿Está lejos?',en:'Is it far?'},
+       {sp:'No, a dos cuadras.',en:'No, two blocks away.'},
+     ]},
+     {type:'listen_repeat',es:'a la derecha',ph:'/a la ðeˈre.tʃa/',en:'to the right'},
+     {type:'listen_repeat',es:'a la izquierda',ph:'/a la isˈkjer.ða/',en:'to the left'},
+     {type:'listen_repeat',es:'todo recto',ph:'/ˈto.ðo ˈrek.to/',en:'straight ahead'},
+     {type:'listen_repeat',es:'A la derecha',ph:'/a la ðeˈre.tʃa/',en:'To the right'},
+     {type:'listen_repeat',es:'Todo recto',ph:'/ˈto.ðo ˈrek.to/',en:'Straight ahead'},
+     {type:'present',es:'¿Está cerca o lejos?',ph:'/esˈta ˈser.ka o ˈle.xos/',en:'Is it near or far?'},
+     {type:'listen_repeat',es:'A dos cuadras',ph:'/a dos ˈkwa.ðras/',en:'Two blocks away'},
+     {type:'frame_swap',frame:'Está en ___',en:'It\'s at ___',slots:[
+       {es:'la esquina',en:'the corner'},{es:'la derecha',en:'the right'},{es:'la izquierda',en:'the left'},{es:'dos cuadras',en:'two blocks'}]},
+     {type:'produce',en:'Ask “Where is the museum?”',es:'¿Dónde está el museo?',ph:''},
+     {type:'produce',en:'Ask “Is it near or far?”',es:'¿Está cerca o lejos?',ph:''},
+     {type:'produce',en:'Say “To the right”',es:'A la derecha',ph:''},
+     {type:'roleplay',title:'Role-play — you\'re lost',lines:[
+       {who:'them',es:'¿Necesita ayuda?',en:'Do you need help?'},
+       {who:'you',es:'¿Dónde está la estación?',en:'Where is the station?'},
+       {who:'them',es:'Todo recto, a la izquierda.',en:'Straight, then left.'},
+       {who:'you',es:'¿Está lejos?',en:'Is it far?'},
+       {who:'them',es:'No, muy cerca.',en:'No, very close.'},
+       {who:'you',es:'Gracias',en:'Thank you'},
+     ]},
+   ]},
+  {id:'s7',code:'S7',track:'scenario',title:'Trouble',icon:'🆘',desc:'Pharmacy, feeling sick, lost or stolen, a doctor.',goal:'Get help when you\'re sick, hurt, or something\'s lost.',
+   steps:[
+     {type:'scene',title:'A scene — at the pharmacy',lines:[
+       {sp:'Me duele la cabeza.',en:'My head hurts.'},
+       {sp:'¿Necesita algo para el dolor?',en:'Do you need something for the pain?'},
+       {sp:'Sí, por favor.',en:'Yes, please.'},
+     ]},
+     {type:'present',es:'Me duele ___',ph:'/me ˈðwe.le/',en:'My ___ hurts',note:'Point as you say it — it always works.'},
+     {type:'frame_swap',frame:'Me duele ___',en:'My ___ hurts',slots:[
+       {es:'la cabeza',en:'head'},{es:'el estómago',en:'stomach'},{es:'la garganta',en:'throat'},{es:'la espalda',en:'back'}]},
+     {type:'listen_repeat',es:'Necesito un médico',ph:'/ne.seˈsi.to un ˈme.ði.ko/',en:'I need a doctor  (your E2 frame)'},
+     {type:'present',es:'Perdí mi ___',ph:'/perˈði mi/',en:'I lost my ___'},
+     {type:'frame_swap',frame:'Perdí mi ___',en:'I lost my ___',slots:[
+       {es:'pasaporte',en:'passport'},{es:'teléfono',en:'phone'},{es:'cartera',en:'wallet'},{es:'maleta',en:'suitcase'}]},
+     {type:'listen_repeat',es:'Ayúdeme, por favor',ph:'/aˈʝu.ðe.me/',en:'Help me, please  (your E6 command)'},
+     {type:'produce',en:'Say “My head hurts”',es:'Me duele la cabeza',ph:''},
+     {type:'produce',en:'Say “I need a doctor”',es:'Necesito un médico',ph:''},
+     {type:'produce',en:'Say “I lost my passport”',es:'Perdí mi pasaporte',ph:''},
+     {type:'roleplay',title:'Role-play — feeling sick',lines:[
+       {who:'them',es:'¿Qué le pasa?',en:'What\'s wrong?'},
+       {who:'you',es:'Me duele el estómago',en:'My stomach hurts'},
+       {who:'them',es:'¿Desde cuándo?',en:'Since when?'},
+       {who:'you',es:'Desde ayer',en:'Since yesterday'},
+       {who:'them',es:'Necesita ver a un médico.',en:'You need to see a doctor.'},
+       {who:'you',es:'¿Dónde está el hospital?',en:'Where is the hospital?'},
+     ]},
+   ]},
+  {id:'s8',code:'S8',track:'scenario',title:'Connecting',icon:'💬',desc:'Greet warmly, small talk, be a good guest.',goal:'Break the ice and be a gracious guest.',
+   steps:[
+     {type:'scene',title:'A scene — meeting a local',lines:[
+       {sp:'¡Hola! ¿De dónde eres?',en:'Hi! Where are you from?'},
+       {sp:'Soy de Estados Unidos.',en:'I\'m from the United States.'},
+       {sp:'¡Bienvenido! ¿Te gusta México?',en:'Welcome! Do you like Mexico?'},
+       {sp:'¡Me encanta!',en:'I love it!'},
+     ]},
+     {type:'present',es:'¿De dónde eres?',ph:'/de ˈðon.de ˈe.res/',en:'Where are you from?'},
+     {type:'listen_repeat',es:'Soy de Estados Unidos',ph:'',en:'I\'m from the United States  (your E4 frame)'},
+     {type:'present',es:'Me gusta mucho ___',ph:'/me ˈɡus.ta ˈmu.tʃo/',en:'I really like ___  (your E6 “me gusta”)'},
+     {type:'frame_swap',frame:'Me gusta mucho ___',en:'I really like ___',slots:[
+       {es:'tu país',en:'your country'},{es:'la comida',en:'the food'},{es:'esta ciudad',en:'this city'},{es:'la gente',en:'the people'}]},
+     {type:'listen_repeat',es:'Mucho gusto',ph:'/ˈmu.tʃo ˈɡus.to/',en:'Nice to meet you'},
+     {type:'listen_repeat',es:'Igualmente',ph:'/iˈɣwal.men.te/',en:'Likewise'},
+     {type:'present',es:'usted vs tú',ph:'',en:'formal “you” vs casual “you”',note:'Use “usted” with strangers and elders; “tú” with friends and kids.'},
+     {type:'produce',en:'Ask “Where are you from?”',es:'¿De dónde eres?',ph:''},
+     {type:'produce',en:'Say “Nice to meet you”',es:'Mucho gusto',ph:''},
+     {type:'produce',en:'Say “I really like the food”',es:'Me gusta mucho la comida',ph:''},
+     {type:'roleplay',title:'Role-play — small talk',lines:[
+       {who:'them',es:'¡Hola! ¿De dónde eres?',en:'Hi! Where are you from?'},
+       {who:'you',es:'Soy de California',en:'I\'m from California'},
+       {who:'them',es:'¿Te gusta México?',en:'Do you like Mexico?'},
+       {who:'you',es:'Me gusta mucho',en:'I really like it'},
+       {who:'them',es:'Mucho gusto.',en:'Nice to meet you.'},
+       {who:'you',es:'Igualmente',en:'Likewise'},
+     ]},
+   ]},
+];
+
+// ── Capstone: the Trip Simulation (one travel day, your side spoken) ──
+const TRIP_SIM={id:'trip',code:'★',track:'capstone',title:'Trip Simulation',icon:'🏁',
+  desc:'One full travel day — your side, start to finish.',goal:'Handle a whole travel day — arrival to dinner to home — on your own.',
+  steps:[
+    {type:'present',es:'Tu día de viaje',ph:'',en:'Your travel day: land → taxi → hotel → dinner → find your way home.',note:'Everything here you already learned. Now put it together and speak your side.'},
+    {type:'roleplay',title:'1 · You land',lines:[
+      {who:'them',es:'¿Motivo de su viaje?',en:'Purpose of your trip?'},
+      {who:'you',es:'Turismo',en:'Tourism'},
+      {who:'them',es:'Bienvenido. ¿Cuántos días?',en:'Welcome. How many days?'},
+      {who:'you',es:'Una semana',en:'One week'},
+      {who:'them',es:'Que disfrute.',en:'Enjoy your stay.'},
+      {who:'you',es:'¿Dónde está la salida?',en:'Where is the exit?'},
+    ]},
+    {type:'roleplay',title:'2 · Taxi to the hotel',lines:[
+      {who:'them',es:'¿A dónde va?',en:'Where are you going?'},
+      {who:'you',es:'Al centro, por favor',en:'Downtown, please'},
+      {who:'them',es:'Son doscientos pesos.',en:'Two hundred pesos.'},
+      {who:'you',es:'Está bien',en:'Okay'},
+      {who:'them',es:'Llegamos.',en:'We\'re here.'},
+      {who:'you',es:'Pare aquí, por favor',en:'Stop here, please'},
+    ]},
+    {type:'roleplay',title:'3 · Checking in',lines:[
+      {who:'them',es:'¿Tiene una reserva?',en:'Do you have a reservation?'},
+      {who:'you',es:'Sí, a nombre de García',en:'Yes, under García'},
+      {who:'them',es:'Aquí está su llave.',en:'Here\'s your key.'},
+      {who:'you',es:'¿A qué hora es el desayuno?',en:'What time is breakfast?'},
+    ]},
+    {type:'roleplay',title:'4 · Dinner',lines:[
+      {who:'them',es:'¿Mesa para cuántos?',en:'Table for how many?'},
+      {who:'you',es:'Para dos, por favor',en:'For two, please'},
+      {who:'them',es:'¿Qué desean tomar?',en:'What would you like to drink?'},
+      {who:'you',es:'Para mí, una cerveza',en:'For me, a beer'},
+      {who:'them',es:'¿Y para comer?',en:'And to eat?'},
+      {who:'you',es:'El pollo, por favor',en:'The chicken, please'},
+    ]},
+    {type:'roleplay',title:'5 · Lost, finding your way home',lines:[
+      {who:'them',es:'¿Necesita ayuda?',en:'Do you need help?'},
+      {who:'you',es:'¿Dónde está el hotel?',en:'Where is the hotel?'},
+      {who:'them',es:'Todo recto, a la derecha.',en:'Straight, then right.'},
+      {who:'you',es:'¿Está lejos?',en:'Is it far?'},
+      {who:'them',es:'No, muy cerca.',en:'No, very close.'},
+      {who:'you',es:'Muchas gracias',en:'Thank you very much'},
+    ]},
+    {type:'present',es:'¡Lo lograste!',ph:'/lo loˈɣras.te/',en:'You did it!',note:'You got through a whole travel day on your own. That’s the promise, delivered.'},
+  ]};
+const CAPSTONES=[TRIP_SIM];
+
+// ── Pre-Trip Cram: the essential phrases, fast ──
+const CRAM=[
+  {es:'Hola',en:'Hello'},{es:'Gracias',en:'Thank you'},{es:'Por favor',en:'Please'},
+  {es:'Disculpe',en:'Excuse me'},{es:'Perdón',en:'Sorry / pardon'},{es:'De nada',en:'You\'re welcome'},
+  {es:'Sí',en:'Yes'},{es:'No',en:'No'},{es:'Buenos días',en:'Good morning'},{es:'Buenas noches',en:'Good evening'},
+  {es:'No entiendo',en:'I don\'t understand'},{es:'Más despacio, por favor',en:'Slower, please'},
+  {es:'¿Puede repetir?',en:'Can you repeat?'},{es:'¿Habla inglés?',en:'Do you speak English?'},{es:'No sé',en:'I don\'t know'},
+  {es:'Quiero un café',en:'I want a coffee'},{es:'Necesito ayuda',en:'I need help'},
+  {es:'¿Dónde está el baño?',en:'Where is the bathroom?'},{es:'¿Cuánto cuesta esto?',en:'How much is this?'},
+  {es:'¿Tiene wifi?',en:'Do you have wifi?'},{es:'¿Puedo pagar con tarjeta?',en:'Can I pay by card?'},
+  {es:'Soy de Estados Unidos',en:'I\'m from the United States'},{es:'Tengo hambre',en:'I\'m hungry'},{es:'¿Hay un baño?',en:'Is there a bathroom?'},
+  {es:'¿Cuánto es?',en:'How much is it?'},{es:'Es muy caro',en:'It\'s very expensive'},{es:'¿Qué hora es?',en:'What time is it?'},
+  {es:'Necesito un taxi',en:'I need a taxi'},{es:'Al centro, por favor',en:'Downtown, please'},{es:'Pare aquí, por favor',en:'Stop here, please'},
+  {es:'Tengo una reserva',en:'I have a reservation'},{es:'La cuenta, por favor',en:'The check, please'},{es:'Soy alérgico a los mariscos',en:'I\'m allergic to shellfish'},
+  {es:'¿Está cerca o lejos?',en:'Is it near or far?'},{es:'A la derecha',en:'To the right'},
+  {es:'Me duele la cabeza',en:'My head hurts'},{es:'Necesito un médico',en:'I need a doctor'},{es:'Perdí mi pasaporte',en:'I lost my passport'},{es:'Ayúdeme, por favor',en:'Help me, please'},
+  {es:'¿De dónde eres?',en:'Where are you from?'},{es:'Mucho gusto',en:'Nice to meet you'},{es:'Me gusta mucho la comida',en:'I really like the food'},
+];
+
+// ── Basics cheat-sheet (browsable reference in Practice) ──
+const BASICS=[
+  {title:'Numbers 1–10',items:[
+    {es:'uno',en:'1'},{es:'dos',en:'2'},{es:'tres',en:'3'},{es:'cuatro',en:'4'},{es:'cinco',en:'5'},
+    {es:'seis',en:'6'},{es:'siete',en:'7'},{es:'ocho',en:'8'},{es:'nueve',en:'9'},{es:'diez',en:'10'}]},
+  {title:'Bigger numbers',items:[
+    {es:'veinte',en:'20'},{es:'treinta',en:'30'},{es:'cuarenta',en:'40'},{es:'cincuenta',en:'50'},{es:'cien',en:'100'}]},
+  {title:'Days',items:[
+    {es:'lunes',en:'Monday'},{es:'martes',en:'Tuesday'},{es:'miércoles',en:'Wednesday'},{es:'jueves',en:'Thursday'},
+    {es:'viernes',en:'Friday'},{es:'sábado',en:'Saturday'},{es:'domingo',en:'Sunday'}]},
+  {title:'Colors',items:[
+    {es:'rojo',en:'red'},{es:'azul',en:'blue'},{es:'verde',en:'green'},{es:'amarillo',en:'yellow'},{es:'blanco',en:'white'},{es:'negro',en:'black'}]},
+  {title:'Handy words',items:[
+    {es:'agua',en:'water'},{es:'baño',en:'bathroom'},{es:'ayuda',en:'help'},{es:'hoy',en:'today'},{es:'mañana',en:'tomorrow'},
+    {es:'sí',en:'yes'},{es:'no',en:'no'},{es:'aquí',en:'here'}]},
+];
+
+// ── Cram player ──
+function startCram(){PR.mode='cram';PR.queue=CRAM;PR.idx=0;
+  document.getElementById('practiceHome').style.display='none';
+  document.getElementById('practiceActive').style.display='block';renderCramCard();}
+function renderCramCard(){
+  const a=document.getElementById('practiceActive');const{queue,idx}=PR;
+  if(idx>=queue.length){
+    a.innerHTML=`<div class="lesson-done"><span class="ld-emoji">⚡</span><div class="ld-title">Cram done!</div>
+      <p class="ld-sub">You blitzed ${queue.length} essential phrases.</p>
+      <div class="ld-actions"><button class="btn btn-primary btn-lg" onclick="renderPractice()">Back to practice</button></div></div>`;
+    return;
+  }
+  const c=queue[idx];
+  a.innerHTML=`
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+      <button class="btn btn-ghost" onclick="renderPractice()">← Back</button>
+      <div style="flex:1;text-align:center;font-size:.78rem;color:var(--text3);">${idx+1} / ${queue.length}</div>
+    </div>
+    <div class="al-card">
+      <div class="al-es">${c.es}</div>
+      <div class="al-en">${c.en}</div>
+      <div class="al-btns" style="justify-content:center;">
+        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(c.es)}')">🔊 Again</button>
+        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(c.es)}')">🐢 Slow</button>
+      </div>
+    </div>
+    <div class="ex-actions" style="margin-top:1rem;"><button class="btn btn-primary" onclick="cramNext()">Next →</button></div>`;
+  setTimeout(()=>speakPhrase(c.es),200);
+}
+function cramNext(){PR.idx++;renderCramCard();}
+
+// ── Basics browser ──
+function showBasics(){
+  document.getElementById('practiceHome').style.display='none';
+  const a=document.getElementById('practiceActive');a.style.display='block';
+  a.innerHTML=`
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
+      <button class="btn btn-ghost" onclick="renderPractice()">← Back</button>
+      <div style="flex:1;font-weight:600;">Basics — tap any word to hear it</div>
+    </div>
+    ${BASICS.map(sec=>`
+      <div class="band-label">${sec.title}</div>
+      <div class="basics-grid">
+        ${sec.items.map(it=>`<button class="basics-chip" onclick="speakPhrase('${escJS(it.es)}')">
+          <span class="bc-es">${it.es}</span><span class="bc-en">${it.en}</span></button>`).join('')}
+      </div>`).join('')}`;
+}
+
+function escJS(t){return String(t).replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
+
+// slowed playback — bundled clip at reduced rate, else slow browser TTS
+function speakPhraseSlow(text){
+  const src=(typeof AUDIO_MANIFEST!=='undefined')&&(AUDIO_MANIFEST[text]||AUDIO_LOOKUP[(text||'').toLowerCase().trim()]);
+  if(src){try{if('speechSynthesis' in window)window.speechSynthesis.cancel();if(_esptalkAudio)_esptalkAudio.pause();_esptalkAudio=new Audio(src);_esptalkAudio.playbackRate=0.62;_esptalkAudio.play().catch(()=>speakSlowTTS(text));return;}catch(e){}}
+  speakSlowTTS(text);
+}
+function speakSlowTTS(text){if('speechSynthesis' in window){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='es-MX';u.rate=0.5;window.speechSynthesis.speak(u);}}
+
+// Launch an Engine/Scenario module through the lesson engine
+function startModule(track,id){
+  const mod=[...ENGINE,...SCENARIOS,...CAPSTONES].find(m=>m.track===track&&m.id===id);
+  if(!mod){showToast('Module not found');return;}
+  const goalStep={type:'goal',code:mod.code,title:mod.title,icon:mod.icon,goal:mod.goal||mod.desc};
+  const steps=[goalStep,...mod.steps];
+  LS={track,modId:id,steps,si:0,correct:0,answered:false,swapIdx:0,rpIdx:0,matchSel:{side:null,idx:null,val:null},matchCount:0,matchPairs:[]};
+  nav('lesson');
+  document.getElementById('tbSub').textContent=mod.code+' · '+mod.title;
+  renderStep();
+}
+function moduleComplete(){
+  if(!S.completedModules) S.completedModules=new Set();
+  S.completedModules.add(LS.track+':'+LS.modId);
+  awardXP(20);recordActivity();saveState();
+  document.getElementById('lessonFill').style.width='100%';
+  document.getElementById('lessonBody').innerHTML=`
+    <div class="lesson-done">
+      <span class="ld-emoji">🎉</span>
+      <div class="ld-title">Module complete!</div>
+      <p class="ld-sub">You followed along and produced it out loud — that’s the whole method.</p>
+      <div class="ld-xp">⭐ +20 XP</div>
+      <div class="ld-actions">
+        <button class="btn btn-primary btn-lg" onclick="nav('curriculum')">Back to course</button>
+      </div>
+    </div>`;
+  saveState();
+}
+
+// ── Produce: reveal model + self-rate ──
+function revealProduce(){
+  const s=LS.steps[LS.si];
+  document.getElementById('pr-reveal').innerHTML=`
+    <div class="al-card" style="margin-top:1rem;">
+      <div class="al-es">${s.es}</div>
+      ${s.ph?`<div class="al-ph">${s.ph}</div>`:''}
+      <div class="al-btns">
+        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">🔊 Natural</button>
+        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(s.es)}')">🐢 Slow</button>
+      </div>
+    </div>`;
+  speakPhrase(s.es);
+  const rb=document.getElementById('revealBtn'); if(rb) rb.style.display='none';
+  document.getElementById('fb').innerHTML=`
+    <div class="pr-rate"><span>How did you do?</span>
+      <button class="btn btn-ghost" onclick="rateProduce(false)">Missed it</button>
+      <button class="btn btn-green" onclick="rateProduce(true)">Got it ✓</button>
+    </div>`;
+}
+function rateProduce(good){
+  if(LS.answered)return;LS.answered=true;
+  if(good)LS.correct++;
+  document.getElementById('nxt').disabled=false;
+  document.getElementById('fb').innerHTML=`<div class="feedback ok"><span class="fb-icon">${good?'✓':'↻'}</span><div><div class="fb-main">${good?'¡Bien! You said it.':'No worries — repeat it a couple times, then continue.'}</div></div></div>`;
+}
+
+// ── Frame swap: cycle a noun through a frame ──
+function renderSwap(){
+  const s=LS.steps[LS.si];const slot=s.slots[LS.swapIdx];
+  const full=s.frame.replace('___',slot.es);
+  const fullEn=s.en.replace('___',slot.en);
+  document.getElementById('lessonBody').innerHTML=`
+    <div class="ex-card">
+      <div class="ex-type">🧩 Swap it into the frame</div>
+      <div class="fs-frame">${s.frame.replace('___','<span class="fs-slot">'+slot.es+'</span>')}</div>
+      <div class="al-en" style="text-align:center;">${fullEn}</div>
+      <div class="al-btns" style="justify-content:center;">
+        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(full)}')">🔊 Natural</button>
+        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(full)}')">🐢 Slow</button>
+      </div>
+      <div class="fs-count">${LS.swapIdx+1} / ${s.slots.length} · say it out loud</div>
+    </div>
+    <div class="ex-actions"><button class="btn btn-primary" onclick="swapNext()">${LS.swapIdx<s.slots.length-1?'Next word →':'Done →'}</button></div>`;
+  setTimeout(()=>speakPhrase(full),250);
+}
+function swapNext(){
+  const s=LS.steps[LS.si];
+  if(LS.swapIdx<s.slots.length-1){LS.swapIdx++;renderSwap();}
+  else{LS.answered=true;next(true);}
+}
+
+// ── Scene: play the whole exchange ──
+function playScene(){
+  const s=LS.steps[LS.si];
+  s.lines.forEach((l,i)=>setTimeout(()=>speakPhrase(l.sp),i*2000));
+}
+
+// ── Role-play: learner speaks their side ──
+function renderRoleplay(){
+  const s=LS.steps[LS.si];const line=s.lines[LS.rpIdx];
+  const isYou=line.who==='you';
+  document.getElementById('lessonBody').innerHTML=`
+    <div class="ex-card">
+      <div class="ex-type">🎭 ${s.title||'Role-play'}</div>
+      <div class="rp-turn ${isYou?'rp-you':'rp-them'}">${isYou?'YOUR LINE':'THEY SAY'}</div>
+      ${isYou?`
+        <div class="rp-cue">${line.en}</div>
+        <div id="rp-reveal"></div>`
+      :`
+        <div class="al-card">
+          <div class="al-es">${line.es}</div>
+          <div class="al-en">${line.en}</div>
+          <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(line.es)}')">🔊 Again</button></div>
+        </div>`}
+    </div>
+    <div class="ex-actions" id="rp-actions">
+      ${isYou?`<button class="btn btn-ghost ex-check" id="rpRevealBtn" onclick="rpReveal()">Reveal</button>
+               <button class="btn btn-primary" id="rpNextBtn" onclick="rpNext()" disabled>Next →</button>`
+             :`<button class="btn btn-primary" onclick="rpNext()">Next →</button>`}
+    </div>`;
+  if(!isYou) setTimeout(()=>speakPhrase(line.es),300);
+}
+function rpReveal(){
+  const line=LS.steps[LS.si].lines[LS.rpIdx];
+  document.getElementById('rp-reveal').innerHTML=`
+    <div class="al-card" style="margin-top:.75rem;">
+      <div class="al-es">${line.es}</div>
+      <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(line.es)}')">🔊 Natural</button><button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(line.es)}')">🐢 Slow</button></div>
+    </div>`;
+  speakPhrase(line.es);
+  const rb=document.getElementById('rpRevealBtn'); if(rb) rb.style.display='none';
+  document.getElementById('rpNextBtn').disabled=false;
+}
+function rpNext(){
+  const s=LS.steps[LS.si];
+  if(LS.rpIdx<s.lines.length-1){LS.rpIdx++;renderRoleplay();}
+  else{LS.answered=true;LS.correct++;next(true);}
 }
 
 const MAX_TRIES=2;      // attempts allowed before the answer is revealed
@@ -2283,6 +3111,84 @@ function renderStep(){
         <button class="btn btn-ghost" onclick="checkBuild()">Check</button>
         <button class="btn btn-primary" id="nxt" onclick="next()" disabled>Continue →</button>
       </div>`;
+  } else if(s.type==='goal'){
+    body.innerHTML=`
+      <div class="ex-card goal-card">
+        <div class="goal-icon">${s.icon||'🎯'}</div>
+        <div class="goal-code">${s.code} · ${s.title}</div>
+        <div class="goal-by">By the end, you'll be able to:</div>
+        <div class="goal-text">${s.goal}</div>
+      </div>
+      <div class="ex-actions"><button class="btn btn-primary btn-lg" onclick="next(true)">Start →</button></div>`;
+    LS.answered=true;
+  } else if(s.type==='present'){
+    body.innerHTML=`
+      <div class="ex-card">
+        <div class="ex-type">👂 Listen</div>
+        <div class="al-card">
+          <div class="al-es">${s.es}</div>
+          ${s.ph?`<div class="al-ph">${s.ph}</div>`:''}
+          <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">🔊 Hear it</button></div>
+          <div class="al-en">${s.en}</div>
+          ${s.note?`<div class="al-note">${s.note}</div>`:''}
+        </div>
+        <p class="al-hint">Listen closely, then continue.</p>
+      </div>
+      <div class="ex-actions"><button class="btn btn-primary" onclick="next(true)">Continue →</button></div>`;
+    LS.answered=true;
+    setTimeout(()=>speakPhrase(s.es),300);
+  } else if(s.type==='listen_repeat'){
+    body.innerHTML=`
+      <div class="ex-card">
+        <div class="ex-type">🔁 Listen &amp; repeat</div>
+        <div class="al-card">
+          <div class="al-es">${s.es}</div>
+          ${s.ph?`<div class="al-ph">${s.ph}</div>`:''}
+          <div class="al-en">${s.en}</div>
+          <div class="al-btns" style="justify-content:center;">
+            <button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">🔊 Natural</button>
+            <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(s.es)}')">🐢 Slow</button>
+          </div>
+          <div class="al-say">Now say it out loud.</div>
+        </div>
+      </div>
+      <div class="ex-actions"><button class="btn btn-primary" onclick="next(true)">I said it →</button></div>`;
+    LS.answered=true;
+    setTimeout(()=>speakPhrase(s.es),300);
+  } else if(s.type==='produce'){
+    body.innerHTML=`
+      <div class="ex-card">
+        <div class="ex-type">🗣️ Say it in Spanish</div>
+        <div class="pr-prompt">${s.en}</div>
+        <div class="pr-instr">Say it out loud, then reveal to check yourself.</div>
+        <div id="pr-reveal"></div>
+      </div>
+      <div id="fb"></div>
+      <div class="ex-actions">
+        <button class="btn btn-ghost ex-check" id="revealBtn" onclick="revealProduce()">Reveal answer</button>
+        <button class="btn btn-primary" id="nxt" onclick="next()" disabled>Continue →</button>
+      </div>`;
+  } else if(s.type==='frame_swap'){
+    LS.swapIdx=0;
+    renderSwap();
+  } else if(s.type==='scene'){
+    body.innerHTML=`
+      <div class="ex-card">
+        <div class="ex-type">🎬 Listen to the scene</div>
+        ${s.title?`<div class="sc-title">${s.title}</div>`:''}
+        <div class="sc-lines">
+          ${s.lines.map(l=>`<div class="sc-line">
+            <button class="sc-play" onclick="speakPhrase('${escJS(l.sp)}')">🔊</button>
+            <div><div class="sc-sp">${l.sp}</div><div class="sc-en">${l.en}</div></div>
+          </div>`).join('')}
+        </div>
+        <div style="text-align:center;margin-top:.5rem;"><button class="btn btn-ghost" onclick="playScene()">▶ Play whole scene</button></div>
+      </div>
+      <div class="ex-actions"><button class="btn btn-primary" onclick="next(true)">Continue →</button></div>`;
+    LS.answered=true;
+  } else if(s.type==='roleplay'){
+    LS.rpIdx=0;
+    renderRoleplay();
   }
 }
 
@@ -2470,6 +3376,7 @@ function next(auto=false){
   LS.si++;renderStep();
 }
 function lessonComplete(){
+  if(LS.track){moduleComplete();return;}   // new Engine/Scenario modules
   const nonVocabSteps=LS.steps.filter(s=>s.type!=='vocab');
   const xp=15+Math.round(LS.correct/Math.max(nonVocabSteps.length,1)*10);
   S.lessonScores[`${LS.lv}-${LS.ls}`]={correct:LS.correct,total:nonVocabSteps.length};
@@ -2499,17 +3406,12 @@ function lessonComplete(){
 }
 function exitLesson(){nav('curriculum');}
 function continueLesson(){
-  for(let lv=0;lv<CURRICULUM.length;lv++){
-    for(let ls=0;ls<CURRICULUM[lv].lessons.length;ls++){
-      const lesson=CURRICULUM[lv].lessons[ls];
-      if(lesson.type==='exam'){
-        if(!S.completedExams.has(String(lv))&&isLessonUnlocked(lv,ls)){startExam(lv);return;}
-      } else {
-        if(!S.completedLessons.has(`${lv}-${ls}`)&&isLessonUnlocked(lv,ls)){startLesson(lv,ls);return;}
-      }
-    }
-  }
-  showToast('¡Felicidades! All available lessons done!');
+  const doneM=m=>S.completedModules&&S.completedModules.has(m.track+':'+m.id);
+  const all=[...ENGINE,...SCENARIOS.filter(m=>!m.soon)];
+  const next=all.find(m=>!doneM(m));
+  if(next){startModule(next.track,next.id);return;}
+  nav('curriculum');
+  showToast('¡Felicidades! You’ve finished everything available.');
 }
 
 // ═══════════════════════════
@@ -2649,30 +3551,38 @@ function getReviewQueue(){
 function renderPractice(){
   document.getElementById('practiceHome').style.display='block';
   document.getElementById('practiceActive').style.display='none';
+  document.getElementById('practiceHero').innerHTML='';   // no mismatched hero — uniform cards below
 
-  // Hero — daily review
   const reviewQueue=getReviewQueue();
-  const newCount=reviewQueue.filter(w=>(S.vocabStatus[w.spanish]||'new')==='new').length;
-  const learnCount=reviewQueue.filter(w=>(S.vocabStatus[w.spanish]||'new')==='learning').length;
-  document.getElementById('practiceHero').innerHTML=`
-    <div class="ph-icon">🧠</div>
-    <div style="flex:1;">
-      <div class="ph-title">Daily Review</div>
-      <div class="ph-sub">
-        ${newCount>0?`<span style="color:var(--accent);font-weight:600;">${newCount} new</span> · `:''}
-        ${learnCount>0?`<span style="color:var(--gold);font-weight:600;">${learnCount} learning</span> · `:''}
-        ${reviewQueue.length} words ready
-      </div>
-      <div class="ph-btn">
-        <button class="btn btn-primary" onclick="startReview()" ${reviewQueue.length===0?'disabled':''}>
-          Start review →
-        </button>
-      </div>
-    </div>`;
-
-  // Phrase set cards
+  const sec=(t)=>`<div class="pm-section">${t}</div>`;
   document.getElementById('practiceModes').innerHTML=`
-    <div style="font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:.5rem;grid-column:1/-1;">Phrasebooks</div>
+    <div class="practice-intro" style="grid-column:1/-1;">
+      <span class="pi-icon">🎯</span>
+      <div><strong>Practice is optional and never graded.</strong> It's how you get better and prep — warm up, drill, or look things up.</div>
+    </div>
+    ${sec('Warm up')}
+    <div class="pm-card" onclick="startReview()">
+      <div class="pm-icon">🧠</div><div class="pm-title">Daily Review</div>
+      <div class="pm-desc">Spaced repetition of what you've learned.</div>
+      <div class="pm-count">${reviewQueue.length} words ready →</div>
+    </div>
+    ${sec('Drill')}
+    <div class="pm-card" onclick="startFlashcards()">
+      <div class="pm-icon">🃏</div><div class="pm-title">Flashcards</div>
+      <div class="pm-desc">Flip through your vocabulary.</div>
+      <div class="pm-count">Study →</div>
+    </div>
+    <div class="pm-card" onclick="startCram()">
+      <div class="pm-icon">⚡</div><div class="pm-title">Pre-Trip Cram</div>
+      <div class="pm-desc">Blitz the essential phrases fast.</div>
+      <div class="pm-count">${CRAM.length} phrases →</div>
+    </div>
+    ${sec('Reference')}
+    <div class="pm-card" onclick="showBasics()">
+      <div class="pm-icon">📋</div><div class="pm-title">Basics</div>
+      <div class="pm-desc">Numbers, days, colors &amp; handy words — tap to hear.</div>
+      <div class="pm-count">Browse →</div>
+    </div>
     ${PHRASE_SETS.map(p=>`
       <div class="pm-card" onclick="startPhrasebook('${p.id}')">
         <div class="pm-icon">${p.icon}</div>
@@ -2813,7 +3723,7 @@ function renderPhrasebookCard(){
 
 // Bundled human-voice clips (generated by tools/gen_audio.py). Keyed by the
 // exact Spanish string; plays the same natural voice for every user/device.
-const AUDIO_MANIFEST={"A la derecha":"audio/a-la-derecha.m4a","A la izquierda":"audio/a-la-izquierda.m4a","Adiós":"audio/adios.m4a","Agua, por favor":"audio/agua-por-favor.m4a","Bien, gracias":"audio/bien-gracias.m4a","Buenas noches":"audio/buenas-noches.m4a","Buenas tardes":"audio/buenas-tardes.m4a","Buenos días":"audio/buenos-dias.m4a","Cerca / Lejos":"audio/cerca-lejos.m4a","De nada":"audio/de-nada.m4a","Está delicioso":"audio/esta-delicioso.m4a","Gracias":"audio/gracias.m4a","Hasta luego":"audio/hasta-luego.m4a","Hola":"audio/hola.m4a","Igualmente":"audio/igualmente.m4a","La cuenta, por favor":"audio/la-cuenta-por-favor.m4a","Lo siento":"audio/lo-siento.m4a","Me llamo...":"audio/me-llamo.m4a","Mucho gusto":"audio/mucho-gusto.m4a","Más despacio":"audio/mas-despacio.m4a","Necesito ayuda":"audio/necesito-ayuda.m4a","No entiendo":"audio/no-entiendo.m4a","Perdón":"audio/perdon.m4a","Por favor":"audio/por-favor.m4a","Quisiera...":"audio/quisiera.m4a","Sin... por favor":"audio/sin-por-favor.m4a","Soy de...":"audio/soy-de.m4a","Todo recto":"audio/todo-recto.m4a","adiós":"audio/adios.m4a","aprender":"audio/aprender.m4a","azul":"audio/azul.m4a","cuatro, cinco, seis":"audio/cuatro-cinco-seis.m4a","dieciséis...veinte":"audio/dieciseis-veinte.m4a","diez, once, doce":"audio/diez-once-doce.m4a","dos":"audio/dos.m4a","gracias":"audio/gracias.m4a","hermano":"audio/hermano.m4a","hola":"audio/hola.m4a","la madre / el padre":"audio/la-madre-el-padre.m4a","lunes":"audio/lunes.m4a","lunes · martes · miércoles":"audio/lunes-martes-miercoles.m4a","madre":"audio/madre.m4a","padre":"audio/padre.m4a","rojo":"audio/rojo.m4a","rojo / azul / verde":"audio/rojo-azul-verde.m4a","siete, ocho, nueve":"audio/siete-ocho-nueve.m4a","trece, catorce, quince":"audio/trece-catorce-quince.m4a","uno":"audio/uno.m4a","uno, dos, tres":"audio/uno-dos-tres.m4a","verde":"audio/verde.m4a","¿Cuánto cuesta?":"audio/cuanto-cuesta.m4a","¿Cómo estás?":"audio/como-estas.m4a","¿Cómo te llamas?":"audio/como-te-llamas.m4a","¿De dónde eres?":"audio/de-donde-eres.m4a","¿Dónde está...?":"audio/donde-esta.m4a","¿Puede repetir?":"audio/puede-repetir.m4a"};
+const AUDIO_MANIFEST={"A la derecha":"audio/a-la-derecha.m4a","A la izquierda":"audio/a-la-izquierda.m4a","Además":"audio/ademas.m4a","Adiós":"audio/adios.m4a","Agua, por favor":"audio/agua-por-favor.m4a","Ayer comí en un restaurante.":"audio/ayer-comi-en-un-restaurante.m4a","Ayer fui al parque y vi a un amigo.":"audio/ayer-fui-al-parque-y-vi-a-un-amigo.m4a","Ayer hablé con mi madre.":"audio/ayer-hable-con-mi-madre.m4a","Ayer trabajé":"audio/ayer-trabaje.m4a","Bien, gracias":"audio/bien-gracias.m4a","Buenas noches":"audio/buenas-noches.m4a","Buenas tardes":"audio/buenas-tardes.m4a","Buenos días":"audio/buenos-dias.m4a","Buenos días ¿cómo estás?":"audio/buenos-dias-como-estas.m4a","Cerca / Lejos":"audio/cerca-lejos.m4a","Creo que":"audio/creo-que.m4a","Creo que / Pienso que":"audio/creo-que-pienso-que.m4a","Creo que el español es muy útil.":"audio/creo-que-el-espanol-es-muy-util.m4a","Creo que es una buena idea.":"audio/creo-que-es-una-buena-idea.m4a","Cuando era niño, vivía en México.":"audio/cuando-era-nino-vivia-en-mexico.m4a","De nada":"audio/de-nada.m4a","Desayuno pan y café.":"audio/desayuno-pan-y-cafe.m4a","El banco está aquí":"audio/el-banco-esta-aqui.m4a","El cielo es azul":"audio/el-cielo-es-azul.m4a","El lunes tengo clase de español.":"audio/el-lunes-tengo-clase-de-espanol.m4a","El tomate es rojo.":"audio/el-tomate-es-rojo.m4a","En mi opinión":"audio/en-mi-opinion.m4a","Entiendo tu punto, pero no estoy de acuerdo.":"audio/entiendo-tu-punto-pero-no-estoy-de-acuerdo.m4a","Entiendo tu punto, pero pienso diferente.":"audio/entiendo-tu-punto-pero-pienso-diferente.m4a","Entiendo tu punto, pero...":"audio/entiendo-tu-punto-pero.m4a","Entiendo, pero no estoy de acuerdo":"audio/entiendo-pero-no-estoy-de-acuerdo.m4a","Espero que tengas un buen día.":"audio/espero-que-tengas-un-buen-dia.m4a","Espero que tengas...":"audio/espero-que-tengas.m4a","Estoy de acuerdo":"audio/estoy-de-acuerdo.m4a","Estoy feliz":"audio/estoy-feliz.m4a","Estoy feliz hoy.":"audio/estoy-feliz-hoy.m4a","Está delicioso":"audio/esta-delicioso.m4a","Fui a la playa el fin de semana.":"audio/fui-a-la-playa-el-fin-de-semana.m4a","Fui al mercado ayer.":"audio/fui-al-mercado-ayer.m4a","Gracias":"audio/gracias.m4a","Había una vez":"audio/habia-una-vez.m4a","Había una vez un rey.":"audio/habia-una-vez-un-rey.m4a","Hace frío":"audio/hace-frio.m4a","Hasta luego":"audio/hasta-luego.m4a","Hasta mañana":"audio/hasta-manana.m4a","Hola":"audio/hola.m4a","Hoy es lunes":"audio/hoy-es-lunes.m4a","Hoy es lunes, mañana es martes.":"audio/hoy-es-lunes-manana-es-martes.m4a","Hoy fue un buen día":"audio/hoy-fue-un-buen-dia.m4a","Hoy trabajé mucho y estoy cansado.":"audio/hoy-trabaje-mucho-y-estoy-cansado.m4a","Igualmente":"audio/igualmente.m4a","La cuenta, por favor":"audio/la-cuenta-por-favor.m4a","La próxima semana":"audio/la-proxima-semana.m4a","Lo siento":"audio/lo-siento.m4a","Mañana estudiaré para el examen.":"audio/manana-estudiare-para-el-examen.m4a","Mañana hablaré con ella.":"audio/manana-hablare-con-ella.m4a","Mañana viajaré":"audio/manana-viajare.m4a","Me despierto a las siete.":"audio/me-despierto-a-las-siete.m4a","Me despierto temprano":"audio/me-despierto-temprano.m4a","Me gusta la manzana.":"audio/me-gusta-la-manzana.m4a","Me gustaría viajar":"audio/me-gustaria-viajar.m4a","Me gustaría viajar más.":"audio/me-gustaria-viajar-mas.m4a","Me gustaría...":"audio/me-gustaria.m4a","Me gustó":"audio/me-gusto.m4a","Me llamo Alex":"audio/me-llamo-alex.m4a","Me llamo Alex. ¿Y tú?":"audio/me-llamo-alex-y-tu.m4a","Me llamo...":"audio/me-llamo.m4a","Mi madre es muy amable.":"audio/mi-madre-es-muy-amable.m4a","Mucho gusto":"audio/mucho-gusto.m4a","Más despacio":"audio/mas-despacio.m4a","Necesito ayuda":"audio/necesito-ayuda.m4a","No entiendo":"audio/no-entiendo.m4a","No estoy de acuerdo":"audio/no-estoy-de-acuerdo.m4a","Nosotros trabajamos mucho":"audio/nosotros-trabajamos-mucho.m4a","Ojalá que llueva":"audio/ojala-que-llueva.m4a","Perdón":"audio/perdon.m4a","Pienso que es importante":"audio/pienso-que-es-importante.m4a","Por favor":"audio/por-favor.m4a","Primero comí, luego dormí":"audio/primero-comi-luego-dormi.m4a","Quiero agua":"audio/quiero-agua.m4a","Quiero que seas feliz.":"audio/quiero-que-seas-feliz.m4a","Quiero un café":"audio/quiero-un-cafe.m4a","Quisiera la cuenta, por favor.":"audio/quisiera-la-cuenta-por-favor.m4a","Quisiera un café":"audio/quisiera-un-cafe.m4a","Quisiera un café, por favor.":"audio/quisiera-un-cafe-por-favor.m4a","Quisiera...":"audio/quisiera.m4a","Respeto tu opinión, aunque no la comparto.":"audio/respeto-tu-opinion-aunque-no-la-comparto.m4a","Si tuviera tiempo, aprendería a cocinar.":"audio/si-tuviera-tiempo-aprenderia-a-cocinar.m4a","Sin... por favor":"audio/sin-por-favor.m4a","Soy de...":"audio/soy-de.m4a","Tengo dos hermanos":"audio/tengo-dos-hermanos.m4a","Tengo tres hermanos.":"audio/tengo-tres-hermanos.m4a","Tengo una hermana":"audio/tengo-una-hermana.m4a","Todo recto":"audio/todo-recto.m4a","Trabajo por la mañana":"audio/trabajo-por-la-manana.m4a","Tuve un perro":"audio/tuve-un-perro.m4a","Vamos a cenar juntos mañana.":"audio/vamos-a-cenar-juntos-manana.m4a","Voy a viajar":"audio/voy-a-viajar.m4a","Voy al mercado.":"audio/voy-al-mercado.m4a","Yo como a mediodía.":"audio/yo-como-a-mediodia.m4a","Yo estudio español todos los días.":"audio/yo-estudio-espanol-todos-los-dias.m4a","Yo hablo español.":"audio/yo-hablo-espanol.m4a","abuela":"audio/abuela.m4a","abuelo":"audio/abuelo.m4a","agua":"audio/agua.m4a","ahora":"audio/ahora.m4a","amarillo":"audio/amarillo.m4a","ayer":"audio/ayer.m4a","ayer / hoy / mañana":"audio/ayer-hoy-manana.m4a","azul":"audio/azul.m4a","baño":"audio/bano.m4a","blanco":"audio/blanco.m4a","cansado":"audio/cansado.m4a","comemos":"audio/comemos.m4a","comen":"audio/comen.m4a","comer → como":"audio/comer-como.m4a","comeré":"audio/comere.m4a","comería":"audio/comeria.m4a","comes":"audio/comes.m4a","comí":"audio/comi.m4a","comía":"audio/comia.m4a","cuatro":"audio/cuatro.m4a","cuatro, cinco, seis":"audio/cuatro-cinco-seis.m4a","desayunar":"audio/desayunar.m4a","despertarse":"audio/despertarse.m4a","dieciséis...veinte":"audio/dieciseis-veinte.m4a","diez":"audio/diez.m4a","diez, once, doce":"audio/diez-once-doce.m4a","domingo":"audio/domingo.m4a","el banco":"audio/el-banco.m4a","el hospital":"audio/el-hospital.m4a","el mercado":"audio/el-mercado.m4a","enojado":"audio/enojado.m4a","estudié":"audio/estudie.m4a","estuve":"audio/estuve.m4a","feliz":"audio/feliz.m4a","feliz / triste":"audio/feliz-triste.m4a","fui":"audio/fui.m4a","fui / tuve / hice":"audio/fui-tuve-hice.m4a","habla":"audio/habla.m4a","hablan":"audio/hablan.m4a","hablar → hablo":"audio/hablar-hablo.m4a","hablaré":"audio/hablare.m4a","hablaré / comeré":"audio/hablare-comere.m4a","hablaría":"audio/hablaria.m4a","hablas":"audio/hablas.m4a","hablo":"audio/hablo.m4a","hablé":"audio/hable.m4a","hablé / comí":"audio/hable-comi.m4a","hacía":"audio/hacia.m4a","haré":"audio/hare.m4a","hermana":"audio/hermana.m4a","hice":"audio/hice.m4a","hijo":"audio/hijo.m4a","hoy":"audio/hoy.m4a","huevo":"audio/huevo.m4a","iré":"audio/ire.m4a","iría":"audio/iria.m4a","jueves":"audio/jueves.m4a","la escuela":"audio/la-escuela.m4a","la madre / el padre":"audio/la-madre-el-padre.m4a","la manzana":"audio/la-manzana.m4a","la tienda":"audio/la-tienda.m4a","leche":"audio/leche.m4a","llamo":"audio/llamo.m4a","lunes":"audio/lunes.m4a","lunes · martes · miércoles":"audio/lunes-martes-miercoles.m4a","madre":"audio/madre.m4a","manzana":"audio/manzana.m4a","martes":"audio/martes.m4a","mañana":"audio/manana.m4a","miércoles":"audio/miercoles.m4a","nueve":"audio/nueve.m4a","pan":"audio/pan.m4a","prima":"audio/prima.m4a","primo":"audio/primo.m4a","queso":"audio/queso.m4a","rojo":"audio/rojo.m4a","rojo / azul / verde":"audio/rojo-azul-verde.m4a","siete":"audio/siete.m4a","siete, ocho, nueve":"audio/siete-ocho-nueve.m4a","sábado":"audio/sabado.m4a","trece, catorce, quince":"audio/trece-catorce-quince.m4a","triste":"audio/triste.m4a","tuve":"audio/tuve.m4a","tía":"audio/tia.m4a","tío":"audio/tio.m4a","uno":"audio/uno.m4a","uno, dos, tres":"audio/uno-dos-tres.m4a","verde":"audio/verde.m4a","viajaré":"audio/viajare.m4a","viajé":"audio/viaje.m4a","viernes":"audio/viernes.m4a","viviré":"audio/vivire.m4a","viviría":"audio/viviria.m4a","viví":"audio/vivi.m4a","¡Buenos días a todos!":"audio/buenos-dias-a-todos.m4a","¡Hola! ¿Cómo estás?":"audio/hola-como-estas.m4a","¡Hola! ¿Cómo te llamas?":"audio/hola-como-te-llamas.m4a","¿A qué hora te levantas?":"audio/a-que-hora-te-levantas.m4a","¿Cuál es tu color favorito?":"audio/cual-es-tu-color-favorito.m4a","¿Cuándo?":"audio/cuando.m4a","¿Cuánto cuesta?":"audio/cuanto-cuesta.m4a","¿Cuánto?":"audio/cuanto.m4a","¿Cuántos años tienes?":"audio/cuantos-anos-tienes.m4a","¿Cómo está usted?":"audio/como-esta-usted.m4a","¿Cómo estás?":"audio/como-estas.m4a","¿Cómo te llamas?":"audio/como-te-llamas.m4a","¿Cómo te sientes hoy?":"audio/como-te-sientes-hoy.m4a","¿Cómo te sientes?":"audio/como-te-sientes.m4a","¿Cómo?":"audio/como.m4a","¿De dónde eres?":"audio/de-donde-eres.m4a","¿Dónde está el mercado?":"audio/donde-esta-el-mercado.m4a","¿Dónde está...?":"audio/donde-esta.m4a","¿Dónde vives?":"audio/donde-vives.m4a","¿Por qué?":"audio/por-que.m4a","¿Puede repetir?":"audio/puede-repetir.m4a","¿Quieres ir al cine esta noche?":"audio/quieres-ir-al-cine-esta-noche.m4a","¿Quién?":"audio/quien.m4a","¿Qué haces normalmente por la tarde?":"audio/que-haces-normalmente-por-la-tarde.m4a","¿Qué haces?":"audio/que-haces.m4a","¿Qué harías?":"audio/que-harias.m4a","¿Qué hiciste ayer?":"audio/que-hiciste-ayer.m4a","¿Qué hiciste?":"audio/que-hiciste.m4a","¿Qué hora es?":"audio/que-hora-es.m4a","¿Qué me recomienda?":"audio/que-me-recomienda.m4a","¿Qué quieres?":"audio/que-quieres.m4a","¿Qué vas a hacer mañana?":"audio/que-vas-a-hacer-manana.m4a","¿Qué vas a hacer?":"audio/que-vas-a-hacer.m4a","¿Qué?":"audio/que.m4a","¿Qué? / ¿Quién? / ¿Dónde?":"audio/que-quien-donde.m4a","¿Tienes hambre?":"audio/tienes-hambre.m4a","¿Tienes hermanos?":"audio/tienes-hermanos.m4a","Él come fruta":"audio/el-come-fruta.m4a"};
 const AUDIO_LOOKUP=(function(){const m={};for(const k in AUDIO_MANIFEST){m[k.toLowerCase().trim()]=AUDIO_MANIFEST[k];}return m;})();
 let _esptalkAudio=null;
 function speakPhrase(text){
@@ -3061,6 +3971,7 @@ function saveState(){
       activityLog:S.activityLog.slice(-20),
       vocabStatus:S.vocabStatus,
       lessonScores:S.lessonScores,
+      modules:[...(S.completedModules||[])],
       inProgressLesson:S.inProgressLesson,
     }));
   }catch(e){}
@@ -3077,6 +3988,7 @@ function loadState(){
     if(d.lessons){S.completedLessons=new Set(d.lessons);}
     if(d.exams){S.completedExams=new Set(d.exams);}
     if(d.lessonScores){S.lessonScores=d.lessonScores;}
+    if(d.modules){S.completedModules=new Set(d.modules);}
     if(d.weekly){S.weeklyXP=d.weekly;}
     if(typeof d.streak==='number'){S.streak=d.streak;}
     if(d.lastActive){S.lastActiveDate=d.lastActive;}
