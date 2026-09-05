@@ -18,318 +18,314 @@ Same phrase used in two modules is listed once, at first appearance.
 | 008 | **Perdón** | Excuse me / sorry |
 | 009 | **Adiós** | Goodbye |
 
-## Foundations · E2 You Already Know 300 Words
+## Foundations · E2 Familiar Words
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 010 | **You already know this** | Thousands of Spanish words are nearly identical to English. Watch how many you already know. |
-| 011 | **hotel** | hotel |
-| 012 | **taxi** | taxi |
-| 013 | **restaurante** | restaurant |
-| 014 | **aeropuerto** | airport |
-| 015 | **-ción = -tion** | English words ending in “-tion” become “-ción”. |
-| 016 | **información** | information |
-| 017 | **estación** | station |
-| 018 | **-dad = -ty** | English “-ty” becomes “-dad”. |
-| 019 | **ciudad** | city |
+| 010 | **hotel** | hotel |
+| 011 | **taxi** | taxi |
+| 012 | **restaurante** | restaurant |
+| 013 | **aeropuerto** | airport |
+| 014 | **información** | information |
+| 015 | **estación** | station |
+| 016 | **ciudad** | city |
 
 ## Foundations · E3 The 5 Magic Frames
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 020 | **Quiero un café** | I want a coffee |
-| 021 | **Quiero agua** | I want water |
-| 022 | **Quiero la cuenta** | I want the check |
-| 023 | **Quiero un taxi** | I want a taxi |
-| 024 | **Necesito ayuda** | I need help |
-| 025 | **Necesito un baño** | I need a bathroom |
-| 026 | **Necesito un médico** | I need a doctor |
-| 027 | **Necesito un taxi** | I need a taxi |
-| 028 | **¿Dónde está el baño?** | Where is the bathroom? |
-| 029 | **¿Dónde está la salida?** | Where is the exit? |
-| 030 | **¿Dónde está el hotel?** | Where is the hotel? |
-| 031 | **¿Dónde está la estación?** | Where is the station? |
-| 032 | **¿Cuánto cuesta esto?** | How much is this? |
-| 033 | **¿Cuánto cuesta el boleto?** | How much is the ticket? |
-| 034 | **¿Cuánto cuesta la habitación?** | How much is the room? |
-| 035 | **¿Tiene wifi?** | Do you have wifi? |
-| 036 | **¿Tiene una mesa?** | Do you have a table? |
-| 037 | **¿Tiene un cuarto?** | Do you have a room? |
+| 017 | **Quiero un café** | I want a coffee |
+| 018 | **Quiero agua** | I want water |
+| 019 | **Quiero la cuenta** | I want the check |
+| 020 | **Quiero un taxi** | I want a taxi |
+| 021 | **Necesito ayuda** | I need help |
+| 022 | **Necesito un baño** | I need a bathroom |
+| 023 | **Necesito un médico** | I need a doctor |
+| 024 | **Necesito un taxi** | I need a taxi |
+| 025 | **¿Dónde está el baño?** | Where is the bathroom? |
+| 026 | **¿Dónde está la salida?** | Where is the exit? |
+| 027 | **¿Dónde está el hotel?** | Where is the hotel? |
+| 028 | **¿Dónde está la estación?** | Where is the station? |
+| 029 | **¿Cuánto cuesta esto?** | How much is this? |
+| 030 | **¿Cuánto cuesta el boleto?** | How much is the ticket? |
+| 031 | **¿Cuánto cuesta la habitación?** | How much is the room? |
+| 032 | **¿Tiene wifi?** | Do you have wifi? |
+| 033 | **¿Tiene una mesa?** | Do you have a table? |
+| 034 | **¿Tiene un cuarto?** | Do you have a room? |
 
 ## Foundations · E4 When You're Lost
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 038 | **No entiendo** | I don't understand |
-| 039 | **Más despacio, por favor** | Slower, please |
-| 040 | **¿Puede repetir?** | Can you repeat? |
-| 041 | **¿Habla inglés?** | Do you speak English? |
-| 042 | **No sé** | I don't know |
+| 035 | **No entiendo** | I don't understand |
+| 036 | **Más despacio, por favor** | Slower, please |
+| 037 | **¿Puede repetir?** | Can you repeat? |
+| 038 | **¿Habla inglés?** | Do you speak English? |
+| 039 | **No sé** | I don't know |
 
 ## Foundations · E5 Numbers, Time & Money
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 043 | **uno, dos, tres, cuatro, cinco** | Count from one to five |
-| 044 | **seis, siete, ocho, nueve, diez** | Count from six to ten |
-| 045 | **¿Cuánto es?** | How much is it? |
-| 046 | **Es muy caro** | It's very expensive |
-| 047 | **¿Qué hora es?** | What time is it? |
-| 048 | **Son las tres** | It's three o'clock |
-| 049 | **A las ocho** | At eight |
-| 050 | **hoy** | today |
-| 051 | **mañana** | tomorrow |
-| 052 | **ayer** | yesterday |
+| 040 | **uno, dos, tres, cuatro, cinco** | Count from one to five |
+| 041 | **seis, siete, ocho, nueve, diez** | Count from six to ten |
+| 042 | **¿Cuánto es?** | How much is it? |
+| 043 | **Es muy caro** | It's very expensive |
+| 044 | **¿Qué hora es?** | What time is it? |
+| 045 | **Son las tres** | It's three o'clock |
+| 046 | **A las ocho** | At eight |
+| 047 | **hoy** | today |
+| 048 | **mañana** | tomorrow |
+| 049 | **ayer** | yesterday |
 
 ## Foundations · E6 Talking About Yourself
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 053 | **Soy de Estados Unidos** | I'm from the United States |
-| 054 | **Soy de California** | I'm from California |
-| 055 | **Soy de Canadá** | I'm from Canada |
-| 056 | **Soy de Nueva York** | I'm from New York |
-| 057 | **Estoy aquí de vacaciones** | I'm here on vacation |
-| 058 | **Tengo hambre** | I'm hungry |
-| 059 | **Tengo sed** | I have / I'm thirsty |
-| 060 | **Tengo frío** | I have / I'm cold |
-| 061 | **Tengo prisa** | I have / I'm in a hurry |
-| 062 | **¿Hay un baño?** | Is there a bathroom? |
-| 063 | **¿Hay wifi?** | Is there wifi? |
-| 064 | **¿Hay un cajero?** | Is there an ATM? |
-| 065 | **¿Hay un restaurante cerca?** | Is there a restaurant nearby? |
+| 050 | **Soy de Estados Unidos** | I'm from the United States |
+| 051 | **Soy de California** | I'm from California |
+| 052 | **Soy de Canadá** | I'm from Canada |
+| 053 | **Soy de Nueva York** | I'm from New York |
+| 054 | **Estoy aquí de vacaciones** | I'm here on vacation |
+| 055 | **Tengo hambre** | I'm hungry |
+| 056 | **Tengo sed** | I have / I'm thirsty |
+| 057 | **Tengo frío** | I have / I'm cold |
+| 058 | **Tengo prisa** | I have / I'm in a hurry |
+| 059 | **¿Hay un baño?** | Is there a bathroom? |
+| 060 | **¿Hay wifi?** | Is there wifi? |
+| 061 | **¿Hay un cajero?** | Is there an ATM? |
+| 062 | **¿Hay un restaurante cerca?** | Is there a restaurant nearby? |
 
 ## Foundations · E7 Questions & Verbs
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 066 | **¿Qué es esto?** | What is this? |
-| 067 | **¿Cuándo?** | When? |
-| 068 | **¿Por qué?** | Why? |
-| 069 | **Voy a comer** | I'm going to eat |
-| 070 | **Voy a pagar** | I'm going to pay |
-| 071 | **Voy a comprar** | I'm going to buy |
-| 072 | **Voy a dormir** | I'm going to sleep |
-| 073 | **¿Puede ayudarme?** | Can you help me? |
-| 074 | **Me gusta la comida** | I like the food |
-| 075 | **Me gusta México** | I like Mexico |
-| 076 | **Me gusta esta ciudad** | I like this city |
+| 063 | **¿Qué es esto?** | What is this? |
+| 064 | **¿Cuándo?** | When? |
+| 065 | **¿Por qué?** | Why? |
+| 066 | **Voy a comer** | I'm going to eat |
+| 067 | **Voy a pagar** | I'm going to pay |
+| 068 | **Voy a comprar** | I'm going to buy |
+| 069 | **Voy a dormir** | I'm going to sleep |
+| 070 | **¿Puede ayudarme?** | Can you help me? |
+| 071 | **Me gusta la comida** | I like the food |
+| 072 | **Me gusta México** | I like Mexico |
+| 073 | **Me gusta esta ciudad** | I like this city |
 
 ## The Trip · S1 Arrival & the Airport
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 077 | **¿Motivo de su viaje?** | Purpose of your trip? |
-| 078 | **Turismo.** | Tourism. |
-| 079 | **¿Cuántos días?** | How many days? |
-| 080 | **Una semana.** | One week. |
-| 081 | **¿Dónde está mi maleta?** | Where is my suitcase? |
-| 082 | **¿Dónde está la puerta?** | Where is the gate? |
-| 083 | **¿Dónde está un taxi?** | Where is a taxi? |
-| 084 | **Perdí mi maleta** | I lost my suitcase |
-| 085 | **Bienvenido.** | Welcome. |
+| 074 | **¿Motivo de su viaje?** | Purpose of your trip? |
+| 075 | **Turismo.** | Tourism. |
+| 076 | **¿Cuántos días?** | How many days? |
+| 077 | **Una semana.** | One week. |
+| 078 | **¿Dónde está mi maleta?** | Where is my suitcase? |
+| 079 | **¿Dónde está la puerta?** | Where is the gate? |
+| 080 | **¿Dónde está un taxi?** | Where is a taxi? |
+| 081 | **Perdí mi maleta** | I lost my suitcase |
+| 082 | **Bienvenido.** | Welcome. |
 
 ## The Trip · S2 Getting Around
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 086 | **¿A dónde va?** | Where are you going? |
-| 087 | **Al centro, por favor.** | Downtown, please. |
-| 088 | **¿Cuánto cuesta?** | How much is it? |
-| 089 | **Doscientos pesos.** | Two hundred pesos. |
-| 090 | **Al ___, por favor** | To ___, please (telling the driver) |
-| 091 | **Al hotel, por favor** | To the hotel, please |
-| 092 | **Al aeropuerto, por favor** | To the airport, please |
-| 093 | **Al museo, por favor** | To the museum, please |
-| 094 | **¿Cuánto cuesta al centro?** | How much to downtown? (your E2 frame) |
-| 095 | **Pare aquí, por favor** | Stop here, please |
-| 096 | **¿Puede llevarme a este hotel?** | Can you take me to this hotel? |
-| 097 | **¿Puede llevarme a esta dirección?** | Can you take me to this address? |
-| 098 | **¿Puede llevarme a el aeropuerto?** | Can you take me to the airport? |
-| 099 | **Son doscientos pesos.** | It's two hundred pesos. |
-| 100 | **Está bien** | Okay |
-| 101 | **¿Aquí?** | Here? |
+| 083 | **¿A dónde va?** | Where are you going? |
+| 084 | **Al centro, por favor.** | Downtown, please. |
+| 085 | **¿Cuánto cuesta?** | How much is it? |
+| 086 | **Doscientos pesos.** | Two hundred pesos. |
+| 087 | **Al ___, por favor** | To ___, please (telling the driver) |
+| 088 | **Al hotel, por favor** | To the hotel, please |
+| 089 | **Al aeropuerto, por favor** | To the airport, please |
+| 090 | **Al museo, por favor** | To the museum, please |
+| 091 | **¿Cuánto cuesta al centro?** | How much to downtown? (your E2 frame) |
+| 092 | **Pare aquí, por favor** | Stop here, please |
+| 093 | **¿Puede llevarme a este hotel?** | Can you take me to this hotel? |
+| 094 | **¿Puede llevarme a esta dirección?** | Can you take me to this address? |
+| 095 | **¿Puede llevarme a el aeropuerto?** | Can you take me to the airport? |
+| 096 | **Son doscientos pesos.** | It's two hundred pesos. |
+| 097 | **Está bien** | Okay |
+| 098 | **¿Aquí?** | Here? |
 
 ## The Trip · S3 Checking In
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 102 | **Buenas tardes, ¿tiene una reserva?** | Good afternoon, do you have a reservation? |
-| 103 | **Sí, a nombre de García.** | Yes, under the name García. |
-| 104 | **Perfecto. Aquí está su llave.** | Perfect. Here's your key. |
-| 105 | **Tengo una reserva** | I have a reservation (your E4 “tengo”) |
-| 106 | **A nombre de García** | Under the name García |
-| 107 | **¿A qué hora es el desayuno?** | What time is breakfast? |
-| 108 | **¿A qué hora es el checkout?** | What time is checkout? |
-| 109 | **Hay un problema con ___** | There's a problem with ___ (your E4 “hay”) |
-| 110 | **Hay un problema con la llave** | There's a problem with the key |
-| 111 | **Hay un problema con el aire acondicionado** | There's a problem with the AC |
-| 112 | **Hay un problema con la ducha** | There's a problem with the shower |
-| 113 | **Hay un problema con el wifi** | There's a problem with the wifi |
-| 114 | **Necesito más toallas** | I need more towels |
-| 115 | **¿Tiene una reserva?** | Do you have a reservation? |
-| 116 | **Aquí está su llave.** | Here's your key. |
+| 099 | **Buenas tardes, ¿tiene una reserva?** | Good afternoon, do you have a reservation? |
+| 100 | **Sí, a nombre de García.** | Yes, under the name García. |
+| 101 | **Perfecto. Aquí está su llave.** | Perfect. Here's your key. |
+| 102 | **Tengo una reserva** | I have a reservation (your E4 “tengo”) |
+| 103 | **A nombre de García** | Under the name García |
+| 104 | **¿A qué hora es el desayuno?** | What time is breakfast? |
+| 105 | **¿A qué hora es el checkout?** | What time is checkout? |
+| 106 | **Hay un problema con ___** | There's a problem with ___ (your E4 “hay”) |
+| 107 | **Hay un problema con la llave** | There's a problem with the key |
+| 108 | **Hay un problema con el aire acondicionado** | There's a problem with the AC |
+| 109 | **Hay un problema con la ducha** | There's a problem with the shower |
+| 110 | **Hay un problema con el wifi** | There's a problem with the wifi |
+| 111 | **Necesito más toallas** | I need more towels |
+| 112 | **¿Tiene una reserva?** | Do you have a reservation? |
+| 113 | **Aquí está su llave.** | Here's your key. |
 
 ## The Trip · S4 Eating & Drinking
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 117 | **Buenas noches, ¿mesa para dos?** | Good evening, table for two? |
-| 118 | **Sí, por aquí, por favor.** | Yes, this way, please. |
-| 119 | **¿Qué me recomienda?** | What do you recommend? |
-| 120 | **El pescado está muy bueno.** | The fish is very good. |
-| 121 | **Para mí, ___** | For me, ___ (the natural way to order) |
-| 122 | **Para mí, un café** | For me, a coffee |
-| 123 | **Para mí, una cerveza** | For me, a beer |
-| 124 | **Para mí, el pollo** | For me, the chicken |
-| 125 | **Para mí, la ensalada** | For me, the salad |
-| 126 | **¿Qué recomienda?** | What do you recommend? |
-| 127 | **Soy alérgico a ___** | I am allergic to ___ |
-| 128 | **Soy alérgico a los mariscos** | I am allergic to shellfish |
-| 129 | **Soy alérgico a los cacahuates** | I am allergic to peanuts |
-| 130 | **Soy alérgico a el gluten** | I am allergic to gluten |
-| 131 | **Sin cebolla, por favor** | Without onion, please |
-| 132 | **La cuenta, por favor** | The check, please |
-| 133 | **Buenas noches, ¿mesa para cuántos?** | Good evening, table for how many? |
-| 134 | **Para dos, por favor** | For two, please |
-| 135 | **¿Qué desean tomar?** | What would you like to drink? |
-| 136 | **¿Y para comer?** | And to eat? |
-| 137 | **El pollo, por favor** | The chicken, please |
+| 114 | **Buenas noches, ¿mesa para dos?** | Good evening, table for two? |
+| 115 | **Sí, por aquí, por favor.** | Yes, this way, please. |
+| 116 | **¿Qué me recomienda?** | What do you recommend? |
+| 117 | **El pescado está muy bueno.** | The fish is very good. |
+| 118 | **Para mí, ___** | For me, ___ (the natural way to order) |
+| 119 | **Para mí, un café** | For me, a coffee |
+| 120 | **Para mí, una cerveza** | For me, a beer |
+| 121 | **Para mí, el pollo** | For me, the chicken |
+| 122 | **Para mí, la ensalada** | For me, the salad |
+| 123 | **¿Qué recomienda?** | What do you recommend? |
+| 124 | **Soy alérgico a ___** | I am allergic to ___ |
+| 125 | **Soy alérgico a los mariscos** | I am allergic to shellfish |
+| 126 | **Soy alérgico a los cacahuates** | I am allergic to peanuts |
+| 127 | **Soy alérgico a el gluten** | I am allergic to gluten |
+| 128 | **Sin cebolla, por favor** | Without onion, please |
+| 129 | **La cuenta, por favor** | The check, please |
+| 130 | **Buenas noches, ¿mesa para cuántos?** | Good evening, table for how many? |
+| 131 | **Para dos, por favor** | For two, please |
+| 132 | **¿Qué desean tomar?** | What would you like to drink? |
+| 133 | **¿Y para comer?** | And to eat? |
+| 134 | **El pollo, por favor** | The chicken, please |
 
 ## The Trip · S5 Shopping & Money
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 138 | **Cien pesos.** | A hundred pesos. |
-| 139 | **¿Tiene algo más barato?** | Do you have anything cheaper? |
-| 140 | **Ochenta, para usted.** | Eighty, for you. |
-| 141 | **¿Tiene esto en ___?** | Do you have this in ___? |
-| 142 | **¿Tiene esto en otra talla?** | Do you have this in another size? |
-| 143 | **¿Tiene esto en azul?** | Do you have this in blue? |
-| 144 | **¿Tiene esto en más grande?** | Do you have this in bigger? |
-| 145 | **¿Tiene esto en más pequeño?** | Do you have this in smaller? |
-| 146 | **¿Dónde está el probador?** | Where is the fitting room? |
-| 147 | **Es muy caro. ¿Algo más barato?** | It's expensive. Anything cheaper? |
-| 148 | **¿Puedo pagar con tarjeta?** | Can I pay by card? (your E2 “¿Puedo?”) |
-| 149 | **¿Efectivo o tarjeta?** | Cash or card? |
-| 150 | **¿Le puedo ayudar?** | Can I help you? |
-| 151 | **Ochenta.** | Eighty. |
+| 135 | **Cien pesos.** | A hundred pesos. |
+| 136 | **¿Tiene algo más barato?** | Do you have anything cheaper? |
+| 137 | **Ochenta, para usted.** | Eighty, for you. |
+| 138 | **¿Tiene esto en ___?** | Do you have this in ___? |
+| 139 | **¿Tiene esto en otra talla?** | Do you have this in another size? |
+| 140 | **¿Tiene esto en azul?** | Do you have this in blue? |
+| 141 | **¿Tiene esto en más grande?** | Do you have this in bigger? |
+| 142 | **¿Tiene esto en más pequeño?** | Do you have this in smaller? |
+| 143 | **¿Dónde está el probador?** | Where is the fitting room? |
+| 144 | **Es muy caro. ¿Algo más barato?** | It's expensive. Anything cheaper? |
+| 145 | **¿Puedo pagar con tarjeta?** | Can I pay by card? (your E2 “¿Puedo?”) |
+| 146 | **¿Efectivo o tarjeta?** | Cash or card? |
+| 147 | **¿Le puedo ayudar?** | Can I help you? |
+| 148 | **Ochenta.** | Eighty. |
 
 ## The Trip · S6 Directions
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 152 | **Disculpe, ¿dónde está el museo?** | Excuse me, where is the museum? |
-| 153 | **Todo recto y a la derecha.** | Straight ahead and to the right. |
-| 154 | **¿Está lejos?** | Is it far? |
-| 155 | **No, a dos cuadras.** | No, two blocks away. |
-| 156 | **a la derecha** | to the right |
-| 157 | **a la izquierda** | to the left |
-| 158 | **todo recto** | straight ahead |
-| 159 | **¿Está cerca o lejos?** | Is it near or far? |
-| 160 | **A dos cuadras** | Two blocks away |
-| 161 | **Está en la esquina** | It's at the corner |
-| 162 | **Está en la derecha** | It's at the right |
-| 163 | **Está en la izquierda** | It's at the left |
-| 164 | **Está en dos cuadras** | It's at two blocks |
-| 165 | **¿Dónde está el museo?** | Ask “Where is the museum?” |
-| 166 | **¿Necesita ayuda?** | Do you need help? |
-| 167 | **Todo recto, a la izquierda.** | Straight, then left. |
-| 168 | **No, muy cerca.** | No, very close. |
+| 149 | **Disculpe, ¿dónde está el museo?** | Excuse me, where is the museum? |
+| 150 | **Todo recto y a la derecha.** | Straight ahead and to the right. |
+| 151 | **¿Está lejos?** | Is it far? |
+| 152 | **No, a dos cuadras.** | No, two blocks away. |
+| 153 | **a la derecha** | to the right |
+| 154 | **a la izquierda** | to the left |
+| 155 | **todo recto** | straight ahead |
+| 156 | **¿Está cerca o lejos?** | Is it near or far? |
+| 157 | **A dos cuadras** | Two blocks away |
+| 158 | **Está en la esquina** | It's at the corner |
+| 159 | **Está en la derecha** | It's at the right |
+| 160 | **Está en la izquierda** | It's at the left |
+| 161 | **Está en dos cuadras** | It's at two blocks |
+| 162 | **¿Dónde está el museo?** | Ask “Where is the museum?” |
+| 163 | **¿Necesita ayuda?** | Do you need help? |
+| 164 | **Todo recto, a la izquierda.** | Straight, then left. |
+| 165 | **No, muy cerca.** | No, very close. |
 
 ## The Trip · S7 Trouble
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 169 | **Me duele la cabeza.** | My head hurts. |
-| 170 | **¿Necesita algo para el dolor?** | Do you need something for the pain? |
-| 171 | **Sí, por favor.** | Yes, please. |
-| 172 | **Me duele ___** | My ___ hurts |
-| 173 | **Me duele el estómago** | My stomach hurts |
-| 174 | **Me duele la garganta** | My throat hurts |
-| 175 | **Me duele la espalda** | My back hurts |
-| 176 | **Perdí mi ___** | I lost my ___ |
-| 177 | **Perdí mi pasaporte** | I lost my passport |
-| 178 | **Perdí mi teléfono** | I lost my phone |
-| 179 | **Perdí mi cartera** | I lost my wallet |
-| 180 | **Ayúdeme, por favor** | Help me, please (your E6 command) |
-| 181 | **¿Qué le pasa?** | What's wrong? |
-| 182 | **¿Desde cuándo?** | Since when? |
-| 183 | **Desde ayer** | Since yesterday |
-| 184 | **Necesita ver a un médico.** | You need to see a doctor. |
-| 185 | **¿Dónde está el hospital?** | Where is the hospital? |
+| 166 | **Me duele la cabeza.** | My head hurts. |
+| 167 | **¿Necesita algo para el dolor?** | Do you need something for the pain? |
+| 168 | **Sí, por favor.** | Yes, please. |
+| 169 | **Me duele ___** | My ___ hurts |
+| 170 | **Me duele el estómago** | My stomach hurts |
+| 171 | **Me duele la garganta** | My throat hurts |
+| 172 | **Me duele la espalda** | My back hurts |
+| 173 | **Perdí mi ___** | I lost my ___ |
+| 174 | **Perdí mi pasaporte** | I lost my passport |
+| 175 | **Perdí mi teléfono** | I lost my phone |
+| 176 | **Perdí mi cartera** | I lost my wallet |
+| 177 | **Ayúdeme, por favor** | Help me, please (your E6 command) |
+| 178 | **¿Qué le pasa?** | What's wrong? |
+| 179 | **¿Desde cuándo?** | Since when? |
+| 180 | **Desde ayer** | Since yesterday |
+| 181 | **Necesita ver a un médico.** | You need to see a doctor. |
+| 182 | **¿Dónde está el hospital?** | Where is the hospital? |
 
 ## The Trip · S8 Connecting
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 186 | **¡Hola! ¿De dónde eres?** | Hi! Where are you from? |
-| 187 | **¡Bienvenido! ¿Te gusta México?** | Welcome! Do you like Mexico? |
-| 188 | **¡Me encanta!** | I love it! |
-| 189 | **¿De dónde eres?** | Where are you from? |
-| 190 | **Me gusta mucho ___** | I really like ___ (your E6 “me gusta”) |
-| 191 | **Me gusta mucho tu país** | I really like your country |
-| 192 | **Me gusta mucho la comida** | I really like the food |
-| 193 | **Me gusta mucho esta ciudad** | I really like this city |
-| 194 | **Me gusta mucho la gente** | I really like the people |
-| 195 | **Mucho gusto** | Nice to meet you |
-| 196 | **Igualmente** | Likewise |
-| 197 | **usted vs tú** | formal “you” vs casual “you” |
-| 198 | **¿Te gusta México?** | Do you like Mexico? |
+| 183 | **¡Hola! ¿De dónde eres?** | Hi! Where are you from? |
+| 184 | **¡Bienvenido! ¿Te gusta México?** | Welcome! Do you like Mexico? |
+| 185 | **¡Me encanta!** | I love it! |
+| 186 | **¿De dónde eres?** | Where are you from? |
+| 187 | **Me gusta mucho ___** | I really like ___ (your E6 “me gusta”) |
+| 188 | **Me gusta mucho tu país** | I really like your country |
+| 189 | **Me gusta mucho la comida** | I really like the food |
+| 190 | **Me gusta mucho esta ciudad** | I really like this city |
+| 191 | **Me gusta mucho la gente** | I really like the people |
+| 192 | **Mucho gusto** | Nice to meet you |
+| 193 | **Igualmente** | Likewise |
+| 194 | **¿Te gusta México?** | Do you like Mexico? |
 
 ## Capstone · ★ Trip Simulation
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 199 | **Tu día de viaje** | Your travel day: land → taxi → hotel → dinner → find your way home. |
-| 200 | **Bienvenido. ¿Cuántos días?** | Welcome. How many days? |
-| 201 | **Que disfrute.** | Enjoy your stay. |
-| 202 | **Llegamos.** | We're here. |
-| 203 | **¿Mesa para cuántos?** | Table for how many? |
-| 204 | **Todo recto, a la derecha.** | Straight, then right. |
-| 205 | **Muchas gracias** | Thank you very much |
-| 206 | **¡Lo lograste!** | You did it! |
+| 195 | **Tu día de viaje** | Your travel day: land → taxi → hotel → dinner → find your way home. |
+| 196 | **Bienvenido. ¿Cuántos días?** | Welcome. How many days? |
+| 197 | **Que disfrute.** | Enjoy your stay. |
+| 198 | **Llegamos.** | We're here. |
+| 199 | **¿Mesa para cuántos?** | Table for how many? |
+| 200 | **Todo recto, a la derecha.** | Straight, then right. |
+| 201 | **Muchas gracias** | Thank you very much |
+| 202 | **¡Lo lograste!** | You did it! |
 
 ## Practice · Cram essentials
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 207 | **Disculpe** | Excuse me |
-| 208 | **Buenas noches** | Good evening |
+| 203 | **Disculpe** | Excuse me |
+| 204 | **Buenas noches** | Good evening |
 
 ## Practice · Basics reference
 
 | # | Say this (Spanish) | Meaning |
 |---|---|---|
-| 209 | **uno** | 1 |
-| 210 | **dos** | 2 |
-| 211 | **tres** | 3 |
-| 212 | **cuatro** | 4 |
-| 213 | **cinco** | 5 |
-| 214 | **seis** | 6 |
-| 215 | **siete** | 7 |
-| 216 | **ocho** | 8 |
-| 217 | **nueve** | 9 |
-| 218 | **diez** | 10 |
-| 219 | **veinte** | 20 |
-| 220 | **treinta** | 30 |
-| 221 | **cuarenta** | 40 |
-| 222 | **cincuenta** | 50 |
-| 223 | **cien** | 100 |
-| 224 | **lunes** | Monday |
-| 225 | **martes** | Tuesday |
-| 226 | **miércoles** | Wednesday |
-| 227 | **jueves** | Thursday |
-| 228 | **viernes** | Friday |
-| 229 | **sábado** | Saturday |
-| 230 | **domingo** | Sunday |
-| 231 | **rojo** | red |
-| 232 | **azul** | blue |
-| 233 | **verde** | green |
-| 234 | **amarillo** | yellow |
-| 235 | **blanco** | white |
-| 236 | **negro** | black |
-| 237 | **agua** | water |
-| 238 | **baño** | bathroom |
-| 239 | **ayuda** | help |
+| 205 | **uno** | 1 |
+| 206 | **dos** | 2 |
+| 207 | **tres** | 3 |
+| 208 | **cuatro** | 4 |
+| 209 | **cinco** | 5 |
+| 210 | **seis** | 6 |
+| 211 | **siete** | 7 |
+| 212 | **ocho** | 8 |
+| 213 | **nueve** | 9 |
+| 214 | **diez** | 10 |
+| 215 | **veinte** | 20 |
+| 216 | **treinta** | 30 |
+| 217 | **cuarenta** | 40 |
+| 218 | **cincuenta** | 50 |
+| 219 | **cien** | 100 |
+| 220 | **lunes** | Monday |
+| 221 | **martes** | Tuesday |
+| 222 | **miércoles** | Wednesday |
+| 223 | **jueves** | Thursday |
+| 224 | **viernes** | Friday |
+| 225 | **sábado** | Saturday |
+| 226 | **domingo** | Sunday |
+| 227 | **rojo** | red |
+| 228 | **azul** | blue |
+| 229 | **verde** | green |
+| 230 | **amarillo** | yellow |
+| 231 | **blanco** | white |
+| 232 | **negro** | black |
+| 233 | **agua** | water |
+| 234 | **baño** | bathroom |
+| 235 | **ayuda** | help |
 

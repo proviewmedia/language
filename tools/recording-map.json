@@ -64,1609 +64,1581 @@
   },
   {
     "num": "010",
-    "phrase": "You already know this",
-    "en": "Thousands of Spanish words are nearly identical to English. Watch how many you already know.",
-    "slug": "you-already-know-this",
-    "file": "audio/you-already-know-this.m4a"
-  },
-  {
-    "num": "011",
     "phrase": "hotel",
     "en": "hotel",
     "slug": "hotel",
     "file": "audio/hotel.m4a"
   },
   {
-    "num": "012",
+    "num": "011",
     "phrase": "taxi",
     "en": "taxi",
     "slug": "taxi",
     "file": "audio/taxi.m4a"
   },
   {
-    "num": "013",
+    "num": "012",
     "phrase": "restaurante",
     "en": "restaurant",
     "slug": "restaurante",
     "file": "audio/restaurante.m4a"
   },
   {
-    "num": "014",
+    "num": "013",
     "phrase": "aeropuerto",
     "en": "airport",
     "slug": "aeropuerto",
     "file": "audio/aeropuerto.m4a"
   },
   {
-    "num": "015",
-    "phrase": "-ción = -tion",
-    "en": "English words ending in “-tion” become “-ción”.",
-    "slug": "cion-tion",
-    "file": "audio/cion-tion.m4a"
-  },
-  {
-    "num": "016",
+    "num": "014",
     "phrase": "información",
     "en": "information",
     "slug": "informacion",
     "file": "audio/informacion.m4a"
   },
   {
-    "num": "017",
+    "num": "015",
     "phrase": "estación",
     "en": "station",
     "slug": "estacion",
     "file": "audio/estacion.m4a"
   },
   {
-    "num": "018",
-    "phrase": "-dad = -ty",
-    "en": "English “-ty” becomes “-dad”.",
-    "slug": "dad-ty",
-    "file": "audio/dad-ty.m4a"
-  },
-  {
-    "num": "019",
+    "num": "016",
     "phrase": "ciudad",
     "en": "city",
     "slug": "ciudad",
     "file": "audio/ciudad.m4a"
   },
   {
-    "num": "020",
+    "num": "017",
     "phrase": "Quiero un café",
     "en": "I want a coffee",
     "slug": "quiero-un-cafe",
     "file": "audio/quiero-un-cafe.m4a"
   },
   {
-    "num": "021",
+    "num": "018",
     "phrase": "Quiero agua",
     "en": "I want water",
     "slug": "quiero-agua",
     "file": "audio/quiero-agua.m4a"
   },
   {
-    "num": "022",
+    "num": "019",
     "phrase": "Quiero la cuenta",
     "en": "I want the check",
     "slug": "quiero-la-cuenta",
     "file": "audio/quiero-la-cuenta.m4a"
   },
   {
-    "num": "023",
+    "num": "020",
     "phrase": "Quiero un taxi",
     "en": "I want a taxi",
     "slug": "quiero-un-taxi",
     "file": "audio/quiero-un-taxi.m4a"
   },
   {
-    "num": "024",
+    "num": "021",
     "phrase": "Necesito ayuda",
     "en": "I need help",
     "slug": "necesito-ayuda",
     "file": "audio/necesito-ayuda.m4a"
   },
   {
-    "num": "025",
+    "num": "022",
     "phrase": "Necesito un baño",
     "en": "I need a bathroom",
     "slug": "necesito-un-bano",
     "file": "audio/necesito-un-bano.m4a"
   },
   {
-    "num": "026",
+    "num": "023",
     "phrase": "Necesito un médico",
     "en": "I need a doctor",
     "slug": "necesito-un-medico",
     "file": "audio/necesito-un-medico.m4a"
   },
   {
-    "num": "027",
+    "num": "024",
     "phrase": "Necesito un taxi",
     "en": "I need a taxi",
     "slug": "necesito-un-taxi",
     "file": "audio/necesito-un-taxi.m4a"
   },
   {
-    "num": "028",
+    "num": "025",
     "phrase": "¿Dónde está el baño?",
     "en": "Where is the bathroom?",
     "slug": "donde-esta-el-bano",
     "file": "audio/donde-esta-el-bano.m4a"
   },
   {
-    "num": "029",
+    "num": "026",
     "phrase": "¿Dónde está la salida?",
     "en": "Where is the exit?",
     "slug": "donde-esta-la-salida",
     "file": "audio/donde-esta-la-salida.m4a"
   },
   {
-    "num": "030",
+    "num": "027",
     "phrase": "¿Dónde está el hotel?",
     "en": "Where is the hotel?",
     "slug": "donde-esta-el-hotel",
     "file": "audio/donde-esta-el-hotel.m4a"
   },
   {
-    "num": "031",
+    "num": "028",
     "phrase": "¿Dónde está la estación?",
     "en": "Where is the station?",
     "slug": "donde-esta-la-estacion",
     "file": "audio/donde-esta-la-estacion.m4a"
   },
   {
-    "num": "032",
+    "num": "029",
     "phrase": "¿Cuánto cuesta esto?",
     "en": "How much is this?",
     "slug": "cuanto-cuesta-esto",
     "file": "audio/cuanto-cuesta-esto.m4a"
   },
   {
-    "num": "033",
+    "num": "030",
     "phrase": "¿Cuánto cuesta el boleto?",
     "en": "How much is the ticket?",
     "slug": "cuanto-cuesta-el-boleto",
     "file": "audio/cuanto-cuesta-el-boleto.m4a"
   },
   {
-    "num": "034",
+    "num": "031",
     "phrase": "¿Cuánto cuesta la habitación?",
     "en": "How much is the room?",
     "slug": "cuanto-cuesta-la-habitacion",
     "file": "audio/cuanto-cuesta-la-habitacion.m4a"
   },
   {
-    "num": "035",
+    "num": "032",
     "phrase": "¿Tiene wifi?",
     "en": "Do you have wifi?",
     "slug": "tiene-wifi",
     "file": "audio/tiene-wifi.m4a"
   },
   {
-    "num": "036",
+    "num": "033",
     "phrase": "¿Tiene una mesa?",
     "en": "Do you have a table?",
     "slug": "tiene-una-mesa",
     "file": "audio/tiene-una-mesa.m4a"
   },
   {
-    "num": "037",
+    "num": "034",
     "phrase": "¿Tiene un cuarto?",
     "en": "Do you have a room?",
     "slug": "tiene-un-cuarto",
     "file": "audio/tiene-un-cuarto.m4a"
   },
   {
-    "num": "038",
+    "num": "035",
     "phrase": "No entiendo",
     "en": "I don't understand",
     "slug": "no-entiendo",
     "file": "audio/no-entiendo.m4a"
   },
   {
-    "num": "039",
+    "num": "036",
     "phrase": "Más despacio, por favor",
     "en": "Slower, please",
     "slug": "mas-despacio-por-favor",
     "file": "audio/mas-despacio-por-favor.m4a"
   },
   {
-    "num": "040",
+    "num": "037",
     "phrase": "¿Puede repetir?",
     "en": "Can you repeat?",
     "slug": "puede-repetir",
     "file": "audio/puede-repetir.m4a"
   },
   {
-    "num": "041",
+    "num": "038",
     "phrase": "¿Habla inglés?",
     "en": "Do you speak English?",
     "slug": "habla-ingles",
     "file": "audio/habla-ingles.m4a"
   },
   {
-    "num": "042",
+    "num": "039",
     "phrase": "No sé",
     "en": "I don't know",
     "slug": "no-se",
     "file": "audio/no-se.m4a"
   },
   {
-    "num": "043",
+    "num": "040",
     "phrase": "uno, dos, tres, cuatro, cinco",
     "en": "Count from one to five",
     "slug": "uno-dos-tres-cuatro-cinco",
     "file": "audio/uno-dos-tres-cuatro-cinco.m4a"
   },
   {
-    "num": "044",
+    "num": "041",
     "phrase": "seis, siete, ocho, nueve, diez",
     "en": "Count from six to ten",
     "slug": "seis-siete-ocho-nueve-diez",
     "file": "audio/seis-siete-ocho-nueve-diez.m4a"
   },
   {
-    "num": "045",
+    "num": "042",
     "phrase": "¿Cuánto es?",
     "en": "How much is it?",
     "slug": "cuanto-es",
     "file": "audio/cuanto-es.m4a"
   },
   {
-    "num": "046",
+    "num": "043",
     "phrase": "Es muy caro",
     "en": "It's very expensive",
     "slug": "es-muy-caro",
     "file": "audio/es-muy-caro.m4a"
   },
   {
-    "num": "047",
+    "num": "044",
     "phrase": "¿Qué hora es?",
     "en": "What time is it?",
     "slug": "que-hora-es",
     "file": "audio/que-hora-es.m4a"
   },
   {
-    "num": "048",
+    "num": "045",
     "phrase": "Son las tres",
     "en": "It's three o'clock",
     "slug": "son-las-tres",
     "file": "audio/son-las-tres.m4a"
   },
   {
-    "num": "049",
+    "num": "046",
     "phrase": "A las ocho",
     "en": "At eight",
     "slug": "a-las-ocho",
     "file": "audio/a-las-ocho.m4a"
   },
   {
-    "num": "050",
+    "num": "047",
     "phrase": "hoy",
     "en": "today",
     "slug": "hoy",
     "file": "audio/hoy.m4a"
   },
   {
-    "num": "051",
+    "num": "048",
     "phrase": "mañana",
     "en": "tomorrow",
     "slug": "manana",
     "file": "audio/manana.m4a"
   },
   {
-    "num": "052",
+    "num": "049",
     "phrase": "ayer",
     "en": "yesterday",
     "slug": "ayer",
     "file": "audio/ayer.m4a"
   },
   {
-    "num": "053",
+    "num": "050",
     "phrase": "Soy de Estados Unidos",
     "en": "I'm from the United States",
     "slug": "soy-de-estados-unidos",
     "file": "audio/soy-de-estados-unidos.m4a"
   },
   {
-    "num": "054",
+    "num": "051",
     "phrase": "Soy de California",
     "en": "I'm from California",
     "slug": "soy-de-california",
     "file": "audio/soy-de-california.m4a"
   },
   {
-    "num": "055",
+    "num": "052",
     "phrase": "Soy de Canadá",
     "en": "I'm from Canada",
     "slug": "soy-de-canada",
     "file": "audio/soy-de-canada.m4a"
   },
   {
-    "num": "056",
+    "num": "053",
     "phrase": "Soy de Nueva York",
     "en": "I'm from New York",
     "slug": "soy-de-nueva-york",
     "file": "audio/soy-de-nueva-york.m4a"
   },
   {
-    "num": "057",
+    "num": "054",
     "phrase": "Estoy aquí de vacaciones",
     "en": "I'm here on vacation",
     "slug": "estoy-aqui-de-vacaciones",
     "file": "audio/estoy-aqui-de-vacaciones.m4a"
   },
   {
-    "num": "058",
+    "num": "055",
     "phrase": "Tengo hambre",
     "en": "I'm hungry",
     "slug": "tengo-hambre",
     "file": "audio/tengo-hambre.m4a"
   },
   {
-    "num": "059",
+    "num": "056",
     "phrase": "Tengo sed",
     "en": "I have / I'm thirsty",
     "slug": "tengo-sed",
     "file": "audio/tengo-sed.m4a"
   },
   {
-    "num": "060",
+    "num": "057",
     "phrase": "Tengo frío",
     "en": "I have / I'm cold",
     "slug": "tengo-frio",
     "file": "audio/tengo-frio.m4a"
   },
   {
-    "num": "061",
+    "num": "058",
     "phrase": "Tengo prisa",
     "en": "I have / I'm in a hurry",
     "slug": "tengo-prisa",
     "file": "audio/tengo-prisa.m4a"
   },
   {
-    "num": "062",
+    "num": "059",
     "phrase": "¿Hay un baño?",
     "en": "Is there a bathroom?",
     "slug": "hay-un-bano",
     "file": "audio/hay-un-bano.m4a"
   },
   {
-    "num": "063",
+    "num": "060",
     "phrase": "¿Hay wifi?",
     "en": "Is there wifi?",
     "slug": "hay-wifi",
     "file": "audio/hay-wifi.m4a"
   },
   {
-    "num": "064",
+    "num": "061",
     "phrase": "¿Hay un cajero?",
     "en": "Is there an ATM?",
     "slug": "hay-un-cajero",
     "file": "audio/hay-un-cajero.m4a"
   },
   {
-    "num": "065",
+    "num": "062",
     "phrase": "¿Hay un restaurante cerca?",
     "en": "Is there a restaurant nearby?",
     "slug": "hay-un-restaurante-cerca",
     "file": "audio/hay-un-restaurante-cerca.m4a"
   },
   {
-    "num": "066",
+    "num": "063",
     "phrase": "¿Qué es esto?",
     "en": "What is this?",
     "slug": "que-es-esto",
     "file": "audio/que-es-esto.m4a"
   },
   {
-    "num": "067",
+    "num": "064",
     "phrase": "¿Cuándo?",
     "en": "When?",
     "slug": "cuando",
     "file": "audio/cuando.m4a"
   },
   {
-    "num": "068",
+    "num": "065",
     "phrase": "¿Por qué?",
     "en": "Why?",
     "slug": "por-que",
     "file": "audio/por-que.m4a"
   },
   {
-    "num": "069",
+    "num": "066",
     "phrase": "Voy a comer",
     "en": "I'm going to eat",
     "slug": "voy-a-comer",
     "file": "audio/voy-a-comer.m4a"
   },
   {
-    "num": "070",
+    "num": "067",
     "phrase": "Voy a pagar",
     "en": "I'm going to pay",
     "slug": "voy-a-pagar",
     "file": "audio/voy-a-pagar.m4a"
   },
   {
-    "num": "071",
+    "num": "068",
     "phrase": "Voy a comprar",
     "en": "I'm going to buy",
     "slug": "voy-a-comprar",
     "file": "audio/voy-a-comprar.m4a"
   },
   {
-    "num": "072",
+    "num": "069",
     "phrase": "Voy a dormir",
     "en": "I'm going to sleep",
     "slug": "voy-a-dormir",
     "file": "audio/voy-a-dormir.m4a"
   },
   {
-    "num": "073",
+    "num": "070",
     "phrase": "¿Puede ayudarme?",
     "en": "Can you help me?",
     "slug": "puede-ayudarme",
     "file": "audio/puede-ayudarme.m4a"
   },
   {
-    "num": "074",
+    "num": "071",
     "phrase": "Me gusta la comida",
     "en": "I like the food",
     "slug": "me-gusta-la-comida",
     "file": "audio/me-gusta-la-comida.m4a"
   },
   {
-    "num": "075",
+    "num": "072",
     "phrase": "Me gusta México",
     "en": "I like Mexico",
     "slug": "me-gusta-mexico",
     "file": "audio/me-gusta-mexico.m4a"
   },
   {
-    "num": "076",
+    "num": "073",
     "phrase": "Me gusta esta ciudad",
     "en": "I like this city",
     "slug": "me-gusta-esta-ciudad",
     "file": "audio/me-gusta-esta-ciudad.m4a"
   },
   {
-    "num": "077",
+    "num": "074",
     "phrase": "¿Motivo de su viaje?",
     "en": "Purpose of your trip?",
     "slug": "motivo-de-su-viaje",
     "file": "audio/motivo-de-su-viaje.m4a"
   },
   {
-    "num": "078",
+    "num": "075",
     "phrase": "Turismo.",
     "en": "Tourism.",
     "slug": "turismo",
     "file": "audio/turismo.m4a"
   },
   {
-    "num": "079",
+    "num": "076",
     "phrase": "¿Cuántos días?",
     "en": "How many days?",
     "slug": "cuantos-dias",
     "file": "audio/cuantos-dias.m4a"
   },
   {
-    "num": "080",
+    "num": "077",
     "phrase": "Una semana.",
     "en": "One week.",
     "slug": "una-semana",
     "file": "audio/una-semana.m4a"
   },
   {
-    "num": "081",
+    "num": "078",
     "phrase": "¿Dónde está mi maleta?",
     "en": "Where is my suitcase?",
     "slug": "donde-esta-mi-maleta",
     "file": "audio/donde-esta-mi-maleta.m4a"
   },
   {
-    "num": "082",
+    "num": "079",
     "phrase": "¿Dónde está la puerta?",
     "en": "Where is the gate?",
     "slug": "donde-esta-la-puerta",
     "file": "audio/donde-esta-la-puerta.m4a"
   },
   {
-    "num": "083",
+    "num": "080",
     "phrase": "¿Dónde está un taxi?",
     "en": "Where is a taxi?",
     "slug": "donde-esta-un-taxi",
     "file": "audio/donde-esta-un-taxi.m4a"
   },
   {
-    "num": "084",
+    "num": "081",
     "phrase": "Perdí mi maleta",
     "en": "I lost my suitcase",
     "slug": "perdi-mi-maleta",
     "file": "audio/perdi-mi-maleta.m4a"
   },
   {
-    "num": "085",
+    "num": "082",
     "phrase": "Bienvenido.",
     "en": "Welcome.",
     "slug": "bienvenido",
     "file": "audio/bienvenido.m4a"
   },
   {
-    "num": "086",
+    "num": "083",
     "phrase": "¿A dónde va?",
     "en": "Where are you going?",
     "slug": "a-donde-va",
     "file": "audio/a-donde-va.m4a"
   },
   {
-    "num": "087",
+    "num": "084",
     "phrase": "Al centro, por favor.",
     "en": "Downtown, please.",
     "slug": "al-centro-por-favor",
     "file": "audio/al-centro-por-favor.m4a"
   },
   {
-    "num": "088",
+    "num": "085",
     "phrase": "¿Cuánto cuesta?",
     "en": "How much is it?",
     "slug": "cuanto-cuesta",
     "file": "audio/cuanto-cuesta.m4a"
   },
   {
-    "num": "089",
+    "num": "086",
     "phrase": "Doscientos pesos.",
     "en": "Two hundred pesos.",
     "slug": "doscientos-pesos",
     "file": "audio/doscientos-pesos.m4a"
   },
   {
-    "num": "090",
+    "num": "087",
     "phrase": "Al ___, por favor",
     "en": "To ___, please (telling the driver)",
     "slug": "al-por-favor",
     "file": "audio/al-por-favor.m4a"
   },
   {
-    "num": "091",
+    "num": "088",
     "phrase": "Al hotel, por favor",
     "en": "To the hotel, please",
     "slug": "al-hotel-por-favor",
     "file": "audio/al-hotel-por-favor.m4a"
   },
   {
-    "num": "092",
+    "num": "089",
     "phrase": "Al aeropuerto, por favor",
     "en": "To the airport, please",
     "slug": "al-aeropuerto-por-favor",
     "file": "audio/al-aeropuerto-por-favor.m4a"
   },
   {
-    "num": "093",
+    "num": "090",
     "phrase": "Al museo, por favor",
     "en": "To the museum, please",
     "slug": "al-museo-por-favor",
     "file": "audio/al-museo-por-favor.m4a"
   },
   {
-    "num": "094",
+    "num": "091",
     "phrase": "¿Cuánto cuesta al centro?",
     "en": "How much to downtown? (your E2 frame)",
     "slug": "cuanto-cuesta-al-centro",
     "file": "audio/cuanto-cuesta-al-centro.m4a"
   },
   {
-    "num": "095",
+    "num": "092",
     "phrase": "Pare aquí, por favor",
     "en": "Stop here, please",
     "slug": "pare-aqui-por-favor",
     "file": "audio/pare-aqui-por-favor.m4a"
   },
   {
-    "num": "096",
+    "num": "093",
     "phrase": "¿Puede llevarme a este hotel?",
     "en": "Can you take me to this hotel?",
     "slug": "puede-llevarme-a-este-hotel",
     "file": "audio/puede-llevarme-a-este-hotel.m4a"
   },
   {
-    "num": "097",
+    "num": "094",
     "phrase": "¿Puede llevarme a esta dirección?",
     "en": "Can you take me to this address?",
     "slug": "puede-llevarme-a-esta-direccion",
     "file": "audio/puede-llevarme-a-esta-direccion.m4a"
   },
   {
-    "num": "098",
+    "num": "095",
     "phrase": "¿Puede llevarme a el aeropuerto?",
     "en": "Can you take me to the airport?",
     "slug": "puede-llevarme-a-el-aeropuerto",
     "file": "audio/puede-llevarme-a-el-aeropuerto.m4a"
   },
   {
-    "num": "099",
+    "num": "096",
     "phrase": "Son doscientos pesos.",
     "en": "It's two hundred pesos.",
     "slug": "son-doscientos-pesos",
     "file": "audio/son-doscientos-pesos.m4a"
   },
   {
-    "num": "100",
+    "num": "097",
     "phrase": "Está bien",
     "en": "Okay",
     "slug": "esta-bien",
     "file": "audio/esta-bien.m4a"
   },
   {
-    "num": "101",
+    "num": "098",
     "phrase": "¿Aquí?",
     "en": "Here?",
     "slug": "aqui",
     "file": "audio/aqui.m4a"
   },
   {
-    "num": "102",
+    "num": "099",
     "phrase": "Buenas tardes, ¿tiene una reserva?",
     "en": "Good afternoon, do you have a reservation?",
     "slug": "buenas-tardes-tiene-una-reserva",
     "file": "audio/buenas-tardes-tiene-una-reserva.m4a"
   },
   {
-    "num": "103",
+    "num": "100",
     "phrase": "Sí, a nombre de García.",
     "en": "Yes, under the name García.",
     "slug": "si-a-nombre-de-garcia",
     "file": "audio/si-a-nombre-de-garcia.m4a"
   },
   {
-    "num": "104",
+    "num": "101",
     "phrase": "Perfecto. Aquí está su llave.",
     "en": "Perfect. Here's your key.",
     "slug": "perfecto-aqui-esta-su-llave",
     "file": "audio/perfecto-aqui-esta-su-llave.m4a"
   },
   {
-    "num": "105",
+    "num": "102",
     "phrase": "Tengo una reserva",
     "en": "I have a reservation (your E4 “tengo”)",
     "slug": "tengo-una-reserva",
     "file": "audio/tengo-una-reserva.m4a"
   },
   {
-    "num": "106",
+    "num": "103",
     "phrase": "A nombre de García",
     "en": "Under the name García",
     "slug": "a-nombre-de-garcia",
     "file": "audio/a-nombre-de-garcia.m4a"
   },
   {
-    "num": "107",
+    "num": "104",
     "phrase": "¿A qué hora es el desayuno?",
     "en": "What time is breakfast?",
     "slug": "a-que-hora-es-el-desayuno",
     "file": "audio/a-que-hora-es-el-desayuno.m4a"
   },
   {
-    "num": "108",
+    "num": "105",
     "phrase": "¿A qué hora es el checkout?",
     "en": "What time is checkout?",
     "slug": "a-que-hora-es-el-checkout",
     "file": "audio/a-que-hora-es-el-checkout.m4a"
   },
   {
-    "num": "109",
+    "num": "106",
     "phrase": "Hay un problema con ___",
     "en": "There's a problem with ___ (your E4 “hay”)",
     "slug": "hay-un-problema-con",
     "file": "audio/hay-un-problema-con.m4a"
   },
   {
-    "num": "110",
+    "num": "107",
     "phrase": "Hay un problema con la llave",
     "en": "There's a problem with the key",
     "slug": "hay-un-problema-con-la-llave",
     "file": "audio/hay-un-problema-con-la-llave.m4a"
   },
   {
-    "num": "111",
+    "num": "108",
     "phrase": "Hay un problema con el aire acondicionado",
     "en": "There's a problem with the AC",
     "slug": "hay-un-problema-con-el-aire-acondicionado",
     "file": "audio/hay-un-problema-con-el-aire-acondicionado.m4a"
   },
   {
-    "num": "112",
+    "num": "109",
     "phrase": "Hay un problema con la ducha",
     "en": "There's a problem with the shower",
     "slug": "hay-un-problema-con-la-ducha",
     "file": "audio/hay-un-problema-con-la-ducha.m4a"
   },
   {
-    "num": "113",
+    "num": "110",
     "phrase": "Hay un problema con el wifi",
     "en": "There's a problem with the wifi",
     "slug": "hay-un-problema-con-el-wifi",
     "file": "audio/hay-un-problema-con-el-wifi.m4a"
   },
   {
-    "num": "114",
+    "num": "111",
     "phrase": "Necesito más toallas",
     "en": "I need more towels",
     "slug": "necesito-mas-toallas",
     "file": "audio/necesito-mas-toallas.m4a"
   },
   {
-    "num": "115",
+    "num": "112",
     "phrase": "¿Tiene una reserva?",
     "en": "Do you have a reservation?",
     "slug": "tiene-una-reserva",
     "file": "audio/tiene-una-reserva.m4a"
   },
   {
-    "num": "116",
+    "num": "113",
     "phrase": "Aquí está su llave.",
     "en": "Here's your key.",
     "slug": "aqui-esta-su-llave",
     "file": "audio/aqui-esta-su-llave.m4a"
   },
   {
-    "num": "117",
+    "num": "114",
     "phrase": "Buenas noches, ¿mesa para dos?",
     "en": "Good evening, table for two?",
     "slug": "buenas-noches-mesa-para-dos",
     "file": "audio/buenas-noches-mesa-para-dos.m4a"
   },
   {
-    "num": "118",
+    "num": "115",
     "phrase": "Sí, por aquí, por favor.",
     "en": "Yes, this way, please.",
     "slug": "si-por-aqui-por-favor",
     "file": "audio/si-por-aqui-por-favor.m4a"
   },
   {
-    "num": "119",
+    "num": "116",
     "phrase": "¿Qué me recomienda?",
     "en": "What do you recommend?",
     "slug": "que-me-recomienda",
     "file": "audio/que-me-recomienda.m4a"
   },
   {
-    "num": "120",
+    "num": "117",
     "phrase": "El pescado está muy bueno.",
     "en": "The fish is very good.",
     "slug": "el-pescado-esta-muy-bueno",
     "file": "audio/el-pescado-esta-muy-bueno.m4a"
   },
   {
-    "num": "121",
+    "num": "118",
     "phrase": "Para mí, ___",
     "en": "For me, ___ (the natural way to order)",
     "slug": "para-mi",
     "file": "audio/para-mi.m4a"
   },
   {
-    "num": "122",
+    "num": "119",
     "phrase": "Para mí, un café",
     "en": "For me, a coffee",
     "slug": "para-mi-un-cafe",
     "file": "audio/para-mi-un-cafe.m4a"
   },
   {
-    "num": "123",
+    "num": "120",
     "phrase": "Para mí, una cerveza",
     "en": "For me, a beer",
     "slug": "para-mi-una-cerveza",
     "file": "audio/para-mi-una-cerveza.m4a"
   },
   {
-    "num": "124",
+    "num": "121",
     "phrase": "Para mí, el pollo",
     "en": "For me, the chicken",
     "slug": "para-mi-el-pollo",
     "file": "audio/para-mi-el-pollo.m4a"
   },
   {
-    "num": "125",
+    "num": "122",
     "phrase": "Para mí, la ensalada",
     "en": "For me, the salad",
     "slug": "para-mi-la-ensalada",
     "file": "audio/para-mi-la-ensalada.m4a"
   },
   {
-    "num": "126",
+    "num": "123",
     "phrase": "¿Qué recomienda?",
     "en": "What do you recommend?",
     "slug": "que-recomienda",
     "file": "audio/que-recomienda.m4a"
   },
   {
-    "num": "127",
+    "num": "124",
     "phrase": "Soy alérgico a ___",
     "en": "I am allergic to ___",
     "slug": "soy-alergico-a",
     "file": "audio/soy-alergico-a.m4a"
   },
   {
-    "num": "128",
+    "num": "125",
     "phrase": "Soy alérgico a los mariscos",
     "en": "I am allergic to shellfish",
     "slug": "soy-alergico-a-los-mariscos",
     "file": "audio/soy-alergico-a-los-mariscos.m4a"
   },
   {
-    "num": "129",
+    "num": "126",
     "phrase": "Soy alérgico a los cacahuates",
     "en": "I am allergic to peanuts",
     "slug": "soy-alergico-a-los-cacahuates",
     "file": "audio/soy-alergico-a-los-cacahuates.m4a"
   },
   {
-    "num": "130",
+    "num": "127",
     "phrase": "Soy alérgico a el gluten",
     "en": "I am allergic to gluten",
     "slug": "soy-alergico-a-el-gluten",
     "file": "audio/soy-alergico-a-el-gluten.m4a"
   },
   {
-    "num": "131",
+    "num": "128",
     "phrase": "Sin cebolla, por favor",
     "en": "Without onion, please",
     "slug": "sin-cebolla-por-favor",
     "file": "audio/sin-cebolla-por-favor.m4a"
   },
   {
-    "num": "132",
+    "num": "129",
     "phrase": "La cuenta, por favor",
     "en": "The check, please",
     "slug": "la-cuenta-por-favor",
     "file": "audio/la-cuenta-por-favor.m4a"
   },
   {
-    "num": "133",
+    "num": "130",
     "phrase": "Buenas noches, ¿mesa para cuántos?",
     "en": "Good evening, table for how many?",
     "slug": "buenas-noches-mesa-para-cuantos",
     "file": "audio/buenas-noches-mesa-para-cuantos.m4a"
   },
   {
-    "num": "134",
+    "num": "131",
     "phrase": "Para dos, por favor",
     "en": "For two, please",
     "slug": "para-dos-por-favor",
     "file": "audio/para-dos-por-favor.m4a"
   },
   {
-    "num": "135",
+    "num": "132",
     "phrase": "¿Qué desean tomar?",
     "en": "What would you like to drink?",
     "slug": "que-desean-tomar",
     "file": "audio/que-desean-tomar.m4a"
   },
   {
-    "num": "136",
+    "num": "133",
     "phrase": "¿Y para comer?",
     "en": "And to eat?",
     "slug": "y-para-comer",
     "file": "audio/y-para-comer.m4a"
   },
   {
-    "num": "137",
+    "num": "134",
     "phrase": "El pollo, por favor",
     "en": "The chicken, please",
     "slug": "el-pollo-por-favor",
     "file": "audio/el-pollo-por-favor.m4a"
   },
   {
-    "num": "138",
+    "num": "135",
     "phrase": "Cien pesos.",
     "en": "A hundred pesos.",
     "slug": "cien-pesos",
     "file": "audio/cien-pesos.m4a"
   },
   {
-    "num": "139",
+    "num": "136",
     "phrase": "¿Tiene algo más barato?",
     "en": "Do you have anything cheaper?",
     "slug": "tiene-algo-mas-barato",
     "file": "audio/tiene-algo-mas-barato.m4a"
   },
   {
-    "num": "140",
+    "num": "137",
     "phrase": "Ochenta, para usted.",
     "en": "Eighty, for you.",
     "slug": "ochenta-para-usted",
     "file": "audio/ochenta-para-usted.m4a"
   },
   {
-    "num": "141",
+    "num": "138",
     "phrase": "¿Tiene esto en ___?",
     "en": "Do you have this in ___?",
     "slug": "tiene-esto-en",
     "file": "audio/tiene-esto-en.m4a"
   },
   {
-    "num": "142",
+    "num": "139",
     "phrase": "¿Tiene esto en otra talla?",
     "en": "Do you have this in another size?",
     "slug": "tiene-esto-en-otra-talla",
     "file": "audio/tiene-esto-en-otra-talla.m4a"
   },
   {
-    "num": "143",
+    "num": "140",
     "phrase": "¿Tiene esto en azul?",
     "en": "Do you have this in blue?",
     "slug": "tiene-esto-en-azul",
     "file": "audio/tiene-esto-en-azul.m4a"
   },
   {
-    "num": "144",
+    "num": "141",
     "phrase": "¿Tiene esto en más grande?",
     "en": "Do you have this in bigger?",
     "slug": "tiene-esto-en-mas-grande",
     "file": "audio/tiene-esto-en-mas-grande.m4a"
   },
   {
-    "num": "145",
+    "num": "142",
     "phrase": "¿Tiene esto en más pequeño?",
     "en": "Do you have this in smaller?",
     "slug": "tiene-esto-en-mas-pequeno",
     "file": "audio/tiene-esto-en-mas-pequeno.m4a"
   },
   {
-    "num": "146",
+    "num": "143",
     "phrase": "¿Dónde está el probador?",
     "en": "Where is the fitting room?",
     "slug": "donde-esta-el-probador",
     "file": "audio/donde-esta-el-probador.m4a"
   },
   {
-    "num": "147",
+    "num": "144",
     "phrase": "Es muy caro. ¿Algo más barato?",
     "en": "It's expensive. Anything cheaper?",
     "slug": "es-muy-caro-algo-mas-barato",
     "file": "audio/es-muy-caro-algo-mas-barato.m4a"
   },
   {
-    "num": "148",
+    "num": "145",
     "phrase": "¿Puedo pagar con tarjeta?",
     "en": "Can I pay by card? (your E2 “¿Puedo?”)",
     "slug": "puedo-pagar-con-tarjeta",
     "file": "audio/puedo-pagar-con-tarjeta.m4a"
   },
   {
-    "num": "149",
+    "num": "146",
     "phrase": "¿Efectivo o tarjeta?",
     "en": "Cash or card?",
     "slug": "efectivo-o-tarjeta",
     "file": "audio/efectivo-o-tarjeta.m4a"
   },
   {
-    "num": "150",
+    "num": "147",
     "phrase": "¿Le puedo ayudar?",
     "en": "Can I help you?",
     "slug": "le-puedo-ayudar",
     "file": "audio/le-puedo-ayudar.m4a"
   },
   {
-    "num": "151",
+    "num": "148",
     "phrase": "Ochenta.",
     "en": "Eighty.",
     "slug": "ochenta",
     "file": "audio/ochenta.m4a"
   },
   {
-    "num": "152",
+    "num": "149",
     "phrase": "Disculpe, ¿dónde está el museo?",
     "en": "Excuse me, where is the museum?",
     "slug": "disculpe-donde-esta-el-museo",
     "file": "audio/disculpe-donde-esta-el-museo.m4a"
   },
   {
-    "num": "153",
+    "num": "150",
     "phrase": "Todo recto y a la derecha.",
     "en": "Straight ahead and to the right.",
     "slug": "todo-recto-y-a-la-derecha",
     "file": "audio/todo-recto-y-a-la-derecha.m4a"
   },
   {
-    "num": "154",
+    "num": "151",
     "phrase": "¿Está lejos?",
     "en": "Is it far?",
     "slug": "esta-lejos",
     "file": "audio/esta-lejos.m4a"
   },
   {
-    "num": "155",
+    "num": "152",
     "phrase": "No, a dos cuadras.",
     "en": "No, two blocks away.",
     "slug": "no-a-dos-cuadras",
     "file": "audio/no-a-dos-cuadras.m4a"
   },
   {
-    "num": "156",
+    "num": "153",
     "phrase": "a la derecha",
     "en": "to the right",
     "slug": "a-la-derecha",
     "file": "audio/a-la-derecha.m4a"
   },
   {
-    "num": "157",
+    "num": "154",
     "phrase": "a la izquierda",
     "en": "to the left",
     "slug": "a-la-izquierda",
     "file": "audio/a-la-izquierda.m4a"
   },
   {
-    "num": "158",
+    "num": "155",
     "phrase": "todo recto",
     "en": "straight ahead",
     "slug": "todo-recto",
     "file": "audio/todo-recto.m4a"
   },
   {
-    "num": "159",
+    "num": "156",
     "phrase": "¿Está cerca o lejos?",
     "en": "Is it near or far?",
     "slug": "esta-cerca-o-lejos",
     "file": "audio/esta-cerca-o-lejos.m4a"
   },
   {
-    "num": "160",
+    "num": "157",
     "phrase": "A dos cuadras",
     "en": "Two blocks away",
     "slug": "a-dos-cuadras",
     "file": "audio/a-dos-cuadras.m4a"
   },
   {
-    "num": "161",
+    "num": "158",
     "phrase": "Está en la esquina",
     "en": "It's at the corner",
     "slug": "esta-en-la-esquina",
     "file": "audio/esta-en-la-esquina.m4a"
   },
   {
-    "num": "162",
+    "num": "159",
     "phrase": "Está en la derecha",
     "en": "It's at the right",
     "slug": "esta-en-la-derecha",
     "file": "audio/esta-en-la-derecha.m4a"
   },
   {
-    "num": "163",
+    "num": "160",
     "phrase": "Está en la izquierda",
     "en": "It's at the left",
     "slug": "esta-en-la-izquierda",
     "file": "audio/esta-en-la-izquierda.m4a"
   },
   {
-    "num": "164",
+    "num": "161",
     "phrase": "Está en dos cuadras",
     "en": "It's at two blocks",
     "slug": "esta-en-dos-cuadras",
     "file": "audio/esta-en-dos-cuadras.m4a"
   },
   {
-    "num": "165",
+    "num": "162",
     "phrase": "¿Dónde está el museo?",
     "en": "Ask “Where is the museum?”",
     "slug": "donde-esta-el-museo",
     "file": "audio/donde-esta-el-museo.m4a"
   },
   {
-    "num": "166",
+    "num": "163",
     "phrase": "¿Necesita ayuda?",
     "en": "Do you need help?",
     "slug": "necesita-ayuda",
     "file": "audio/necesita-ayuda.m4a"
   },
   {
-    "num": "167",
+    "num": "164",
     "phrase": "Todo recto, a la izquierda.",
     "en": "Straight, then left.",
     "slug": "todo-recto-a-la-izquierda",
     "file": "audio/todo-recto-a-la-izquierda.m4a"
   },
   {
-    "num": "168",
+    "num": "165",
     "phrase": "No, muy cerca.",
     "en": "No, very close.",
     "slug": "no-muy-cerca",
     "file": "audio/no-muy-cerca.m4a"
   },
   {
-    "num": "169",
+    "num": "166",
     "phrase": "Me duele la cabeza.",
     "en": "My head hurts.",
     "slug": "me-duele-la-cabeza",
     "file": "audio/me-duele-la-cabeza.m4a"
   },
   {
-    "num": "170",
+    "num": "167",
     "phrase": "¿Necesita algo para el dolor?",
     "en": "Do you need something for the pain?",
     "slug": "necesita-algo-para-el-dolor",
     "file": "audio/necesita-algo-para-el-dolor.m4a"
   },
   {
-    "num": "171",
+    "num": "168",
     "phrase": "Sí, por favor.",
     "en": "Yes, please.",
     "slug": "si-por-favor",
     "file": "audio/si-por-favor.m4a"
   },
   {
-    "num": "172",
+    "num": "169",
     "phrase": "Me duele ___",
     "en": "My ___ hurts",
     "slug": "me-duele",
     "file": "audio/me-duele.m4a"
   },
   {
-    "num": "173",
+    "num": "170",
     "phrase": "Me duele el estómago",
     "en": "My stomach hurts",
     "slug": "me-duele-el-estomago",
     "file": "audio/me-duele-el-estomago.m4a"
   },
   {
-    "num": "174",
+    "num": "171",
     "phrase": "Me duele la garganta",
     "en": "My throat hurts",
     "slug": "me-duele-la-garganta",
     "file": "audio/me-duele-la-garganta.m4a"
   },
   {
-    "num": "175",
+    "num": "172",
     "phrase": "Me duele la espalda",
     "en": "My back hurts",
     "slug": "me-duele-la-espalda",
     "file": "audio/me-duele-la-espalda.m4a"
   },
   {
-    "num": "176",
+    "num": "173",
     "phrase": "Perdí mi ___",
     "en": "I lost my ___",
     "slug": "perdi-mi",
     "file": "audio/perdi-mi.m4a"
   },
   {
-    "num": "177",
+    "num": "174",
     "phrase": "Perdí mi pasaporte",
     "en": "I lost my passport",
     "slug": "perdi-mi-pasaporte",
     "file": "audio/perdi-mi-pasaporte.m4a"
   },
   {
-    "num": "178",
+    "num": "175",
     "phrase": "Perdí mi teléfono",
     "en": "I lost my phone",
     "slug": "perdi-mi-telefono",
     "file": "audio/perdi-mi-telefono.m4a"
   },
   {
-    "num": "179",
+    "num": "176",
     "phrase": "Perdí mi cartera",
     "en": "I lost my wallet",
     "slug": "perdi-mi-cartera",
     "file": "audio/perdi-mi-cartera.m4a"
   },
   {
-    "num": "180",
+    "num": "177",
     "phrase": "Ayúdeme, por favor",
     "en": "Help me, please (your E6 command)",
     "slug": "ayudeme-por-favor",
     "file": "audio/ayudeme-por-favor.m4a"
   },
   {
-    "num": "181",
+    "num": "178",
     "phrase": "¿Qué le pasa?",
     "en": "What's wrong?",
     "slug": "que-le-pasa",
     "file": "audio/que-le-pasa.m4a"
   },
   {
-    "num": "182",
+    "num": "179",
     "phrase": "¿Desde cuándo?",
     "en": "Since when?",
     "slug": "desde-cuando",
     "file": "audio/desde-cuando.m4a"
   },
   {
-    "num": "183",
+    "num": "180",
     "phrase": "Desde ayer",
     "en": "Since yesterday",
     "slug": "desde-ayer",
     "file": "audio/desde-ayer.m4a"
   },
   {
-    "num": "184",
+    "num": "181",
     "phrase": "Necesita ver a un médico.",
     "en": "You need to see a doctor.",
     "slug": "necesita-ver-a-un-medico",
     "file": "audio/necesita-ver-a-un-medico.m4a"
   },
   {
-    "num": "185",
+    "num": "182",
     "phrase": "¿Dónde está el hospital?",
     "en": "Where is the hospital?",
     "slug": "donde-esta-el-hospital",
     "file": "audio/donde-esta-el-hospital.m4a"
   },
   {
-    "num": "186",
+    "num": "183",
     "phrase": "¡Hola! ¿De dónde eres?",
     "en": "Hi! Where are you from?",
     "slug": "hola-de-donde-eres",
     "file": "audio/hola-de-donde-eres.m4a"
   },
   {
-    "num": "187",
+    "num": "184",
     "phrase": "¡Bienvenido! ¿Te gusta México?",
     "en": "Welcome! Do you like Mexico?",
     "slug": "bienvenido-te-gusta-mexico",
     "file": "audio/bienvenido-te-gusta-mexico.m4a"
   },
   {
-    "num": "188",
+    "num": "185",
     "phrase": "¡Me encanta!",
     "en": "I love it!",
     "slug": "me-encanta",
     "file": "audio/me-encanta.m4a"
   },
   {
-    "num": "189",
+    "num": "186",
     "phrase": "¿De dónde eres?",
     "en": "Where are you from?",
     "slug": "de-donde-eres",
     "file": "audio/de-donde-eres.m4a"
   },
   {
-    "num": "190",
+    "num": "187",
     "phrase": "Me gusta mucho ___",
     "en": "I really like ___ (your E6 “me gusta”)",
     "slug": "me-gusta-mucho",
     "file": "audio/me-gusta-mucho.m4a"
   },
   {
-    "num": "191",
+    "num": "188",
     "phrase": "Me gusta mucho tu país",
     "en": "I really like your country",
     "slug": "me-gusta-mucho-tu-pais",
     "file": "audio/me-gusta-mucho-tu-pais.m4a"
   },
   {
-    "num": "192",
+    "num": "189",
     "phrase": "Me gusta mucho la comida",
     "en": "I really like the food",
     "slug": "me-gusta-mucho-la-comida",
     "file": "audio/me-gusta-mucho-la-comida.m4a"
   },
   {
-    "num": "193",
+    "num": "190",
     "phrase": "Me gusta mucho esta ciudad",
     "en": "I really like this city",
     "slug": "me-gusta-mucho-esta-ciudad",
     "file": "audio/me-gusta-mucho-esta-ciudad.m4a"
   },
   {
-    "num": "194",
+    "num": "191",
     "phrase": "Me gusta mucho la gente",
     "en": "I really like the people",
     "slug": "me-gusta-mucho-la-gente",
     "file": "audio/me-gusta-mucho-la-gente.m4a"
   },
   {
-    "num": "195",
+    "num": "192",
     "phrase": "Mucho gusto",
     "en": "Nice to meet you",
     "slug": "mucho-gusto",
     "file": "audio/mucho-gusto.m4a"
   },
   {
-    "num": "196",
+    "num": "193",
     "phrase": "Igualmente",
     "en": "Likewise",
     "slug": "igualmente",
     "file": "audio/igualmente.m4a"
   },
   {
-    "num": "197",
-    "phrase": "usted vs tú",
-    "en": "formal “you” vs casual “you”",
-    "slug": "usted-vs-tu",
-    "file": "audio/usted-vs-tu.m4a"
-  },
-  {
-    "num": "198",
+    "num": "194",
     "phrase": "¿Te gusta México?",
     "en": "Do you like Mexico?",
     "slug": "te-gusta-mexico",
     "file": "audio/te-gusta-mexico.m4a"
   },
   {
-    "num": "199",
+    "num": "195",
     "phrase": "Tu día de viaje",
     "en": "Your travel day: land → taxi → hotel → dinner → find your way home.",
     "slug": "tu-dia-de-viaje",
     "file": "audio/tu-dia-de-viaje.m4a"
   },
   {
-    "num": "200",
+    "num": "196",
     "phrase": "Bienvenido. ¿Cuántos días?",
     "en": "Welcome. How many days?",
     "slug": "bienvenido-cuantos-dias",
     "file": "audio/bienvenido-cuantos-dias.m4a"
   },
   {
-    "num": "201",
+    "num": "197",
     "phrase": "Que disfrute.",
     "en": "Enjoy your stay.",
     "slug": "que-disfrute",
     "file": "audio/que-disfrute.m4a"
   },
   {
-    "num": "202",
+    "num": "198",
     "phrase": "Llegamos.",
     "en": "We're here.",
     "slug": "llegamos",
     "file": "audio/llegamos.m4a"
   },
   {
-    "num": "203",
+    "num": "199",
     "phrase": "¿Mesa para cuántos?",
     "en": "Table for how many?",
     "slug": "mesa-para-cuantos",
     "file": "audio/mesa-para-cuantos.m4a"
   },
   {
-    "num": "204",
+    "num": "200",
     "phrase": "Todo recto, a la derecha.",
     "en": "Straight, then right.",
     "slug": "todo-recto-a-la-derecha",
     "file": "audio/todo-recto-a-la-derecha.m4a"
   },
   {
-    "num": "205",
+    "num": "201",
     "phrase": "Muchas gracias",
     "en": "Thank you very much",
     "slug": "muchas-gracias",
     "file": "audio/muchas-gracias.m4a"
   },
   {
-    "num": "206",
+    "num": "202",
     "phrase": "¡Lo lograste!",
     "en": "You did it!",
     "slug": "lo-lograste",
     "file": "audio/lo-lograste.m4a"
   },
   {
-    "num": "207",
+    "num": "203",
     "phrase": "Disculpe",
     "en": "Excuse me",
     "slug": "disculpe",
     "file": "audio/disculpe.m4a"
   },
   {
-    "num": "208",
+    "num": "204",
     "phrase": "Buenas noches",
     "en": "Good evening",
     "slug": "buenas-noches",
     "file": "audio/buenas-noches.m4a"
   },
   {
-    "num": "209",
+    "num": "205",
     "phrase": "uno",
     "en": "1",
     "slug": "uno",
     "file": "audio/uno.m4a"
   },
   {
-    "num": "210",
+    "num": "206",
     "phrase": "dos",
     "en": "2",
     "slug": "dos",
     "file": "audio/dos.m4a"
   },
   {
-    "num": "211",
+    "num": "207",
     "phrase": "tres",
     "en": "3",
     "slug": "tres",
     "file": "audio/tres.m4a"
   },
   {
-    "num": "212",
+    "num": "208",
     "phrase": "cuatro",
     "en": "4",
     "slug": "cuatro",
     "file": "audio/cuatro.m4a"
   },
   {
-    "num": "213",
+    "num": "209",
     "phrase": "cinco",
     "en": "5",
     "slug": "cinco",
     "file": "audio/cinco.m4a"
   },
   {
-    "num": "214",
+    "num": "210",
     "phrase": "seis",
     "en": "6",
     "slug": "seis",
     "file": "audio/seis.m4a"
   },
   {
-    "num": "215",
+    "num": "211",
     "phrase": "siete",
     "en": "7",
     "slug": "siete",
     "file": "audio/siete.m4a"
   },
   {
-    "num": "216",
+    "num": "212",
     "phrase": "ocho",
     "en": "8",
     "slug": "ocho",
     "file": "audio/ocho.m4a"
   },
   {
-    "num": "217",
+    "num": "213",
     "phrase": "nueve",
     "en": "9",
     "slug": "nueve",
     "file": "audio/nueve.m4a"
   },
   {
-    "num": "218",
+    "num": "214",
     "phrase": "diez",
     "en": "10",
     "slug": "diez",
     "file": "audio/diez.m4a"
   },
   {
-    "num": "219",
+    "num": "215",
     "phrase": "veinte",
     "en": "20",
     "slug": "veinte",
     "file": "audio/veinte.m4a"
   },
   {
-    "num": "220",
+    "num": "216",
     "phrase": "treinta",
     "en": "30",
     "slug": "treinta",
     "file": "audio/treinta.m4a"
   },
   {
-    "num": "221",
+    "num": "217",
     "phrase": "cuarenta",
     "en": "40",
     "slug": "cuarenta",
     "file": "audio/cuarenta.m4a"
   },
   {
-    "num": "222",
+    "num": "218",
     "phrase": "cincuenta",
     "en": "50",
     "slug": "cincuenta",
     "file": "audio/cincuenta.m4a"
   },
   {
-    "num": "223",
+    "num": "219",
     "phrase": "cien",
     "en": "100",
     "slug": "cien",
     "file": "audio/cien.m4a"
   },
   {
-    "num": "224",
+    "num": "220",
     "phrase": "lunes",
     "en": "Monday",
     "slug": "lunes",
     "file": "audio/lunes.m4a"
   },
   {
-    "num": "225",
+    "num": "221",
     "phrase": "martes",
     "en": "Tuesday",
     "slug": "martes",
     "file": "audio/martes.m4a"
   },
   {
-    "num": "226",
+    "num": "222",
     "phrase": "miércoles",
     "en": "Wednesday",
     "slug": "miercoles",
     "file": "audio/miercoles.m4a"
   },
   {
-    "num": "227",
+    "num": "223",
     "phrase": "jueves",
     "en": "Thursday",
     "slug": "jueves",
     "file": "audio/jueves.m4a"
   },
   {
-    "num": "228",
+    "num": "224",
     "phrase": "viernes",
     "en": "Friday",
     "slug": "viernes",
     "file": "audio/viernes.m4a"
   },
   {
-    "num": "229",
+    "num": "225",
     "phrase": "sábado",
     "en": "Saturday",
     "slug": "sabado",
     "file": "audio/sabado.m4a"
   },
   {
-    "num": "230",
+    "num": "226",
     "phrase": "domingo",
     "en": "Sunday",
     "slug": "domingo",
     "file": "audio/domingo.m4a"
   },
   {
-    "num": "231",
+    "num": "227",
     "phrase": "rojo",
     "en": "red",
     "slug": "rojo",
     "file": "audio/rojo.m4a"
   },
   {
-    "num": "232",
+    "num": "228",
     "phrase": "azul",
     "en": "blue",
     "slug": "azul",
     "file": "audio/azul.m4a"
   },
   {
-    "num": "233",
+    "num": "229",
     "phrase": "verde",
     "en": "green",
     "slug": "verde",
     "file": "audio/verde.m4a"
   },
   {
-    "num": "234",
+    "num": "230",
     "phrase": "amarillo",
     "en": "yellow",
     "slug": "amarillo",
     "file": "audio/amarillo.m4a"
   },
   {
-    "num": "235",
+    "num": "231",
     "phrase": "blanco",
     "en": "white",
     "slug": "blanco",
     "file": "audio/blanco.m4a"
   },
   {
-    "num": "236",
+    "num": "232",
     "phrase": "negro",
     "en": "black",
     "slug": "negro",
     "file": "audio/negro.m4a"
   },
   {
-    "num": "237",
+    "num": "233",
     "phrase": "agua",
     "en": "water",
     "slug": "agua",
     "file": "audio/agua.m4a"
   },
   {
-    "num": "238",
+    "num": "234",
     "phrase": "baño",
     "en": "bathroom",
     "slug": "bano",
     "file": "audio/bano.m4a"
   },
   {
-    "num": "239",
+    "num": "235",
     "phrase": "ayuda",
     "en": "help",
     "slug": "ayuda",

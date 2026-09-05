@@ -1,4 +1,4 @@
-const CACHE = 'esptalk-v10';
+const CACHE = 'esptalk-v14';
 // Core shell is precached; the ~230 audio clips are cached on demand at
 // runtime (cache-first handler below) so this list stays small.
 const ASSETS = [
