@@ -363,6 +363,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex-direction: column;
   gap: 5px;
   padding: 8px;
+  z-index: 101;
 }
 .nav__mobile-toggle span {
   display: block;
@@ -372,6 +373,31 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
 }
+.nav__mobile-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__mobile-toggle.active span:nth-child(2) { opacity: 0; }
+.nav__mobile-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav__mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px 24px;
+  gap: 18px;
+  box-shadow: 0 12px 24px rgba(0,0,0,.08);
+}
+.nav--open .nav__mobile-menu { display: flex; }
+.nav__mobile-menu a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text2);
+}
+.nav__mobile-menu .btn-primary { align-self: flex-start; font-size: 14px; padding: 3px 3px 3px 22px; }
+.nav__mobile-menu .btn-primary .btn-icon { width: 38px; height: 38px; margin-left: 12px; }
 
 /* ===================================================================
    HERO
@@ -931,11 +957,32 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         </span>
       </a>
     </div>
-    <button class="nav__mobile-toggle" aria-label="Menu" onclick="this.classList.toggle('active')">
+    <button class="nav__mobile-toggle" aria-label="Menu" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
   </div>
+  <div class="nav__mobile-menu">
+    <a href="#how" onclick="closeMobileNav()">How</a>
+    <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+    <a href="app.html" onclick="closeMobileNav()">Sign in</a>
+    <a href="app.html" class="btn-primary">
+      Start Free
+      <span class="btn-icon">
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+  </div>
 </nav>
+<script>
+function toggleMobileNav(){
+  document.querySelector('.nav').classList.toggle('nav--open');
+  document.querySelector('.nav__mobile-toggle').classList.toggle('active');
+}
+function closeMobileNav(){
+  document.querySelector('.nav').classList.remove('nav--open');
+  document.querySelector('.nav__mobile-toggle').classList.remove('active');
+}
+</script>
 
 <!-- ============================================================
      HERO
