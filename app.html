@@ -998,7 +998,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   .setting-row{flex-wrap:wrap;gap:.5rem;}
 
   /* Auth */
-  .auth-card{width:calc(100vw - 2rem);padding:1.75rem 1.25rem;}
+  .auth-card{width:calc(100vw - 2rem);padding:1.75rem 1.25rem;max-height:90dvh;overflow-y:auto;}
 
   /* Paywall */
   .paywall-card{width:calc(100vw - 2rem);padding:1.5rem 1.25rem;max-height:90dvh;overflow-y:auto;}
@@ -1020,7 +1020,6 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 <div class="auth-overlay" id="authOverlay">
   <a href="index.html" style="display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--text3);text-decoration:none;margin-bottom:1.25rem;transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text3)'">← Back to site</a>
   <div class="auth-card">
-    <button onclick="closeAuthOverlay()" aria-label="Close" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;color:var(--text3);cursor:pointer;line-height:1;padding:.25rem;">✕</button>
     <div class="auth-logo" style="margin-top:.25rem;">Esp<span>Talk</span></div>
     <div class="auth-tagline">Speak Spanish from day one. No flashcards, no busywork.</div>
     <div class="auth-tabs">
@@ -1043,8 +1042,6 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
       <button class="auth-btn" onclick="doAuth()">Start learning free →</button>
       <div id="authError" style="font-size:.75rem;color:var(--red);text-align:center;margin-top:.5rem;min-height:1rem;"></div>
     </div>
-    <div class="auth-divider">or</div>
-    <button class="auth-guest" onclick="continueGuest()">Continue as guest (no progress saved)</button>
     <div class="auth-fine">By signing up you agree to our Terms & Privacy Policy.<br>The Engine basics and Eating & Drinking are always free. No credit card required.</div>
   </div>
 </div>
@@ -1368,7 +1365,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
         <div class="pw-feat">✓ &nbsp;Choice of two voices</div>
         <div class="pw-feat">✓ &nbsp;No subscription — pay once, keep forever</div>
       </div>
-      <div class="pw-price" id="pwPrice">$4.99<span style="font-size:1.2rem;color:var(--text2);"> one-time</span></div>
+      <div class="pw-price" id="pwPrice">$9.99<span style="font-size:1.2rem;color:var(--text2);"> one-time</span></div>
       <div class="pw-per" id="pwPer">one payment · yours forever · no renewals</div>
       <button class="auth-btn" onclick="startCheckout()" id="pwCheckoutBtn">Continue to payment →</button>
       <button class="auth-guest" style="margin-top:.75rem;" onclick="hidePaywall()">Maybe later</button>
@@ -1381,8 +1378,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
       <div style="font-size:1.5rem;margin-bottom:.75rem;">💳</div>
       <div class="pw-title" style="font-size:1.1rem;margin-bottom:.5rem;">Complete payment</div>
       <div id="pwOrderSummary" style="background:var(--bg3);border-radius:var(--radius);padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.82rem;color:var(--text2);text-align:left;">
-        <div style="display:flex;justify-content:space-between;margin-bottom:.3rem;"><span>EspTalk Pro (one-time)</span><span style="color:var(--text);font-weight:600;">$4.99</span></div>
-        <div style="border-top:1px solid var(--border2);padding-top:.3rem;margin-top:.3rem;display:flex;justify-content:space-between;font-weight:600;color:var(--text);"><span>Total today</span><span>$4.99</span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:.3rem;"><span>EspTalk Pro (one-time)</span><span style="color:var(--text);font-weight:600;">$9.99</span></div>
+        <div style="border-top:1px solid var(--border2);padding-top:.3rem;margin-top:.3rem;display:flex;justify-content:space-between;font-weight:600;color:var(--text);"><span>Total today</span><span>$9.99</span></div>
       </div>
       <!-- PayPal button container — renders when SDK loads -->
       <div id="paypal-button-container" style="min-height:48px;"></div>
@@ -1436,7 +1433,7 @@ function initSupabase(){
 const PAYPAL_CONFIGURED = true;
 
 let BILLING_CYCLE = 'onetime';
-const PRICES = { onetime: { amount: '4.99', label: '$4.99', desc: 'one payment · yours forever · no renewals' } };
+const PRICES = { onetime: { amount: '9.99', label: '$9.99', desc: 'one payment · yours forever · no renewals' } };
 
 function setBilling(cycle){ /* no-op — single price */ }
 
@@ -1922,7 +1919,7 @@ const VOCAB_BANK=[
 // ═══════════════════════════
 const S={
   xp:0,
-  user:{name:'',isPro:false,isGuest:false},
+  user:{name:'',isPro:false},
   completedLessons:new Set(),
   completedExams:new Set(),
   inProgressLesson:null,   // {lv, ls} — lesson started but not finished
@@ -1981,7 +1978,6 @@ async function doAuth(){
       const displayName=user.user_metadata?.display_name||name||email.split('@')[0];
       S.user.name=displayName;
       S.user.supabaseId=user.id;
-      S.user.isGuest=false;
       // Load profile (pro status etc.)
       const {data:profile}=await sb.from('profiles').select('is_pro').eq('id',user.id).single();
       if(profile?.is_pro) S.user.isPro=true;
@@ -1997,7 +1993,6 @@ async function doAuth(){
   } else {
     // Supabase not configured — localStorage-only mode
     S.user.name=name||email.split('@')[0]||'Learner';
-    S.user.isGuest=false;
     document.getElementById('authOverlay').style.display='none';
     updateUserUI();refreshDashboard();saveState();
     showToast('Welcome to EspTalk, '+S.user.name+'! 🎉');
@@ -2005,27 +2000,6 @@ async function doAuth(){
 
   btn.textContent=authMode==='signup'?'Start learning free →':'Sign in →';
   btn.disabled=false;
-}
-
-function continueGuest(){
-  S.user.isGuest=true;
-  S.user.name='Guest';
-  document.getElementById('authOverlay').style.display='none';
-  updateUserUI();
-  refreshDashboard();
-  showToast('Continuing as guest — progress won\'t be saved.');
-}
-// Closes the overlay without forcing a choice. If there's already an
-// identity (a guest re-prompted by the paywall, or a returning user),
-// just dismiss it. On a true first visit there's no state to fall back
-// to, so close behaves like "continue as guest" instead of leaving the
-// app in an undefined logged-out state.
-function closeAuthOverlay(){
-  if(S.user.name){
-    document.getElementById('authOverlay').style.display='none';
-  } else {
-    continueGuest();
-  }
 }
 
 async function signOut(){
@@ -3934,12 +3908,6 @@ function fcAnswer(knew){
 // PAYWALL
 // ═══════════════════════════
 function showPaywall(){
-  if(S.user.isGuest){
-    showToast('Create a free account first to upgrade — guest progress isn\'t saved.');
-    switchAuthTab('signup');
-    document.getElementById('authOverlay').style.display='flex';
-    return;
-  }
   document.getElementById('pw-step-plan').style.display='block';
   document.getElementById('pw-step-payment').style.display='none';
   document.getElementById('pw-step-success').style.display='none';
@@ -4039,7 +4007,6 @@ function showToast(msg,duration=3000){
 // PERSISTENCE
 // ═══════════════════════════
 function saveState(){
-  if(S.user.isGuest) return;
   try{
     localStorage.setItem('esptalk_v1',JSON.stringify({
       xp:S.xp,
