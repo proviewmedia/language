@@ -16,16 +16,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Text:ital@1&family=Hanken+Grotesk:wght@700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <!-- Supabase JS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<!-- PayPal SDK -->
-<script>
-// Load PayPal async so it never blocks the app
-(function(){
-  var s=document.createElement('script');
-  s.src='https://www.paypal.com/sdk/js?client-id=AYBHRCogcl-HuEuQB7nJuRCHqCqtCAT39XL-Zpz-762J9xEztL8RWdRan8g9v1M5yFY3WK8SJReNq3zn&currency=USD';
-  s.async=true;s.defer=true;
-  document.head.appendChild(s);
-})();
-</script>
 <style>
 :root {
   --bg:       #F5F5F7;
@@ -1371,24 +1361,12 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
       <button class="auth-guest" style="margin-top:.75rem;" onclick="hidePaywall()">Maybe later</button>
     </div>
 
-    <!-- Step 2: PayPal payment -->
-    <div id="pw-step-payment" style="display:none;">
-      <button onclick="showPlanStep()" style="position:absolute;top:1rem;left:1rem;background:none;border:none;font-size:.85rem;color:var(--text3);cursor:pointer;">← Back</button>
-      <button onclick="hidePaywall()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;color:var(--text3);cursor:pointer;">✕</button>
-      <div style="font-size:1.5rem;margin-bottom:.75rem;">💳</div>
-      <div class="pw-title" style="font-size:1.1rem;margin-bottom:.5rem;">Complete payment</div>
-      <div id="pwOrderSummary" style="background:var(--bg3);border-radius:var(--radius);padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.82rem;color:var(--text2);text-align:left;">
-        <div style="display:flex;justify-content:space-between;margin-bottom:.3rem;"><span>EspTalk Pro (one-time)</span><span style="color:var(--text);font-weight:600;">$9.99</span></div>
-        <div style="border-top:1px solid var(--border2);padding-top:.3rem;margin-top:.3rem;display:flex;justify-content:space-between;font-weight:600;color:var(--text);"><span>Total today</span><span>$9.99</span></div>
-      </div>
-      <!-- PayPal button container — renders when SDK loads -->
-      <div id="paypal-button-container" style="min-height:48px;"></div>
-      <!-- Fallback when PayPal SDK not yet configured -->
-      <div id="paypal-placeholder" style="background:var(--bg3);border:1.5px dashed var(--border2);border-radius:var(--radius);padding:1rem;text-align:center;font-size:.78rem;color:var(--text3);">
-        <div style="font-size:1.1rem;margin-bottom:.4rem;">🔧</div>
-        PayPal not yet configured.<br>Add your Client ID to activate payments.
-      </div>
-      <div class="pw-trial" style="margin-top:1rem;">Secure payment via PayPal. One-time charge. No subscription.</div>
+    <!-- Step 2: redirecting to Stripe Checkout / confirming payment on return -->
+    <div id="pw-step-payment" style="display:none;text-align:center;padding:1rem 0;">
+      <button onclick="showPlanStep()" id="pwPaymentBack" style="position:absolute;top:1rem;left:1rem;background:none;border:none;font-size:.85rem;color:var(--text3);cursor:pointer;">← Back</button>
+      <div class="pw-title" style="font-size:1.1rem;margin-bottom:.5rem;" id="pwStepPaymentTitle">Redirecting to secure checkout…</div>
+      <div class="pw-sub" id="pwStepPaymentMsg">One moment — you'll land back here once payment is complete.</div>
+      <div class="pw-trial" style="margin-top:1rem;">Secure payment via Stripe. One-time charge. No subscription.</div>
     </div>
 
     <!-- Step 3: Success -->
@@ -1423,55 +1401,39 @@ function initSupabase(){
 }
 
 // ═══════════════════════════════════════════════════
-// PAYPAL CONFIGURATION
-// ─────────────────────────────────────────────────
-// 1. Get your PayPal Client ID from developer.paypal.com
-// 2. Uncomment the PayPal SDK script in <head>
-// 3. Replace YOUR_PAYPAL_CLIENT_ID in that script tag
-// 4. Set PAYPAL_CONFIGURED = true below
+// CHECKOUT — Stripe
+// Payment runs through a real backend: startCheckout() only ever asks our
+// own /api/create-checkout-session for a Stripe-hosted checkout URL and
+// redirects there. Pro access is granted ONLY by a verified Stripe webhook
+// (see api/stripe-webhook.js) — never trust the redirect back from Stripe
+// alone, since a user could hand-craft that URL without paying.
 // ═══════════════════════════════════════════════════
-const PAYPAL_CONFIGURED = true;
-
-let BILLING_CYCLE = 'onetime';
 const PRICES = { onetime: { amount: '9.99', label: '$9.99', desc: 'one payment · yours forever · no renewals' } };
 
-function setBilling(cycle){ /* no-op — single price */ }
+async function startCheckout(){
+  if(!sb) initSupabase();
+  const {data:{user}}=await sb.auth.getUser();
+  if(!user){ showToast('Please sign in again to continue.'); return; }
 
-function startCheckout(){
   document.getElementById('pw-step-plan').style.display='none';
   document.getElementById('pw-step-payment').style.display='block';
-  const container=document.getElementById('paypal-button-container');
-  const placeholder=document.getElementById('paypal-placeholder');
-  container.innerHTML='';
-  if(window.paypal){
-    placeholder.style.display='none';
-    window.paypal.Buttons({
-      style:{layout:'vertical',color:'blue',shape:'rect',label:'pay'},
-      createOrder:(data,actions)=>actions.order.create({
-        purchase_units:[{
-          description:'EspTalk Pro — '+BILLING_CYCLE,
-          amount:{value:PRICES[BILLING_CYCLE].amount,currency_code:'USD'}
-        }]
-      }),
-      onApprove:async(data,actions)=>{
-        await actions.order.capture();
-        await activatePro();
-      },
-      onError:(err)=>{
-        console.error('PayPal error',err);
-        showToast('Payment failed. Please try again.');
-      },
-      onCancel:()=>{showToast('Payment cancelled.');}
-    }).render('#paypal-button-container');
-  } else {
-    placeholder.style.display='block';
-    placeholder.innerHTML='<div style="font-size:1.1rem;margin-bottom:.4rem;">⏳</div>Loading PayPal…<br><small>If this persists, reload the page.</small>';
-    // Retry once after 2s in case SDK is still loading
-    setTimeout(()=>{
-      if(window.paypal&&document.getElementById('pw-step-payment').style.display!=='none'){
-        startCheckout();
-      }
-    },2000);
+  document.getElementById('pwPaymentBack').style.display='block';
+  document.getElementById('pwStepPaymentTitle').textContent='Redirecting to secure checkout…';
+  document.getElementById('pwStepPaymentMsg').textContent="One moment — you'll land back here once payment is complete.";
+
+  try{
+    const res=await fetch('/api/create-checkout-session',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({userId:user.id,email:user.email})
+    });
+    const data=await res.json();
+    if(!res.ok||!data.url) throw new Error(data.error||'Checkout could not start');
+    window.location.href=data.url;
+  }catch(err){
+    console.error('startCheckout failed',err);
+    showToast('Could not start checkout. Please try again.');
+    showPlanStep();
   }
 }
 
@@ -1480,27 +1442,55 @@ function showPlanStep(){
   document.getElementById('pw-step-payment').style.display='none';
 }
 
-async function activatePro(){
-  S.user.isPro=true;
-  // Save pro status to Supabase if logged in — payment already succeeded via
-  // PayPal at this point, so a backend hiccup here must never hide that from
-  // the customer. Local state + UI always proceed; only the remote save can fail.
-  if(sb){
-    try{
-      const {data:{user}}=await sb.auth.getUser();
-      if(user){
-        await sb.from('profiles').upsert({id:user.id, is_pro:true, updated_at:new Date().toISOString()});
-      }
-    }catch(e){
-      console.error('Failed to save Pro status to Supabase; local access is still granted.', e);
-    }
-  }
-  saveState();
-  updatePlanUI();
+function showProSuccess(){
   document.getElementById('sbUpgrade').style.display='none';
+  document.getElementById('paywallModal').style.display='flex';
+  document.getElementById('pw-step-plan').style.display='none';
   document.getElementById('pw-step-payment').style.display='none';
   document.getElementById('pw-step-success').style.display='block';
   renderCurr();
+}
+
+// After a successful Stripe redirect back, the webhook has very likely
+// already landed — but it's not guaranteed to beat the browser redirect,
+// so poll briefly for the profile to actually flip to is_pro before
+// declaring success, rather than trusting the URL alone.
+async function checkStripeReturn(){
+  const params=new URLSearchParams(location.search);
+  const checkout=params.get('checkout');
+  if(!checkout) return;
+  history.replaceState(null,'',location.pathname);
+  if(checkout==='cancel'){
+    showToast('Checkout cancelled — no charge was made.');
+    return;
+  }
+  if(checkout!=='success') return;
+
+  if(!sb) initSupabase();
+  document.getElementById('paywallModal').style.display='flex';
+  document.getElementById('pw-step-plan').style.display='none';
+  document.getElementById('pw-step-success').style.display='none';
+  document.getElementById('pw-step-payment').style.display='block';
+  document.getElementById('pwPaymentBack').style.display='none';
+  document.getElementById('pwStepPaymentTitle').textContent='Confirming your payment…';
+  document.getElementById('pwStepPaymentMsg').textContent="This only takes a second.";
+
+  for(let i=0;i<10;i++){
+    const {data:{user}}=await sb.auth.getUser();
+    if(user){
+      const {data:profile}=await sb.from('profiles').select('is_pro').eq('id',user.id).single();
+      if(profile?.is_pro){
+        S.user.isPro=true;
+        saveState();
+        updatePlanUI();
+        showProSuccess();
+        return;
+      }
+    }
+    await new Promise(r=>setTimeout(r,1500));
+  }
+  document.getElementById('pwStepPaymentTitle').textContent="Almost there";
+  document.getElementById('pwStepPaymentMsg').textContent="Your payment went through, but it's taking a bit longer than usual to confirm. Refresh in a moment — if Pro still isn't unlocked, contact support with your receipt.";
 }
 
 // ═══════════════════════════
@@ -4094,6 +4084,7 @@ if(sb){
     if(event==='SIGNED_OUT') document.getElementById('authOverlay').style.display='flex';
   });
 }
+checkStripeReturn();
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 
 </script>
