@@ -1044,7 +1044,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     </div>
     <div class="auth-divider">or</div>
     <button class="auth-guest" onclick="continueGuest()">Continue as guest (no progress saved)</button>
-    <div class="auth-fine">By signing up you agree to our Terms & Privacy Policy.<br>Levels 1–2 are always free. No credit card required.</div>
+    <div class="auth-fine">By signing up you agree to our Terms & Privacy Policy.<br>The Engine basics and Eating & Drinking are always free. No credit card required.</div>
   </div>
 </div>
 
@@ -1071,8 +1071,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     <button class="sb-link" onclick="nav('settings')"><span class="sb-link-icon">◌</span><span class="sb-link-txt">Account</span></button>
   </nav>
   <div class="sb-upgrade" id="sbUpgrade">
-    <div class="sb-upgrade-title">Unlock all 5 levels</div>
-    <div class="sb-upgrade-sub">Unlock all 5 levels, advanced practice & more.</div>
+    <div class="sb-upgrade-title">Unlock the full course</div>
+    <div class="sb-upgrade-sub">All 8 travel scenarios, the Trip Simulation & more.</div>
     <button class="sb-upgrade-btn" onclick="showPaywall()">Upgrade to Pro →</button>
   </div>
   <div class="sb-streak">
@@ -1280,7 +1280,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
             <button class="btn btn-ghost" style="font-size:.72rem;padding:.3rem .7rem;" onclick="editName()">Edit</button>
           </div>
           <div class="setting-row" id="planRow">
-            <div><div class="setting-label" id="planLabel">Free plan</div><div class="setting-sub" id="planSub">Levels 1–2 only</div></div>
+            <div><div class="setting-label" id="planLabel">Free plan</div><div class="setting-sub" id="planSub">Engine basics & Eating &amp; Drinking only</div></div>
             <button class="btn btn-primary" id="planBtn" style="font-size:.72rem;padding:.3rem .7rem;" onclick="showPaywall()">Upgrade</button>
           </div>
           <div class="setting-row">
@@ -1359,12 +1359,12 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
       <button onclick="hidePaywall()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;color:var(--text3);cursor:pointer;">✕</button>
       <span class="pw-lock">🔐</span>
       <div class="pw-title">Upgrade to Pro</div>
-      <div class="pw-sub">Unlock all 5 levels. Pay once, yours forever.</div>
+      <div class="pw-sub">Unlock the full course. Pay once, yours forever.</div>
       <div class="pw-features">
-        <div class="pw-feat">✓ &nbsp;All 5 levels (18 more lessons)</div>
-        <div class="pw-feat">✓ &nbsp;Advanced grammar tracks</div>
-        <div class="pw-feat">✓ &nbsp;Pronunciation scoring &amp; feedback</div>
-        <div class="pw-feat">✓ &nbsp;Spanish-only immersion mode</div>
+        <div class="pw-feat">✓ &nbsp;All 8 real travel scenarios</div>
+        <div class="pw-feat">✓ &nbsp;The Trip Simulation capstone</div>
+        <div class="pw-feat">✓ &nbsp;Native-accent audio, adjustable speed</div>
+        <div class="pw-feat">✓ &nbsp;Choice of two voices</div>
         <div class="pw-feat">✓ &nbsp;No subscription — pay once, keep forever</div>
       </div>
       <div class="pw-price" id="pwPrice">$4.99<span style="font-size:1.2rem;color:var(--text2);"> one-time</span></div>
@@ -1397,7 +1397,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     <div id="pw-step-success" style="display:none;text-align:center;padding:1rem 0;">
       <div style="font-size:3rem;margin-bottom:.75rem;">🎉</div>
       <div class="pw-title">You're Pro!</div>
-      <div class="pw-sub">All 5 levels are now unlocked. ¡Vamos!</div>
+      <div class="pw-sub">The full course is now unlocked. ¡Vamos!</div>
       <button class="auth-btn" style="margin-top:1.5rem;" onclick="hidePaywall();nav('curriculum')">Start learning →</button>
     </div>
   </div>
@@ -1412,8 +1412,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 // 2. Settings → API → copy "Project URL" and "anon public" key
 // 3. Paste them below — that's it, auth is live
 // ═══════════════════════════════════════════════════
-const SUPABASE_URL  = 'https://sjfedqekdrfwewoprfqo.supabase.co';
-const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNqZmVkcWVrZHJmd2V3b3ByZnFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3NTU5MzEsImV4cCI6MjA4ODMzMTkzMX0.4B_XRABLeI8sNCROwFtTIMFOQU1iIce2vdNJ6qs9MUc';
+const SUPABASE_URL  = 'https://ljichtaunpiulzjpftoc.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxqaWNodGF1bnBpdWx6anBmdG9jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg1OTAxMTQsImV4cCI6MjEwNDE2NjExNH0.umBhSg6gRljQ8disxDAeU4mQEeeEyr3NqIrGDcJoyWM';
 
 let sb = null;
 function initSupabase(){
@@ -1484,11 +1484,17 @@ function showPlanStep(){
 
 async function activatePro(){
   S.user.isPro=true;
-  // Save pro status to Supabase if logged in
+  // Save pro status to Supabase if logged in — payment already succeeded via
+  // PayPal at this point, so a backend hiccup here must never hide that from
+  // the customer. Local state + UI always proceed; only the remote save can fail.
   if(sb){
-    const {data:{user}}=await sb.auth.getUser();
-    if(user){
-      await sb.from('profiles').upsert({id:user.id, is_pro:true, updated_at:new Date().toISOString()});
+    try{
+      const {data:{user}}=await sb.auth.getUser();
+      if(user){
+        await sb.from('profiles').upsert({id:user.id, is_pro:true, updated_at:new Date().toISOString()});
+      }
+    }catch(e){
+      console.error('Failed to save Pro status to Supabase; local access is still granted.', e);
     }
   }
   saveState();
@@ -2070,11 +2076,11 @@ function updatePlanUI(){
   if(!lbl)return;
   if(S.user.isPro){
     lbl.textContent='Pro plan';
-    if(sub) sub.textContent='All 5 levels unlocked';
+    if(sub) sub.textContent='Full course unlocked';
     if(btn){btn.textContent='Active ✓';btn.style.background='var(--green)';btn.onclick=null;}
   } else {
     lbl.textContent='Free plan';
-    if(sub) sub.textContent='Levels 1–2 only';
+    if(sub) sub.textContent='Engine basics & Eating & Drinking only';
     if(btn){btn.textContent='Upgrade';btn.style.background='';btn.onclick=showPaywall;}
   }
 }
