@@ -1974,6 +1974,7 @@ async function doAuth(){
       const displayName=user.user_metadata?.display_name||name||email.split('@')[0];
       S.user.name=displayName;
       S.user.supabaseId=user.id;
+      S.user.isGuest=false;
       // Load profile (pro status etc.)
       const {data:profile}=await sb.from('profiles').select('is_pro').eq('id',user.id).single();
       if(profile?.is_pro) S.user.isPro=true;
@@ -1989,6 +1990,7 @@ async function doAuth(){
   } else {
     // Supabase not configured — localStorage-only mode
     S.user.name=name||email.split('@')[0]||'Learner';
+    S.user.isGuest=false;
     document.getElementById('authOverlay').style.display='none';
     updateUserUI();refreshDashboard();saveState();
     showToast('Welcome to EspTalk, '+S.user.name+'! 🎉');
@@ -2312,10 +2314,12 @@ function renderCurr(){
   const doneM=m=>S.completedModules&&S.completedModules.has(m.track+':'+m.id);
   const row=m=>{
     const soon=m.soon;
-    return `<div class="lesson-row ${doneM(m)?'lr-done':''} ${soon?'lr-lock':''}" ${soon?'':`onclick="startModule('${m.track}','${m.id}')"`}>
+    const locked=!m.free&&!S.user.isPro;
+    const click=soon?'':locked?'onclick="showPaywall()"':`onclick="startModule('${m.track}','${m.id}')"`;
+    return `<div class="lesson-row ${doneM(m)?'lr-done':''} ${soon||locked?'lr-lock':''}" ${click}>
       <div class="lr-icon">${m.icon}</div>
       <div class="lr-main"><div class="lr-title">${m.code} · ${m.title}</div><div class="lr-type" style="text-transform:none;letter-spacing:0;">${m.desc}</div></div>
-      <span class="lr-badge ${doneM(m)?'lr-passed':soon?'lr-locked':'lr-start'}">${doneM(m)?'✓ Done':soon?'Soon':'Start →'}</span>
+      <span class="lr-badge ${doneM(m)?'lr-passed':soon?'lr-locked':locked?'lr-locked':'lr-start'}">${doneM(m)?'✓ Done':soon?'Soon':locked?'🔒 Upgrade':'Start →'}</span>
     </div>`;
   };
   const eDone=ENGINE.filter(doneM).length;
@@ -2366,11 +2370,7 @@ function renderCurr(){
       </div>
       <div class="level-body" style="display:block;">
         <div class="course-list">
-          <div class="lesson-row ${doneM(TRIP_SIM)?'lr-done':''}" onclick="startModule('capstone','trip')">
-            <div class="lr-icon">🏁</div>
-            <div class="lr-main"><div class="lr-title">${TRIP_SIM.title}</div><div class="lr-type" style="text-transform:none;letter-spacing:0;">${TRIP_SIM.desc}</div></div>
-            <span class="lr-badge ${doneM(TRIP_SIM)?'lr-passed':'lr-start'}">${doneM(TRIP_SIM)?'✓ Done':'Start →'}</span>
-          </div>
+          ${row(TRIP_SIM)}
           <div class="lesson-row" onclick="nav('practice')">
             <div class="lr-icon">⚡</div>
             <div class="lr-main"><div class="lr-title">Pre-Trip Cram</div><div class="lr-type" style="text-transform:none;letter-spacing:0;">Blitz the essential phrases — in Practice.</div></div>
@@ -2415,7 +2415,7 @@ function genLesson(lv,ls){
 // NEW AUDIO-FIRST COURSE (Engine + Scenarios) — listen · repeat · produce
 // ═══════════════════════════
 const ENGINE=[
-  {id:'e1',code:'E1',track:'engine',title:'First Words',icon:'👋',
+  {id:'e1',code:'E1',track:'engine',title:'First Words',icon:'👋',free:true,
    desc:'Greet and be polite — the words you\'ll use in your first 30 seconds.',
    goal:'Greet anyone and be polite — your very first words.',
    steps:[
@@ -2432,7 +2432,7 @@ const ENGINE=[
      {type:'produce',en:'Say “Thank you”',es:'Gracias',ph:'/ˈɡra.sjas/'},
      {type:'produce',en:'Say “Please”',es:'Por favor',ph:'/por faˈβor/'},
    ]},
-  {id:'e2',code:'E2',track:'engine',title:'Familiar Words',icon:'✨',
+  {id:'e2',code:'E2',track:'engine',title:'Familiar Words',icon:'✨',free:true,
    desc:'Thousands of Spanish words are almost identical to English.',
    goal:'Recognize hundreds of Spanish words on sight.',
    steps:[
@@ -2449,7 +2449,7 @@ const ENGINE=[
      {type:'produce',en:'Say “restaurant” in Spanish',es:'restaurante',ph:''},
      {type:'produce',en:'Say “information” in Spanish',es:'información',ph:''},
    ]},
-  {id:'e3',code:'E3',track:'engine',title:'The 5 Magic Frames',icon:'🪄',
+  {id:'e3',code:'E3',track:'engine',title:'The 5 Magic Frames',icon:'🪄',free:true,
    desc:'Five fill-in-the-blank frames that let you ask for almost anything.',
    goal:'Ask for anything with five simple frames.',
    steps:[
@@ -2623,7 +2623,7 @@ const SCENARIOS=[
        {who:'you',es:'Gracias',en:'Thank you'},
      ]},
    ]},
-  {id:'s4',code:'S4',track:'scenario',title:'Eating & Drinking',icon:'🍽️',
+  {id:'s4',code:'S4',track:'scenario',title:'Eating & Drinking',icon:'🍽️',free:true,
    desc:'Get a table, order, handle allergies, ask what’s good, and pay.',goal:'Get a table, order, flag an allergy, and pay.',
    steps:[
      {type:'scene',title:'A quick scene — a table for two',lines:[
@@ -2919,6 +2919,7 @@ function speakSlowTTS(text){if('speechSynthesis' in window){window.speechSynthes
 function startModule(track,id){
   const mod=[...ENGINE,...SCENARIOS,...CAPSTONES].find(m=>m.track===track&&m.id===id);
   if(!mod){showToast('Module not found');return;}
+  if(!mod.free&&!S.user.isPro){showPaywall();return;}
   const goalStep={type:'goal',code:mod.code,title:mod.title,icon:mod.icon,goal:mod.goal||mod.desc};
   const steps=[goalStep,...mod.steps];
   LS={track,modId:id,steps,si:0,correct:0,answered:false,swapIdx:0,rpIdx:0,matchSel:{side:null,idx:null,val:null},matchCount:0,matchPairs:[]};
@@ -3914,6 +3915,12 @@ function fcAnswer(knew){
 // PAYWALL
 // ═══════════════════════════
 function showPaywall(){
+  if(S.user.isGuest){
+    showToast('Create a free account first to upgrade — guest progress isn\'t saved.');
+    switchAuthTab('signup');
+    document.getElementById('authOverlay').style.display='flex';
+    return;
+  }
   document.getElementById('pw-step-plan').style.display='block';
   document.getElementById('pw-step-payment').style.display='none';
   document.getElementById('pw-step-success').style.display='none';
