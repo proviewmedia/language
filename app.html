@@ -1020,6 +1020,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 <div class="auth-overlay" id="authOverlay">
   <a href="index.html" style="display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--text3);text-decoration:none;margin-bottom:1.25rem;transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text3)'">← Back to site</a>
   <div class="auth-card">
+    <button onclick="closeAuthOverlay()" aria-label="Close" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;color:var(--text3);cursor:pointer;line-height:1;padding:.25rem;">✕</button>
     <div class="auth-logo" style="margin-top:.25rem;">Esp<span>Talk</span></div>
     <div class="auth-tagline">Speak Spanish from day one. No flashcards, no busywork.</div>
     <div class="auth-tabs">
@@ -2013,6 +2014,18 @@ function continueGuest(){
   updateUserUI();
   refreshDashboard();
   showToast('Continuing as guest — progress won\'t be saved.');
+}
+// Closes the overlay without forcing a choice. If there's already an
+// identity (a guest re-prompted by the paywall, or a returning user),
+// just dismiss it. On a true first visit there's no state to fall back
+// to, so close behaves like "continue as guest" instead of leaving the
+// app in an undefined logged-out state.
+function closeAuthOverlay(){
+  if(S.user.name){
+    document.getElementById('authOverlay').style.display='none';
+  } else {
+    continueGuest();
+  }
 }
 
 async function signOut(){
