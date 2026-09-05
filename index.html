@@ -1142,9 +1142,9 @@ function closeMobileNav(){
         <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
         &iquest;D&oacute;nde est&aacute; el ba&ntilde;o?
       </button>
-      <button class="audio__phrase fu" data-text="Me gustaría una cerveza">
+      <button class="audio__phrase fu" data-text="Para mí, una cerveza">
         <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-        Me gustar&iacute;a una cerveza
+        Para m&iacute;, una cerveza
       </button>
       <button class="audio__phrase fu" data-text="Muchas gracias">
         <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
@@ -1342,7 +1342,7 @@ function closeMobileNav(){
       <a href="app.html">Open app</a>
       <a href="privacy.html">Privacy</a>
     </div>
-    <div class="footer__credit">Created by <a href="https://proviewmediaco.com" target="_blank" rel="noopener">Proview Media Co.</a></div>
+    <div class="footer__credit">Created by <a href="https://proviewstudio.com" target="_blank" rel="noopener">Proview Studio</a></div>
   </div>
 </footer>
 
@@ -1393,27 +1393,45 @@ document.querySelectorAll('.faq__question').forEach(function(btn) {
   });
 });
 
-/* Audio demo — Web Speech API */
-if('speechSynthesis' in window){window.speechSynthesis.getVoices();window.speechSynthesis.onvoiceschanged=function(){window.speechSynthesis.getVoices();};}
+/* Audio demo — real EspTalk voice clips (falls back to browser TTS if a clip can't load) */
+var DEMO_AUDIO = {
+  "Buenos días": "audio/male/buenos-dias.m4a",
+  "La cuenta, por favor": "audio/male/la-cuenta-por-favor.m4a",
+  "¿Dónde está el baño?": "audio/male/donde-esta-el-bano.m4a",
+  "Para mí, una cerveza": "audio/male/para-mi-una-cerveza.m4a",
+  "Muchas gracias": "audio/male/muchas-gracias.m4a"
+};
+function demoSpeakTTS(text, btn) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  var utter = new SpeechSynthesisUtterance(text);
+  utter.lang = 'es-MX';
+  utter.rate = 0.82;
+  utter.pitch = 1.05;
+  var voices = window.speechSynthesis.getVoices();
+  var esVoice = voices.find(function(v){return v.lang.startsWith('es')&&v.name.toLowerCase().includes('paulina')})
+    || voices.find(function(v){return v.lang.startsWith('es')&&v.name.toLowerCase().includes('monica')})
+    || voices.find(function(v){return v.lang.startsWith('es')&&!v.name.toLowerCase().includes('google')})
+    || voices.find(function(v){return v.lang.startsWith('es')});
+  if(esVoice) utter.voice = esVoice;
+  btn.classList.add('speaking');
+  utter.onend = function() { btn.classList.remove('speaking'); };
+  utter.onerror = function() { btn.classList.remove('speaking'); };
+  window.speechSynthesis.speak(utter);
+}
+var demoAudioEl = null;
 document.querySelectorAll('.audio__phrase').forEach(function(btn) {
   btn.addEventListener('click', function() {
     var text = btn.getAttribute('data-text') || btn.textContent.trim();
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      var utter = new SpeechSynthesisUtterance(text);
-      utter.lang = 'es-MX';
-      utter.rate = 0.82;
-      utter.pitch = 1.05;
-      var voices = window.speechSynthesis.getVoices();
-      var esVoice = voices.find(function(v){return v.lang.startsWith('es')&&v.name.toLowerCase().includes('paulina')})
-        || voices.find(function(v){return v.lang.startsWith('es')&&v.name.toLowerCase().includes('monica')})
-        || voices.find(function(v){return v.lang.startsWith('es')&&!v.name.toLowerCase().includes('google')})
-        || voices.find(function(v){return v.lang.startsWith('es')});
-      if(esVoice) utter.voice = esVoice;
+    var src = DEMO_AUDIO[text];
+    if (src) {
+      if (demoAudioEl) demoAudioEl.pause();
+      demoAudioEl = new Audio(src);
       btn.classList.add('speaking');
-      utter.onend = function() { btn.classList.remove('speaking'); };
-      utter.onerror = function() { btn.classList.remove('speaking'); };
-      window.speechSynthesis.speak(utter);
+      demoAudioEl.onended = function(){ btn.classList.remove('speaking'); };
+      demoAudioEl.play().catch(function(){ btn.classList.remove('speaking'); demoSpeakTTS(text, btn); });
+    } else {
+      demoSpeakTTS(text, btn);
     }
   });
 });
