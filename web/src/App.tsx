@@ -1,31 +1,19 @@
-import { Nav } from "@/components/Nav";
-import { Hero } from "@/components/Hero";
-import { ProofBar } from "@/components/ProofBar";
-import { HowItWorks } from "@/components/HowItWorks";
-import { CurriculumGrid } from "@/components/CurriculumGrid";
-import { AudioDemo } from "@/components/AudioDemo";
-import { Personas } from "@/components/Personas";
-import { Pricing } from "@/components/Pricing";
-import { Faq } from "@/components/Faq";
-import { CtaSection, Footer } from "@/components/CtaFooter";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MarketingPage } from "@/pages/MarketingPage";
+import { DashboardPage } from "@/pages/DashboardPage";
+import { CoursePage } from "@/pages/CoursePage";
+import { PracticePage } from "@/pages/PracticePage";
 
 function App() {
   return (
-    <>
-      <Nav />
-      <main>
-        <Hero />
-        <ProofBar />
-        <HowItWorks />
-        <CurriculumGrid />
-        <AudioDemo />
-        <Personas />
-        <Pricing />
-        <Faq />
-        <CtaSection />
-      </main>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MarketingPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/course" element={<CoursePage />} />
+        <Route path="/practice" element={<PracticePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

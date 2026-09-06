@@ -78,7 +78,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 @keyframes slideUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
 .auth-logo{
-  font-family:'Hanken Grotesk',sans-serif;font-size:1.7rem;font-weight:900;
+  font-family:var(--font-heading);font-size:1.7rem;font-weight:900;
   color:var(--text);margin-bottom:.2rem;letter-spacing:-.5px;
   text-align:center;
 }
@@ -136,7 +136,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 }
 .sb-logo{
   padding:1.25rem 1.25rem .75rem;
-  font-family:'Hanken Grotesk',sans-serif;font-size:1.4rem;font-weight:900;
+  font-family:var(--font-heading);font-size:1.4rem;font-weight:900;
   color:var(--text);letter-spacing:-.5px;
   border-bottom:1px solid var(--border);
 }
@@ -167,7 +167,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .sb-link:hover{background:var(--bg3);}
 .sb-link.active{background:var(--accent-g);}
 .sb-link.active::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:2px;background:var(--accent);border-radius:2px 0 0 2px;}
-.sb-link-icon{font-size:.95rem;width:18px;text-align:center;flex-shrink:0;opacity:.5;}
+.sb-link-icon{width:18px;height:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;opacity:.5;}
+.sb-link-icon svg{width:18px;height:18px;}
 .sb-link.active .sb-link-icon{opacity:1;}
 .sb-link-txt{font-size:.82rem;color:var(--text2);font-weight:400;}
 .sb-link.active .sb-link-txt{color:var(--accent-d);font-weight:600;}
@@ -184,7 +185,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .sb-upgrade-btn{
   display:block;width:100%;padding:.5rem;border-radius:8px;
   background:var(--accent);color:white;border:none;
-  font-family:'Outfit',sans-serif;font-size:.75rem;font-weight:600;
+  font-family:var(--font-body);font-size:.75rem;font-weight:600;
   cursor:pointer;text-align:center;transition:background .2s;
 }
 .sb-upgrade-btn:hover{background:var(--accent-d);}
@@ -193,7 +194,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   padding:.75rem 1.25rem;border-top:1px solid var(--border);
   display:flex;align-items:center;gap:.6rem;flex-shrink:0;
 }
-.streak-fire{font-size:1.2rem;}
+.streak-fire{display:flex;align-items:center;justify-content:center;color:var(--accent);}
+.streak-fire svg{width:22px;height:22px;}
 .streak-n{font-family:'Instrument Serif',serif;font-size:1.3rem;color:var(--gold);}
 .streak-lbl{font-size:.68rem;color:var(--text3);}
 
@@ -255,7 +257,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 }
 .stat-val{font-family:'Instrument Serif',serif;font-size:1.8rem;color:var(--text);display:block;line-height:1;}
 .stat-lbl{font-family:var(--font-heading);font-size:.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.12em;margin-top:.25rem;}
-.stat-icon{font-size:1rem;margin-bottom:.4rem;display:block;}
+.stat-icon{margin-bottom:.4rem;display:flex;color:var(--accent);}
+.stat-icon svg{width:18px;height:18px;}
 
 .dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .dash-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
@@ -269,7 +272,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   box-shadow:0 1px 3px rgba(0,0,0,.04);
 }
 .next-lesson:hover{border-color:var(--accent);background:var(--bg2);box-shadow:0 4px 16px rgba(74,92,232,.1);}
-.nl-icon{width:48px;height:48px;border-radius:var(--radius);background:var(--accent-g);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;}
+.nl-icon{width:48px;height:48px;border-radius:var(--radius);background:var(--accent-g);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;}
+.nl-icon svg{width:22px;height:22px;}
 .nl-title{font-size:.9rem;font-weight:600;color:var(--text);}
 .nl-sub{font-size:.75rem;color:var(--text3);margin-top:.15rem;}
 .nl-tag{font-size:.65rem;font-weight:500;color:var(--accent-l);background:var(--accent-g);padding:.2rem .5rem;border-radius:100px;margin-bottom:.25rem;display:inline-block;}
@@ -286,8 +290,9 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .level-num-badge{
   width:40px;height:40px;border-radius:var(--radius);
   display:flex;align-items:center;justify-content:center;
-  font-size:1rem;flex-shrink:0;
+  font-size:1rem;flex-shrink:0;color:var(--accent);
 }
+.level-num-badge svg{width:19px;height:19px;}
 .level-num-badge.done{background:var(--green-g);border:1px solid rgba(45,212,160,.2);}
 .level-num-badge.active{background:var(--accent-g);border:1px solid rgba(91,110,245,.2);}
 .level-num-badge.locked{background:var(--bg3);border:1px solid var(--border);}
@@ -352,11 +357,13 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .lesson-row.lr-lock{cursor:default;opacity:.5;}
 .lr-num{width:20px;height:20px;flex-shrink:0;border-radius:50%;background:var(--bg3);color:var(--text3);font-family:'JetBrains Mono',monospace;font-size:.66rem;font-weight:600;display:flex;align-items:center;justify-content:center;}
 .lesson-row.lr-done .lr-num{background:var(--green);color:#fff;}
-.lr-icon{font-size:1rem;flex-shrink:0;}
+.lr-icon{width:20px;height:20px;display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;}
+.lr-icon svg{width:20px;height:20px;}
 .lr-main{flex:1;min-width:0;}
 .lr-title{font-size:.82rem;font-weight:500;color:var(--text);}
 .lr-type{font-size:.64rem;color:var(--text3);margin-top:.05rem;text-transform:uppercase;letter-spacing:.05em;}
-.lr-badge{flex-shrink:0;font-size:.66rem;font-weight:600;padding:.2rem .5rem;border-radius:100px;white-space:nowrap;}
+.lr-badge{flex-shrink:0;font-size:.66rem;font-weight:600;padding:.2rem .5rem;border-radius:100px;white-space:nowrap;display:inline-flex;align-items:center;gap:.2rem;}
+.lr-badge svg{width:11px;height:11px;}
 .lr-badge.lr-passed{background:var(--green-g);color:var(--green);}
 .lr-badge.lr-progress{background:var(--gold-g);color:var(--gold);}
 .lr-badge.lr-start{background:var(--accent-g);color:var(--accent-l);}
@@ -375,7 +382,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .checkpoint-card.cp-done .cp-action{color:var(--green);}
 /* ── practice band ── */
 .practice-row{display:flex;gap:.5rem;flex-wrap:wrap;}
-.practice-chip{background:var(--bg);border:1px solid var(--border);border-radius:100px;padding:.4rem .8rem;font-family:'Outfit',sans-serif;font-size:.74rem;font-weight:500;color:var(--text2);cursor:pointer;transition:all .15s;}
+.practice-chip{background:var(--bg);border:1px solid var(--border);border-radius:100px;padding:.4rem .8rem;font-family:var(--font-body);font-size:.74rem;font-weight:500;color:var(--text2);cursor:pointer;transition:all .15s;}
 .practice-chip:hover{border-color:var(--accent);color:var(--accent-d);background:var(--accent-g);}
 /* ── Home: ready-to-advance module ── */
 .ready-module{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.1rem 1.25rem;margin-bottom:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
@@ -385,7 +392,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .rm-note{font-size:.72rem;color:var(--text3);flex:1;min-width:160px;}
 /* ── Practice intro banner ── */
 .practice-intro{display:flex;gap:.7rem;align-items:flex-start;background:var(--accent-g);border:1px solid rgba(74,92,232,.15);border-radius:var(--radius);padding:.8rem 1rem;margin-bottom:1.25rem;font-size:.78rem;color:var(--text2);line-height:1.45;}
-.practice-intro .pi-icon{font-size:1rem;flex-shrink:0;}
+.practice-intro .pi-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);}
+.practice-intro .pi-icon svg{width:20px;height:20px;}
 .practice-intro strong{color:var(--text);font-weight:600;}
 /* ── audio-first lesson step types ── */
 .al-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);padding:1.5rem 1.25rem;text-align:center;}
@@ -422,21 +430,25 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .basics-chip:hover{border-color:var(--accent);background:var(--accent-g);}
 .bc-es{font-size:.95rem;font-weight:600;color:var(--text);}
 .bc-en{font-size:.72rem;color:var(--text3);}
-.bc-spk{position:absolute;top:.5rem;right:.6rem;font-size:.7rem;opacity:0;transition:opacity .15s;}
+.bc-spk{position:absolute;top:.5rem;right:.6rem;display:flex;color:var(--text3);opacity:0;transition:opacity .15s;}
+.bc-spk svg{width:13px;height:13px;}
 .basics-chip:hover .bc-spk{opacity:.6;}
 /* ── lesson goal card ── */
 .goal-card{text-align:center;padding:2rem 1.5rem;}
-.goal-icon{font-size:2.4rem;margin-bottom:.6rem;}
+.goal-icon{display:flex;justify-content:center;color:var(--accent);margin-bottom:.6rem;}
+.goal-icon svg{width:40px;height:40px;}
 .goal-code{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:600;letter-spacing:.05em;color:var(--accent-d);text-transform:uppercase;}
 .goal-by{font-size:.72rem;color:var(--text3);margin-top:1rem;text-transform:uppercase;letter-spacing:.08em;}
 .goal-text{font-family:'Instrument Serif',serif;font-size:1.5rem;line-height:1.3;color:var(--text);margin-top:.35rem;}
 /* ── silent explanation/intro card ── */
 .note-card{text-align:center;padding:2rem 1.5rem;}
-.note-icon{font-size:1.8rem;margin-bottom:.75rem;}
+.note-icon{display:flex;justify-content:center;color:var(--accent);margin-bottom:.75rem;}
+.note-icon svg{width:30px;height:30px;}
 .note-text{font-size:1.05rem;line-height:1.55;color:var(--text2);max-width:440px;margin:0 auto;}
 /* ── Course welcome hero ── */
 .welcome-hero{text-align:center;background:linear-gradient(180deg,var(--accent-g),transparent);border:1px solid rgba(74,92,232,.18);border-radius:var(--radius-l);padding:1.75rem 1.5rem;margin-bottom:1.25rem;}
-.wh-emoji{font-size:1.8rem;}
+.wh-emoji{display:flex;justify-content:center;color:var(--accent);margin-bottom:.4rem;}
+.wh-emoji svg{width:32px;height:32px;}
 .wh-title{font-family:'Instrument Serif',serif;font-size:1.7rem;color:var(--text);margin-top:.2rem;}
 .wh-sub{font-size:.9rem;color:var(--text2);max-width:420px;margin:.5rem auto 1.1rem;line-height:1.5;}
 /* ── practice section labels ── */
@@ -473,7 +485,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .mc-btn{
   padding:.875rem 1.1rem;border-radius:var(--radius);
   border:1px solid var(--border2);background:var(--bg2);
-  color:var(--text);font-family:'Outfit',sans-serif;font-size:.875rem;
+  color:var(--text);font-family:var(--font-body);font-size:.875rem;
   cursor:pointer;text-align:left;transition:all .15s;display:flex;align-items:center;gap:.75rem;
   box-shadow:0 1px 2px rgba(0,0,0,.04);
 }
@@ -493,7 +505,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .fill-input{
   width:100%;padding:.875rem 1rem;border-radius:var(--radius);
   background:var(--bg2);border:1.5px solid var(--border2);
-  color:var(--text);font-family:'Outfit',sans-serif;font-size:.9rem;outline:none;
+  color:var(--text);font-family:var(--font-body);font-size:.9rem;outline:none;
   transition:border .2s;box-shadow:0 1px 2px rgba(0,0,0,.04);
 }
 .fill-input:focus{border-color:var(--accent);}
@@ -506,7 +518,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .match-tile{
   padding:.65rem .9rem;border-radius:var(--radius);border:1.5px solid var(--border2);
   background:var(--bg2);color:var(--text2);font-size:.82rem;cursor:pointer;
-  transition:all .15s;text-align:center;font-family:'Outfit',sans-serif;
+  transition:all .15s;text-align:center;font-family:var(--font-body);
   box-shadow:0 1px 2px rgba(0,0,0,.04);
 }
 .match-tile:hover{border-color:var(--accent);color:var(--text);background:var(--accent-g);}
@@ -552,9 +564,11 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-l);
   padding:2.5rem;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);
 }
-.ld-emoji{font-size:3.5rem;margin-bottom:1rem;display:block;}
+.ld-emoji{margin-bottom:1rem;display:flex;justify-content:center;color:var(--accent);}
+.ld-emoji svg{width:52px;height:52px;}
 .ld-title{font-family:'Instrument Serif',serif;font-size:2rem;color:var(--text);margin-bottom:.5rem;}
 .ld-sub{font-size:.88rem;color:var(--text2);margin-bottom:1.75rem;}
+.ld-xp svg{width:14px;height:14px;}
 .ld-xp{
   display:inline-flex;align-items:center;gap:.4rem;
   background:var(--gold-g);border:1px solid rgba(245,197,66,.2);
@@ -661,7 +675,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 }
 .conv-input-row:focus-within{border-color:var(--accent);}
 .conv-textarea{
-  flex:1;border:none;outline:none;font-family:'Outfit',sans-serif;
+  flex:1;border:none;outline:none;font-family:var(--font-body);
   font-size:.855rem;color:var(--text);resize:none;background:transparent;
   min-height:36px;max-height:100px;line-height:1.5;
 }
@@ -679,7 +693,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .sug{
   padding:.3rem .75rem;border-radius:100px;background:var(--bg2);
   border:1px solid var(--border2);font-size:.72rem;color:var(--text2);
-  cursor:pointer;transition:all .15s;font-family:'Outfit',sans-serif;
+  cursor:pointer;transition:all .15s;font-family:var(--font-body);
 }
 .sug:hover{border-color:var(--accent);color:var(--accent-d);background:var(--accent-g);}
 
@@ -691,20 +705,23 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .filter-group{display:flex;gap:.3rem;background:var(--bg3);border:1px solid var(--border);border-radius:100px;padding:3px;}
 .filter-btn{
   padding:.35rem .85rem;border-radius:100px;border:none;background:transparent;
-  font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:500;color:var(--text3);
+  font-family:var(--font-body);font-size:.72rem;font-weight:500;color:var(--text3);
   cursor:pointer;transition:all .15s;
 }
 .filter-btn.active{background:var(--accent);color:white;box-shadow:0 1px 4px rgba(74,92,232,.3);}
 .prog-tabs{display:flex;gap:.25rem;margin-bottom:1.5rem;border-bottom:1px solid var(--border2);}
 .prog-tab{background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;
-  font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:500;color:var(--text3);
+  font-family:var(--font-body);font-size:.9rem;font-weight:500;color:var(--text3);
   padding:.55rem .5rem;cursor:pointer;transition:color .15s,border-color .15s;}
 .prog-tab:hover{color:var(--text2);}
 .prog-tab.active{color:var(--text);font-weight:600;border-bottom-color:var(--accent);}
 
 .vocab-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.5rem;}
 .vs-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.1rem;display:flex;align-items:center;gap:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
-.vs-icon{font-size:1.3rem;}
+.vs-icon{font-size:1.3rem;display:inline-flex;}
+.vs-icon svg{width:18px;height:18px;}
+.icon-sm{display:inline-flex;vertical-align:-2px;}
+.icon-sm svg{width:12px;height:12px;}
 .vs-num{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--text);line-height:1;}
 .vs-lbl{font-size:.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;}
 
@@ -760,7 +777,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   animation:slideUp .4s cubic-bezier(.16,1,.3,1);
   box-shadow:0 24px 60px rgba(0,0,0,.12);
 }
-.pw-lock{font-size:3rem;margin-bottom:1rem;display:block;}
+.pw-lock{margin-bottom:1rem;display:flex;justify-content:center;color:var(--accent);}
+.pw-lock svg{width:44px;height:44px;}
 .pw-title{font-family:'Instrument Serif',serif;font-size:1.75rem;color:var(--text);margin-bottom:.4rem;}
 .pw-sub{font-size:.85rem;color:var(--text2);margin-bottom:2rem;line-height:1.6;}
 .pw-features{text-align:left;margin-bottom:2rem;display:flex;flex-direction:column;gap:.5rem;}
@@ -799,7 +817,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .ach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;}
 .ach{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem;text-align:center;}
 .ach.earned{border-color:rgba(200,146,10,.25);background:var(--gold-g);}
-.ach-icon{font-size:1.5rem;margin-bottom:.3rem;}
+.ach-icon{display:flex;align-items:center;justify-content:center;margin-bottom:.3rem;color:var(--accent);}
+.ach-icon svg{width:22px;height:22px;}
 .ach-name{font-size:.65rem;font-weight:500;color:var(--text2);}
 
 /* ═══════════════════════════════════
@@ -830,7 +849,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 }
 .pm-card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(74,92,232,.1);transform:translateY(-1px);}
 .pm-card.disabled{opacity:.45;cursor:default;pointer-events:none;}
-.pm-icon{font-size:1.5rem;margin-bottom:.5rem;}
+.pm-icon{display:flex;align-items:center;margin-bottom:.5rem;color:var(--accent);}
+.pm-icon svg{width:24px;height:24px;}
 .pm-title{font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:.2rem;}
 .pm-desc{font-size:.75rem;color:var(--text2);line-height:1.5;}
 .pm-count{font-size:.68rem;font-weight:600;color:var(--accent);margin-top:.5rem;}
@@ -848,7 +868,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .recall-btns{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1rem;}
 .recall-btn{
   padding:.85rem;border-radius:var(--radius);border:1.5px solid var(--border2);
-  background:var(--bg2);cursor:pointer;font-family:'Outfit',sans-serif;
+  background:var(--bg2);cursor:pointer;font-family:var(--font-body);
   font-size:.82rem;font-weight:500;transition:all .15s;
 }
 .recall-btn:hover{transform:translateY(-1px);}
@@ -864,7 +884,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   padding:.3rem .75rem;border-radius:100px;border:1.5px solid var(--border2);
   background:var(--bg3);color:var(--text2);font-size:.75rem;
   cursor:pointer;transition:all .15s;margin:.5rem 0;
-  font-family:'Outfit',sans-serif;
+  font-family:var(--font-body);
 }
 .speak-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-g);}
 .speak-chip:active{transform:scale(.96);}
@@ -881,7 +901,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 .word-chip{
   padding:.45rem .85rem;border-radius:8px;border:1.5px solid var(--border2);
   background:var(--bg2);color:var(--text);font-size:.88rem;cursor:pointer;
-  transition:all .15s;user-select:none;font-family:'Outfit',sans-serif;
+  transition:all .15s;user-select:none;font-family:var(--font-body);
   box-shadow:0 1px 3px rgba(0,0,0,.06);
 }
 .word-chip:hover{border-color:var(--accent);background:var(--accent-g);color:var(--accent-d);}
@@ -929,7 +949,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   .bn-item{
     flex:1;display:flex;flex-direction:column;align-items:center;gap:.2rem;
     padding:.4rem .2rem;border:none;background:none;cursor:pointer;
-    font-family:'Outfit',sans-serif;
+    font-family:var(--font-body);
   }
   .bn-icon{font-size:1.2rem;line-height:1;}
   .bn-label{font-size:.6rem;font-weight:500;color:var(--text3);}
@@ -1050,13 +1070,13 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   </div>
   <nav class="sb-nav">
     <div class="sb-section">Learn</div>
-    <button class="sb-link active" onclick="nav('dashboard')"><span class="sb-link-icon">⊞</span><span class="sb-link-txt">Home</span></button>
-    <button class="sb-link" onclick="nav('curriculum')"><span class="sb-link-icon">◈</span><span class="sb-link-txt">Course</span></button>
-    <button class="sb-link" onclick="nav('practice')"><span class="sb-link-icon">◎</span><span class="sb-link-txt">Practice</span></button>
+    <button class="sb-link active" onclick="nav('dashboard')"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span class="sb-link-txt">Home</span></button>
+    <button class="sb-link" onclick="nav('curriculum')"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="sb-link-txt">Course</span></button>
+    <button class="sb-link" onclick="nav('practice')"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span><span class="sb-link-txt">Practice</span></button>
     <div class="sb-section">You</div>
-    <button class="sb-link" onclick="nav('progress')"><span class="sb-link-icon">◷</span><span class="sb-link-txt">Progress</span></button>
+    <button class="sb-link" onclick="nav('progress')"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="sb-link-txt">Progress</span></button>
     <div class="sb-section">Account</div>
-    <button class="sb-link" onclick="nav('settings')"><span class="sb-link-icon">◌</span><span class="sb-link-txt">Account</span></button>
+    <button class="sb-link" onclick="nav('settings')"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span class="sb-link-txt">Account</span></button>
   </nav>
   <div class="sb-upgrade" id="sbUpgrade">
     <div class="sb-upgrade-title">Unlock the full course</div>
@@ -1064,7 +1084,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     <button class="sb-upgrade-btn" onclick="showPaywall()">Upgrade to Pro →</button>
   </div>
   <div class="sb-streak">
-    <span class="streak-fire" id="streakFire">🔥</span>
+    <span class="streak-fire" id="streakFire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
     <div>
       <div style="display:flex;align-items:baseline;gap:.3rem;"><span class="streak-n" id="streakNum">0</span><span style="font-size:.65rem;color:var(--text3);">day streak</span></div>
       <div class="streak-lbl" id="streakLbl">Start your streak today!</div>
@@ -1117,13 +1137,13 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
         </div>
       </div>
       <div class="dash-stats">
-        <div class="stat"><span class="stat-icon">⭐</span><span class="stat-val" id="dashXP">0</span><span class="stat-lbl">Total XP</span></div>
-        <div class="stat"><span class="stat-icon">📖</span><span class="stat-val" id="dashWords">0</span><span class="stat-lbl">Words learned</span></div>
-        <div class="stat"><span class="stat-icon">✅</span><span class="stat-val" id="dashLessons">0</span><span class="stat-lbl">Lessons done</span></div>
-        <div class="stat"><span class="stat-icon">🎯</span><span class="stat-val" id="dashAccuracy">—</span><span class="stat-lbl">Avg accuracy</span></div>
+        <div class="stat"><span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="stat-val" id="dashXP">0</span><span class="stat-lbl">Total XP</span></div>
+        <div class="stat"><span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="stat-val" id="dashWords">0</span><span class="stat-lbl">Words learned</span></div>
+        <div class="stat"><span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span class="stat-val" id="dashLessons">0</span><span class="stat-lbl">Lessons done</span></div>
+        <div class="stat"><span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="stat-val" id="dashAccuracy">—</span><span class="stat-lbl">Avg accuracy</span></div>
       </div>
       <div class="next-lesson" id="nextLessonCard" onclick="continueLesson()">
-        <div class="nl-icon" id="nlIcon">📚</div>
+        <div class="nl-icon" id="nlIcon"></div>
         <div style="flex:1;">
           <div class="nl-tag" id="nlTag">Get started</div>
           <div class="nl-title" id="nlTitle">Your first lesson awaits</div>
@@ -1178,8 +1198,8 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     <div class="screen" id="screen-practice">
       <div id="practiceHome">
         <div class="practice-intro">
-          <span class="pi-icon">🎯</span>
-          <div><strong>Practice is optional and never graded.</strong> It's how you get better and prep for Checkpoints — your Course score isn't affected.</div>
+          <span class="pi-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+          <div><strong>Your phrasebook, always here.</strong> Warm up, drill the words you're shaky on, and look anything up before you need it.</div>
         </div>
         <div class="practice-hero" id="practiceHero"></div>
         <div class="practice-modes" id="practiceModes"></div>
@@ -1204,7 +1224,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
         <button class="btn btn-primary" onclick="startFlashcards()">Study flashcards</button>
       </div>
       <div class="vocab-stats-row">
-        <div class="vs-card"><span class="vs-icon">⭐</span><div><div class="vs-num" id="vsTotal">0</div><div class="vs-lbl">Total words</div></div></div>
+        <div class="vs-card"><span class="vs-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><div><div class="vs-num" id="vsTotal">0</div><div class="vs-lbl">Total words</div></div></div>
         <div class="vs-card"><span class="vs-icon" style="color:var(--green);">✓</span><div><div class="vs-num" id="vsMastered" style="color:var(--green);">0</div><div class="vs-lbl">Mastered</div></div></div>
         <div class="vs-card"><span class="vs-icon" style="color:var(--accent);">⟳</span><div><div class="vs-num" id="vsLearning" style="color:var(--accent);">0</div><div class="vs-lbl">Learning</div></div></div>
       </div>
@@ -1219,7 +1239,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
           <div style="flex:1;text-align:center;font-size:.78rem;color:var(--text3);" id="fcCounter">Card 1 of 12</div>
         </div>
         <div class="flashcard" id="flashcard" onclick="flipCard()">
-          <div id="fcFront"><div class="fc-front" id="fcWord">hola</div><div class="fc-phonetic" id="fcPhon">/ˈo.la/</div><button class="speak-chip" onclick="event.stopPropagation();speakPhrase(document.getElementById('fcWord').textContent)" title="Hear pronunciation">🔊</button><div class="fc-hint">Tap card to reveal</div></div>
+          <div id="fcFront"><div class="fc-front" id="fcWord">hola</div><div class="fc-phonetic" id="fcPhon">/ˈo.la/</div><button class="speak-chip" onclick="event.stopPropagation();speakPhrase(document.getElementById('fcWord').textContent)" title="Hear pronunciation"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></button><div class="fc-hint">Tap card to reveal</div></div>
           <div id="fcBack" style="display:none;"><div class="fc-back" id="fcEng">hello</div><div class="fc-example" id="fcEx">¡Hola! ¿Cómo estás?</div></div>
         </div>
         <div class="fc-actions" id="fcActions" style="display:none;">
@@ -1299,14 +1319,14 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
           <h3>Audio</h3>
           <div class="setting-row">
             <div><div class="setting-label">Voice</div><div class="setting-sub">Who speaks the Spanish audio</div></div>
-            <select id="sel-voice" style="background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:8px;padding:.3rem .6rem;font-family:'Outfit',sans-serif;font-size:.78rem;outline:none;" onchange="savePref('voice',this.value)">
+            <select id="sel-voice" style="background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:10px;padding:.65rem .9rem;font-family:var(--font-body);font-size:.9rem;outline:none;min-height:2.75rem;cursor:pointer;" onchange="savePref('voice',this.value)">
               <option value="male" selected>Male (Mateo)</option>
               <option value="female">Female (Luciana)</option>
             </select>
           </div>
           <div class="setting-row">
             <div><div class="setting-label">Playback speed</div><div class="setting-sub">Slow down every clip by default</div></div>
-            <select id="sel-speed" style="background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:8px;padding:.3rem .6rem;font-family:'Outfit',sans-serif;font-size:.78rem;outline:none;" onchange="savePref('speed',this.value)">
+            <select id="sel-speed" style="background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:10px;padding:.65rem .9rem;font-family:var(--font-body);font-size:.9rem;outline:none;min-height:2.75rem;cursor:pointer;" onchange="savePref('speed',this.value)">
               <option value="normal" selected>Normal</option>
               <option value="slow">Slow</option>
             </select>
@@ -1316,7 +1336,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
           <h3>Learning</h3>
           <div class="setting-row">
             <div><div class="setting-label">Daily goal</div><div class="setting-sub">Target XP per day</div></div>
-            <select id="sel-goal" style="background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:8px;padding:.3rem .6rem;font-family:'Outfit',sans-serif;font-size:.78rem;outline:none;" onchange="savePref('dailyGoal',this.value)">
+            <select id="sel-goal" style="background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:10px;padding:.65rem .9rem;font-family:var(--font-body);font-size:.9rem;outline:none;min-height:2.75rem;cursor:pointer;" onchange="savePref('dailyGoal',this.value)">
               <option value="10">Casual (10 XP)</option>
               <option value="25" selected>Regular (25 XP)</option>
               <option value="50">Serious (50 XP)</option>
@@ -1325,7 +1345,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
           </div>
           <div class="setting-row">
             <div><div class="setting-label">Lesson difficulty</div><div class="setting-sub">Adjust question complexity</div></div>
-            <select id="sel-diff" style="background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:8px;padding:.3rem .6rem;font-family:'Outfit',sans-serif;font-size:.78rem;outline:none;" onchange="savePref('difficulty',this.value)">
+            <select id="sel-diff" style="background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:10px;padding:.65rem .9rem;font-family:var(--font-body);font-size:.9rem;outline:none;min-height:2.75rem;cursor:pointer;" onchange="savePref('difficulty',this.value)">
               <option value="adaptive" selected>Adaptive</option>
               <option value="easy">Easy</option>
               <option value="normal">Normal</option>
@@ -1345,7 +1365,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     <!-- Step 1: Plan selection -->
     <div id="pw-step-plan">
       <button onclick="hidePaywall()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;color:var(--text3);cursor:pointer;">✕</button>
-      <span class="pw-lock">🔐</span>
+      <span class="pw-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
       <div class="pw-title">Upgrade to Pro</div>
       <div class="pw-sub">Unlock the full course. Pay once, yours forever.</div>
       <div class="pw-features">
@@ -1371,7 +1391,7 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 
     <!-- Step 3: Success -->
     <div id="pw-step-success" style="display:none;text-align:center;padding:1rem 0;">
-      <div style="font-size:3rem;margin-bottom:.75rem;">🎉</div>
+      <div style="margin-bottom:.75rem;color:var(--accent);"><svg viewBox="0 0 24 24" width="48" height="48" style="margin:0 auto;display:block;" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"/></svg></div>
       <div class="pw-title">You're Pro!</div>
       <div class="pw-sub">The full course is now unlocked. ¡Vamos!</div>
       <button class="auth-btn" style="margin-top:1.5rem;" onclick="hidePaywall();nav('curriculum')">Start learning →</button>
@@ -1382,7 +1402,59 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
 
 <script>
 // ═══════════════════════════════════════════════════
-// SUPABASE CONFIGURATION
+// ICONS — real icon set (Lucide paths), no emoji.
+// Usage: ICONS.home, ICONS.flame, etc. Each is a ready-to-use <svg> string.
+// ═══════════════════════════════════════════════════
+function icon(paths,size=18){
+  return `<svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;
+}
+const ICONS={
+  home:icon('<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>'),
+  grid:icon('<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>'),
+  sparkles:icon('<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>'),
+  clock:icon('<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'),
+  user:icon('<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'),
+  flame:icon('<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>'),
+  target:icon('<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>'),
+  repeat:icon('<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>'),
+  layers:icon('<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>'),
+  zap:icon('<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'),
+  bookOpen:icon('<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>'),
+  smile:icon('<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>'),
+  messageCircle:icon('<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>'),
+  utensils:icon('<path d="M3 2v7c0 1.1.9 2 2 2h1a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3z"/><path d="M18 15v7"/>'),
+  map:icon('<path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M9 4.5v15"/><path d="M15 5.5v15"/>'),
+  hash:icon('<line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/>'),
+  briefcase:icon('<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>'),
+  car:icon('<path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11"/><rect x="3" y="11" width="18" height="7" rx="2"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="16.5" cy="18" r="1.5"/>'),
+  bed:icon('<circle cx="7" cy="15" r="4"/><path d="M10.5 11.5L21 1"/><path d="M15 6l3 3"/><path d="M18 3l3 3"/>'),
+  shoppingBag:icon('<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>'),
+  mapPin:icon('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>'),
+  lifeBuoy:icon('<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="14.83" y1="9.17" x2="18.36" y2="5.64"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/>'),
+  flag:icon('<path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 8 2a6 6 0 0 0 3.6-1.2A1 1 0 0 1 21 3.6v10.8a1 1 0 0 1-.4.8A6 6 0 0 1 17 16c-3 0-5-2-8-2a6 6 0 0 0-3.6 1.2"/>'),
+  check:icon('<polyline points="20 6 9 17 4 12"/>'),
+  refresh:icon('<path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/>'),
+  star:icon('<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>'),
+  trophy:icon('<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>'),
+  graduationCap:icon('<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 4 6 4s6-2 6-4v-5"/>'),
+  medal:icon('<path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"/><circle cx="12" cy="17" r="5"/><path d="M12 18v-2h-.5"/>'),
+  rocket:icon('<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>'),
+  lock:icon('<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'),
+  micIcon:icon('<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>'),
+  partyPopper:icon('<path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"/>'),
+  fileText:icon('<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/>'),
+  volume:icon('<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>'),
+  x:icon('<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'),
+  play:icon('<polygon points="6 3 20 12 6 21 6 3"/>'),
+};
+const MODULE_ICON_MAP={
+  e1:'smile',e2:'sparkles',e3:'layers',e4:'lifeBuoy',e5:'hash',e6:'user',e7:'messageCircle',
+  s1:'briefcase',s2:'car',s3:'bed',s4:'utensils',s5:'shoppingBag',s6:'mapPin',s7:'lifeBuoy',s8:'messageCircle',
+  trip:'flag',
+};
+function moduleIcon(m){return ICONS[MODULE_ICON_MAP[m.id]]||ICONS.bookOpen;}
+const PHRASE_SET_ICON_MAP={greetings:'smile',intro:'user',basics:'messageCircle',food:'utensils',directions:'map',numbers:'hash'};
+function phraseSetIcon(p){return ICONS[PHRASE_SET_ICON_MAP[p.id]]||ICONS.bookOpen;}
 // ─────────────────────────────────────────────────
 // 1. Go to https://supabase.com → New project (free)
 // 2. Settings → API → copy "Project URL" and "anon public" key
@@ -1455,6 +1527,20 @@ function showProSuccess(){
 // already landed — but it's not guaranteed to beat the browser redirect,
 // so poll briefly for the profile to actually flip to is_pro before
 // declaring success, rather than trusting the URL alone.
+// Bridge from the new React dashboard/course pages (web/) — deep-links
+// straight into a specific module or the paywall, since the lesson player
+// and auth UI still live only here during the Phase 2 transition.
+function checkDeepLink(){
+  const params=new URLSearchParams(location.search);
+  const moduleParam=params.get('module');
+  const paywallParam=params.get('paywall');
+  if(!moduleParam&&!paywallParam) return;
+  history.replaceState(null,'',location.pathname);
+  if(paywallParam){showPaywall();return;}
+  const [track,id]=moduleParam.split(':');
+  if(track&&id) startModule(track,id);
+}
+
 async function checkStripeReturn(){
   const params=new URLSearchParams(location.search);
   const checkout=params.get('checkout');
@@ -1972,11 +2058,11 @@ async function doAuth(){
       const {data:profile}=await sb.from('profiles').select('is_pro').eq('id',user.id).single();
       if(profile?.is_pro) S.user.isPro=true;
       if(authMode==='signup'){
-        showToast('Check your email to confirm your account! 📧');
+        showToast('Check your email to confirm your account!');
       }
       document.getElementById('authOverlay').style.display='none';
-      updateUserUI();refreshDashboard();saveState();
-      showToast('Welcome'+(authMode==='signup'?' to EspTalk, ':' back, ')+displayName+'! 🎉');
+      refreshDashboard();saveState();
+      showToast('Welcome'+(authMode==='signup'?' to EspTalk, ':' back, ')+displayName+'!');
     }catch(err){
       errEl.textContent=err.message||'Something went wrong. Please try again.';
     }
@@ -1984,8 +2070,8 @@ async function doAuth(){
     // Supabase not configured — localStorage-only mode
     S.user.name=name||email.split('@')[0]||'Learner';
     document.getElementById('authOverlay').style.display='none';
-    updateUserUI();refreshDashboard();saveState();
-    showToast('Welcome to EspTalk, '+S.user.name+'! 🎉');
+    refreshDashboard();saveState();
+    showToast('Welcome to EspTalk, '+S.user.name+'!');
   }
 
   btn.textContent=authMode==='signup'?'Start learning free →':'Sign in →';
@@ -2035,7 +2121,7 @@ function editName(){
   const name=prompt('Enter your display name:',current);
   if(name&&name.trim()){
     S.user.name=name.trim();
-    updateUserUI();
+    refreshDashboard();
     saveState();
     showToast('Name updated!');
   }
@@ -2095,17 +2181,14 @@ function updateStreakUI(){
   const n=el('streakNum');const lbl=el('streakLbl');const fire=el('streakFire');
   if(!n)return;
   n.textContent=S.streak;
+  if(fire) fire.innerHTML=S.streak===0?ICONS.sparkles:ICONS.flame;
   if(S.streak===0){
-    if(fire) fire.textContent='✨';
     if(lbl) lbl.textContent='Start your streak today!';
   } else if(S.streak<3){
-    if(fire) fire.textContent='🔥';
     if(lbl) lbl.textContent='Keep it going!';
   } else if(S.streak<7){
-    if(fire) fire.textContent='🔥';
     if(lbl) lbl.textContent='You\'re on fire!';
   } else {
-    if(fire) fire.textContent='🔥';
     if(lbl) lbl.textContent='Incredible streak!';
   }
 }
@@ -2189,12 +2272,12 @@ function refreshDashboard(){
     el('nlTag').textContent=(nextMod.track==='engine'?'Foundations':'The Trip')+' · '+nextMod.code;
     el('nlTitle').textContent=nextMod.title;
     el('nlSub').textContent=nextMod.desc;
-    el('nlIcon').textContent=nextMod.icon;
+    el('nlIcon').innerHTML=moduleIcon(nextMod);
   } else {
     el('nlTag').textContent='All done!';
     el('nlTitle').textContent='You’ve finished everything available';
     el('nlSub').textContent='More scenarios coming soon';
-    el('nlIcon').textContent='🏆';
+    el('nlIcon').innerHTML=ICONS.trophy;
   }
   const rm=el('dashReadiness'); if(rm) rm.style.display='none';
 
@@ -2203,15 +2286,15 @@ function refreshDashboard(){
   if(path){
     const dM=m=>S.completedModules&&S.completedModules.has(m.track+':'+m.id);
     const groups=[
-      {label:'Foundations (the Engine)',icon:'🧭',mods:ENGINE},
-      {label:'The Trip (Scenarios)',icon:'🧳',mods:SCENARIOS.filter(m=>!m.soon)},
+      {label:'Foundations (the Engine)',icon:ICONS.map,mods:ENGINE},
+      {label:'The Trip (Scenarios)',icon:ICONS.briefcase,mods:SCENARIOS.filter(m=>!m.soon)},
     ];
     path.innerHTML=groups.map(g=>{
       const total=g.mods.length||1;
       const done=g.mods.filter(dM).length;
       const pct=Math.round(done/total*100);
       return `<div style="display:flex;align-items:center;gap:.75rem;">
-        <span style="font-size:1.1rem;">${g.icon}</span>
+        <span style="display:inline-flex;color:var(--accent);">${g.icon}</span>
         <div style="flex:1;">
           <div style="font-size:.78rem;font-weight:500;color:var(--text);margin-bottom:.3rem;">${g.label}</div>
           <div style="height:4px;background:var(--bg4);border-radius:100px;overflow:hidden;">
@@ -2234,7 +2317,7 @@ function refreshDashboard(){
       actEl.innerHTML=S.activityLog.slice(-5).reverse().map(a=>{
         const when=a.date===today?'Today':a.date===yesterday?'Yesterday':a.date;
         return `<div style="display:flex;align-items:center;gap:.6rem;font-size:.78rem;color:var(--text2);">
-          <span>${a.icon||'✅'}</span><span style="flex:1;">${a.detail}</span><span style="color:var(--text3);flex-shrink:0;">${when}</span>
+          <span style="display:inline-flex;">${a.icon||ICONS.check}</span><span style="flex:1;">${a.detail}</span><span style="color:var(--text3);flex-shrink:0;">${when}</span>
         </div>`;
       }).join('');
     }
@@ -2300,9 +2383,9 @@ function renderCurr(){
     const locked=!m.free&&!S.user.isPro;
     const click=soon?'':locked?'onclick="showPaywall()"':`onclick="startModule('${m.track}','${m.id}')"`;
     return `<div class="lesson-row ${doneM(m)?'lr-done':''} ${soon||locked?'lr-lock':''}" ${click}>
-      <div class="lr-icon">${m.icon}</div>
+      <div class="lr-icon">${locked?ICONS.lock:moduleIcon(m)}</div>
       <div class="lr-main"><div class="lr-title">${m.code} · ${m.title}</div><div class="lr-type" style="text-transform:none;letter-spacing:0;">${m.desc}</div></div>
-      <span class="lr-badge ${doneM(m)?'lr-passed':soon?'lr-locked':locked?'lr-locked':'lr-start'}">${doneM(m)?'✓ Done':soon?'Soon':locked?'🔒 Upgrade':'Start →'}</span>
+      <span class="lr-badge ${doneM(m)?'lr-passed':soon?'lr-locked':locked?'lr-locked':'lr-start'}">${doneM(m)?'✓ Done':soon?'Soon':locked?`${ICONS.lock} Upgrade`:'Start →'}</span>
     </div>`;
   };
   const eDone=ENGINE.filter(doneM).length;
@@ -2310,7 +2393,7 @@ function renderCurr(){
   const started=eDone>0||tDone>0;
   map.innerHTML=`
     <div class="welcome-hero">
-      <div class="wh-emoji">👋</div>
+      <div class="wh-emoji">${ICONS.smile}</div>
       <div class="wh-title">${started?'Welcome back':'Welcome to EspTalk'}</div>
       <div class="wh-sub">${started
         ? 'Pick up where you left off — one focused phrase at a time.'
@@ -2319,7 +2402,7 @@ function renderCurr(){
     </div>
     <div class="level-card" style="border-color:rgba(74,92,232,.35);">
       <div class="level-head" style="cursor:default;">
-        <div class="level-num-badge active">🧭</div>
+        <div class="level-num-badge active">${ICONS.map}</div>
         <div class="level-info">
           <div class="level-name">Phase 1 · Foundations</div>
           <div class="level-desc">Learn the engine — the reusable machinery. Master this and you can say almost anything.</div>
@@ -2332,7 +2415,7 @@ function renderCurr(){
     </div>
     <div class="level-card" style="border-color:rgba(200,146,10,.3);">
       <div class="level-head" style="cursor:default;">
-        <div class="level-num-badge" style="background:var(--gold-g);border:1px solid rgba(200,146,10,.25);">🧳</div>
+        <div class="level-num-badge" style="background:var(--gold-g);border:1px solid rgba(200,146,10,.25);">${ICONS.briefcase}</div>
         <div class="level-info">
           <div class="level-name">Phase 2 · The Trip</div>
           <div class="level-desc">Use it, event by event. Every scenario reuses your frames and adds just the new words.</div>
@@ -2345,7 +2428,7 @@ function renderCurr(){
     </div>
     <div class="level-card" style="border-color:rgba(22,168,122,.3);">
       <div class="level-head" style="cursor:default;">
-        <div class="level-num-badge" style="background:var(--green-g);border:1px solid rgba(22,168,122,.25);">🏁</div>
+        <div class="level-num-badge" style="background:var(--green-g);border:1px solid rgba(22,168,122,.25);">${ICONS.flag}</div>
         <div class="level-info">
           <div class="level-name">Capstone</div>
           <div class="level-desc">Prove it — a full travel day, your side spoken start to finish.</div>
@@ -2355,7 +2438,7 @@ function renderCurr(){
         <div class="course-list">
           ${row(TRIP_SIM)}
           <div class="lesson-row" onclick="nav('practice')">
-            <div class="lr-icon">⚡</div>
+            <div class="lr-icon">${ICONS.zap}</div>
             <div class="lr-main"><div class="lr-title">Pre-Trip Cram</div><div class="lr-type" style="text-transform:none;letter-spacing:0;">Blitz the essential phrases — in Practice.</div></div>
             <span class="lr-badge lr-start">Open →</span>
           </div>
@@ -2840,7 +2923,7 @@ function startCram(){PR.mode='cram';PR.queue=CRAM;PR.idx=0;
 function renderCramCard(){
   const a=document.getElementById('practiceActive');const{queue,idx}=PR;
   if(idx>=queue.length){
-    a.innerHTML=`<div class="lesson-done"><span class="ld-emoji">⚡</span><div class="ld-title">Cram done!</div>
+    a.innerHTML=`<div class="lesson-done"><span class="ld-emoji">${ICONS.zap}</span><div class="ld-title">Cram done!</div>
       <p class="ld-sub">You blitzed ${queue.length} essential phrases.</p>
       <div class="ld-actions"><button class="btn btn-primary btn-lg" onclick="renderPractice()">Back to practice</button></div></div>`;
     return;
@@ -2855,8 +2938,8 @@ function renderCramCard(){
       <div class="al-es">${c.es}</div>
       <div class="al-en">${c.en}</div>
       <div class="al-btns" style="justify-content:center;">
-        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(c.es)}')">🔊 Again</button>
-        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(c.es)}')">🐢 Slow</button>
+        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(c.es)}')">${ICONS.volume} Again</button>
+        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(c.es)}')">${ICONS.volume} Slow</button>
       </div>
     </div>
     <div class="ex-actions" style="margin-top:1rem;"><button class="btn btn-primary" onclick="cramNext()">Next →</button></div>`;
@@ -2880,7 +2963,7 @@ function showBasics(){
         <div class="basics-grid">
           ${sec.items.map(it=>`<button class="basics-chip" onclick="speakPhrase('${escJS(it.es)}')">
             <span class="bc-es">${it.es}</span><span class="bc-en">${it.en}</span>
-            <span class="bc-spk">🔊</span></button>`).join('')}
+            <span class="bc-spk">${ICONS.volume}</span></button>`).join('')}
         </div>
       </div>`).join('')}`;
 }
@@ -2903,7 +2986,7 @@ function startModule(track,id){
   const mod=[...ENGINE,...SCENARIOS,...CAPSTONES].find(m=>m.track===track&&m.id===id);
   if(!mod){showToast('Module not found');return;}
   if(!mod.free&&!S.user.isPro){showPaywall();return;}
-  const goalStep={type:'goal',code:mod.code,title:mod.title,icon:mod.icon,goal:mod.goal||mod.desc};
+  const goalStep={type:'goal',code:mod.code,title:mod.title,icon:moduleIcon(mod),goal:mod.goal||mod.desc};
   const steps=[goalStep,...mod.steps];
   LS={track,modId:id,steps,si:0,correct:0,answered:false,swapIdx:0,rpIdx:0,matchSel:{side:null,idx:null,val:null},matchCount:0,matchPairs:[]};
   nav('lesson');
@@ -2917,10 +3000,10 @@ function moduleComplete(){
   document.getElementById('lessonFill').style.width='100%';
   document.getElementById('lessonBody').innerHTML=`
     <div class="lesson-done">
-      <span class="ld-emoji">🎉</span>
+      <span class="ld-emoji">${ICONS.partyPopper}</span>
       <div class="ld-title">Module complete!</div>
       <p class="ld-sub">You followed along and produced it out loud — that’s the whole method.</p>
-      <div class="ld-xp">⭐ +20 XP</div>
+      <div class="ld-xp">${ICONS.star} +20 XP</div>
       <div class="ld-actions">
         <button class="btn btn-primary btn-lg" onclick="nav('curriculum')">Back to course</button>
       </div>
@@ -2936,8 +3019,8 @@ function revealProduce(){
       <div class="al-es">${s.es}</div>
       ${s.ph?`<div class="al-ph">${s.ph}</div>`:''}
       <div class="al-btns">
-        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">🔊 Natural</button>
-        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(s.es)}')">🐢 Slow</button>
+        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">${ICONS.volume} Natural</button>
+        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(s.es)}')">${ICONS.volume} Slow</button>
       </div>
     </div>`;
   speakPhrase(s.es);
@@ -2952,7 +3035,7 @@ function rateProduce(good){
   if(LS.answered)return;LS.answered=true;
   if(good)LS.correct++;
   document.getElementById('nxt').disabled=false;
-  document.getElementById('fb').innerHTML=`<div class="feedback ok"><span class="fb-icon">${good?'✓':'↻'}</span><div><div class="fb-main">${good?'¡Bien! You said it.':'No worries — repeat it a couple times, then continue.'}</div></div></div>`;
+  document.getElementById('fb').innerHTML=`<div class="feedback ok"><span class="fb-icon">${good?ICONS.check:ICONS.repeat}</span><div><div class="fb-main">${good?'¡Bien! You said it.':'No worries — repeat it a couple times, then continue.'}</div></div></div>`;
 }
 
 // ── Frame swap: cycle a noun through a frame ──
@@ -2962,12 +3045,12 @@ function renderSwap(){
   const fullEn=s.en.replace('___',slot.en);
   document.getElementById('lessonBody').innerHTML=`
     <div class="ex-card">
-      <div class="ex-type">🧩 Swap it into the frame</div>
+      <div class="ex-type">${ICONS.layers} Swap it into the frame</div>
       <div class="fs-frame">${s.frame.replace('___','<span class="fs-slot">'+slot.es+'</span>')}</div>
       <div class="al-en" style="text-align:center;">${fullEn}</div>
       <div class="al-btns" style="justify-content:center;">
-        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(full)}')">🔊 Natural</button>
-        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(full)}')">🐢 Slow</button>
+        <button class="btn btn-ghost" onclick="speakPhrase('${escJS(full)}')">${ICONS.volume} Natural</button>
+        <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(full)}')">${ICONS.volume} Slow</button>
       </div>
       <div class="fs-count">${LS.swapIdx+1} / ${s.slots.length} · say it out loud</div>
     </div>
@@ -2992,7 +3075,7 @@ function renderRoleplay(){
   const isYou=line.who==='you';
   document.getElementById('lessonBody').innerHTML=`
     <div class="ex-card">
-      <div class="ex-type">🎭 ${s.title||'Role-play'}</div>
+      <div class="ex-type">${ICONS.messageCircle} ${s.title||'Role-play'}</div>
       <div class="rp-turn ${isYou?'rp-you':'rp-them'}">${isYou?'YOUR LINE':'THEY SAY'}</div>
       ${isYou?`
         <div class="rp-cue">${line.en}</div>
@@ -3001,7 +3084,7 @@ function renderRoleplay(){
         <div class="al-card">
           <div class="al-es">${line.es}</div>
           <div class="al-en">${line.en}</div>
-          <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(line.es)}')">🔊 Again</button></div>
+          <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(line.es)}')">${ICONS.volume} Again</button></div>
         </div>`}
     </div>
     <div class="ex-actions" id="rp-actions">
@@ -3016,7 +3099,7 @@ function rpReveal(){
   document.getElementById('rp-reveal').innerHTML=`
     <div class="al-card" style="margin-top:.75rem;">
       <div class="al-es">${line.es}</div>
-      <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(line.es)}')">🔊 Natural</button><button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(line.es)}')">🐢 Slow</button></div>
+      <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(line.es)}')">${ICONS.volume} Natural</button><button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(line.es)}')">${ICONS.volume} Slow</button></div>
     </div>`;
   speakPhrase(line.es);
   const rb=document.getElementById('rpRevealBtn'); if(rb) rb.style.display='none';
@@ -3138,7 +3221,7 @@ function renderStep(){
   } else if(s.type==='goal'){
     body.innerHTML=`
       <div class="ex-card goal-card">
-        <div class="goal-icon">${s.icon||'🎯'}</div>
+        <div class="goal-icon">${s.icon||ICONS.target}</div>
         <div class="goal-code">${s.code} · ${s.title}</div>
         <div class="goal-by">By the end, you'll be able to:</div>
         <div class="goal-text">${s.goal}</div>
@@ -3148,7 +3231,7 @@ function renderStep(){
   } else if(s.type==='note'){
     body.innerHTML=`
       <div class="ex-card note-card">
-        <div class="note-icon">💡</div>
+        <div class="note-icon">${ICONS.sparkles}</div>
         <div class="note-text">${s.text||s.en||''}</div>
       </div>
       <div class="ex-actions"><button class="btn btn-primary" onclick="next(true)">Continue →</button></div>`;
@@ -3156,11 +3239,11 @@ function renderStep(){
   } else if(s.type==='present'){
     body.innerHTML=`
       <div class="ex-card">
-        <div class="ex-type">👂 Listen</div>
+        <div class="ex-type">${ICONS.volume} Listen</div>
         <div class="al-card">
           <div class="al-es">${s.es}</div>
           ${s.ph?`<div class="al-ph">${s.ph}</div>`:''}
-          <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">🔊 Hear it</button></div>
+          <div class="al-btns" style="justify-content:center;"><button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">${ICONS.volume} Hear it</button></div>
           <div class="al-en">${s.en}</div>
           ${s.note?`<div class="al-note">${s.note}</div>`:''}
         </div>
@@ -3172,25 +3255,25 @@ function renderStep(){
   } else if(s.type==='listen_repeat'){
     body.innerHTML=`
       <div class="ex-card">
-        <div class="ex-type">🔁 Listen &amp; repeat</div>
+        <div class="ex-type">${ICONS.repeat} Listen &amp; repeat</div>
         <div class="al-card">
           <div class="al-es">${s.es}</div>
           ${s.ph?`<div class="al-ph">${s.ph}</div>`:''}
           <div class="al-en">${s.en}</div>
           <div class="al-btns" style="justify-content:center;">
-            <button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">🔊 Natural</button>
-            <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(s.es)}')">🐢 Slow</button>
+            <button class="btn btn-ghost" onclick="speakPhrase('${escJS(s.es)}')">${ICONS.volume} Natural</button>
+            <button class="btn btn-ghost" onclick="speakPhraseSlow('${escJS(s.es)}')">${ICONS.volume} Slow</button>
           </div>
           <div class="al-say">Now say it out loud.</div>
         </div>
       </div>
-      <div class="ex-actions"><button class="btn btn-primary" onclick="next(true)">I said it →</button></div>`;
+      <div class="ex-actions"><button class="btn btn-primary" onclick="next(true)">Continue →</button></div>`;
     LS.answered=true;
     setTimeout(()=>speakPhrase(s.es),300);
   } else if(s.type==='produce'){
     body.innerHTML=`
       <div class="ex-card">
-        <div class="ex-type">🗣️ Say it in Spanish</div>
+        <div class="ex-type">${ICONS.micIcon} Say it in Spanish</div>
         <div class="pr-prompt">${s.en}</div>
         <div class="pr-instr">Say it out loud, then reveal to check yourself.</div>
         <div id="pr-reveal"></div>
@@ -3206,15 +3289,15 @@ function renderStep(){
   } else if(s.type==='scene'){
     body.innerHTML=`
       <div class="ex-card">
-        <div class="ex-type">🎬 Listen to the scene</div>
+        <div class="ex-type">${ICONS.messageCircle} Listen to the scene</div>
         ${s.title?`<div class="sc-title">${s.title}</div>`:''}
         <div class="sc-lines">
           ${s.lines.map(l=>`<div class="sc-line">
-            <button class="sc-play" onclick="speakPhrase('${escJS(l.sp)}')">🔊</button>
+            <button class="sc-play" onclick="speakPhrase('${escJS(l.sp)}')">${ICONS.volume}</button>
             <div><div class="sc-sp">${l.sp}</div><div class="sc-en">${l.en}</div></div>
           </div>`).join('')}
         </div>
-        <div style="text-align:center;margin-top:.5rem;"><button class="btn btn-ghost" onclick="playScene()">▶ Play whole scene</button></div>
+        <div style="text-align:center;margin-top:.5rem;"><button class="btn btn-ghost" onclick="playScene()">${ICONS.play} Play whole scene</button></div>
       </div>
       <div class="ex-actions"><button class="btn btn-primary" onclick="next(true)">Continue →</button></div>`;
     LS.answered=true;
@@ -3423,7 +3506,7 @@ function lessonComplete(){
   awardXP(xp);
   recordActivity();
   const lessonName=CURRICULUM[LS.lv].lessons[LS.ls].title;
-  logActivity('✅','Completed "'+lessonName+'"');
+  logActivity(ICONS.check,'Completed "'+lessonName+'"');
   renderCurr();
   document.getElementById('lessonFill').style.width='100%';
   document.getElementById('lessonBody').innerHTML=`
@@ -3535,9 +3618,9 @@ function submitExam(){
     S.completedExams.add(String(ES.lv));
     awardXP(50);
     recordActivity();
-    logActivity('🎓','Passed Level '+(ES.lv+1)+' Exam ('+score+'%)');
+    logActivity(ICONS.graduationCap,'Passed Level '+(ES.lv+1)+' Exam ('+score+'%)');
   } else {
-    logActivity('📝','Level '+(ES.lv+1)+' Exam — '+score+'% (need 70%)');
+    logActivity(ICONS.fileText,'Level '+(ES.lv+1)+' Exam — '+score+'% (need 70%)');
   }
   S.accuracy.push(...ES.ans.map(a=>a===true));
   saveState();
@@ -3592,35 +3675,35 @@ function renderPractice(){
   const sec=(t)=>`<div class="pm-section">${t}</div>`;
   document.getElementById('practiceModes').innerHTML=`
     <div class="practice-intro" style="grid-column:1/-1;">
-      <span class="pi-icon">🎯</span>
-      <div><strong>Practice is optional and never graded.</strong> It's how you get better and prep — warm up, drill, or look things up.</div>
+      <span class="pi-icon">${ICONS.target}</span>
+      <div><strong>Your phrasebook, always here.</strong> Warm up, drill the words you're shaky on, and look anything up before you need it.</div>
     </div>
     ${sec('Warm up')}
     <div class="pm-card" onclick="startReview()">
-      <div class="pm-icon">🧠</div><div class="pm-title">Daily Review</div>
+      <div class="pm-icon">${ICONS.repeat}</div><div class="pm-title">Daily Review</div>
       <div class="pm-desc">Spaced repetition of what you've learned.</div>
       <div class="pm-count">${reviewQueue.length} words ready →</div>
     </div>
     ${sec('Drill')}
     <div class="pm-card" onclick="startFlashcards()">
-      <div class="pm-icon">🃏</div><div class="pm-title">Flashcards</div>
+      <div class="pm-icon">${ICONS.layers}</div><div class="pm-title">Flashcards</div>
       <div class="pm-desc">Flip through your vocabulary.</div>
       <div class="pm-count">Study →</div>
     </div>
     <div class="pm-card" onclick="startCram()">
-      <div class="pm-icon">⚡</div><div class="pm-title">Pre-Trip Cram</div>
+      <div class="pm-icon">${ICONS.zap}</div><div class="pm-title">Pre-Trip Cram</div>
       <div class="pm-desc">Blitz the essential phrases fast.</div>
       <div class="pm-count">${CRAM.length} phrases →</div>
     </div>
     ${sec('Reference')}
     <div class="pm-card" onclick="showBasics()">
-      <div class="pm-icon">📋</div><div class="pm-title">Basics</div>
+      <div class="pm-icon">${ICONS.bookOpen}</div><div class="pm-title">Basics</div>
       <div class="pm-desc">Numbers, days, colors &amp; handy words — tap to hear.</div>
       <div class="pm-count">Browse →</div>
     </div>
     ${PHRASE_SETS.map(p=>`
       <div class="pm-card" onclick="startPhrasebook('${p.id}')">
-        <div class="pm-icon">${p.icon}</div>
+        <div class="pm-icon">${phraseSetIcon(p)}</div>
         <div class="pm-title">${p.title}</div>
         <div class="pm-desc">${p.desc}</div>
         <div class="pm-count">${p.phrases.length} phrases →</div>
@@ -3645,7 +3728,7 @@ function renderReviewCard(){
   if(idx>=queue.length){reviewComplete();return;}
   const word=queue[idx];
   const status=S.vocabStatus[word.spanish]||'new';
-  const statusLabel={new:'🆕 New word',learning:'⟳ Learning',mastered:'✓ Mastered'}[status];
+  const statusLabel={new:`<span class="icon-sm">${ICONS.sparkles}</span> New word`,learning:'⟳ Learning',mastered:'✓ Mastered'}[status];
   PR.revealed=false;
   active.innerHTML=`
     <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
@@ -3668,10 +3751,10 @@ function renderReviewCard(){
     <div id="recallBtns" style="display:none;">
       <div style="font-size:.75rem;color:var(--text3);text-align:center;margin-bottom:.75rem;">How well did you know it?</div>
       <div class="recall-btns">
-        <button class="recall-btn recall-hard" onclick="rateWord('hard')">😓 Still learning</button>
-        <button class="recall-btn recall-good" onclick="rateWord('good')">🙂 Got it</button>
+        <button class="recall-btn recall-hard" onclick="rateWord('hard')"><span class="icon-sm">${ICONS.repeat}</span> Still learning</button>
+        <button class="recall-btn recall-good" onclick="rateWord('good')"><span class="icon-sm">${ICONS.check}</span> Got it</button>
       </div>
-      <button class="recall-btn recall-easy" style="width:100%;margin-top:0;" onclick="rateWord('easy')">⭐ Know it cold</button>
+      <button class="recall-btn recall-easy" style="width:100%;margin-top:0;" onclick="rateWord('easy')"><span class="icon-sm">${ICONS.star}</span> Know it cold</button>
     </div>`;
 }
 
@@ -3705,11 +3788,11 @@ function rateWord(rating){
 function reviewComplete(){
   const mastered=PR.queue.filter(w=>S.vocabStatus[w.spanish]==='mastered').length;
   awardXP(10);
-  logActivity('🧠','Completed daily review — '+mastered+' mastered');
+  logActivity(ICONS.repeat,'Completed daily review — '+mastered+' mastered');
   saveState();
   document.getElementById('practiceActive').innerHTML=`
     <div class="lesson-done">
-      <span class="ld-emoji">🧠</span>
+      <span class="ld-emoji">${ICONS.repeat}</span>
       <div class="ld-title">Review done!</div>
       <div class="ld-sub">${mastered} word${mastered!==1?'s':''} mastered · keep it up daily for best results.</div>
       <div class="ld-xp">+10 XP</div>
@@ -3746,14 +3829,14 @@ function renderPhrasebookCard(){
       <span style="font-size:.72rem;color:var(--text3);">${phraseIdx+1}/${set.phrases.length}</span>
     </div>
     <div class="review-word">
-      <div style="font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;">${set.icon} ${set.title}</div>
+      <div style="font-size:.72rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text3);margin-bottom:.75rem;display:flex;align-items:center;justify-content:center;gap:.35rem;"><span class="icon-sm">${phraseSetIcon(set)}</span> ${set.title}</div>
       <div class="rw-spanish">${phrase.es}</div>
       <div class="rw-phonetic">${phrase.ph}</div>
       <div class="rw-english">${phrase.en}</div>
-      ${phrase.tip?`<div class="rw-example">💡 ${phrase.tip}</div>`:''}
+      ${phrase.tip?`<div class="rw-example"><span class="icon-sm">${ICONS.sparkles}</span> ${phrase.tip}</div>`:''}
     </div>
     <div style="margin-top:.75rem;display:flex;gap:.6rem;justify-content:center;">
-      <button class="btn btn-ghost" onclick="speakPhrase('${phrase.es.replace(/'/g,"\\'")}')">🔊 Say it</button>
+      <button class="btn btn-ghost" onclick="speakPhrase('${phrase.es.replace(/'/g,"\\'")}')">${ICONS.volume} Say it</button>
       <button class="btn btn-primary" onclick="nextPhrase()">Next →</button>
     </div>`;
 }
@@ -3809,7 +3892,7 @@ function phrasebookComplete(set){
   saveState();
   document.getElementById('practiceActive').innerHTML=`
     <div class="lesson-done">
-      <span class="ld-emoji">${set.icon}</span>
+      <span class="ld-emoji">${phraseSetIcon(set)}</span>
       <div class="ld-title">¡Bien hecho!</div>
       <div class="ld-sub">You studied all ${set.phrases.length} phrases in "${set.title}".</div>
       <div class="ld-xp">+5 XP</div>
@@ -3864,7 +3947,7 @@ function startFlashcards(){
   nav('flashcards');showFC();
 }
 function showFC(){
-  if(fcIdx>=fcList.length){nav('vocabulary');showToast('Flashcard review done! 🎉');return;}
+  if(fcIdx>=fcList.length){nav('vocabulary');showToast('Flashcard review done!');return;}
   const v=fcList[fcIdx];
   document.getElementById('fcCounter').textContent=`Card ${fcIdx+1} of ${fcList.length}`;
   document.getElementById('fcWord').textContent=v.spanish;
@@ -3910,18 +3993,18 @@ function hidePaywall(){document.getElementById('paywallModal').style.display='no
 // ═══════════════════════════
 function renderAchievements(){
   const ACHIEVEMENTS=[
-    {icon:'📖',name:'First lesson',check:()=>S.completedLessons.size>=1},
-    {icon:'⭐',name:'50 XP',check:()=>S.xp>=50},
-    {icon:'⭐',name:'200 XP',check:()=>S.xp>=200},
-    {icon:'🔥',name:'3-day streak',check:()=>S.streak>=3},
-    {icon:'🔥',name:'7-day streak',check:()=>S.streak>=7},
-    {icon:'🎓',name:'Pass an exam',check:()=>S.completedExams.size>=1},
-    {icon:'🏆',name:'Level 2 unlocked',check:()=>isLevelUnlocked(2)},
-    {icon:'💬',name:'First practice',check:()=>S.activityLog.some(a=>a.icon==='💬')},
-    {icon:'🌟',name:'10 lessons',check:()=>S.completedLessons.size>=10},
-    {icon:'🚀',name:'30-day streak',check:()=>S.streak>=30},
-    {icon:'🎯',name:'90% accuracy',check:()=>S.accuracy.length>=10&&(S.accuracy.filter(Boolean).length/S.accuracy.length)>=0.9},
-    {icon:'🏅',name:'Complete Level 1',check:()=>S.completedExams.has('0')},
+    {icon:ICONS.bookOpen,name:'First lesson',check:()=>S.completedLessons.size>=1},
+    {icon:ICONS.star,name:'50 XP',check:()=>S.xp>=50},
+    {icon:ICONS.star,name:'200 XP',check:()=>S.xp>=200},
+    {icon:ICONS.flame,name:'3-day streak',check:()=>S.streak>=3},
+    {icon:ICONS.flame,name:'7-day streak',check:()=>S.streak>=7},
+    {icon:ICONS.graduationCap,name:'Pass an exam',check:()=>S.completedExams.size>=1},
+    {icon:ICONS.trophy,name:'Level 2 unlocked',check:()=>isLevelUnlocked(2)},
+    {icon:ICONS.messageCircle,name:'First practice',check:()=>S.activityLog.some(a=>a.icon===ICONS.repeat)},
+    {icon:ICONS.sparkles,name:'10 lessons',check:()=>S.completedLessons.size>=10},
+    {icon:ICONS.rocket,name:'30-day streak',check:()=>S.streak>=30},
+    {icon:ICONS.target,name:'90% accuracy',check:()=>S.accuracy.length>=10&&(S.accuracy.filter(Boolean).length/S.accuracy.length)>=0.9},
+    {icon:ICONS.medal,name:'Complete Level 1',check:()=>S.completedExams.has('0')},
   ];
   const grid=document.getElementById('achievementsGrid');
   if(!grid)return;
@@ -4049,7 +4132,6 @@ function loadState(){
       S.streak=0;
     }
 
-    updateUserUI();
     refreshDashboard();
     renderCurr();
 
@@ -4075,8 +4157,8 @@ if(sb){
       const {data:profile}=await sb.from('profiles').select('is_pro').eq('id',user.id).single();
       if(profile?.is_pro) S.user.isPro=true;
       document.getElementById('authOverlay').style.display='none';
-      updateUserUI();
       refreshDashboard();
+      checkDeepLink();
     }
   });
   sb.auth.onAuthStateChange((event,session)=>{

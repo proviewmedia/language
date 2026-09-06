@@ -1,4 +1,9 @@
 {
   "buildCommand": "cd web && npm install && npm run build",
-  "outputDirectory": "web/dist"
+  "outputDirectory": "web/dist",
+  "rewrites": [
+    { "source": "/dashboard", "destination": "/index.html" },
+    { "source": "/course", "destination": "/index.html" },
+    { "source": "/practice", "destination": "/index.html" }
+  ]
 }
