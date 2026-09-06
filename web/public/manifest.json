@@ -1,0 +1,26 @@
+{
+  "name": "EspTalk — Survival Spanish, Fast",
+  "short_name": "EspTalk",
+  "description": "Learn enough Spanish to actually use it — in a week.",
+  "start_url": "./app.html",
+  "display": "standalone",
+  "background_color": "#F5F5F7",
+  "theme_color": "#4A5CE8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "lang": "en-US"
+}
