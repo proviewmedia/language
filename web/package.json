@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "sync-legacy": "cp ../app.html ../sw.js ../manifest.json ../robots.txt ../sitemap.xml public/",
+    "prebuild": "npm run sync-legacy",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
