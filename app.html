@@ -2258,6 +2258,12 @@ function nav(id){
 function refreshDashboard(){
   const el=(id)=>document.getElementById(id);
 
+  // sbName/settingName used to be set by a since-deleted updateUserUI()
+  // helper and were left permanently stuck on their placeholder text.
+  const displayName=S.user.name&&S.user.name!=='Guest'?S.user.name:'—';
+  if(el('sbName')) el('sbName').textContent=displayName;
+  if(el('settingName')) el('settingName').textContent=displayName;
+
   const h=new Date().getHours();
   const greetWord=h<12?'¡Buenos días':h<18?'¡Buenas tardes':'¡Buenas noches';
   const name=S.user.name&&S.user.name!=='Guest'?', <em>'+S.user.name+'</em>':'';
@@ -3056,6 +3062,7 @@ function rateProduce(good){
 // ── Frame swap: cycle a noun through a frame ──
 function renderSwap(){
   const s=LS.steps[LS.si];const slot=s.slots[LS.swapIdx];
+  updateLessonProgress(LS.swapIdx);
   const full=s.frame.replace('___',slot.es);
   const fullEn=s.en.replace('___',slot.en);
   document.getElementById('lessonBody').innerHTML=`
@@ -3087,6 +3094,7 @@ function playScene(){
 // ── Role-play: learner speaks their side ──
 function renderRoleplay(){
   const s=LS.steps[LS.si];const line=s.lines[LS.rpIdx];
+  updateLessonProgress(LS.rpIdx);
   const isYou=line.who==='you';
   document.getElementById('lessonBody').innerHTML=`
     <div class="ex-card">
@@ -3128,13 +3136,30 @@ function rpNext(){
 
 const MAX_TRIES=2;      // attempts allowed before the answer is revealed
 let stepTries=0;        // wrong attempts on the current step
+// frame_swap and roleplay steps bundle several sub-interactions (one per
+// slot/line) behind a single top-level step, which used to make the lesson
+// counter badly understate real progress on modules built from them. Weight
+// each step by its actual interaction count so "N / total" means something.
+function stepWeight(s){
+  if(s.type==='frame_swap') return s.slots.length;
+  if(s.type==='roleplay') return s.lines.length;
+  return 1;
+}
+function updateLessonProgress(subIdx=0){
+  const{steps,si}=LS;
+  let before=0;
+  for(let i=0;i<si;i++) before+=stepWeight(steps[i]);
+  const total=steps.reduce((sum,s)=>sum+stepWeight(s),0);
+  const current=Math.min(before+subIdx+1,total);
+  const fill=document.getElementById('lessonFill'); if(fill) fill.style.width=((current-1)/total*100)+'%';
+  const counter=document.getElementById('lessonCounter'); if(counter) counter.textContent=`${current} / ${total}`;
+}
 function renderStep(){
   stepTries=0;
   const{steps,si,correct}=LS;
   const total=steps.length;
   const nonVocab=steps.filter(s=>s.type!=='vocab').length;
-  document.getElementById('lessonFill').style.width=(si/total*100)+'%';
-  document.getElementById('lessonCounter').textContent=`${si+1} / ${total}`;
+  updateLessonProgress(0);
   const pb=document.getElementById('prevBtn'); if(pb) pb.style.visibility=si>0?'visible':'hidden';
   if(si>=total){lessonComplete();return;}
   const s=steps[si];
