@@ -4,6 +4,8 @@
   "rewrites": [
     { "source": "/dashboard", "destination": "/index.html" },
     { "source": "/course", "destination": "/index.html" },
-    { "source": "/practice", "destination": "/index.html" }
+    { "source": "/practice", "destination": "/index.html" },
+    { "source": "/progress", "destination": "/index.html" },
+    { "source": "/settings", "destination": "/index.html" }
   ]
 }

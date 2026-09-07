@@ -1075,9 +1075,9 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
     <button class="sb-link" onclick="location.href='/course'"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><span class="sb-link-txt">Course</span></button>
     <button class="sb-link" onclick="location.href='/practice'"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span><span class="sb-link-txt">Practice</span></button>
     <div class="sb-section">You</div>
-    <button class="sb-link" onclick="nav('progress')"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="sb-link-txt">Progress</span></button>
+    <button class="sb-link" onclick="location.href='/progress'"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="sb-link-txt">Progress</span></button>
     <div class="sb-section">Account</div>
-    <button class="sb-link" onclick="nav('settings')"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span class="sb-link-txt">Account</span></button>
+    <button class="sb-link" onclick="location.href='/settings'"><span class="sb-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span class="sb-link-txt">Account</span></button>
   </nav>
   <div class="sb-upgrade" id="sbUpgrade">
     <div class="sb-upgrade-title">Unlock the full course</div>
@@ -1104,10 +1104,10 @@ body{font-family:'DM Sans','Outfit',sans-serif;color:var(--text);display:flex;}
   <button class="bn-item" onclick="location.href='/practice'" id="bn-practice">
     <span class="bn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span><span class="bn-label">Practice</span>
   </button>
-  <button class="bn-item active" onclick="nav('progress')" id="bn-progress">
+  <button class="bn-item" onclick="location.href='/progress'" id="bn-progress">
     <span class="bn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="bn-label">Progress</span>
   </button>
-  <button class="bn-item" onclick="nav('settings')" id="bn-settings">
+  <button class="bn-item" onclick="location.href='/settings'" id="bn-settings">
     <span class="bn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span class="bn-label">Account</span>
   </button>
 </nav>

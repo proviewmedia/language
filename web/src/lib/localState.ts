@@ -74,18 +74,49 @@ export function writeEspTalkProgress(update: {
 export interface EspTalkPrefs {
   voice: "male" | "female";
   speed: "normal" | "slow";
+  reminders: boolean;
+  sound: boolean;
+  auto: boolean;
+  dailyGoal: number;
+  difficulty: "adaptive" | "easy" | "normal" | "hard";
 }
+
+const DEFAULT_PREFS: EspTalkPrefs = {
+  voice: "male",
+  speed: "normal",
+  reminders: false,
+  sound: true,
+  auto: false,
+  dailyGoal: 25,
+  difficulty: "adaptive",
+};
 
 export function readEspTalkPrefs(): EspTalkPrefs {
   try {
     const raw = localStorage.getItem("esptalk_prefs");
-    if (!raw) return { voice: "male", speed: "normal" };
+    if (!raw) return DEFAULT_PREFS;
     const d = JSON.parse(raw);
     return {
       voice: d.voice === "female" ? "female" : "male",
       speed: d.speed === "slow" ? "slow" : "normal",
+      reminders: !!d.reminders,
+      sound: d.sound !== false,
+      auto: !!d.auto,
+      dailyGoal: typeof d.dailyGoal === "number" ? d.dailyGoal : 25,
+      difficulty: ["adaptive", "easy", "normal", "hard"].includes(d.difficulty) ? d.difficulty : "adaptive",
     };
   } catch {
-    return { voice: "male", speed: "normal" };
+    return DEFAULT_PREFS;
+  }
+}
+
+// Merges one or more preference changes into the shared esptalk_prefs blob
+// (same key app.html's savePref()/toggleSetting() write to).
+export function writeEspTalkPrefs(update: Partial<EspTalkPrefs>): void {
+  try {
+    const current = readEspTalkPrefs();
+    localStorage.setItem("esptalk_prefs", JSON.stringify({ ...current, ...update }));
+  } catch {
+    // localStorage unavailable — prefs just won't persist this session
   }
 }
