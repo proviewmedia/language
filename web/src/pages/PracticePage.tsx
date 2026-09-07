@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { Search, Volume2 } from "lucide-react";
+import { Search, Volume2, Repeat, Layers } from "lucide-react";
 import { AppShell } from "@/components/app/AppShell";
-import { BASICS, CRAM } from "@/data/curriculum";
+import { DailyReview } from "@/components/app/DailyReview";
+import { Flashcards } from "@/components/app/Flashcards";
+import { BASICS, CRAM, PHRASE_SETS, VOCAB_BANK } from "@/data/curriculum";
+import { PHRASE_SET_ICONS } from "@/lib/phraseSetIcons";
 import { playPhrase } from "@/lib/playPhrase";
 import { useEspTalkSession } from "@/lib/useEspTalkSession";
 
@@ -20,28 +23,82 @@ function PhraseRow({ es, en }: { es: string; en: string }) {
   );
 }
 
+function StudyCard({
+  icon: Icon,
+  title,
+  desc,
+  count,
+  onClick,
+}: {
+  icon: typeof Repeat;
+  title: string;
+  desc: string;
+  count: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className="flex flex-col items-start gap-2 rounded-2xl border border-black/[0.07] bg-white p-5 text-left hover:border-accent/40"
+    >
+      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
+        <Icon className="h-5 w-5" strokeWidth={1.8} />
+      </div>
+      <div className="font-heading text-base font-bold text-foreground">{title}</div>
+      <div className="font-body text-sm text-muted-foreground">{desc}</div>
+      <div className="font-body text-xs font-medium text-accent">{count} →</div>
+    </button>
+  );
+}
+
 export function PracticePage() {
-  const { loading, name, state } = useEspTalkSession();
+  const { loading, name, state, refresh } = useEspTalkSession();
   const [query, setQuery] = useState("");
+  const [mode, setMode] = useState<"home" | "review" | "flashcards">("home");
 
   if (loading) return null;
 
+  if (mode === "review") {
+    return (
+      <AppShell name={name} streak={state.streak} xp={state.xp}>
+        <DailyReview
+          vocabStatus={state.vocabStatus}
+          onExit={() => setMode("home")}
+          onFinish={() => refresh()}
+        />
+      </AppShell>
+    );
+  }
+
+  if (mode === "flashcards") {
+    return (
+      <AppShell name={name} streak={state.streak} xp={state.xp}>
+        <Flashcards onExit={() => setMode("home")} onFinish={() => refresh()} />
+      </AppShell>
+    );
+  }
+
   const q = query.trim().toLowerCase();
-  const filteredCram = CRAM.filter(
-    (p) => !q || p.es.toLowerCase().includes(q) || p.en.toLowerCase().includes(q),
-  );
+  const matches = (es: string, en: string) => !q || es.toLowerCase().includes(q) || en.toLowerCase().includes(q);
+
+  const filteredCram = CRAM.filter((p) => matches(p.es, p.en));
   const filteredBasics = BASICS.map((section) => ({
     ...section,
-    items: section.items.filter(
-      (p) => !q || p.es.toLowerCase().includes(q) || p.en.toLowerCase().includes(q),
-    ),
+    items: section.items.filter((p) => matches(p.es, p.en)),
   })).filter((section) => section.items.length > 0);
+  const filteredSets = PHRASE_SETS.map((set) => ({
+    ...set,
+    phrases: set.phrases.filter((p) => matches(p.es, p.en)),
+  })).filter((set) => set.phrases.length > 0);
+
+  const showStudyCards = !q;
+  const nothingFound = q && filteredCram.length === 0 && filteredBasics.length === 0 && filteredSets.length === 0;
 
   return (
     <AppShell name={name} streak={state.streak} xp={state.xp}>
       <h1 className="font-heading text-2xl font-bold text-foreground">Practice</h1>
       <p className="mt-1 font-body text-sm text-muted-foreground">
-        Your phrasebook — search anything, tap to hear it.
+        Your phrasebook, always here — warm up, study, or search anything and tap to hear it.
       </p>
 
       <div className="relative mt-4">
@@ -53,6 +110,25 @@ export function PracticePage() {
           className="w-full rounded-full border border-black/[0.08] bg-white py-3 pl-11 pr-4 font-body text-sm text-foreground outline-none focus:border-accent"
         />
       </div>
+
+      {showStudyCards && (
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          <StudyCard
+            icon={Repeat}
+            title="Daily Review"
+            desc="Spaced repetition of what you've learned."
+            count={`${Math.min(8, VOCAB_BANK.length)} words ready`}
+            onClick={() => setMode("review")}
+          />
+          <StudyCard
+            icon={Layers}
+            title="Flashcards"
+            desc="Flip through your vocabulary."
+            count={`${VOCAB_BANK.length} words`}
+            onClick={() => setMode("flashcards")}
+          />
+        </div>
+      )}
 
       {filteredCram.length > 0 && (
         <>
@@ -67,6 +143,22 @@ export function PracticePage() {
         </>
       )}
 
+      {filteredSets.map((set) => {
+        const Icon = PHRASE_SET_ICONS[set.id];
+        return (
+          <div key={set.id}>
+            <h2 className="mt-8 flex items-center gap-1.5 font-heading text-sm font-bold uppercase tracking-wide text-muted-foreground">
+              {Icon && <Icon className="h-3.5 w-3.5" />} {set.title}
+            </h2>
+            <div className="mt-3 flex flex-col gap-2">
+              {set.phrases.map((p) => (
+                <PhraseRow key={p.es} es={p.es} en={p.en} />
+              ))}
+            </div>
+          </div>
+        );
+      })}
+
       {filteredBasics.map((section) => (
         <div key={section.title}>
           <h2 className="mt-8 font-heading text-sm font-bold uppercase tracking-wide text-muted-foreground">
@@ -80,7 +172,7 @@ export function PracticePage() {
         </div>
       ))}
 
-      {filteredCram.length === 0 && filteredBasics.length === 0 && (
+      {nothingFound && (
         <p className="mt-10 text-center font-body text-sm text-muted-foreground">
           Nothing matches "{query}".
         </p>

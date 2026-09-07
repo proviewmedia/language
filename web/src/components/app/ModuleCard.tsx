@@ -90,7 +90,8 @@ export function ModuleCard({
           )}
           <div className="mt-6 px-4 pb-6">
             <Button
-              className="w-full rounded-full py-5 font-heading font-bold"
+              size="cta"
+              className="w-full"
               render={<a href={href}>{completed ? "Review" : "Start"}</a>}
             />
           </div>

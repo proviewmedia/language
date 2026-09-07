@@ -58,7 +58,8 @@ export function Pricing() {
               </div>
               <Button
                 variant="outline"
-                className="mt-8 w-full rounded-full py-5 font-heading font-bold"
+                size="cta"
+                className="mt-8 w-full"
                 render={<a href="/app.html">Get Started</a>}
               />
             </div>
@@ -75,7 +76,8 @@ export function Pricing() {
                 {proFeatures.map((f) => <FeatureRow key={f} text={f} />)}
               </div>
               <Button
-                className="mt-8 w-full rounded-full py-5 font-heading font-bold"
+                size="cta"
+                className="mt-8 w-full"
                 render={
                   <a href="/app.html" className="flex items-center justify-center gap-2">
                     Get Pro <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

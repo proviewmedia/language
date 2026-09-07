@@ -43,7 +43,8 @@ export function DashboardPage() {
             </div>
           </div>
           <Button
-            className="w-full shrink-0 rounded-full py-5 font-heading font-bold sm:w-auto"
+            size="cta"
+            className="w-full shrink-0 sm:w-auto"
             render={
               <a href={`/app.html?module=${nextModule.track}:${nextModule.id}`} className="flex items-center justify-center gap-2">
                 Continue <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

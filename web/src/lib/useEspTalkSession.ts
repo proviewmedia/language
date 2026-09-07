@@ -20,8 +20,9 @@ export function useEspTalkSession() {
 
   const isPro = auth.isPro || state.isPro;
   const completedIds = new Set(state.modules);
+  const refresh = () => setState(readEspTalkState());
 
-  return { ...auth, isPro, state, completedIds };
+  return { ...auth, isPro, state, completedIds, refresh };
 }
 
 function goToPaywall() {
