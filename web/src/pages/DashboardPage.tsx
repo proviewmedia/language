@@ -46,7 +46,7 @@ export function DashboardPage() {
             size="cta"
             className="w-full shrink-0 sm:w-auto"
             render={
-              <a href={`/app.html?module=${nextModule.track}:${nextModule.id}`} className="flex items-center justify-center gap-2">
+              <a href={`/lesson/${nextModule.track}/${nextModule.id}`} className="flex items-center justify-center gap-2">
                 Continue <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
               </a>
             }

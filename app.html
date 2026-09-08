@@ -1532,18 +1532,18 @@ function showProSuccess(){
 // straight into a specific module or the paywall, since the lesson player
 // and auth UI still live only here during the Phase 2 transition.
 // Called once a signed-in session is confirmed. app.html itself now only
-// hosts the lesson player, the paywall, and Progress/Settings — Home, Course,
-// and Practice live in the new design system. With no deep link to serve,
-// send the user there instead of showing the legacy dashboard screen.
+// hosts auth and the paywall — Home, Course, Practice, Progress, Settings,
+// and the lesson player all live in the new design system. With no deep
+// link to serve, send the user there instead of showing a legacy screen.
 function checkDeepLink(){
   const params=new URLSearchParams(location.search);
   const moduleParam=params.get('module');
   const paywallParam=params.get('paywall');
   const checkoutParam=params.get('checkout');
   if(moduleParam){
-    history.replaceState(null,'',location.pathname);
     const [track,id]=moduleParam.split(':');
-    if(track&&id) startModule(track,id);
+    if(track&&id){location.replace(`/lesson/${track}/${id}`);return;}
+    history.replaceState(null,'',location.pathname);
     return;
   }
   if(paywallParam){

@@ -40,7 +40,7 @@ export function ModuleCard({
 }) {
   const [open, setOpen] = useState(false);
   const phrases = samplePhrases(mod);
-  const href = `/app.html?module=${mod.track}:${mod.id}`;
+  const href = `/lesson/${mod.track}/${mod.id}`;
 
   return (
     <>

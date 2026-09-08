@@ -59,7 +59,7 @@ export function CoursePage() {
       </h2>
       <div className="mt-3">
         <button
-          onClick={() => (capstoneLocked ? goToPaywall() : (window.location.href = `/app.html?module=${TRIP_SIM.track}:${TRIP_SIM.id}`))}
+          onClick={() => (capstoneLocked ? goToPaywall() : (window.location.href = `/lesson/${TRIP_SIM.track}/${TRIP_SIM.id}`))}
           className="flex w-full items-center gap-4 rounded-2xl border border-black/[0.07] bg-white p-5 text-left hover:border-accent/40"
         >
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">

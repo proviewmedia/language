@@ -46,11 +46,33 @@ function todayDayIdx(): number {
   return d === 0 ? 6 : d - 1;
 }
 
-// Merges XP + vocab-status changes into the shared esptalk_v1 blob without
-// touching any other field app.html owns (lessons, exams, activity log, etc.)
+function todayISO(): string {
+  return new Date().toISOString().split("T")[0];
+}
+function yesterdayISO(): string {
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+  return d.toISOString().split("T")[0];
+}
+
+// Ported from app.html's recordActivity(): advances the streak once per
+// calendar day, resets it on a gap, starts it at 1 on the very first visit.
+function nextStreak(d: Record<string, unknown>): { streak: number; lastActiveDate: string } {
+  const today = todayISO();
+  const lastActiveDate = typeof d.lastActiveDate === "string" ? d.lastActiveDate : undefined;
+  const prevStreak = typeof d.streak === "number" ? d.streak : 0;
+  if (lastActiveDate === today) return { streak: prevStreak, lastActiveDate: today };
+  if (!lastActiveDate) return { streak: 1, lastActiveDate: today };
+  if (lastActiveDate === yesterdayISO()) return { streak: prevStreak + 1, lastActiveDate: today };
+  return { streak: 1, lastActiveDate: today };
+}
+
+// Merges progress changes into the shared esptalk_v1 blob without touching
+// any other field app.html owns (lessons, exams, activity log, etc.)
 export function writeEspTalkProgress(update: {
   xpDelta?: number;
   vocabStatus?: Record<string, VocabStatus>;
+  moduleKey?: string; // "track:id" — marks a module complete + advances the streak
 }): void {
   try {
     const raw = localStorage.getItem("esptalk_v1");
@@ -64,6 +86,12 @@ export function writeEspTalkProgress(update: {
     }
     if (update.vocabStatus) {
       d.vocabStatus = { ...(d.vocabStatus || {}), ...update.vocabStatus };
+    }
+    if (update.moduleKey) {
+      const modules: string[] = Array.isArray(d.modules) ? d.modules : [];
+      if (!modules.includes(update.moduleKey)) modules.push(update.moduleKey);
+      d.modules = modules;
+      Object.assign(d, nextStreak(d));
     }
     localStorage.setItem("esptalk_v1", JSON.stringify(d));
   } catch {

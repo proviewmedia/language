@@ -20,7 +20,7 @@ export function EnginePath({
         const locked = !mod.free && !isPro;
         const isNext =
           !completed && !locked && !modules.slice(0, i).some((m) => !completedIds.has(`${m.track}:${m.id}`) && (m.free || isPro));
-        const href = `/app.html?module=${mod.track}:${mod.id}`;
+        const href = `/lesson/${mod.track}/${mod.id}`;
 
         return (
           <a
