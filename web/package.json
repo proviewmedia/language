@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "sync-legacy": "cp ../app.html ../sw.js ../manifest.json ../robots.txt ../sitemap.xml public/",
+    "sync-legacy": "cp ../app.html ../sw.js ../manifest.json ../robots.txt ../sitemap.xml public/ && cp -R ../audio/male/. public/audio/male/ && cp -R ../audio/female/. public/audio/female/ && cp ../audio-manifest.male.json ../audio-manifest.female.json src/data/",
     "prebuild": "npm run sync-legacy",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
