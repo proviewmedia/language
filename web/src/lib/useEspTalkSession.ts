@@ -27,8 +27,12 @@ export function useEspTalkSession() {
 
 export type EspTalkSession = ReturnType<typeof useEspTalkSession>;
 
+// Only for routes rendered outside AppLayout (currently just LessonPage,
+// deliberately full-screen/focused with no dialog of its own) — everything
+// inside the layout should use the openPaywall() from outlet context instead,
+// which opens the dialog in place with no navigation.
 function goToPaywall() {
-  window.location.href = "/app.html?paywall=1";
+  window.location.href = "/course?paywall=1";
 }
 
 export { goToPaywall };

@@ -29,8 +29,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { supabase } from "@/lib/supabase";
 import { readEspTalkPrefs, writeEspTalkPrefs, type EspTalkPrefs } from "@/lib/localState";
-import { goToPaywall } from "@/lib/useEspTalkSession";
-import type { EspTalkSession } from "@/lib/useEspTalkSession";
+import type { AppOutletContext } from "@/components/app/AppLayout";
 
 function SettingRow({
   label,
@@ -62,7 +61,7 @@ function SettingsCard({ title, children }: { title: string; children: React.Reac
 }
 
 export function SettingsPage() {
-  const { name, isPro } = useOutletContext<EspTalkSession>();
+  const { name, isPro, openPaywall } = useOutletContext<AppOutletContext>();
   const [prefs, setPrefs] = useState<EspTalkPrefs>(() => readEspTalkPrefs());
   const [nameDialogOpen, setNameDialogOpen] = useState(false);
   const [nameDraft, setNameDraft] = useState(name);
@@ -110,7 +109,7 @@ export function SettingsPage() {
             {isPro ? (
               <span className="font-body text-xs font-semibold text-accent">Active</span>
             ) : (
-              <Button size="sm" onClick={goToPaywall}>
+              <Button size="sm" onClick={openPaywall}>
                 Upgrade
               </Button>
             )}

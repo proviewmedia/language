@@ -18,8 +18,8 @@ module.exports = async (req, res) => {
   params.append('line_items[0][quantity]', '1');
   params.append('client_reference_id', userId);
   if (email) params.append('customer_email', email);
-  params.append('success_url', 'https://esptalk.com/app.html?checkout=success');
-  params.append('cancel_url', 'https://esptalk.com/app.html?checkout=cancel');
+  params.append('success_url', 'https://esptalk.com/dashboard?checkout=success');
+  params.append('cancel_url', 'https://esptalk.com/dashboard?checkout=cancel');
 
   try {
     const stripeRes = await fetch('https://api.stripe.com/v1/checkout/sessions', {

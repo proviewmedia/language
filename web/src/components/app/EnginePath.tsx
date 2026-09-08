@@ -55,6 +55,11 @@ export function EnginePath({
                 Next
               </span>
             )}
+            {locked && (
+              <span className="shrink-0 rounded-full bg-accent/10 px-2.5 py-1 font-body text-xs font-semibold text-accent">
+                Upgrade
+              </span>
+            )}
           </a>
         );
       })}

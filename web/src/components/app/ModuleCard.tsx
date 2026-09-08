@@ -46,7 +46,9 @@ export function ModuleCard({
     <>
       <button
         onClick={() => (locked ? onLockedClick() : setOpen(true))}
-        className="flex w-full items-start gap-4 rounded-2xl border border-black/[0.07] bg-white p-5 text-left transition-colors hover:border-accent/40"
+        className={`flex w-full items-start gap-4 rounded-2xl border p-5 text-left transition-colors ${
+          locked ? "border-black/[0.06] bg-black/[0.02] opacity-60" : "border-black/[0.07] bg-white hover:border-accent/40"
+        }`}
       >
         <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${locked ? "bg-muted text-muted-foreground" : "bg-accent/10 text-accent"}`}>
           {locked ? <Lock className="h-5 w-5" /> : <Icon className="h-5 w-5" strokeWidth={1.8} />}
@@ -63,6 +65,11 @@ export function ModuleCard({
           </div>
           <p className="mt-1 font-body text-sm text-muted-foreground">{mod.desc ?? mod.goal}</p>
         </div>
+        {locked && (
+          <span className="shrink-0 rounded-full bg-accent/10 px-2.5 py-1 font-body text-xs font-semibold text-accent">
+            Upgrade
+          </span>
+        )}
       </button>
 
       <Sheet open={open} onOpenChange={setOpen}>

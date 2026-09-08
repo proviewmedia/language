@@ -1,14 +1,13 @@
 import { useOutletContext } from "react-router-dom";
-import { Flag } from "lucide-react";
+import { Flag, Lock } from "lucide-react";
 import { EnginePath } from "@/components/app/EnginePath";
 import { ModuleCard } from "@/components/app/ModuleCard";
 import { ENGINE, SCENARIOS, TRIP_SIM } from "@/data/curriculum";
 import { SCENARIO_ICONS } from "@/lib/scenarioIcons";
-import { goToPaywall } from "@/lib/useEspTalkSession";
-import type { EspTalkSession } from "@/lib/useEspTalkSession";
+import type { AppOutletContext } from "@/components/app/AppLayout";
 
 export function CoursePage() {
-  const { completedIds, isPro } = useOutletContext<EspTalkSession>();
+  const { completedIds, isPro, openPaywall } = useOutletContext<AppOutletContext>();
 
   const capstoneKey = `${TRIP_SIM.track}:${TRIP_SIM.id}`;
   const capstoneLocked = !isPro;
@@ -30,7 +29,7 @@ export function CoursePage() {
           modules={ENGINE}
           completedIds={completedIds}
           isPro={isPro}
-          onLockedClick={goToPaywall}
+          onLockedClick={openPaywall}
         />
       </div>
 
@@ -48,7 +47,7 @@ export function CoursePage() {
             icon={SCENARIO_ICONS[mod.id]}
             completed={completedIds.has(`${mod.track}:${mod.id}`)}
             locked={!mod.free && !isPro}
-            onLockedClick={goToPaywall}
+            onLockedClick={openPaywall}
           />
         ))}
       </div>
@@ -58,17 +57,24 @@ export function CoursePage() {
       </h2>
       <div className="mt-3">
         <button
-          onClick={() => (capstoneLocked ? goToPaywall() : (window.location.href = `/lesson/${TRIP_SIM.track}/${TRIP_SIM.id}`))}
-          className="flex w-full items-center gap-4 rounded-2xl border border-black/[0.07] bg-white p-5 text-left hover:border-accent/40"
+          onClick={() => (capstoneLocked ? openPaywall() : (window.location.href = `/lesson/${TRIP_SIM.track}/${TRIP_SIM.id}`))}
+          className={`flex w-full items-center gap-4 rounded-2xl border p-5 text-left ${
+            capstoneLocked ? "border-black/[0.06] bg-black/[0.02] opacity-60" : "border-black/[0.07] bg-white hover:border-accent/40"
+          }`}
         >
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
-            <Flag className="h-5 w-5" strokeWidth={1.8} />
+          <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${capstoneLocked ? "bg-muted text-muted-foreground" : "bg-accent/10 text-accent"}`}>
+            {capstoneLocked ? <Lock className="h-5 w-5" strokeWidth={1.8} /> : <Flag className="h-5 w-5" strokeWidth={1.8} />}
           </div>
           <div className="min-w-0 flex-1">
             <h3 className="font-heading text-base font-bold text-foreground">{TRIP_SIM.title}</h3>
             <p className="mt-1 font-body text-sm text-muted-foreground">{TRIP_SIM.desc}</p>
           </div>
           {capstoneCompleted && <span className="shrink-0 font-body text-xs font-semibold text-accent">Done</span>}
+          {capstoneLocked && (
+            <span className="shrink-0 rounded-full bg-accent/10 px-2.5 py-1 font-body text-xs font-semibold text-accent">
+              Upgrade
+            </span>
+          )}
         </button>
       </div>
     </>

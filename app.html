@@ -1547,8 +1547,7 @@ function checkDeepLink(){
     return;
   }
   if(paywallParam){
-    history.replaceState(null,'',location.pathname);
-    showPaywall();
+    location.replace('/dashboard?paywall=1');
     return;
   }
   if(checkoutParam) return;   // let checkStripeReturn() handle it, don't redirect mid-confirmation
