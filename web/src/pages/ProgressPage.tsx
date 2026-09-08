@@ -12,10 +12,12 @@ import {
   Medal,
   Flag,
   Layers,
+  Volume2,
 } from "lucide-react";
 import { Flashcards } from "@/components/app/Flashcards";
 import { Button } from "@/components/ui/button";
 import { ENGINE, SCENARIOS, TRIP_SIM, VOCAB_BANK } from "@/data/curriculum";
+import { playPhrase } from "@/lib/playPhrase";
 import type { EspTalkSession } from "@/lib/useEspTalkSession";
 import type { VocabStatus } from "@/lib/localState";
 
@@ -173,8 +175,15 @@ export function ProgressPage() {
           </p>
           <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
             {filteredVocab.map((v) => (
-              <div key={v.spanish} className="rounded-xl border border-black/[0.06] bg-white p-3">
-                <div className="font-body text-sm font-semibold text-foreground">{v.spanish}</div>
+              <button
+                key={v.spanish}
+                onClick={() => playPhrase(v.spanish)}
+                className="rounded-xl border border-black/[0.06] bg-white p-3 text-left hover:border-accent/40"
+              >
+                <div className="flex items-center justify-between gap-1">
+                  <div className="font-body text-sm font-semibold text-foreground">{v.spanish}</div>
+                  <Volume2 className="h-3.5 w-3.5 shrink-0 text-accent" />
+                </div>
                 <div className="font-body text-xs text-muted-foreground">{v.english}</div>
                 <span
                   className={`mt-1.5 inline-block rounded-full px-1.5 py-0.5 font-body text-[10px] font-medium capitalize ${
@@ -187,7 +196,7 @@ export function ProgressPage() {
                 >
                   {v.status}
                 </span>
-              </div>
+              </button>
             ))}
           </div>
           {filteredVocab.length === 0 && (

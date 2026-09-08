@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, Repeat, Sparkles, Star, Check } from "lucide-react";
+import { ArrowLeft, Repeat, Sparkles, Star, Check, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { VOCAB_BANK, type VocabWord } from "@/data/curriculum";
@@ -107,6 +107,17 @@ export function DailyReview({
       >
         <div className="font-heading text-3xl font-bold text-foreground">{word.spanish}</div>
         <div className="mt-1 font-body text-sm text-muted-foreground">{word.phonetic}</div>
+        <span
+          role="button"
+          tabIndex={0}
+          onClick={(e) => {
+            e.stopPropagation();
+            playPhrase(word.spanish);
+          }}
+          className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-black/[0.08] bg-muted px-3 py-1.5 font-body text-xs text-muted-foreground hover:border-accent hover:text-accent"
+        >
+          <Volume2 className="h-3.5 w-3.5" /> Hear it
+        </span>
         {revealed ? (
           <>
             <div className="mt-6 font-body text-lg text-foreground">{word.english}</div>
