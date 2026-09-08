@@ -75,7 +75,13 @@ export function AppShell({
           Esp<span className="font-logo italic font-normal text-accent">Talk</span>
         </a>
 
-        <div className="mx-4 mb-4 flex items-center gap-3 rounded-xl border border-black/[0.07] bg-[#f9f9f9] p-3">
+        <nav className="flex flex-1 flex-col gap-1 px-3">
+          {tabs.map((t) => (
+            <SidebarLink key={t.to} {...t} />
+          ))}
+        </nav>
+
+        <div className="mx-4 mb-3 flex items-center gap-3 rounded-xl border border-black/[0.07] bg-[#f9f9f9] p-3">
           <Avatar className="h-9 w-9">
             <AvatarFallback className="bg-accent/10 text-accent">
               <UserIcon className="h-4 w-4" />
@@ -94,13 +100,7 @@ export function AppShell({
           </div>
         </div>
 
-        <nav className="flex flex-1 flex-col gap-1 px-3">
-          {tabs.map((t) => (
-            <SidebarLink key={t.to} {...t} />
-          ))}
-        </nav>
-
-        <div className="p-3">
+        <div className="p-3 pt-0">
           <Button variant="ghost" className="w-full justify-start gap-3 text-muted-foreground" onClick={signOut}>
             <LogOut className="h-[18px] w-[18px]" strokeWidth={1.8} />
             Sign out
