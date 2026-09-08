@@ -233,5 +233,12 @@
   "negro": "audio/female/negro.m4a",
   "agua": "audio/female/agua.m4a",
   "baño": "audio/female/bano.m4a",
-  "ayuda": "audio/female/ayuda.m4a"
+  "ayuda": "audio/female/ayuda.m4a",
+  "Turismo": "audio/female/turismo.m4a",
+  "Una semana": "audio/female/una-semana.m4a",
+  "Al centro, por favor": "audio/female/al-centro-por-favor.m4a",
+  "A las ocho.": "audio/female/a-las-ocho.m4a",
+  "Sí, a nombre de García": "audio/female/si-a-nombre-de-garcia.m4a",
+  "Me duele la cabeza": "audio/female/me-duele-la-cabeza.m4a",
+  "Mucho gusto.": "audio/female/mucho-gusto.m4a"
 }

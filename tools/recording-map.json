@@ -1643,5 +1643,285 @@
     "en": "help",
     "slug": "ayuda",
     "file": "audio/ayuda.m4a"
+  },
+  {
+    "num": "242",
+    "phrase": "Soy de Estados Unidos.",
+    "en": "I'm from the United States.",
+    "slug": "soy-de-estados-unidos-2",
+    "file": "audio/soy-de-estados-unidos-2.m4a"
+  },
+  {
+    "num": "243",
+    "phrase": "Me gusta mucho",
+    "en": "I really like it",
+    "slug": "me-gusta-mucho-2",
+    "file": "audio/me-gusta-mucho-2.m4a"
+  },
+  {
+    "num": "245",
+    "phrase": "aquí",
+    "en": "here",
+    "slug": "aqui-2",
+    "file": "audio/aqui-2.m4a"
+  },
+  {
+    "num": "246",
+    "phrase": "madre",
+    "en": "mother",
+    "slug": "madre",
+    "file": "audio/madre.m4a"
+  },
+  {
+    "num": "247",
+    "phrase": "padre",
+    "en": "father",
+    "slug": "padre",
+    "file": "audio/padre.m4a"
+  },
+  {
+    "num": "248",
+    "phrase": "hermano",
+    "en": "brother",
+    "slug": "hermano",
+    "file": "audio/hermano.m4a"
+  },
+  {
+    "num": "249",
+    "phrase": "pan",
+    "en": "bread",
+    "slug": "pan",
+    "file": "audio/pan.m4a"
+  },
+  {
+    "num": "250",
+    "phrase": "mercado",
+    "en": "market",
+    "slug": "mercado",
+    "file": "audio/mercado.m4a"
+  },
+  {
+    "num": "251",
+    "phrase": "farmacia",
+    "en": "pharmacy",
+    "slug": "farmacia",
+    "file": "audio/farmacia.m4a"
+  },
+  {
+    "num": "252",
+    "phrase": "hablar",
+    "en": "to speak",
+    "slug": "hablar",
+    "file": "audio/hablar.m4a"
+  },
+  {
+    "num": "253",
+    "phrase": "comer",
+    "en": "to eat",
+    "slug": "comer",
+    "file": "audio/comer.m4a"
+  },
+  {
+    "num": "254",
+    "phrase": "vivir",
+    "en": "to live",
+    "slug": "vivir",
+    "file": "audio/vivir.m4a"
+  },
+  {
+    "num": "255",
+    "phrase": "feliz",
+    "en": "happy",
+    "slug": "feliz",
+    "file": "audio/feliz.m4a"
+  },
+  {
+    "num": "256",
+    "phrase": "cansado",
+    "en": "tired",
+    "slug": "cansado",
+    "file": "audio/cansado.m4a"
+  },
+  {
+    "num": "257",
+    "phrase": "fui",
+    "en": "I went",
+    "slug": "fui",
+    "file": "audio/fui.m4a"
+  },
+  {
+    "num": "258",
+    "phrase": "comí",
+    "en": "I ate",
+    "slug": "comi",
+    "file": "audio/comi.m4a"
+  },
+  {
+    "num": "259",
+    "phrase": "creer",
+    "en": "to believe",
+    "slug": "creer",
+    "file": "audio/creer.m4a"
+  },
+  {
+    "num": "260",
+    "phrase": "acuerdo",
+    "en": "agreement",
+    "slug": "acuerdo",
+    "file": "audio/acuerdo.m4a"
+  },
+  {
+    "num": "261",
+    "phrase": "gustaría",
+    "en": "would like",
+    "slug": "gustaria",
+    "file": "audio/gustaria.m4a"
+  },
+  {
+    "num": "262",
+    "phrase": "Buenas tardes",
+    "en": "Good afternoon",
+    "slug": "buenas-tardes",
+    "file": "audio/buenas-tardes.m4a"
+  },
+  {
+    "num": "263",
+    "phrase": "¿Cómo estás?",
+    "en": "How are you?",
+    "slug": "como-estas",
+    "file": "audio/como-estas.m4a"
+  },
+  {
+    "num": "264",
+    "phrase": "Bien, gracias",
+    "en": "Good, thank you",
+    "slug": "bien-gracias",
+    "file": "audio/bien-gracias.m4a"
+  },
+  {
+    "num": "265",
+    "phrase": "Hasta luego",
+    "en": "See you later",
+    "slug": "hasta-luego",
+    "file": "audio/hasta-luego.m4a"
+  },
+  {
+    "num": "266",
+    "phrase": "Me llamo...",
+    "en": "My name is...",
+    "slug": "me-llamo",
+    "file": "audio/me-llamo.m4a"
+  },
+  {
+    "num": "267",
+    "phrase": "¿Cómo te llamas?",
+    "en": "What is your name?",
+    "slug": "como-te-llamas",
+    "file": "audio/como-te-llamas.m4a"
+  },
+  {
+    "num": "268",
+    "phrase": "Soy de...",
+    "en": "I am from...",
+    "slug": "soy-de",
+    "file": "audio/soy-de.m4a"
+  },
+  {
+    "num": "269",
+    "phrase": "Lo siento",
+    "en": "I'm sorry",
+    "slug": "lo-siento",
+    "file": "audio/lo-siento.m4a"
+  },
+  {
+    "num": "270",
+    "phrase": "Más despacio",
+    "en": "More slowly",
+    "slug": "mas-despacio",
+    "file": "audio/mas-despacio.m4a"
+  },
+  {
+    "num": "271",
+    "phrase": "Quisiera...",
+    "en": "I would like...",
+    "slug": "quisiera",
+    "file": "audio/quisiera.m4a"
+  },
+  {
+    "num": "272",
+    "phrase": "Agua, por favor",
+    "en": "Water, please",
+    "slug": "agua-por-favor",
+    "file": "audio/agua-por-favor.m4a"
+  },
+  {
+    "num": "273",
+    "phrase": "Sin... por favor",
+    "en": "Without... please",
+    "slug": "sin-por-favor",
+    "file": "audio/sin-por-favor.m4a"
+  },
+  {
+    "num": "274",
+    "phrase": "Está delicioso",
+    "en": "It's delicious",
+    "slug": "esta-delicioso",
+    "file": "audio/esta-delicioso.m4a"
+  },
+  {
+    "num": "275",
+    "phrase": "¿Dónde está...?",
+    "en": "Where is...?",
+    "slug": "donde-esta",
+    "file": "audio/donde-esta.m4a"
+  },
+  {
+    "num": "276",
+    "phrase": "Cerca / Lejos",
+    "en": "Near / Far",
+    "slug": "cerca-lejos",
+    "file": "audio/cerca-lejos.m4a"
+  },
+  {
+    "num": "277",
+    "phrase": "uno, dos, tres",
+    "en": "one, two, three",
+    "slug": "uno-dos-tres",
+    "file": "audio/uno-dos-tres.m4a"
+  },
+  {
+    "num": "278",
+    "phrase": "cuatro, cinco, seis",
+    "en": "four, five, six",
+    "slug": "cuatro-cinco-seis",
+    "file": "audio/cuatro-cinco-seis.m4a"
+  },
+  {
+    "num": "279",
+    "phrase": "siete, ocho, nueve",
+    "en": "seven, eight, nine",
+    "slug": "siete-ocho-nueve",
+    "file": "audio/siete-ocho-nueve.m4a"
+  },
+  {
+    "num": "280",
+    "phrase": "diez, once, doce",
+    "en": "ten, eleven, twelve",
+    "slug": "diez-once-doce",
+    "file": "audio/diez-once-doce.m4a"
+  },
+  {
+    "num": "281",
+    "phrase": "trece, catorce, quince",
+    "en": "thirteen, fourteen, fifteen",
+    "slug": "trece-catorce-quince",
+    "file": "audio/trece-catorce-quince.m4a"
+  },
+  {
+    "num": "282",
+    "phrase": "dieciséis...veinte",
+    "en": "sixteen...twenty",
+    "slug": "dieciseis-veinte",
+    "file": "audio/dieciseis-veinte.m4a"
   }
 ]

@@ -7,12 +7,21 @@ const MANIFESTS: Record<"male" | "female", Record<string, string>> = {
   female: femaleManifest,
 };
 
+// Some curriculum data capitalizes a phrase differently than it was recorded
+// (e.g. the Practice phrasebook's "A la derecha" vs. the lesson step's
+// "a la derecha") — case-fold the lookup so those still resolve to the same
+// clip instead of silently playing nothing.
+const LOWERCASE_INDEX: Record<"male" | "female", Record<string, string>> = {
+  male: Object.fromEntries(Object.entries(maleManifest).map(([k, v]) => [k.toLowerCase(), v])),
+  female: Object.fromEntries(Object.entries(femaleManifest).map(([k, v]) => [k.toLowerCase(), v])),
+};
+
 let currentAudio: HTMLAudioElement | null = null;
 
 function play(text: string, rate: number, onEnd?: () => void) {
   const { voice } = readEspTalkPrefs();
   const manifest = MANIFESTS[voice] ?? MANIFESTS.male;
-  const src = manifest[text];
+  const src = manifest[text] ?? LOWERCASE_INDEX[voice]?.[text.toLowerCase()];
   if (!src) return;
 
   currentAudio?.pause();
