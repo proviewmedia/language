@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Check, Mic, Repeat, Volume2 } from "lucide-react";
+import { Flag, Mic, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { playPhrase, playPhraseAt } from "@/lib/playPhrase";
 
@@ -15,11 +15,11 @@ export function ProduceStep({
   onComplete: () => void;
 }) {
   const [revealed, setRevealed] = useState(false);
-  const [rated, setRated] = useState<"good" | "bad" | null>(null);
+  const [flagged, setFlagged] = useState(false);
 
   useEffect(() => {
     setRevealed(false);
-    setRated(null);
+    setFlagged(false);
   }, [es]);
 
   function reveal() {
@@ -40,33 +40,22 @@ export function ProduceStep({
           <div className="mt-5 rounded-2xl bg-[#f9f9f9] p-4">
             <div className="font-heading text-xl font-bold text-foreground">{es}</div>
             {ph && <div className="mt-1 font-mono text-sm text-muted-foreground">{ph}</div>}
-            <div className="mt-3 flex justify-center gap-2">
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
               <Button variant="outline" size="sm" onClick={() => playPhraseAt(es, "natural")}>
                 <Volume2 className="h-4 w-4" /> Natural
               </Button>
               <Button variant="outline" size="sm" onClick={() => playPhraseAt(es, "slow")}>
                 <Volume2 className="h-4 w-4" /> Slow
               </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                className={flagged ? "border-orange-300 bg-orange-50 text-orange-600 hover:bg-orange-50" : ""}
+                onClick={() => setFlagged((f) => !f)}
+              >
+                <Flag className="h-4 w-4" /> {flagged ? "Flagged for practice" : "Need more practice?"}
+              </Button>
             </div>
-          </div>
-        )}
-
-        {revealed && !rated && (
-          <div className="mt-4 flex items-center justify-center gap-3">
-            <span className="font-body text-xs text-muted-foreground">How did you do?</span>
-            <Button variant="outline" size="sm" onClick={() => setRated("bad")}>
-              Missed it
-            </Button>
-            <Button size="sm" onClick={() => setRated("good")}>
-              Got it
-            </Button>
-          </div>
-        )}
-
-        {rated && (
-          <div className="mt-4 flex items-center justify-center gap-2 font-body text-sm text-foreground">
-            {rated === "good" ? <Check className="h-4 w-4 text-accent" /> : <Repeat className="h-4 w-4 text-muted-foreground" />}
-            {rated === "good" ? "¡Bien! You said it." : "No worries — repeat it a couple times, then continue."}
           </div>
         )}
       </div>
@@ -76,7 +65,7 @@ export function ProduceStep({
           Reveal answer
         </Button>
       ) : (
-        <Button size="cta" className="w-full max-w-xs" disabled={!rated} onClick={onComplete}>
+        <Button size="cta" className="w-full max-w-xs" onClick={onComplete}>
           Continue
         </Button>
       )}
