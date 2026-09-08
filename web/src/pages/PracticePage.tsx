@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import { Search, Volume2, Repeat, Layers } from "lucide-react";
-import { AppShell } from "@/components/app/AppShell";
 import { DailyReview } from "@/components/app/DailyReview";
 import { Flashcards } from "@/components/app/Flashcards";
 import { BASICS, CRAM, PHRASE_SETS, VOCAB_BANK } from "@/data/curriculum";
 import { PHRASE_SET_ICONS } from "@/lib/phraseSetIcons";
 import { playPhrase } from "@/lib/playPhrase";
-import { useEspTalkSession } from "@/lib/useEspTalkSession";
+import type { EspTalkSession } from "@/lib/useEspTalkSession";
 
 function PhraseRow({ es, en }: { es: string; en: string }) {
   return (
@@ -52,30 +52,22 @@ function StudyCard({
 }
 
 export function PracticePage() {
-  const { loading, name, state, refresh } = useEspTalkSession();
+  const { state, refresh } = useOutletContext<EspTalkSession>();
   const [query, setQuery] = useState("");
   const [mode, setMode] = useState<"home" | "review" | "flashcards">("home");
 
-  if (loading) return null;
-
   if (mode === "review") {
     return (
-      <AppShell name={name} streak={state.streak} xp={state.xp}>
-        <DailyReview
-          vocabStatus={state.vocabStatus}
-          onExit={() => setMode("home")}
-          onFinish={() => refresh()}
-        />
-      </AppShell>
+      <DailyReview
+        vocabStatus={state.vocabStatus}
+        onExit={() => setMode("home")}
+        onFinish={() => refresh()}
+      />
     );
   }
 
   if (mode === "flashcards") {
-    return (
-      <AppShell name={name} streak={state.streak} xp={state.xp}>
-        <Flashcards onExit={() => setMode("home")} onFinish={() => refresh()} />
-      </AppShell>
-    );
+    return <Flashcards onExit={() => setMode("home")} onFinish={() => refresh()} />;
   }
 
   const q = query.trim().toLowerCase();
@@ -95,7 +87,7 @@ export function PracticePage() {
   const nothingFound = q && filteredCram.length === 0 && filteredBasics.length === 0 && filteredSets.length === 0;
 
   return (
-    <AppShell name={name} streak={state.streak} xp={state.xp}>
+    <>
       <h1 className="font-heading text-2xl font-bold text-foreground">Practice</h1>
       <p className="mt-1 font-body text-sm text-muted-foreground">
         Your phrasebook, always here — warm up, study, or search anything and tap to hear it.
@@ -177,6 +169,6 @@ export function PracticePage() {
           Nothing matches "{query}".
         </p>
       )}
-    </AppShell>
+    </>
   );
 }

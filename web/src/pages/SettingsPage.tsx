@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AppShell } from "@/components/app/AppShell";
+import { useOutletContext } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import {
@@ -29,7 +29,8 @@ import {
 } from "@/components/ui/alert-dialog";
 import { supabase } from "@/lib/supabase";
 import { readEspTalkPrefs, writeEspTalkPrefs, type EspTalkPrefs } from "@/lib/localState";
-import { useEspTalkSession, goToPaywall } from "@/lib/useEspTalkSession";
+import { goToPaywall } from "@/lib/useEspTalkSession";
+import type { EspTalkSession } from "@/lib/useEspTalkSession";
 
 function SettingRow({
   label,
@@ -61,14 +62,12 @@ function SettingsCard({ title, children }: { title: string; children: React.Reac
 }
 
 export function SettingsPage() {
-  const { loading, name, isPro, state } = useEspTalkSession();
+  const { name, isPro } = useOutletContext<EspTalkSession>();
   const [prefs, setPrefs] = useState<EspTalkPrefs>(() => readEspTalkPrefs());
   const [nameDialogOpen, setNameDialogOpen] = useState(false);
   const [nameDraft, setNameDraft] = useState(name);
   const [savingName, setSavingName] = useState(false);
   const [resetOpen, setResetOpen] = useState(false);
-
-  if (loading) return null;
 
   function updatePrefs(update: Partial<EspTalkPrefs>) {
     const next = { ...prefs, ...update };
@@ -94,7 +93,7 @@ export function SettingsPage() {
   }
 
   return (
-    <AppShell name={name} streak={state.streak} xp={state.xp}>
+    <>
       <h1 className="font-heading text-2xl font-bold text-foreground">Settings</h1>
 
       <div className="mt-6 flex flex-col gap-4">
@@ -228,6 +227,6 @@ export function SettingsPage() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </AppShell>
+    </>
   );
 }

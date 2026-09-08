@@ -1,22 +1,21 @@
+import { useOutletContext } from "react-router-dom";
 import { Flag } from "lucide-react";
-import { AppShell } from "@/components/app/AppShell";
 import { EnginePath } from "@/components/app/EnginePath";
 import { ModuleCard } from "@/components/app/ModuleCard";
 import { ENGINE, SCENARIOS, TRIP_SIM } from "@/data/curriculum";
 import { SCENARIO_ICONS } from "@/lib/scenarioIcons";
-import { useEspTalkSession, goToPaywall } from "@/lib/useEspTalkSession";
+import { goToPaywall } from "@/lib/useEspTalkSession";
+import type { EspTalkSession } from "@/lib/useEspTalkSession";
 
 export function CoursePage() {
-  const { loading, name, state, completedIds, isPro } = useEspTalkSession();
-
-  if (loading) return null;
+  const { completedIds, isPro } = useOutletContext<EspTalkSession>();
 
   const capstoneKey = `${TRIP_SIM.track}:${TRIP_SIM.id}`;
   const capstoneLocked = !isPro;
   const capstoneCompleted = completedIds.has(capstoneKey);
 
   return (
-    <AppShell name={name} streak={state.streak} xp={state.xp}>
+    <>
       <h1 className="font-heading text-2xl font-bold text-foreground">Course</h1>
       <p className="mt-1 font-body text-sm text-muted-foreground">
         Work through Foundations in order. Jump into any Travel Scenario
@@ -72,6 +71,6 @@ export function CoursePage() {
           {capstoneCompleted && <span className="shrink-0 font-body text-xs font-semibold text-accent">Done</span>}
         </button>
       </div>
-    </AppShell>
+    </>
   );
 }

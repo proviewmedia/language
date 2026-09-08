@@ -1,14 +1,12 @@
+import { useOutletContext } from "react-router-dom";
 import { ArrowRight, Flame } from "lucide-react";
-import { AppShell } from "@/components/app/AppShell";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { ENGINE, SCENARIOS } from "@/data/curriculum";
-import { useEspTalkSession } from "@/lib/useEspTalkSession";
+import type { EspTalkSession } from "@/lib/useEspTalkSession";
 
 export function DashboardPage() {
-  const { loading, name, state, completedIds, isPro } = useEspTalkSession();
-
-  if (loading) return null;
+  const { state, completedIds, isPro } = useOutletContext<EspTalkSession>();
 
   const allModules = [...ENGINE, ...SCENARIOS];
   const unlocked = allModules.filter((m) => m.free || isPro);
@@ -19,7 +17,7 @@ export function DashboardPage() {
   const weeklyTotal = state.weekly.reduce((a, b) => a + b, 0);
 
   return (
-    <AppShell name={name} streak={state.streak} xp={state.xp}>
+    <>
       <h1 className="font-heading text-2xl font-bold text-foreground">
         Let's keep going
       </h1>
@@ -94,6 +92,6 @@ export function DashboardPage() {
           );
         })}
       </div>
-    </AppShell>
+    </>
   );
 }

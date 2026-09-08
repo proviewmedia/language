@@ -25,6 +25,8 @@ export function useEspTalkSession() {
   return { ...auth, isPro, state, completedIds, refresh };
 }
 
+export type EspTalkSession = ReturnType<typeof useEspTalkSession>;
+
 function goToPaywall() {
   window.location.href = "/app.html?paywall=1";
 }

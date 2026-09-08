@@ -6,17 +6,20 @@ import { PracticePage } from "@/pages/PracticePage";
 import { ProgressPage } from "@/pages/ProgressPage";
 import { SettingsPage } from "@/pages/SettingsPage";
 import { LessonPage } from "@/pages/LessonPage";
+import { AppLayout } from "@/components/app/AppLayout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MarketingPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/course" element={<CoursePage />} />
-        <Route path="/practice" element={<PracticePage />} />
-        <Route path="/progress" element={<ProgressPage />} />
-        <Route path="/settings" element={<SettingsPage />} />
+        <Route element={<AppLayout />}>
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/course" element={<CoursePage />} />
+          <Route path="/practice" element={<PracticePage />} />
+          <Route path="/progress" element={<ProgressPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+        </Route>
         <Route path="/lesson/:track/:id" element={<LessonPage />} />
       </Routes>
     </BrowserRouter>

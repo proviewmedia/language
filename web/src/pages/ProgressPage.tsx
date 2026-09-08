@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import {
   BookOpen,
   Star,
@@ -12,11 +13,10 @@ import {
   Flag,
   Layers,
 } from "lucide-react";
-import { AppShell } from "@/components/app/AppShell";
 import { Flashcards } from "@/components/app/Flashcards";
 import { Button } from "@/components/ui/button";
 import { ENGINE, SCENARIOS, TRIP_SIM, VOCAB_BANK } from "@/data/curriculum";
-import { useEspTalkSession } from "@/lib/useEspTalkSession";
+import type { EspTalkSession } from "@/lib/useEspTalkSession";
 import type { VocabStatus } from "@/lib/localState";
 
 function Achievement({
@@ -41,19 +41,13 @@ function Achievement({
 const DAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 export function ProgressPage() {
-  const { loading, name, state, completedIds, refresh } = useEspTalkSession();
+  const { state, completedIds, refresh } = useOutletContext<EspTalkSession>();
   const [tab, setTab] = useState<"stats" | "words">("stats");
   const [studying, setStudying] = useState(false);
   const [wordFilter, setWordFilter] = useState<"all" | VocabStatus>("all");
 
-  if (loading) return null;
-
   if (studying) {
-    return (
-      <AppShell name={name} streak={state.streak} xp={state.xp}>
-        <Flashcards onExit={() => setStudying(false)} onFinish={() => refresh()} />
-      </AppShell>
-    );
+    return <Flashcards onExit={() => setStudying(false)} onFinish={() => refresh()} />;
   }
 
   const allEngineDone = ENGINE.every((m) => completedIds.has(`${m.track}:${m.id}`));
@@ -88,7 +82,7 @@ export function ProgressPage() {
   const filteredVocab = wordFilter === "all" ? vocab : vocab.filter((v) => v.status === wordFilter);
 
   return (
-    <AppShell name={name} streak={state.streak} xp={state.xp}>
+    <>
       <h1 className="font-heading text-2xl font-bold text-foreground">Progress</h1>
 
       <div className="mt-4 flex gap-1 rounded-full bg-black/[0.04] p-1">
@@ -201,6 +195,6 @@ export function ProgressPage() {
           )}
         </>
       )}
-    </AppShell>
+    </>
   );
 }
