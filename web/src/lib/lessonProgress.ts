@@ -5,7 +5,8 @@ import type { StepBase } from "@/data/curriculum";
 // interaction count so the progress bar/counter reflect actual content,
 // matching the fix already shipped in app.html's updateLessonProgress().
 export function stepWeight(s: StepBase): number {
-  if (s.type === "frame_swap") return (s.slots as unknown[]).length;
+  // +1 for frame_swap's bare-frame intro screen before it starts filling in slots.
+  if (s.type === "frame_swap") return (s.slots as unknown[]).length + 1;
   if (s.type === "roleplay") return (s.lines as unknown[]).length;
   return 1;
 }
