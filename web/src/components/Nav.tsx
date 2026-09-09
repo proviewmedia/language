@@ -43,13 +43,13 @@ export function Nav() {
           >
             <Menu className="h-6 w-6" />
           </SheetTrigger>
-          <SheetContent side="top" className="border-b border-black/[0.07] pt-8">
+          <SheetContent side="top" className="border-b border-black/[0.07] pt-8 pb-8">
             <SheetTitle className="sr-only">Menu</SheetTitle>
             <div className="flex flex-col gap-5 px-2">
               <a href="#how" onClick={() => setOpen(false)} className="font-body text-base font-medium text-muted-foreground">How</a>
               <a href="#pricing" onClick={() => setOpen(false)} className="font-body text-base font-medium text-muted-foreground">Pricing</a>
               <a href="/app.html" onClick={() => setOpen(false)} className="font-body text-base font-medium text-muted-foreground">Sign in</a>
-              <StartFreeButton className="self-start" />
+              <StartFreeButton className="mt-1 self-start" />
             </div>
           </SheetContent>
         </Sheet>
